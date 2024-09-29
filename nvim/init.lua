@@ -25,8 +25,7 @@ vim.opt.listchars = { tab = "> ", trail = "_", nbsp = "␣" }
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
---vim.tabstop = 4
---syncronizing clipboard between neovim and the system , in order for this to work xclip has to be installed
+--syncronizing clipboard between neovim and the system, in order for this to work xclip has to be installed
 vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 vim.opt.hlsearch = true
@@ -52,7 +51,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "tpope/vim-sleuth" }, -- Detect tabstop and shiftwidth automatically
+	{ "tpope/vim-sleuth" }, -- NICE TABS DONT DELETE!!!!
 	{
 		"lewis6991/gitsigns.nvim",
 		opts = {
@@ -66,7 +65,7 @@ require("lazy").setup({
 		},
 	},
 
-	{ -- Fuzzy Finder (files, lsp, etc)
+	{ 
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
 		branch = "0.1.x",
@@ -91,7 +90,6 @@ require("lazy").setup({
 				},
 				extensions = {
 					["ui-select"] = {
-						-- require("telescope.themes").get_dropdown(),
 						-- require("telescope.themes").get_ivy(),
 					},
 				},
@@ -132,7 +130,7 @@ require("lazy").setup({
 		end,
 	},
 
-	{ -- LSP Configuration & Plugins
+	{ 
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"williamboman/mason.nvim",
@@ -143,7 +141,7 @@ require("lazy").setup({
 		},
 		config = function()
 			vim.api.nvim_create_autocmd("LspAttach", {
-				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
+				group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 				callback = function(event)
 					local map = function(keys, func, desc)
 						vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
@@ -166,12 +164,8 @@ require("lazy").setup({
 
 					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
-					-- Opens a popup that displays documentation about the word under your cursor
-					--  See `:help K` for why this keymap.
 					map("dc", vim.lsp.buf.hover, "Hover Documentation")
 
-					-- WARN: This is not Goto Definition, this is Goto Declaration.
-					--  For example, in C this would take you to the header.
 					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
@@ -188,23 +182,9 @@ require("lazy").setup({
 					end
 				end,
 			})
-
-			-- LSP servers and clients are able to communicate to each other what features they support.
-			--  By default, Neovim doesn't support everything that is in the LSP specification.
-			--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
-			--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-			-- Enable the following language servers
-			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
-			--
-			--  Add any additional override configuration in the following tables. Available keys are:
-			--  - cmd (table): Override the default command used to start the server
-			--  - filetypes (table): Override the default list of associated filetypes for the server
-			--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
-			--  - settings (table): Override the default settings passed when initializing the server.
-			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				clangd = {},
 				pyright = {},
@@ -241,9 +221,6 @@ require("lazy").setup({
 				handlers = {
 					function(server_name)
 						local server = servers[server_name] or {}
-						-- This handles overriding only values explicitly passed
-						-- by the server configuration above. Useful when disabling
-						-- certain features of an LSP (for example, turning off formatting for tsserver)
 						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 						require("lspconfig")[server_name].setup(server)
 					end,
@@ -252,7 +229,7 @@ require("lazy").setup({
 		end,
 	},
 
-	{ -- Autoformat
+	{ 
 		"stevearc/conform.nvim",
 		lazy = true,
 		keys = {
@@ -268,9 +245,6 @@ require("lazy").setup({
 		opts = {
 			notify_on_error = false,
 			format_on_save = function(bufnr)
-				-- Disable "format_on_save lsp_fallback" for languages that don't
-				-- have a well standardized coding style. You can add additional
-				-- languages here or re-enable it for the disabled ones.
 				local disable_filetypes = {}
 				return {
 					timeout_ms = 500,
@@ -279,48 +253,27 @@ require("lazy").setup({
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
-				-- Conform can also run multiple formatters sequentially
 				python = { "black" },
-				-- You can use a sub-list to tell conform to run *until* a formatter
-				-- is found.
-				-- javascript = { { "prettierd", "prettier" } },
 			},
 		},
 	},
 
-	{ -- Autocompletion
+	{ 
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
-			-- Snippet Engine & its associated nvim-cmp source
 			{
 				"L3MON4D3/LuaSnip",
 				build = (function()
-					-- Build Step is needed for regex support in snippets.
-					-- This step is not supported in many windows environments.
-					-- Remove the below condition to re-enable on windows.
 					if vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0 then
 						return
 					end
 					return "make install_jsregexp"
 				end)(),
 				dependencies = {
-					-- `friendly-snippets` contains a variety of premade snippets.
-					--    See the README about individual language/framework/plugin snippets:
-					--    https://github.com/rafamadriz/friendly-snippets
-					-- {
-					--   'rafamadriz/friendly-snippets',
-					--   config = function()
-					--     require('luasnip.loaders.from_vscode').lazy_load()
-					--   end,
-					-- },
 				},
 			},
 			"saadparwaiz1/cmp_luasnip",
-
-			-- Adds other completion capabilities.
-			--  nvim-cmp does not ship with all sources by default. They are split
-			--  into multiple repos for maintenance purposes.
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
 		},
