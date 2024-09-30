@@ -65,7 +65,7 @@ require("lazy").setup({
 		},
 	},
 
-	{ 
+	{
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
 		branch = "0.1.x",
@@ -130,7 +130,7 @@ require("lazy").setup({
 		end,
 	},
 
-	{ 
+	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"williamboman/mason.nvim",
@@ -229,7 +229,7 @@ require("lazy").setup({
 		end,
 	},
 
-	{ 
+	{
 		"stevearc/conform.nvim",
 		lazy = true,
 		keys = {
@@ -258,7 +258,7 @@ require("lazy").setup({
 		},
 	},
 
-	{ 
+	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
@@ -270,8 +270,7 @@ require("lazy").setup({
 					end
 					return "make install_jsregexp"
 				end)(),
-				dependencies = {
-				},
+				dependencies = {},
 			},
 			"saadparwaiz1/cmp_luasnip",
 			"hrsh7th/cmp-nvim-lsp",
@@ -650,5 +649,20 @@ require("lazy").setup({
 				})
 			end,
 		},
+	},
+	{
+		"ej-shafran/compile-mode.nvim",
+		-- HARDCODED TAG , CHECK REPO FOR NEWEST
+		tag = "v5.2.0",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{ "m00qek/baleia.nvim", tag = "v1.3.0" },
+		},
+		config = function()
+			---@type CompileModeOpts
+			vim.g.compile_mode = {
+				baleia_setup = true,
+			}
+		end,
 	},
 }, {})

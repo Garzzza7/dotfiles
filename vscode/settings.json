@@ -79,5 +79,6 @@
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.editorActionsLocation": "titleBar",
+  "cmake.showOptionsMovedNotification": false,
   // "terminal.integrated.fontFamily": "'Fira Code',monospace",
 }
