@@ -1,13 +1,3 @@
-*.md
-*.db
-*.elc
-*.pyc
-*.stackdump
-*.flycheck_packages.el
-/*.zip
-*.org
-*.develop
-
 *.out
 *.exe
 *.o
@@ -21,8 +11,10 @@
 *.idx
 .idea
 .cache
+.vscode
 build/*
 *log
 *.swp
 *#
 .#*
+*.md
