@@ -9,5 +9,5 @@ cp vim/.vimrc	$HOME/.vimrc
 cp scripts/* $HOME/scripts/
 cp vscode/settings.json $HOME/.config/Code/User/settings.json
 cp omz/.zshrc $HOME/.zshrc
-
+cat vscode/ext.txt | xargs -L 1 code --install-extension
 
