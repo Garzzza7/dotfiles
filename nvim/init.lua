@@ -277,7 +277,6 @@ require("lazy").setup({
 			"hrsh7th/cmp-path",
 		},
 		config = function()
-			-- See `:help cmp`
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			luasnip.config.setup({})
@@ -546,7 +545,7 @@ require("lazy").setup({
 					strings = true,
 					emphasis = true,
 					comments = true,
-					operators = false,
+					operators = true,
 					folds = true,
 				},
 				strikethrough = true,
@@ -561,7 +560,7 @@ require("lazy").setup({
 				dim_inactive = false,
 				transparent_mode = false,
 			})
-			--vim.o.background = "dark"
+			-- vim.o.background = "dark"
 			vim.cmd("colorscheme gruvbox")
 		end,
 	},
@@ -615,8 +614,7 @@ require("lazy").setup({
 		{
 			"akinsho/toggleterm.nvim",
 			version = "*",
-			opts = {--[[ things you want to change go here]]
-			},
+			opts = {},
 			init = function()
 				require("toggleterm").setup({
 					size = 20,
