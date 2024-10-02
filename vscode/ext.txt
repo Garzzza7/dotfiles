@@ -6,6 +6,7 @@ donjayamanne.git-extension-pack
 donjayamanne.githistory
 dotjoshjohnson.xml
 eamodio.gitlens
+ecmel.vscode-html-css
 eliverlara.andromeda
 foxundermoon.shell-format
 golang.go
@@ -13,7 +14,6 @@ harryhopkinson.vim-theme
 haskell.haskell
 jdinhlife.gruvbox
 justusadam.language-haskell
-lizebang.bash-extension-pack
 lucianirsigler.nasm
 mads-hartmann.bash-ide-vscode
 meisammafi.clion-plus-theme
