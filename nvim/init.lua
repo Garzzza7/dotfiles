@@ -192,7 +192,7 @@ require("lazy").setup({
 				bashls = {},
 				neocmake = {},
 				asm_lsp = {},
-				gopls = {},
+				-- gopls = {},
 				glsl_analyzer = {},
 				hls = {},
 				ocamllsp = {},
@@ -212,7 +212,7 @@ require("lazy").setup({
 
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
-				"stylua", -- Used to format Lua code
+				"stylua",
 				"black",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
@@ -239,7 +239,7 @@ require("lazy").setup({
 					require("conform").format({ async = true, lsp_fallback = true })
 				end,
 				mode = "",
-				desc = "[F]ormat buffer",
+				desc = "Format buffer",
 			},
 		},
 		opts = {
@@ -542,11 +542,11 @@ require("lazy").setup({
 				underline = true,
 				bold = true,
 				italic = {
-					strings = true,
-					emphasis = true,
-					comments = true,
-					operators = true,
-					folds = true,
+					strings = false,
+					emphasis = false,
+					comments = false,
+					operators = false,
+					folds = false,
 				},
 				strikethrough = true,
 				invert_selection = false,
@@ -581,9 +581,13 @@ require("lazy").setup({
 				"vim",
 				"vimdoc",
 			},
-			auto_install = true,
+			auto_install = false,
+			sync_install = false,
+
 			highlight = {
 				enable = true,
+				disable = {},
+				additional_vim_regex_highlighting = false,
 			},
 			indent = { enable = true, disable = {} },
 		},
