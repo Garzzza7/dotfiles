@@ -11,4 +11,5 @@ cp scripts/* $HOME/scripts/
 cp omz/zshrc $HOME/.zshrc
 cp kitty/* $HOME/.config/kitty/
 # cat vscode/ext.txt | xargs -L 1 code --install-extension
+cp lazygit/config.yml $HOME/.config/lazygit/config.yml
 
