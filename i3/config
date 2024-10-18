@@ -3,7 +3,7 @@ set $mod Mod4
 
 #font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
-font pango:Ubuntu Regular 8
+font pango:Ubuntu Regular 0
 
 
 # NOTE: The secondary rgb color in the lines below is the fallback if
@@ -217,13 +217,23 @@ bindsym $mod+Print exec gnome-screenshot -a
 
 #status bar
 bar {
+        status_command i3status -c $HOME/.config/i3status/i3status.conf
         position top
         tray_output primary
         workspace_buttons yes
-        status_command i3status -c /home/$USER/.config/i3status/i3status.conf
+        font pango:DejaVu Sans Mono 8
+        mode hide 
+        hidden_state hide
+        modifier Mod1
+        tray_padding 0
+        workspace_min_width 30
+        strip_workspace_numbers no
+        strip_workspace_name no
+
   colors {
         background #000000
         statusline #0FF344
+        separator #0FF344
 
         focused_workspace  #00ff00 #000000 #00ff00
         active_workspace   #FF0000 #ff0000 #ff0000     
