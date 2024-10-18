@@ -3,8 +3,7 @@ set $mod Mod4
 
 #font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
-font pango:Ubuntu Regular 0
-
+font pango:Ubuntu Regular 8
 
 # NOTE: The secondary rgb color in the lines below is the fallback if
 # i3 fails to get colors from Xresources.
@@ -144,6 +143,7 @@ bindsym $mod+a focus parent
 bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
 bindsym $mod+u border none
+for_window [all] border none
 
 
 set $ws1 "1: 🔥"
