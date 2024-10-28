@@ -215,6 +215,7 @@ require("lazy").setup({
 			vim.list_extend(ensure_installed, {
 				"stylua",
 				"black",
+				"clang-format",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -237,7 +238,7 @@ require("lazy").setup({
 			{
 				"==",
 				function()
-					require("conform").format({ async = true, lsp_fallback = true})
+					require("conform").format({ async = true, lsp_fallback = true })
 				end,
 				mode = "",
 				desc = "Format buffer",
@@ -256,6 +257,7 @@ require("lazy").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "black" },
+				cpp = { "clang-format" },
 			},
 		},
 	},
