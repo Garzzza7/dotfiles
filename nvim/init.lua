@@ -296,12 +296,12 @@ require("lazy").setup({
 					["<C-n>"] = cmp.mapping.select_next_item(),
 					["<C-p>"] = cmp.mapping.select_prev_item(),
 
-					["<C-k>"] = cmp.mapping.scroll_docs(-4),
-					["<C-j>"] = cmp.mapping.scroll_docs(4),
+					["<C-j>"] = cmp.mapping.scroll_docs(-1),
+					["<C-k>"] = cmp.mapping.scroll_docs(1),
 
-					["<C-Enter>"] = cmp.mapping.confirm({ select = true }),
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
 
-					["<C-Space>"] = cmp.mapping.complete({}),
+					-- ["<C-Space>"] = cmp.mapping.complete({}),
 
 					["<C-l>"] = cmp.mapping(function()
 						if luasnip.expand_or_locally_jumpable() then
