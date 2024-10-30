@@ -11,4 +11,4 @@ cp -r $HOME/.zshrc omz/zshrc
 cp -r $HOME/.config/kitty/* kitty/
 #code --list-extensions > vscode/ext.txt
 cp $HOME/.config/lazygit/config.yml lazygit/config.yml
-
+cp $HOME/.bashrc bash/bashrc

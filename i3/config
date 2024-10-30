@@ -221,9 +221,10 @@ bar {
         position top
         tray_output primary
         workspace_buttons yes
-        font pango:DejaVu Sans Mono 8
+        font pango:DejaVu Sans Mono 14
         mode hide 
         hidden_state hide
+        # alt key 
         modifier Mod1
         tray_padding 0
         workspace_min_width 30
