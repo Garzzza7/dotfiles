@@ -20,7 +20,8 @@ normal=$(tput sgr0)
 res=$(git pull)
 if [ "$res" != "Already up to date." ]; then
     printf "${grey}Changes detected.\n"
-    if [ "$(which i3)" ]; then
+    if command -v i3 2>&1 >/dev/null
+    then
         printf "${green}i3 found.\n"
         cp i3/* $HOME/.config/i3/
         cp i3status/* $HOME/.config/i3status/
@@ -28,28 +29,32 @@ if [ "$res" != "Already up to date." ]; then
         printf "${red}Omitting i3.\n"
     fi
 
-    if [ "$(which emacs)" ]; then
+    if command -v emacs 2>&1 >/dev/null
+    then
         printf "${green}Emacs found.\n"
         cp emacs/* $HOME/.emacs.d/
     else
         printf "${red}Omitting Emacs.\n"
     fi
 
-    if [ "$(which nvim)" ]; then
+    if command -v nvim 2>&1 >/dev/null
+    then
         printf "${green}Neovim found.\n"
         cp nvim/* $HOME/.config/nvim/
     else
         printf "${red}Omitting Neovim.\n"
     fi
 
-    if [ "$(which vim)" ]; then
+    if command -v vim 2>&1 >/dev/null
+    then
         printf "${green}Vim found.\n"
         cp vim/vimrc	$HOME/.vimrc
     else
         printf "${red}Omitting Vim.\n"
     fi
 
-    if [ "$(which code)" ]; then
+    if command -v code 2>&1 >/dev/null
+    then
         printf "${green}VSCode found.\n"
         cp vscode/settings.json $HOME/.config/Code/User/settings.json
         cat vscode/ext.txt | xargs -L 1 code --install-extension
@@ -64,21 +69,24 @@ if [ "$res" != "Already up to date." ]; then
         printf "${red}Omitting OMZ.\n"
     fi
 
-    if [ "$(which kitty)" ]; then
+    if command -v kitty 2>&1 >/dev/null
+    then
         printf "${green}Kitty found.\n"
         cp kitty/* $HOME/.config/kitty/
     else
         printf "${red}Omitting Kitty.\n"
     fi
 
-    if [ "$(which lazygit)" ]; then
+    if command -v lazygit 2>&1 >/dev/null
+    then
         printf "${green}Lazygit found.\n"
         cp lazygit/config.yml $HOME/.config/lazygit/config.yml
     else
         printf "${red}Omitting Lazygit.\n"
     fi
 
-    if [ "$(which bash)" ]; then
+    if command -v bash 2>&1 >/dev/null
+    then
         printf "${green}Bash found.\n"
         cp bash/bashrc $HOME/.bashrc
     else
