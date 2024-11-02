@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 if [ "$(git pull)" != "Already up to date." ]; then
     echo Changes detected.
     if [ "$(which i3)" ]; then
@@ -65,7 +64,7 @@ if [ "$(git pull)" != "Already up to date." ]; then
         echo Bash found.
         cp bash/bashrc $HOME/.bashrc
     else
-        echo Omitting Lazygit.
+        echo Omitting Bash.
     fi
 
     echo Done.
