@@ -18,11 +18,11 @@ green=$(tput setaf 6)
 normal=$(tput sgr0)
 
 if [ "$(which i3)" ]; then
-    printf "${green}I3 found.\n"
+    printf "${green}i3 found.\n"
     cp -r $HOME/.config/i3/* i3/
     cp -r $HOME/.config/i3status/* i3status/
 else
-    printf "${red}Omitting I3.\n"
+    printf "${red}Omitting i3.\n"
 fi
 
 if [ "$(which emacs)" ]; then
