@@ -17,7 +17,8 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
-if [ "$(git pull)" != "Already up to date." ]; then
+res=$(git pull)
+if [ "$res" != "Already up to date." ]; then
     printf "${grey}Changes detected.\n"
     if [ "$(which i3)" ]; then
         printf "${green}I3 found.\n"
@@ -56,7 +57,7 @@ if [ "$(git pull)" != "Already up to date." ]; then
         printf "${red}Omitting VSCode.\n"
     fi
 
-    if [ "$(which omz)" ]; then
+    if [ -f $HOME/.zshrc ]; then
         printf "${green}OMZ found.\n"
         cp omz/zshrc $HOME/.zshrc
     else

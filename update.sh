@@ -54,7 +54,7 @@ else
     printf "${red}Omitting VSCode.\n"
 fi
 
-if [ "$(which omz)" ]; then
+if [ -f $HOME/.zshrc ]; then
     printf "${green}OMZ found.\n"
     cp -r $HOME/.zshrc omz/zshrc
 else

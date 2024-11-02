@@ -108,6 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias beautysh='/home/pc/.local/share/nvim/mason/bin/beautysh'
+alias gf2='/home/pc/gf/gf2'
 
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin
