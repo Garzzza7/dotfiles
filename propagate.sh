@@ -67,6 +67,13 @@ if [ "$(git pull)" != "Already up to date." ]; then
         echo Omitting Bash.
     fi
 
+    if [ -d "$HOME/scripts" ]; then
+        echo Scripts found.
+        cp  scripts/* $HOME/scripts/
+    else
+        echo Scripts does not exist.
+    fi
+
     echo Done.
 else
     echo Nothing new to propagate.
