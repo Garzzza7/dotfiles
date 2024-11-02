@@ -216,6 +216,7 @@ require("lazy").setup({
 				"stylua",
 				"black",
 				"clang-format",
+				"beautysh",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -258,6 +259,7 @@ require("lazy").setup({
 				lua = { "stylua" },
 				python = { "black" },
 				cpp = { "clang-format" },
+				bash = { "beautysh" },
 			},
 		},
 	},

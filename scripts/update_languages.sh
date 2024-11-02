@@ -2,7 +2,7 @@
 toilet --g rust
 rustup update
 toilet --g haskell
-cabal update 
+cabal update
 toilet --g ocaml
-opam update 
+opam update
 opam upgrade
