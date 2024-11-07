@@ -16,7 +16,7 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.signcolumn = "yes"
-vim.opt.updatetime = 150
+vim.opt.updatetime = 10000
 vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -32,8 +32,8 @@ vim.opt.hlsearch = true
 vim.o.background = "dark"
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
+--vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
+--vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
@@ -659,8 +659,8 @@ require("lazy").setup({
 	},
 	{
 		"ej-shafran/compile-mode.nvim",
-		-- HARDCODED TAG , CHECK REPO FOR NEWEST
-		tag = "v5.2.0",
+		-- HARDCODED TAG , CHECK THE REPO FOR THE NEWEST VERSION
+		tag = "v5.3.1",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{ "m00qek/baleia.nvim", tag = "v1.3.0" },
