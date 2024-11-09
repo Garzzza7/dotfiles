@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bsh='/home/pc/.local/share/nvim/mason/bin/beautysh'
 alias gf2='/home/pc/gf/gf2'
+alias mc='EDITOR=nvim mc'
 
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin

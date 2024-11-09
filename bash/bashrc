@@ -93,6 +93,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias bsh='/home/pc/.local/share/nvim/mason/bin/beautysh'
 alias gf2='/home/pc/gf/gf2'
+alias mc='EDITOR=nvim mc'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
