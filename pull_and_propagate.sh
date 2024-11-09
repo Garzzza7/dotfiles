@@ -100,6 +100,14 @@ if [ "$res" != "Already up to date." ]; then
         printf "${red}Scripts does not exist.\n"
     fi
 
+    if command -v mc 2>&1 >/dev/null
+    then
+        printf "${green}Midnight Commander found.\n"
+        cp mc/ini $HOME/.config/mc/ini
+    else
+        printf "${red}Omitting Midnight Commander.\n"
+    fi
+
     printf "${grey}Done.\n"
 else
     printf "${grey}Nothing new to propagate.\n"

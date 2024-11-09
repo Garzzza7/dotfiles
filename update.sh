@@ -17,7 +17,8 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
-if [ "$(which i3)" ]; then
+if command -v i3 2>&1 >/dev/null
+then
     printf "${green}i3 found.\n"
     cp -r $HOME/.config/i3/* i3/
     cp -r $HOME/.config/i3status/* i3status/
@@ -25,28 +26,32 @@ else
     printf "${red}Omitting i3.\n"
 fi
 
-if [ "$(which emacs)" ]; then
+if command -v emacs 2>&1 >/dev/null
+then
     printf "${green}Emacs found.\n"
     cp -r $HOME/.emacs.d/* emacs/
 else
     printf "${red}Omitting Emacs.\n"
 fi
 
-if [ "$(which nvim)" ]; then
+if command -v nvim 2>&1 >/dev/null
+then
     printf "${green}Neovim found.\n"
     cp -r $HOME/.config/nvim/init.lua nvim/init.lua
 else
     printf "${red}Omitting Neovim.\n"
 fi
 
-if [ "$(which vim)" ]; then
+if command -v vim 2>&1 >/dev/null
+then
     printf "${green}Vim found.\n"
     cp -r $HOME/.vimrc vim/vimrc
 else
     printf "${red}Omitting Vim.\n"
 fi
 
-if [ "$(which code)" ]; then
+if command -v code 2>&1 >/dev/null
+then
     printf "${green}VSCode found.\n"
     cp -r $HOME/.config/Code/User/settings.json vscode/settings.json
     code --list-extensions > vscode/ext.txt
@@ -61,21 +66,24 @@ else
     printf "${red}Omitting OMZ.\n"
 fi
 
-if [ "$(which kitty)" ]; then
+if command -v kitty 2>&1 >/dev/null
+then
     printf "${green}Kitty found.\n"
     cp -r $HOME/.config/kitty/* kitty/
 else
     printf "${red}Omitting Kitty.\n"
 fi
 
-if [ "$(which lazygit)" ]; then
+if command -v lazygit 2>&1 >/dev/null
+then
     printf "${green}Lazygit found.\n"
     cp $HOME/.config/lazygit/config.yml lazygit/config.yml
 else
     printf "${red}Omitting Lazygit.\n"
 fi
 
-if [ "$(which bash)" ]; then
+if command -v bash 2>&1 >/dev/null
+then
     printf "${green}Bash found.\n"
     cp $HOME/.bashrc bash/bashrc
 else
@@ -88,4 +96,13 @@ if [ -d "$HOME/scripts" ]; then
 else
     printf "${red}Scripts does not exist.\n"
 fi
+
+if command -v mc 2>&1 >/dev/null
+then
+    printf "${green}Midnight Commander found.\n"
+    cp $HOME/.config/mc/ini mc/ini
+else
+    printf "${red}Omitting Midnight Commander.\n"
+fi
+
 printf "${grey}Done.\n"
