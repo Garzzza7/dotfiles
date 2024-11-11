@@ -188,6 +188,7 @@ require("lazy").setup({
 			local servers = {
 				clangd = {},
 				pyright = {},
+				-- basedpyright = {},
 				rust_analyzer = {},
 				bashls = {},
 				neocmake = {},
@@ -714,4 +715,18 @@ require("lazy").setup({
 			{ "<Leader>l", "<Cmd>MultipleCursorsLock<CR>", mode = { "n", "x" }, desc = "Lock virtual cursors" },
 		},
 	},
+	-- require("lazy").setup({
+	-- 	"neanias/everforest-nvim",
+	-- 	version = false,
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("everforest").setup({
+	-- 			background = "soft",
+	-- 			transparent_background_level = 0,
+	-- 			italics = true,
+	-- 			disable_italic_comments = false,
+	-- 		})
+	-- 	end,
+	-- }),
 }, {})
