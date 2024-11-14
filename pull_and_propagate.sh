@@ -56,8 +56,8 @@ if [ "$res" != "Already up to date." ]; then
     if command -v code 2>&1 >/dev/null
     then
         printf "${green}VSCode found.\n"
-        cp vscode/settings.json $HOME/.config/Code/User/settings.json
-        cat vscode/ext.txt | xargs -L 1 code --install-extension
+        # cp vscode/settings.json $HOME/.config/Code/User/settings.json
+        # cat vscode/ext.txt | xargs -L 1 code --install-extension
     else
         printf "${red}Omitting VSCode.\n"
     fi

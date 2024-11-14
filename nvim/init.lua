@@ -29,7 +29,10 @@ vim.opt.scrolloff = 10
 vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 vim.opt.hlsearch = true
-vim.o.background = "dark"
+
+vim.o.background = "light"
+vim.o.termguicolors = true
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 --vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -540,7 +543,7 @@ require("lazy").setup({
 	-- },
 	{
 		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
+		priority = 999,
 		config = true,
 		init = function()
 			require("gruvbox").setup({
@@ -561,7 +564,7 @@ require("lazy").setup({
 				invert_tabline = false,
 				invert_intend_guides = false,
 				inverse = true, -- invert background for search, diffs, statuslines and errors
-				contrast = "hard", -- can be "hard", "soft" or empty string
+				contrast = "", -- can be "hard", "soft" or empty string
 				palette_overrides = {},
 				overrides = {},
 				dim_inactive = false,

@@ -53,8 +53,8 @@ fi
 if command -v code 2>&1 >/dev/null
 then
     printf "${green}VSCode found.\n"
-    cp -r $HOME/.config/Code/User/settings.json vscode/settings.json
-    code --list-extensions > vscode/ext.txt
+    # cp -r $HOME/.config/Code/User/settings.json vscode/settings.json
+    # code --list-extensions > vscode/ext.txt
 else
     printf "${red}Omitting VSCode.\n"
 fi
