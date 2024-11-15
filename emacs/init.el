@@ -1,76 +1,42 @@
-;;; init.el --- Spacemacs Initialization File -*- no-byte-compile: t -*-
-;;
-;; Copyright (c) 2012-2024 Sylvain Benner & Contributors
-;;
-;; Author: Sylvain Benner <sylvain.benner@gmail.com>
-;; URL: https://github.com/syl20bnr/spacemacs
-;;
-;; This file is not part of GNU Emacs.
-;;
-;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-;;
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;; Basic Emacs Configuration with Relative Line Numbers and Built-in Color Scheme
 
+;; Enable relative line numbers
+(global-display-line-numbers-mode 1)         ;; Enable line numbers globally
+(setq display-line-numbers-type 'relative)  ;; Set to relative line numbers
 
-;; Without this comment emacs25 adds (package-initialize) here
-;; (package-initialize)
+;; Set a built-in color theme (Emacs comes with several built-in themes)
+(load-theme 'wombat t)  ;; Load the 'wombat' color theme (dark)
 
-;; Avoid garbage collection during startup.
-;; see `SPC h . dotspacemacs-gc-cons' for more info
+;; Enable line wrapping
+(global-visual-line-mode 1)
 
-(defconst emacs-start-time (current-time))
-(setq gc-cons-threshold 402653184 gc-cons-percentage 0.6)
-(load (concat (file-name-directory load-file-name) "core/core-load-paths")
-      nil (not init-file-debug))
-(load (concat spacemacs-core-directory "core-versions")
-      nil (not init-file-debug))
-(load (concat spacemacs-core-directory "core-dumper")
-      nil (not init-file-debug))
+;; Set default font (optional)
+(set-frame-font "Monaco-12" nil t)
 
-;; Remove compiled core files if they become stale or Emacs version has changed.
-(load (concat spacemacs-core-directory "core-compilation")
-      nil (not init-file-debug))
-(load spacemacs--last-emacs-version-file t (not init-file-debug))
-(when (or (not (string= spacemacs--last-emacs-version emacs-version))
-          (> 0 (spacemacs//dir-byte-compile-state
-                (concat spacemacs-core-directory "libs/"))))
-  (spacemacs//remove-byte-compiled-files-in-dir spacemacs-core-directory))
-;; Update saved Emacs version.
-(unless (string= spacemacs--last-emacs-version emacs-version)
-  (spacemacs//update-last-emacs-version))
+;; Enable column number display in mode line
+(column-number-mode 1)
 
-(if (not (version<= spacemacs-emacs-min-version emacs-version))
-    (error (concat "Your version of Emacs (%s) is too old. "
-                   "Spacemacs requires Emacs version %s or above.")
-           emacs-version spacemacs-emacs-min-version)
-  ;; Disabling file-name-handlers for a speed boost during init might seem like
-  ;; a good idea but it causes issues like
-  ;; https://github.com/syl20bnr/spacemacs/issues/11585 "Symbol's value as
-  ;; variable is void: \213" when emacs is not built having:
-  ;; `--without-compress-install`
-  (let ((please-do-not-disable-file-name-handler-alist nil))
-    (require 'core-spacemacs)
-    (spacemacs/dump-restore-load-path)
-    (configuration-layer/load-lock-file)
-    (spacemacs/init)
-    (configuration-layer/stable-elpa-init)
-    (configuration-layer/load)
-    (spacemacs-buffer/display-startup-note)
-    (spacemacs/setup-startup-hook)
-    (spacemacs/dump-eval-delayed-functions)
-    (when (and dotspacemacs-enable-server (not (spacemacs-is-dumping-p)))
-      (require 'server)
-      (when dotspacemacs-server-socket-dir
-        (setq server-socket-dir dotspacemacs-server-socket-dir))
-      (unless (server-running-p)
-        (message "Starting a server...")
-        (server-start)))))
+;; Enable matching parentheses highlighting
+(show-paren-mode 1)
+
+;; Display the time in the mode line
+(display-time-mode 1)
+
+;; Set a custom splash screen message (optional)
+(setq inhibit-splash-screen t)  ;; Disable default splash screen
+(setq initial-scratch-message ";; Welcome to Emacs! Happy coding.\n\n")
+
+;; Enable clipboard support (optional)
+(setq select-enable-clipboard t)
+
+;; Set the default indentation style (optional)
+(setq-default tab-width 4)
+(setq-default indent-tabs-mode nil)  ;; Use spaces instead of tabs
+
+;; Disable startup message
+(setq inhibit-startup-message t)
+
+;; Custom key bindings
+(global-set-key (kbd "C-x C-b") 'ibuffer)  ;; Use ibuffer instead of default buffer list
+(global-set-key (kbd "C-x C-c") 'save-buffers-kill-terminal)  ;; Save and quit shortcut
+

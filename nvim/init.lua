@@ -25,6 +25,7 @@ vim.opt.listchars = { tab = "> ", trail = "_", nbsp = "␣" }
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
+
 --syncronizing clipboard between neovim and the system, in order for this to work xclip has to be installed
 vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
