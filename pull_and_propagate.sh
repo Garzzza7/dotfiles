@@ -19,6 +19,7 @@ normal=$(tput sgr0)
 
 res=$(git pull)
 if [ "$res" != "Already up to date." ]; then
+    ./download.sh
     printf "${grey}Changes detected.\n"
     if command -v i3 2>&1 >/dev/null
     then
