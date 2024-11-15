@@ -7,6 +7,11 @@
 ;; Set a built-in color theme (Emacs comes with several built-in themes)
 (load-theme 'wombat t)  ;; Load the 'wombat' color theme (dark)
 
+;; Turn off toolbar scrollbar and menubar
+(menu-bar-mode -1) 
+(toggle-scroll-bar -1) 
+(tool-bar-mode -1) 
+
 ;; Enable line wrapping
 (global-visual-line-mode 1)
 
