@@ -5,7 +5,8 @@
 (setq display-line-numbers-type 'relative)  ;; Set to relative line numbers
 
 ;; Set a built-in color theme (Emacs comes with several built-in themes)
-(load-theme 'wombat t)  ;; Load the 'wombat' color theme (dark)
+;; Load the 'wombat' color theme (dark)
+(load-theme 'wombat t)  
 
 ;; Turn off toolbar scrollbar and menubar
 (menu-bar-mode -1) 
