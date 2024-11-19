@@ -20,96 +20,96 @@ normal=$(tput sgr0)
 res=$(git pull)
 if [ "$res" != "Already up to date." ]; then
     ./download.sh
-    printf "${grey}Changes detected.\n"
+    printf "${grey}Changes detected.\n${normal}"
     if command -v i3 2>&1 >/dev/null
     then
-        printf "${green}i3 found.\n"
+        printf "${green}i3 found.\n${normal}"
         cp i3/* $HOME/.config/i3/
         cp i3status/* $HOME/.config/i3status/
     else
-        printf "${red}Omitting i3.\n"
+        printf "${red}Omitting i3.\n${normal}"
     fi
 
     if command -v emacs 2>&1 >/dev/null
     then
-        printf "${green}Emacs found.\n"
+        printf "${green}Emacs found.\n${normal}"
         cp emacs/* $HOME/.emacs.d/
     else
-        printf "${red}Omitting Emacs.\n"
+        printf "${red}Omitting Emacs.\n${normal}"
     fi
 
     if command -v nvim 2>&1 >/dev/null
     then
-        printf "${green}Neovim found.\n"
+        printf "${green}Neovim found.\n${normal}"
         cp nvim/* $HOME/.config/nvim/
     else
-        printf "${red}Omitting Neovim.\n"
+        printf "${red}Omitting Neovim.\n${normal}"
     fi
 
     if command -v vim 2>&1 >/dev/null
     then
-        printf "${green}Vim found.\n"
+        printf "${green}Vim found.\n${normal}"
         cp vim/vimrc	$HOME/.vimrc
     else
-        printf "${red}Omitting Vim.\n"
+        printf "${red}Omitting Vim.\n${normal}"
     fi
 
     if command -v code 2>&1 >/dev/null
     then
-        printf "${green}VSCode found.\n"
+        printf "${green}VSCode found.\n${normal}"
         # cp vscode/settings.json $HOME/.config/Code/User/settings.json
         # cat vscode/ext.txt | xargs -L 1 code --install-extension
     else
-        printf "${red}Omitting VSCode.\n"
+        printf "${red}Omitting VSCode.\n${normal}"
     fi
 
     if [ -f $HOME/.zshrc ]; then
-        printf "${green}OMZ found.\n"
+        printf "${green}OMZ found.\n${normal}"
         cp omz/zshrc $HOME/.zshrc
     else
-        printf "${red}Omitting OMZ.\n"
+        printf "${red}Omitting OMZ.\n${normal}"
     fi
 
     if command -v kitty 2>&1 >/dev/null
     then
-        printf "${green}Kitty found.\n"
+        printf "${green}Kitty found.\n${normal}"
         cp kitty/* $HOME/.config/kitty/
     else
-        printf "${red}Omitting Kitty.\n"
+        printf "${red}Omitting Kitty.\n${normal}"
     fi
 
     if command -v lazygit 2>&1 >/dev/null
     then
-        printf "${green}Lazygit found.\n"
+        printf "${green}Lazygit found.\n${normal}"
         cp lazygit/config.yml $HOME/.config/lazygit/config.yml
     else
-        printf "${red}Omitting Lazygit.\n"
+        printf "${red}Omitting Lazygit.\n${normal}"
     fi
 
     if command -v bash 2>&1 >/dev/null
     then
-        printf "${green}Bash found.\n"
+        printf "${green}Bash found.\n${normal}"
         cp bash/bashrc $HOME/.bashrc
     else
-        printf "${red}Omitting Bash.\n"
+        printf "${red}Omitting Bash.\n${normal}"
     fi
 
     if [ -d "$HOME/scripts" ]; then
-        printf "${green}Scripts found.\n"
+        printf "${green}Scripts found.\n${normal}"
         cp  scripts/* $HOME/scripts/
     else
-        printf "${red}Scripts does not exist.\n"
+        printf "${red}Scripts does not exist.\n${normal}"
     fi
 
     if command -v mc 2>&1 >/dev/null
     then
-        printf "${green}Midnight Commander found.\n"
+        printf "${green}Midnight Commander found.\n${normal}"
         cp mc/ini $HOME/.config/mc/ini
     else
-        printf "${red}Omitting Midnight Commander.\n"
+        printf "${red}Omitting Midnight Commander.\n${normal}"
     fi
 
-    printf "${grey}Done.\n"
+    printf "${grey}Done.\n${normal}"
 else
-    printf "${grey}Nothing new to propagate.\n"
+    printf "${grey}Nothing new to propagate.\n${normal}"
 fi
