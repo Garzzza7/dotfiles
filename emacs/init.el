@@ -1,12 +1,26 @@
-;; Basic Emacs Configuration with Relative Line Numbers and Built-in Color Scheme
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("nongnu" . "https://elpa.nongnu.org/nongnu/")
+        ("melpa" . "https://melpa.org/packages/")
+        ))
+
+;; Initialize package system
+(package-initialize)
+
+;; Refresh package contents (if not already done)
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(unless (package-installed-p 'gruvbox-theme)
+  (package-install 'gruvbox-theme))
+
 
 ;; Enable relative line numbers
 (global-display-line-numbers-mode 1)         ;; Enable line numbers globally
 (setq display-line-numbers-type 'relative)  ;; Set to relative line numbers
 
-;; Set a built-in color theme (Emacs comes with several built-in themes)
-;; Load the 'wombat' color theme (dark)
-(load-theme 'wombat t)  
+;; Set a built-in color theme 
+(load-theme 'gruvbox-light-medium t)  
 
 ;; Turn off toolbar scrollbar and menubar
 (menu-bar-mode -1) 
@@ -27,7 +41,7 @@
 
 ;; Set a custom splash screen message (optional)
 (setq inhibit-splash-screen t)  ;; Disable default splash screen
-(setq initial-scratch-message ";; Welcome to Emacs! Happy coding.\n\n")
+(setq initial-scratch-message ";; UwU.\n\n")
 
 ;; Enable clipboard support (optional)
 (setq select-enable-clipboard t)
