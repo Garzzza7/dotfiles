@@ -16,9 +16,6 @@
 ;; Enable line wrapping
 (global-visual-line-mode 1)
 
-;; Set default font (optional)
-(set-frame-font "Monaco-12" nil t)
-
 ;; Enable column number display in mode line
 (column-number-mode 1)
 
