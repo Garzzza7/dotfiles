@@ -49,6 +49,7 @@
 ;; Set the default indentation style (optional)
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)  ;; Use spaces instead of tabs
+(setq font-lock-maximum-decoration t)
 
 ;; Disable startup message
 (setq inhibit-startup-message t)
