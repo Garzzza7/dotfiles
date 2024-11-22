@@ -37,7 +37,7 @@ fi
 if command -v nvim 2>&1 >/dev/null
 then
     printf "${green}Neovim found.\n${normal}"
-    cp nvim/* $HOME/.config/nvim/
+    cp nvim/ $HOME/.config/nvim/
 else
     printf "${red}Omitting Neovim.\n${normal}"
 fi
