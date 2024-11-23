@@ -34,4 +34,4 @@ vim.opt.hlsearch = true
 vim.o.termguicolors = true
 
 vim.o.background = "dark"
-vim.cmd("colorscheme default")
+vim.cmd("colorscheme everforest")
