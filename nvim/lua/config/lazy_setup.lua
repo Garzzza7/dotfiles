@@ -284,7 +284,7 @@ require("lazy").setup({
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		lazy = false,
+		lazy = true,
 		init = function()
 			local function_names = ""
 			local line_following_the_cursor = ""
@@ -402,6 +402,7 @@ require("lazy").setup({
 	},
 	{
 		"EdenEast/nightfox.nvim",
+		lazy = true,
 		init = function()
 			local palettes = {
 				all = {
@@ -491,8 +492,9 @@ require("lazy").setup({
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
-		priority = 999,
+		priority = 1000,
 		config = true,
+		lazy = true,
 		init = function()
 			require("gruvbox").setup({
 				terminal_colors = true, -- add neovim terminal colors
@@ -612,6 +614,7 @@ require("lazy").setup({
 		"ej-shafran/compile-mode.nvim",
 		-- HARDCODED TAG , CHECK THE REPO FOR THE NEWEST VERSION
 		tag = "v5.3.2",
+		lazy = true,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{ "m00qek/baleia.nvim", tag = "v1.3.0" },
@@ -685,13 +688,13 @@ require("lazy").setup({
 	},
 	{
 		"folke/tokyonight.nvim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		opts = {},
 	},
 	{
 		"Tsuzat/NeoSolarized.nvim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 	},
 }, {})

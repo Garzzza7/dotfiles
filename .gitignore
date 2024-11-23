@@ -45,4 +45,3 @@ build/*
 *.pdf
 *~
 lazygit
-lazy-lock.json
