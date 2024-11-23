@@ -153,7 +153,6 @@ require("lazy").setup({
 				glsl_analyzer = {},
 				hls = {},
 				ocamllsp = {},
-				ocamlformat = {},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -173,6 +172,7 @@ require("lazy").setup({
 				"black",
 				"clang-format",
 				"beautysh",
+				"ocamlformat",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
