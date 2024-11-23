@@ -41,7 +41,7 @@ if [ "$res" != "Already up to date." ]; then
     if command -v nvim 2>&1 >/dev/null
     then
         printf "${green}Neovim found.\n${normal}"
-        cp nvim/ $HOME/.config/nvim/
+        cp -r nvim/* $HOME/.config/nvim/
     else
         printf "${red}Omitting Neovim.\n${normal}"
     fi
