@@ -3,7 +3,7 @@ return {
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		lazy = true,
+		lazy = false,
 		init = function()
 			local function_names = ""
 			local line_following_the_cursor = ""
@@ -121,7 +121,7 @@ return {
 	},
 	{
 		"EdenEast/nightfox.nvim",
-		lazy = true,
+		lazy = false,
 		init = function()
 			local palettes = {
 				all = {
@@ -213,7 +213,7 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = true,
-		lazy = true,
+		lazy = false,
 		init = function()
 			require("gruvbox").setup({
 				terminal_colors = true, -- add neovim terminal colors
@@ -262,23 +262,23 @@ return {
 	},
 	{
 		"folke/tokyonight.nvim",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
 		opts = {},
 	},
 	{
 		"Tsuzat/NeoSolarized.nvim",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
 	},
 	{
 		"scottmckendry/cyberdream.nvim",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
 	},
 	{
 		"rebelot/kanagawa.nvim",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
 	},
 }
