@@ -6,7 +6,7 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			{
-				"gj-hui/fidget.nvim",
+				"j-hui/fidget.nvim",
 				tag = "v1.4.5",
 				opts = {},
 				init = function()
