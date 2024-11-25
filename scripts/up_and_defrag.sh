@@ -44,6 +44,8 @@ toilet --g nvim
 nvim --headless "+Lazy! update" +qa
 nvim --headless "+TSUpdate" +qa
 printf "\n"
+nvim --headless "+MasonToolsUpdate" +qa
+printf "\n"
 nvim --headless "+MasonUpdate" +qa
 printf "\n"
 echo "⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄

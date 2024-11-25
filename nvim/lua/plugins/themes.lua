@@ -239,7 +239,6 @@ return {
 				dim_inactive = false,
 				transparent_mode = false,
 			})
-			-- vim.o.background = "dark"
 		end,
 	},
 	{
