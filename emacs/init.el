@@ -20,7 +20,7 @@
 (setq display-line-numbers-type 'relative)  ;; Set to relative line numbers
 
 ;; Set a built-in color theme 
-(load-theme 'gruvbox-light-medium t)  
+(load-theme 'gruvbox-dark-medium t)  
 
 ;; Turn off toolbar scrollbar and menubar
 (menu-bar-mode -1) 

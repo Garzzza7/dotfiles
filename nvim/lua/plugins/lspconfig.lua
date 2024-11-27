@@ -180,6 +180,7 @@ return {
 				asmfmt = {},
 				-- gopls = {},
 				glsl_analyzer = {},
+				html = {},
 				hls = {},
 				ocamllsp = {},
 				lua_ls = {

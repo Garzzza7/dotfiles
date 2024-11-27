@@ -95,6 +95,7 @@ alias bsh='/home/pc/.local/share/nvim/mason/bin/beautysh'
 alias gf2='/home/pc/gf/gf2'
 alias mc='EDITOR=nvim mc'
 alias emacs='emacs --no-window-system'
+alias nv='nvim'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
