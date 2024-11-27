@@ -1,6 +1,7 @@
 require("config.keymaps")
 require("config.lazy")
 require("config.classic")
+require("config.apperance")
 
 -- require("plugins.cmp")
 --
@@ -25,4 +26,3 @@ require("config.classic")
 -- require("plugins.treesitter")
 --
 -- require("plugins.themes")
-

@@ -1,9 +1,5 @@
 vim.g.netrw_liststyle = 3
 
-vim.g.netrw_sort_by = "mtime"
-
-vim.g.netrw_banner = 0
-
 vim.g.have_nerd_font = false
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -29,7 +25,3 @@ vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 vim.opt.hlsearch = true
 
-vim.o.termguicolors = true
-
-vim.o.background = "dark"
-vim.cmd("colorscheme everforest")
