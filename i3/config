@@ -226,10 +226,10 @@ bar {
         tray_output primary
         workspace_buttons yes
         font pango:DejaVu Sans Mono 10
-        mode dock 
+        mode hide 
         hidden_state hide
-        # alt key 
-        modifier none # Mod1 -> alt
+        # alt+win key 
+        modifier Mod1+Mod4     
         tray_padding 0
         workspace_min_width 30
         strip_workspace_numbers no
