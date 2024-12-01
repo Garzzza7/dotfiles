@@ -38,7 +38,8 @@ client.background       $transp
 set $ARTIST $(exec_always playerctl metadata artist)
 
 # KEYBOARD LAYOUT
-exec "setxkbmap -layout pl"
+bindsym $mod+Shift+Ctrl+e exec setxkbmap -layout us
+bindsym $mod+Shift+Ctrl+p exec setxkbmap -layout pl
 # exec "setxkbmap -option 'grp:ctrl_space_toggle'"
 
 exec --no-startup-id dex --autostart --environment i3
@@ -225,10 +226,10 @@ bar {
         tray_output primary
         workspace_buttons yes
         font pango:DejaVu Sans Mono 10
-        mode hide 
+        mode dock 
         hidden_state hide
         # alt key 
-        modifier Mod1
+        modifier none # Mod1 -> alt
         tray_padding 0
         workspace_min_width 30
         strip_workspace_numbers no
