@@ -37,6 +37,9 @@ client.background       $transp
 
 set $ARTIST $(exec_always playerctl metadata artist)
 
+# KEYBOARD LAYOUT
+exec "setxkbmap -layout pl"
+# exec "setxkbmap -option 'grp:ctrl_space_toggle'"
 
 exec --no-startup-id dex --autostart --environment i3
 
