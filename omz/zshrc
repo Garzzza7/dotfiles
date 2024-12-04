@@ -113,6 +113,7 @@ alias gf2='/home/pc/gf/gf2'
 alias mc='EDITOR=nvim mc'
 alias emacs='emacs -nw'
 alias nv='nvim'
+alias :q='exit'
 
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin

@@ -1,7 +1,6 @@
 {
   "window.zoomLevel": 0,
   "material-icon-theme.hidesExplorerArrows": true,
-  "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
   "workbench.iconTheme": "vs-seti",
   "workbench.statusBar.visible": true,
   "workbench.editor.showTabs": "multiple",
@@ -42,7 +41,7 @@
   "editor.scrollbar.vertical": "hidden",
   "editor.overviewRulerBorder": true,
   "editor.cursorBlinking": "solid",
-  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSmoothCaretAnimation": "off",
   "editor.tabSize": 4,
   "editor.detectIndentation": true,
   "editor.fontFamily": "JetBrains Mono",
