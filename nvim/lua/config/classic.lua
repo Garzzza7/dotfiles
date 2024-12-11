@@ -25,3 +25,7 @@ vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 vim.opt.hlsearch = true
 
+-- keybind for sourcing
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<space>x", ":.lua<CR>")
+vim.keymap.set("v", "<space>x", ":lua<CR>")
