@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone https://git.savannah.gnu.org/git/emacs.git $HOME/emacs
+git clone --depth 1 https://git.savannah.gnu.org/git/emacs.git $HOME/emacs
 
 cd $HOME/emacs
 

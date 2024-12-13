@@ -1,5 +1,6 @@
 "highlight Normal ctermfg=black ctermbg=white
 "highlight LineNr ctermfg=black ctermbg=white
+set number
 set relativenumber
 syntax on
  "let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
