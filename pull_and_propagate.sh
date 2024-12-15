@@ -21,6 +21,15 @@ res=$(git pull)
 if [ "$res" != "Already up to date." ]; then
     ./download.sh
     printf "${grey}Changes detected.\n${normal}"
+
+    if command -v subl 2>&1 >/dev/null
+    then
+        printf "${green}Sublime Text found.\n${normal}"
+        cp sublime/Preferences.sublime-settings $HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings
+    else
+        printf "${red}Omitting Sublime Text.\n${normal}"
+    fi
+
     if command -v i3 2>&1 >/dev/null
     then
         printf "${green}i3 found.\n${normal}"

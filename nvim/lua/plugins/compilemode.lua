@@ -2,7 +2,7 @@ return {
 	{
 		"ej-shafran/compile-mode.nvim",
 		-- HARDCODED TAG , CHECK THE REPO FOR THE NEWEST VERSION
-		tag = "v5.3.2",
+		tag = "v5.4.0",
 		lazy = false,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
