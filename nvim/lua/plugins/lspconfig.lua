@@ -172,7 +172,6 @@ return {
 			local servers = {
 				clangd = {},
 				pyright = {},
-				-- basedpyright = {},
 				rust_analyzer = {},
 				bashls = {},
 				neocmake = {},
@@ -183,6 +182,7 @@ return {
 				html = {},
 				hls = {},
 				ocamllsp = {},
+				vimls = {},
 				lua_ls = {
 					settings = {
 						Lua = {
