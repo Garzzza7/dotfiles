@@ -114,6 +114,7 @@ alias mc='EDITOR=nvim mc'
 alias emacs='emacs -nw'
 alias nv='nvim'
 alias :q='exit'
+alias lg='lazygit'
 
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin
