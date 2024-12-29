@@ -175,13 +175,13 @@ return {
 				rust_analyzer = {},
 				bashls = {},
 				neocmake = {},
-				asm_lsp = {},
-				asmfmt = {},
+				-- asm_lsp = {},
+				-- asmfmt = {},
 				-- gopls = {},
 				glsl_analyzer = {},
 				html = {},
 				hls = {},
-				ocamllsp = {},
+				-- ocamllsp = {},
 				vimls = {},
 				lua_ls = {
 					settings = {
@@ -202,7 +202,7 @@ return {
 				"black",
 				"clang-format",
 				"beautysh",
-				"ocamlformat",
+				-- "ocamlformat",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
