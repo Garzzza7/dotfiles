@@ -21,6 +21,7 @@ if command -v neofetch 2>&1 >/dev/null
 then
     printf "${green}Neofetch found.\n${normal}"
     cp -r $HOME/.config/neofetch/config.conf neofetch/config.conf
+    cp -r $HOME/.config/neofetch/logo.txt neofetch/logo.txt
 else
     printf "${red}Omitting Neofetch.\n${normal}"
 fi

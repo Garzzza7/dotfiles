@@ -26,6 +26,7 @@ if [ "$res" != "Already up to date." ]; then
     then
         printf "${green}Neofetch found.\n${normal}"
         cp neofetch/config.conf $HOME/.config/neofetch/config.conf
+        cp neofetch/logo.txt $HOME/.config/neofetch/logo.txt
     else
         printf "${red}Omitting Neofetch.\n${normal}"
     fi
