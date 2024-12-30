@@ -17,6 +17,14 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
+if command -v neofetch 2>&1 >/dev/null
+then
+    printf "${green}Neofetch found.\n${normal}"
+    cp -r $HOME/.config/neofetch/config.conf neofetch/config.conf
+else
+    printf "${red}Omitting Neofetch.\n${normal}"
+fi
+
 if command -v subl 2>&1 >/dev/null
 then
     printf "${green}Sublime Text found.\n${normal}"

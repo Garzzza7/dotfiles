@@ -22,6 +22,14 @@ if [ "$res" != "Already up to date." ]; then
     ./download.sh
     printf "${grey}Changes detected.\n${normal}"
 
+    if command -v neofetch 2>&1 >/dev/null
+    then
+        printf "${green}Neofetch found.\n${normal}"
+        cp neofetch/config.conf $HOME/.config/neofetch/config.conf
+    else
+        printf "${red}Omitting Neofetch.\n${normal}"
+    fi
+
     if command -v subl 2>&1 >/dev/null
     then
         printf "${green}Sublime Text found.\n${normal}"
