@@ -108,8 +108,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias bsh='/home/pc/.local/share/nvim/mason/bin/beautysh'
-alias gf2='/home/pc/gf/gf2'
+
+alias bsh='$HOME/.local/share/nvim/mason/bin/beautysh *.sh'
+alias gf2='$HOME/gf/gf2'
 alias mc='EDITOR=nvim mc'
 alias emacs='emacs -nw'
 alias nv='nvim'
