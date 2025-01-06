@@ -20,6 +20,7 @@ set paste
 set is hls
 set incsearch
 set hlsearch
+set wildmenu
 if maparg('<C-L>', 'n') ==# ''
 	nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
