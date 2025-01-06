@@ -5,4 +5,4 @@ vim.g.netrw_banner = 0
 vim.o.termguicolors = true
 
 vim.o.background = "dark"
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme sitruuna")

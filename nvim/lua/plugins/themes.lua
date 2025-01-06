@@ -280,4 +280,9 @@ return {
 		lazy = false,
 		priority = 1000,
 	},
+	{
+		"eemed/sitruuna.vim",
+		lazy = false,
+		priority = 1000,
+	},
 }
