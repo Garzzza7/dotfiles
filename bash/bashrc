@@ -99,6 +99,10 @@ alias nv='nvim'
 alias :q='exit'
 alias lg='lazygit'
 alias du='du -h'
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias gc='git commit'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

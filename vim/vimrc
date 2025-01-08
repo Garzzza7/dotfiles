@@ -13,8 +13,6 @@ set tabpagemax=1000
 set ruler
 set nojoinspaces
 set shiftround
-set relativenumber
-set nonumber
 set showcmd 
 set paste 
 set is hls

@@ -117,6 +117,10 @@ alias nv='nvim'
 alias :q='exit'
 alias lg='lazygit'
 alias du='du -h'
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias gc='git commit'
 
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin
