@@ -5,7 +5,8 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 set number
 set relativenumber
-syntax on
+syntax enable
+filetype plugin indent on
 set nocompatible
 set termguicolors
 set background=dark
@@ -24,7 +25,11 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 call plug#begin()
 Plug 'eemed/sitruuna.vim'
-Plug 'sheerun/vim-polyglot'
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 colorscheme sitruuna
 if has("autocmd")
@@ -37,5 +42,4 @@ if has("autocmd")
 				\ endif
 	au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
-
 :tnoremap <Esc> <C-\><C-n>

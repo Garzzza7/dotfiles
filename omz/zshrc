@@ -119,6 +119,7 @@ alias lg='lazygit'
 alias du='du -h'
 alias gs='git status'
 alias ga='git add'
+alias gu='git pull'
 alias gp='git push'
 alias gc='git commit'
 

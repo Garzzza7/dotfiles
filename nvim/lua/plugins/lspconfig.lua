@@ -7,7 +7,7 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			{
 				"j-hui/fidget.nvim",
-				tag = "v1.4.5",
+				tag = "v1.5.0",
 				opts = {},
 				init = function()
 					require("fidget").setup({
@@ -180,7 +180,7 @@ return {
 				-- gopls = {},
 				glsl_analyzer = {},
 				html = {},
-				hls = {},
+				-- hls = {},
 				-- ocamllsp = {},
 				vimls = {},
 				lua_ls = {
