@@ -30,6 +30,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'good5dog5/arm.vim'
+Plug 'vim-scripts/asmx86_64'
 call plug#end()
 colorscheme sitruuna
 if has("autocmd")
