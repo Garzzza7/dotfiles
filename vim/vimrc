@@ -4,6 +4,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 set number
+let g:netrw_liststyle=3
 set relativenumber
 syntax enable
 filetype plugin indent on
@@ -20,6 +21,7 @@ set is hls
 set incsearch
 set hlsearch
 set wildmenu
+set hidden
 if maparg('<C-L>', 'n') ==# ''
 	nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
@@ -32,6 +34,11 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'good5dog5/arm.vim'
 Plug 'vim-scripts/asmx86_64'
+Plug 'tbastos/vim-lua'
+Plug 'morhetz/gruvbox'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'tikhomirov/vim-glsl'
+Plug 'tpope/vim-commentary'
 call plug#end()
 colorscheme sitruuna
 if has("autocmd")
@@ -45,3 +52,5 @@ if has("autocmd")
 	au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
 :tnoremap <Esc> <C-\><C-n>
+:map <C-f> :FZF<CR>
+:map <F2> :echo 'Current time is ' . strftime('%c')<CR>
