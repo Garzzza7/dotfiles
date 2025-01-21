@@ -218,6 +218,7 @@ return {
 
 			-- local lspconfig = require("lspconfig")
 			-- lspconfig.rust_analyzer.setup({})
+			-- https://rust-analyzer.github.io/manual.html
 			-- lspconfig.pyright.setup({})
 			-- lspconfig.clangd.setup({})
 			-- lspconfig.lua_ls.setup({})

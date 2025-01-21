@@ -33,6 +33,11 @@ sub install_neocmake(){
 }
 
 sub install_lua_ls(){
+	system "mkdir $path/lsps/lua_ls";
+	system "curl -L https://github.com/LuaLS/lua-language-server/releases/download/3.13.5/lua-language-server-3.13.5-linux-x64.tar.gz --output lua.tar.gz";
+	system "tar -xvf lua.tar.gz -C $path/lsps/lua_ls";
+	system "rm lua.tar.gz";
+	system "ln -s $path/lsps/lua_ls/bin/lua-language-server $path/symlinks/lua-language-server";
 }
 
 sub install_haskell_ls(){
@@ -49,5 +54,6 @@ sub install_vim_ls(){
 
 print "INSTALLING USEFULL LANGUAGE SERVERS !!!\n";
 prepare();
-install_pyright();
-install_rust_analyzer();
+#install_pyright();
+#install_rust_analyzer();
+install_lua_ls();
