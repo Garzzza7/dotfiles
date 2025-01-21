@@ -129,6 +129,7 @@ alias rm='trash-put'
 
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/symlinks
 #zstyle ':completion:*' menu select
 zstyle ':completion:*:processes' command 'NOCOLORS=1 ps -U $(whoami)|sed "/ps/d"'
 zstyle ':completion:*:processes' insert-ids menu yes select
