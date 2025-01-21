@@ -215,6 +215,13 @@ return {
 					end,
 				},
 			})
+
+			-- local lspconfig = require("lspconfig")
+			-- lspconfig.rust_analyzer.setup({})
+			-- lspconfig.pyright.setup({})
+			-- lspconfig.clangd.setup({})
+			-- lspconfig.lua_ls.setup({})
+			-- https://luals.github.io/#install
 		end,
 	},
 }

@@ -125,6 +125,7 @@ alias gc='git commit'
 alias pp='powerprofilesctl set performance'
 alias pb='powerprofilesctl set balanced'
 alias pps='powerprofilesctl set power-saver'
+alias rm='trash-put'
 
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin
