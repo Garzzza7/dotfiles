@@ -16,12 +16,17 @@ sub install_clangd(){
 }
 
 sub install_rust_analyzer(){
+	system "mkdir $path/lsps/rust-analyzer";
+	system "curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > $path/lsps/rust-analyzer/rust-analyzer";
+	system "chmod +x $path/lsps/rust-analyzer/rust-analyzer";
+	system "ln -s $path/lsps/rust-analyzer/rust-analyzer $path/symlinks/rust-analyzer";
+	
 }
 
 sub install_pyright(){
 	system "npm install -g --prefix $path/lsps/pyright pyright";
-	system "ln -s $path/lsps/pyright/lib/node_modules/pyright/index.js ~/symlinks/pyright";
-	system "ln -s $path/lsps/pyright/lib/node_modules/pyright/langserver.index.js ~/symlinks/pyright-langserver";
+	system "ln -s $path/lsps/pyright/lib/node_modules/pyright/index.js $path/symlinks/pyright";
+	system "ln -s $path/lsps/pyright/lib/node_modules/pyright/langserver.index.js $path/symlinks/pyright-langserver";
 }
 
 sub install_neocmake(){
@@ -43,5 +48,6 @@ sub install_vim_ls(){
 }
 
 print "INSTALLING USEFULL LANGUAGE SERVERS !!!\n";
-#prepare();
+prepare();
 install_pyright();
+install_rust_analyzer();
