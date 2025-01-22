@@ -39,8 +39,9 @@ sub install_neocmake(){
 }
 
 sub install_lua_ls(){
+	my $version = "3.13.5";
 	system "mkdir $path/lsps/lua_ls";
-	system "curl -L https://github.com/LuaLS/lua-language-server/releases/download/3.13.5/lua-language-server-3.13.5-linux-x64.tar.gz --output lua.tar.gz";
+	system "curl -L https://github.com/LuaLS/lua-language-server/releases/download/$version/lua-language-server-$version-linux-x64.tar.gz --output lua.tar.gz";
 	system "tar -xvf lua.tar.gz -C $path/lsps/lua_ls";
 	system "rm lua.tar.gz";
 	system "ln -s $path/lsps/lua_ls/bin/lua-language-server $path/symlinks/lua-language-server";
