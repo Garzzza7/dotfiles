@@ -219,11 +219,41 @@ return {
 			-- local lspconfig = require("lspconfig")
 			-- lspconfig.rust_analyzer.setup({})
 			-- https://rust-analyzer.github.io/manual.html
+			--
 			-- lspconfig.pyright.setup({})
+			--
 			-- lspconfig.clangd.setup({})
 			-- https://clangd.llvm.org/installation.html
+			--
 			-- lspconfig.lua_ls.setup({})
 			-- https://luals.github.io/#install
+			--
+			-- if not require("lspconfig.configs").neocmake then
+			-- 	require("lspconfig.configs").neocmake = {
+			-- 		default_config = {
+			-- 			cmd = { "neocmakelsp", "--stdio" },
+			-- 			filetypes = { "cmake" },
+			-- 			root_dir = function(fname)
+			-- 				---@diagnostic disable-next-line: deprecated
+			-- 				return lspconfig.util.find_git_ancestor(fname)
+			-- 			end,
+			-- 			single_file_support = true, -- suggested
+			-- 			---@diagnostic disable-next-line: undefined-global
+			-- 			on_attach = on_attach, -- on_attach is the on_attach function you defined
+			-- 			init_options = {
+			-- 				format = {
+			-- 					enable = true,
+			-- 				},
+			-- 				lint = {
+			-- 					enable = true,
+			-- 				},
+			-- 				scan_cmake_in_package = true, -- default is true
+			-- 			},
+			-- 		},
+			-- 	}
+			-- 	lspconfig.neocmake.setup({})
+			-- end
+			-- https://github.com/neocmakelsp/neocmakelsp?tab=readme-ov-file#installation
 		end,
 	},
 }

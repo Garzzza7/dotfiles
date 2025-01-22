@@ -36,6 +36,9 @@ sub install_pyright(){
 }
 
 sub install_neocmake(){
+	system "mkdir $path/lsps/neocmake";
+	system "cargo install --root $path/lsps/neocmake neocmakelsp";
+	system "ln -s $path/lsps/neocmake/bin/neocmakelsp $path/symlinks/neocmakelsp";
 }
 
 sub install_lua_ls(){
@@ -65,3 +68,4 @@ install_pyright();
 install_rust_analyzer();
 install_lua_ls();
 install_clangd();
+install_neocmake();
