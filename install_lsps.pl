@@ -13,6 +13,12 @@ sub prepare(){
 }
 
 sub install_clangd(){
+	my $version = "19.1.2";
+	system "mkdir $path/lsps/clangd";
+	system "wget -P $path/lsps/clangd https://github.com/clangd/clangd/releases/download/$version/clangd-linux-$version.zip";
+	system "unzip ~/lsps/clangd/clangd-linux-$version.zip -d ~/lsps/clangd";
+	system "rm ~/lsps/clangd/clangd-linux-$version.zip";
+	system "ln -s $path/lsps/clangd/clangd_$version/bin/clangd $path/symlinks/clangd";
 }
 
 sub install_rust_analyzer(){
@@ -20,7 +26,7 @@ sub install_rust_analyzer(){
 	system "curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > $path/lsps/rust-analyzer/rust-analyzer";
 	system "chmod +x $path/lsps/rust-analyzer/rust-analyzer";
 	system "ln -s $path/lsps/rust-analyzer/rust-analyzer $path/symlinks/rust-analyzer";
-	
+
 }
 
 sub install_pyright(){
@@ -54,6 +60,7 @@ sub install_vim_ls(){
 
 print "INSTALLING USEFULL LANGUAGE SERVERS !!!\n";
 prepare();
-#install_pyright();
-#install_rust_analyzer();
+install_pyright();
+install_rust_analyzer();
 install_lua_ls();
+install_clangd();

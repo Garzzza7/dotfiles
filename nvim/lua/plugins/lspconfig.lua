@@ -221,6 +221,7 @@ return {
 			-- https://rust-analyzer.github.io/manual.html
 			-- lspconfig.pyright.setup({})
 			-- lspconfig.clangd.setup({})
+			-- https://clangd.llvm.org/installation.html
 			-- lspconfig.lua_ls.setup({})
 			-- https://luals.github.io/#install
 		end,
