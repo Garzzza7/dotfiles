@@ -173,14 +173,14 @@ return {
 				clangd = {},
 				pyright = {},
 				rust_analyzer = {},
-				-- bashls = {},
+				bashls = {},
 				neocmake = {},
 				-- asm_lsp = {},
 				-- asmfmt = {},
 				-- gopls = {},
 				glsl_analyzer = {},
 				html = {},
-				-- hls = {},
+				hls = {},
 				-- ocamllsp = {},
 				vimls = {},
 				lua_ls = {
@@ -217,6 +217,22 @@ return {
 			})
 
 			-- local lspconfig = require("lspconfig")
+
+			-- lspconfig.hls.setup({})
+			-- https://haskell-language-server.readthedocs.io/en/latest/installation.html
+
+			-- lspconfig.glsl_analyzer.setup({
+			-- 	filetypes = {
+			-- 		"glsl",
+			-- 		"vert",
+			-- 		"vs",
+			-- 		"fs",
+			-- 	},
+			-- })
+			-- https://github.com/nolanderc/glsl_analyzer
+
+			-- lspconfig.vimls.setup({})
+			-- https://github.com/iamcco/vim-language-server
 
 			-- lspconfig.bashls.setup({})
 			-- https://github.com/bash-lsp/bash-language-server

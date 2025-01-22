@@ -51,9 +51,19 @@ sub install_lua_ls(){
 }
 
 sub install_haskell_ls(){
+	system "mkdir $path/lsps/haskell-ls";
+	system "ghcup install hls -i $path/lsps/haskell-ls";
+	system "ln -s $path/lsps/haskell-ls/bin/haskell-language-server-9.4.8 $path/symlinks/haskell-language-server-wrapper";
 }
 
 sub install_gl_ls(){
+	my $version = "v1.5.1";
+	system "mkdir $path/lsps/gl-analyzer";
+	system "wget -P $path/lsps/gl-analyzer https://github.com/nolanderc/glsl_analyzer/releases/download/$version/x86_64-linux-musl.zip";
+	system "unzip $path/lsps/gl-analyzer/x86_64-linux-musl.zip -d $path/lsps/gl-analyzer";
+	system "rm $path/lsps/gl-analyzer/x86_64-linux-musl.zip";
+	system "ln -s $path/lsps/gl-analyzer/bin/glsl_analyzer $path/symlinks/glsl_analyzer";
+
 }
 
 sub install_bash_ls(){
@@ -62,6 +72,8 @@ sub install_bash_ls(){
 }
 
 sub install_vim_ls(){
+	system "npm install -g --prefix $path/lsps/vim-language-server vim-language-server";
+	system "ln -s $path/lsps/vim-language-server/bin/vim-language-server $path/symlinks/vim-language-server";
 }
 
 print "INSTALLING USEFULL LANGUAGE SERVERS !!!\n";
@@ -72,3 +84,6 @@ install_lua_ls();
 install_clangd();
 install_neocmake();
 install_bash_ls();
+install_vim_ls();
+install_gl_ls();
+install_haskell_ls();
