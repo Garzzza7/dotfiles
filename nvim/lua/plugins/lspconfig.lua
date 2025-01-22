@@ -173,7 +173,7 @@ return {
 				clangd = {},
 				pyright = {},
 				rust_analyzer = {},
-				bashls = {},
+				-- bashls = {},
 				neocmake = {},
 				-- asm_lsp = {},
 				-- asmfmt = {},
@@ -217,17 +217,21 @@ return {
 			})
 
 			-- local lspconfig = require("lspconfig")
+
+			-- lspconfig.bashls.setup({})
+			-- https://github.com/bash-lsp/bash-language-server
+
 			-- lspconfig.rust_analyzer.setup({})
 			-- https://rust-analyzer.github.io/manual.html
-			--
+
 			-- lspconfig.pyright.setup({})
-			--
+
 			-- lspconfig.clangd.setup({})
 			-- https://clangd.llvm.org/installation.html
-			--
+
 			-- lspconfig.lua_ls.setup({})
 			-- https://luals.github.io/#install
-			--
+
 			-- if not require("lspconfig.configs").neocmake then
 			-- 	require("lspconfig.configs").neocmake = {
 			-- 		default_config = {

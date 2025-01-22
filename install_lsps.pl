@@ -57,6 +57,8 @@ sub install_gl_ls(){
 }
 
 sub install_bash_ls(){
+	system "npm install -g --prefix $path/lsps/bash-language-server bash-language-server";
+	system "ln -s $path/lsps/bash-language-server/bin/bash-language-server $path/symlinks/bash-language-server";
 }
 
 sub install_vim_ls(){
@@ -69,3 +71,4 @@ install_rust_analyzer();
 install_lua_ls();
 install_clangd();
 install_neocmake();
+install_bash_ls();
