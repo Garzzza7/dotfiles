@@ -6,8 +6,8 @@ use warnings;
 my $path = "~";
 
 sub prepare(){
-	system "mkdir ~/lsps";
-	system "mkdir ~/symlinks";
+	system "mkdir $path/lsps";
+	system "mkdir $path/symlinks";
 	my $export = 'export PATH=$PATH:'.$path.'/symlinks';
 	system "$export";
 }
@@ -16,8 +16,8 @@ sub install_clangd(){
 	my $version = "19.1.2";
 	system "mkdir $path/lsps/clangd";
 	system "wget -P $path/lsps/clangd https://github.com/clangd/clangd/releases/download/$version/clangd-linux-$version.zip";
-	system "unzip ~/lsps/clangd/clangd-linux-$version.zip -d ~/lsps/clangd";
-	system "rm ~/lsps/clangd/clangd-linux-$version.zip";
+	system "unzip $path/lsps/clangd/clangd-linux-$version.zip -d $path/lsps/clangd";
+	system "rm $path/lsps/clangd/clangd-linux-$version.zip";
 	system "ln -s $path/lsps/clangd/clangd_$version/bin/clangd $path/symlinks/clangd";
 }
 
