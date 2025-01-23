@@ -12,6 +12,19 @@ sub prepare(){
 	system "$export";
 }
 
+sub install_perl_lsp(){
+	system "npm install -g --prefix $path/lsps/perllsp perlnavigator-server";
+	system "ln -s $path/lsps/perllsp/bin/perlnavigator $path/symlinks/perlnavigator";
+}
+
+sub install_opencl_lsp(){
+	system "mkdir $path/lsps/opencllsp";
+	system "curl -L https://github.com/Galarius/opencl-language-server/releases/download/0.6.3/opencl-language-server-linux-x86_64.tar.gz --output opencllsp.tar.gz";
+	system "tar -xvf opencllsp.tar.gz -C $path/lsps/opencllsp";
+	system "rm opencllsp.tar.gz";
+	system "ln -s $path/lsps/opencllsp/opencl-language-server $path/symlinks/opencl-language-server";
+}
+
 sub install_clangd(){
 	my $version = "19.1.2";
 	system "mkdir $path/lsps/clangd";
@@ -87,3 +100,5 @@ install_bash_ls();
 install_vim_ls();
 install_gl_ls();
 install_haskell_ls();
+install_opencl_lsp();
+install_perl_lsp();

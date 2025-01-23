@@ -179,6 +179,7 @@ return {
 				-- asmfmt = {},
 				-- gopls = {},
 				glsl_analyzer = {},
+				perlnavigator = {},
 				html = {},
 				hls = {},
 				-- ocamllsp = {},
@@ -219,6 +220,12 @@ return {
 			-- https://mason-registry.dev/registry/list?search=
 
 			-- local lspconfig = require("lspconfig")
+
+			-- lspconfig.perlnavigator.setup({})
+			-- https://github.com/bscan/PerlNavigator
+
+			-- lspconfig.opencl_ls.setup({})
+			-- https://github.com/Galarius/opencl-language-server
 
 			-- lspconfig.hls.setup({})
 			-- https://haskell-language-server.readthedocs.io/en/latest/installation.html
