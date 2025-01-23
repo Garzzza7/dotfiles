@@ -12,24 +12,29 @@ sub prepare(){
 	system "$export";
 }
 
-
+#TODO: FIX PIP RELATED FORMATTERS.
 sub install_clang_format(){
 	system "mkdir $path/lsps/clang-format";
-	system "python3 -m pip install --target $path/lsps/clang-format clang-format";
+	system "python3 -m venv $path/lsps/clang-format";
+	#system "source $path/lsps/clang-format/bin/activate";
+	#system "pip install clang-format";
 	system "ln -s $path/lsps/clang-format/bin/clang-format $path/symlinks/clang-format";
 }
 
 sub install_black(){
 	system "mkdir $path/lsps/black";
-	system "python3 -m pip install --target $path/lsps/black black";
+	system "python3 -m venv $path/lsps/black";
+	#system "source $path/lsps/black/bin/activate";
+	#system "pip install black";
 	system "ln -s $path/lsps/black/bin/black $path/symlinks/black";
 }
 
 sub install_beautysh(){
-	my $name = "beautysh";
-	system "mkdir $path/lsps/$name";
-	system "python3 -m pip install --target $path/lsps/$name $name";
-	system "ln -s $path/lsps/$name/bin/$name $path/symlinks/$name";
+	system "mkdir $path/lsps/beautysh";
+	system "python3 -m venv $path/lsps/beautysh";
+	#system "source $path/lsps/beautysh/bin/activate";
+	#system "pip install beautysh";
+	system "ln -s $path/lsps/beautysh/bin/beautysh $path/symlinks/beautysh";
 }
 
 sub install_stylua(){
@@ -41,7 +46,7 @@ sub install_stylua(){
 
 print "INSTALLING USEFULL FORMATTERS !!!\n";
 prepare();
-install_clang_format();
-install_black();
-install_beautysh();
-#install_stylua();
+#install_clang_format();
+#install_black();
+#install_beautysh();
+install_stylua();
