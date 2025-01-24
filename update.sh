@@ -17,6 +17,14 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
+if command -v qutebrowser 2>&1 >/dev/null
+then
+    printf "${green}Qutebrowse found.\n${normal}"
+    cp -r $HOME/.config/qutebrowser/*.py qutebrowser/
+else
+    printf "${red}Omitting Qutebrowse.\n${normal}"
+fi
+
 if command -v neofetch 2>&1 >/dev/null
 then
     printf "${green}Neofetch found.\n${normal}"
