@@ -54,6 +54,12 @@ sub install_neocmake(){
 	system "ln -s $path/lsps/neocmake/bin/neocmakelsp $path/symlinks/neocmakelsp";
 }
 
+sub install_asmlsp(){
+	system "mkdir $path/lsps/asm-lsp";
+	system "cargo install --root $path/lsps/asm-lsp asm-lsp";
+	system "ln -s $path/lsps/asm-lsp/bin/asm-lsp $path/symlinks/asm_lsp";
+}
+
 sub install_lua_ls(){
 	my $version = "3.13.5";
 	system "mkdir $path/lsps/lua_ls";
@@ -102,3 +108,4 @@ install_gl_ls();
 install_haskell_ls();
 install_opencl_lsp();
 install_perl_lsp();
+install_asmlsp();
