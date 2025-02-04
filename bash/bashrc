@@ -137,3 +137,5 @@ fi
 export PATH=$PATH:~/scripts
 
 [ -f "/home/pc/.ghcup/env" ] && . "/home/pc/.ghcup/env" # ghcup-env
+
+

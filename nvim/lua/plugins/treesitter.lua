@@ -16,6 +16,7 @@ return {
 				"go",
 				"haskell",
 				"html",
+				"julia",
 				"json",
 				"llvm",
 				"lua",

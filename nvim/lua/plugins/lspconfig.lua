@@ -30,8 +30,8 @@ return {
 
 							-- Options related to how LSP progress messages are displayed as notifications
 							display = {
-								render_limit = 10, -- How many LSP messages to show at once
-								done_ttl = 2, -- How long a message should persist after completion
+								render_limit = 15, -- How many LSP messages to show at once
+								done_ttl = 3, -- How long a message should persist after completion
 								done_icon = "✔", -- Icon shown when all LSP progress tasks are complete
 								done_style = "Constant", -- Highlight group for completed LSP tasks
 								progress_ttl = math.huge, -- How long a message should persist when in progress
@@ -98,8 +98,8 @@ return {
 								winblend = 50, -- Background color opacity in the notification window
 								border = "none", -- Border around the notification window
 								zindex = 45, -- Stacking priority of the notification window
-								max_width = 50, -- Maximum width of the notification window
-								max_height = 50, -- Maximum height of the notification window
+								max_width = 100, -- Maximum width of the notification window
+								max_height = 100, -- Maximum height of the notification window
 								x_padding = 0, -- Padding from right edge of window boundary
 								y_padding = 0, -- Padding from bottom edge of window boundary
 								align = "top", -- How to align the notification window
