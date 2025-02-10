@@ -135,6 +135,9 @@ fi
 . "$HOME/.cargo/env"
 
 export PATH=$PATH:~/scripts
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64\
+                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 [ -f "/home/pc/.ghcup/env" ] && . "/home/pc/.ghcup/env" # ghcup-env
 

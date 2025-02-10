@@ -108,3 +108,5 @@ let g:fzf_colors =
 :noremap <C-c><C-f> :tabnew $HOME/.vimrc<CR>
 :noremap <F2> :echo 'Current time is ' . strftime('%c')<CR>
 :noremap <C-r> :source $HOME/.vimrc<CR>
+
+set rtp^="$HOME/.opam/default/share/ocp-indent/vim"

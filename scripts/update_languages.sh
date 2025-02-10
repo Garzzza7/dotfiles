@@ -5,6 +5,6 @@ toilet --g cabal
 cabal update
 toilet --g ghcup
 ghcup upgrade
-# toilet --g ocaml
-# opam update
-# opam upgrade
+toilet --g ocaml
+opam update
+opam upgrade
