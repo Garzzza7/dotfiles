@@ -15,6 +15,8 @@ sub prepare(){
 sub install_perl_lsp(){
 	system "npm install -g --prefix $path/lsps/perllsp perlnavigator-server";
 	system "ln -s $path/lsps/perllsp/bin/perlnavigator $path/symlinks/perlnavigator";
+	system "cpan App::cpanminus";
+	system "sudo cpanm -n Neovim::Ext";
 }
 
 sub install_opencl_lsp(){

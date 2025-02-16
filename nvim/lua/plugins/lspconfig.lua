@@ -7,7 +7,7 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			{
 				"j-hui/fidget.nvim",
-				tag = "v1.5.0",
+				tag = "v1.6.1",
 				opts = {},
 				init = function()
 					require("fidget").setup({
