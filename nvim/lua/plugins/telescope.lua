@@ -45,10 +45,10 @@ return {
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
 			vim.keymap.set("n", "<leader>/", function()
-				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_ivy({
-					winblend = 10,
+				builtin.current_buffer_fuzzy_find({
+					winblend = 1,
 					previewer = true,
-				}))
+				})
 			end, { desc = "[/] Fuzzily search in current buffer" })
 
 			vim.keymap.set("n", "<leader>s/", function()

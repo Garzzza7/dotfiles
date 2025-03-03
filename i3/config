@@ -3,7 +3,7 @@ set $mod Mod4
 
 #font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
-font pango:Ubuntu Regular 9
+font pango:Ubuntu Regular 3
 
 # NOTE: The secondary rgb color in the lines below is the fallback if
 # i3 fails to get colors from Xresources.
@@ -45,7 +45,7 @@ bindsym $mod+Shift+Ctrl+p exec setxkbmap -layout pl
 exec --no-startup-id dex --autostart --environment i3
 
 #wallpaper 
-exec_always feh --bg-fill /home/pc/.config/i3/wallpaper.jpg
+exec_always feh --bg-fill $HOME/.config/i3/wallpaper.jpg
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
@@ -226,7 +226,7 @@ bar {
         position top
         tray_output primary
         workspace_buttons yes
-        font pango:DejaVu Sans Mono 10
+        font pango:DejaVu Sans Mono 3
         mode hide 
         hidden_state hide
         # alt+win key 
