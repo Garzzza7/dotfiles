@@ -225,6 +225,9 @@ return {
 
 			-- local lspconfig = require("lspconfig")
 
+			-- lspconfig.ocamllsp.setup({})
+			-- https://github.com/ocaml/ocaml-lsp
+
 			-- lspconfig.perlnavigator.setup({})
 			-- https://github.com/bscan/PerlNavigator
 

@@ -24,6 +24,7 @@ return {
 				"make",
 				"markdown",
 				"nasm",
+				"nim",
 				"nix",
 				"ocaml",
 				"ocaml_interface",
