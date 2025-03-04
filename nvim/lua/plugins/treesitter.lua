@@ -8,6 +8,7 @@ return {
 				"c",
 				"cmake",
 				"cpp",
+				"cuda",
 				"editorconfig",
 				"git_config",
 				"gitcommit",
