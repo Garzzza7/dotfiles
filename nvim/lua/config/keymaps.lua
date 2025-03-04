@@ -12,3 +12,6 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+
+vim.keymap.set("n", "ih", "<cmd>:lua vim.lsp.inlay_hint.enable(true, { 0 })<CR>", { desc = "Enable inlay hints" })
+vim.keymap.set("n", "hi", "<cmd>:lua vim.lsp.inlay_hint.enable(false, { 0 })<CR>", { desc = "Disenable inlay hints" })

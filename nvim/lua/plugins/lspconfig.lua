@@ -172,7 +172,11 @@ return {
 			local servers = {
 				clangd = {},
 				pyright = {},
-				rust_analyzer = {},
+				rust_analyzer = {
+					diagnostics = {
+						enable = true,
+					},
+				},
 				bashls = {},
 				neocmake = {},
 				-- asm_lsp = {},
