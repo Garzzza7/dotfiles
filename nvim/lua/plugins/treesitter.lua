@@ -36,16 +36,32 @@ return {
 				"vimdoc",
 				"xml",
 				"yaml",
+				"zig",
 			},
 			auto_install = false,
 			sync_install = false,
 
 			highlight = {
-				enable = true,
-				disable = {},
 				additional_vim_regex_highlighting = true,
+				custom_captures = {},
+				disable = {},
+				enable = true,
+				loaded = false,
 			},
-			indent = { enable = false, disable = {} },
+			incremental_selection = {
+				enable = false,
+				disable = {},
+				keymaps = {
+					init_selection = "gnn",
+					node_decremental = "grm",
+					node_incremental = "grn",
+					scope_incremental = "grc",
+				},
+			},
+			indent = {
+				disable = {},
+				enable = false,
+			},
 		},
 		config = function(_, opts)
 			require("nvim-treesitter.configs").setup(opts)
