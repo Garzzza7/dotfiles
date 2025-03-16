@@ -5,7 +5,7 @@ set -ex
 if [ -f "/etc/arch-release" ]; then
     echo "Arch detected!!!!!!"
     sudo pacman -S base-devel cmake ninja curl
-elif [ -f "/etc/debian-version" ]; then
+elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
     sudo apt-get update
     sudo apt-get upgrade

@@ -2,7 +2,7 @@
 
 if [ -f "/etc/arch-release" ]; then
     echo "Arch detected!!!!!!"
-elif [ -f "/etc/debian-version" ]; then
+elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
     sudo apt-key del 7fa2af80
     wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb

@@ -3,7 +3,7 @@
 if [ -f "/etc/arch-release" ]; then
     echo "Arch detected!!!!!!"
     sudo pacman -S discord
-elif [ -f "/etc/debian-version" ]; then
+elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
     rm discord.deb
     set -ex

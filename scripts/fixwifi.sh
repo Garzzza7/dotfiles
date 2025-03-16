@@ -2,7 +2,7 @@
 
 if [ -f "/etc/arch-release" ]; then
     echo "Arch detected!!!!!!"
-elif [ -f "/etc/debian-version" ]; then
+elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
     sudo apt-get reinstall network-manager
     sudo apt reinstall firmware-b43-installer
