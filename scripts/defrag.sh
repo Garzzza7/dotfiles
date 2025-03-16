@@ -1,2 +1,9 @@
 #!/bin/bash
-sudo e4defrag /dev/sdb4
+
+
+if [ -f "/etc/arch-release" ]; then
+    echo "Arch detected!!!!!!"
+elif [ -f "/etc/debian-version" ]; then
+    echo "Debian detected!!!!!!"
+	sudo e4defrag /dev/sdb4
+fi
