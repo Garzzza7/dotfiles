@@ -185,7 +185,7 @@ return {
 				glsl_analyzer = {},
 				perlnavigator = {},
 				html = {},
-				hls = {},
+				-- hls = {},
 				-- ocamllsp = {},
 				vimls = {},
 				lua_ls = {
