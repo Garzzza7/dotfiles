@@ -1,6 +1,8 @@
 #win-key as mod
 set $mod Mod4
 
+set $alt Mod1
+
 #font pango:monospace 8
 # font pango:DejaVu Sans Mono 10
 font pango:Ubuntu Regular 10
@@ -81,7 +83,7 @@ floating_modifier $mod
 bindsym $mod+Return exec kitty
 
 # BACKUP OPENINGS OF A TERMINAL
-bindsym Ctrl+Mod1+t exec kitty
+bindsym Ctrl+$alt+t exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -234,7 +236,7 @@ bar {
         mode hide 
         hidden_state hide
         # alt+win key 
-        modifier Mod1+Mod4     
+        modifier $alt+$mod
         tray_padding 0
         workspace_min_width 30
         strip_workspace_numbers no
