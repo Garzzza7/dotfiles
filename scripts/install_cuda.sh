@@ -2,6 +2,7 @@
 
 if [ -f "/etc/arch-release" ]; then
     echo "Arch detected!!!!!!"
+    sudo pacman -S cuda opencl-nvidia
 elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
     sudo apt-key del 7fa2af80

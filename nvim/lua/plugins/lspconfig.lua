@@ -184,7 +184,7 @@ return {
 				-- gopls = {},
 				glsl_analyzer = {},
 				perlnavigator = {},
-				html = {},
+				-- html = {},
 				-- hls = {},
 				-- ocamllsp = {},
 				vimls = {},
