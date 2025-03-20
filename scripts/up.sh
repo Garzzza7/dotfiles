@@ -36,7 +36,7 @@ if [ -f "/etc/arch-release" ]; then
     echo "Arch detected!!!!!!"
     sudo pacman -Syu
     sudo pacman -Scc
-    pacman -Rsn $(pacman -Qdtq)
+    sudo pacman -Rsn $(pacman -Qdtq)
 elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
     sudo apt-get update
