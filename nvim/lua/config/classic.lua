@@ -25,8 +25,3 @@ vim.opt.scrolloff = 5
 vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 vim.opt.hlsearch = true
-
--- keybind for sourcing
-vim.keymap.set("n", "<space><space>r", "<cmd>source $HOME/.config/nvim/init.lua<CR>")
-vim.keymap.set("n", "<space>r", ":.lua<CR>")
-vim.keymap.set("v", "<space>r", ":lua<CR>")

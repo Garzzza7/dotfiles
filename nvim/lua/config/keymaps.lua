@@ -15,3 +15,29 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 
 vim.keymap.set("n", "ih", "<cmd>:lua vim.lsp.inlay_hint.enable(true, { 0 })<CR>", { desc = "Enable inlay hints" })
 vim.keymap.set("n", "hi", "<cmd>:lua vim.lsp.inlay_hint.enable(false, { 0 })<CR>", { desc = "Disenable inlay hints" })
+
+vim.keymap.set("n", "<F2>", "<cmd>echo 'Current time is ' . strftime('%c')<CR>", {})
+
+vim.keymap.set("n", "<A-n>", "<cmd>:bn<CR> ", {})
+vim.keymap.set("n", "<A-d>", "<cmd>:bd!<CR> ", {})
+vim.keymap.set("n", "<A-p>", "<cmd>:bp<CR> ", {})
+vim.keymap.set("n", "<A-w>", "<cmd>:bw<CR> ", {})
+vim.keymap.set("n", "<A-l>", "<cmd>:ls<CR> ", {})
+
+-- window stuff, conflics with space a the leader
+-- vim.keymap.set("n", "<space>n", "<cmd> :tabNext<CR> ", {})
+-- vim.keymap.set("n", "<space>p", "<cmd> :tabprevious<CR> ", {}
+-- vim.keymap.set("n", "<space>l", "<cmd> :tabs<CR> ", {})
+-- vim.keymap.set("n", "<space>w", "<cmd> :tabclose<CR> ", {})
+
+-- keybind for sourcing
+vim.keymap.set("n", "<space><space>r", "<cmd>source $HOME/.config/nvim/init.lua<CR>", {})
+vim.keymap.set("n", "<space>r", ":.lua<CR>", {})
+vim.keymap.set("v", "<space>r", ":lua<CR>", {})
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>al",
+	"<cmd>Telescope find_files cwd=$HOME/zadania/Algos/<cr>",
+	{ noremap = true, silent = true }
+)
