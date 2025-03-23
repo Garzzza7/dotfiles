@@ -42,6 +42,7 @@ Plug 'tpope/vim-commentary'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'zah/nim.vim'
 Plug 'vim-airline/vim-airline' "status bar 
+Plug 'tbastos/vim-lua'
 call plug#end()
 colorscheme sitruuna
 if has("autocmd")

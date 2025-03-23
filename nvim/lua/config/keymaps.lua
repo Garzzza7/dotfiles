@@ -19,6 +19,7 @@ vim.keymap.set("n", "hi", "<cmd>:lua vim.lsp.inlay_hint.enable(false, { 0 })<CR>
 vim.keymap.set("n", "<F2>", "<cmd>echo 'Current time is ' . strftime('%c')<CR>", {})
 
 vim.keymap.set("n", "<A-n>", "<cmd>:bn<CR> ", {})
+vim.keymap.set("n", "<A-C-q>", "<cmd>:qa!<CR> ", {})
 vim.keymap.set("n", "<A-d>", "<cmd>:bd!<CR> ", {})
 vim.keymap.set("n", "<A-p>", "<cmd>:bp<CR> ", {})
 vim.keymap.set("n", "<A-w>", "<cmd>:bw<CR> ", {})
