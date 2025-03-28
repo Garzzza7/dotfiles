@@ -13,6 +13,8 @@
 
 (unless (package-installed-p 'gruvbox-theme)
   (package-install 'gruvbox-theme))
+(unless (package-installed-p 'cuda-mode)
+  (package-install 'cuda-mode))
 
 
 ;; Enable relative line numbers
