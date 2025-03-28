@@ -15,6 +15,8 @@
   (package-install 'gruvbox-theme))
 (unless (package-installed-p 'cuda-mode)
   (package-install 'cuda-mode))
+(unless (package-installed-p 'rust-mode)
+  (package-install 'rust-mode))
 
 
 ;; Enable relative line numbers
