@@ -29,6 +29,7 @@ endif
 call plug#begin()
 
 Plug 'cespare/vim-toml'
+Plug 'cmaureir/snipmate-snippets-cuda'
 Plug 'eemed/sitruuna.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
@@ -43,7 +44,8 @@ Plug 'lervag/vimtex'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'morhetz/gruvbox'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'octol/vim-cpp-enhanced-highlight'
+" Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'bfrg/vim-cpp-modern'
 Plug 'plasticboy/vim-markdown'
 Plug 'potatoesmaster/i3-vim-syntax'
 Plug 'rhysd/vim-crystal'
