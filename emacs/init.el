@@ -15,6 +15,10 @@
   (package-install 'gruvbox-theme))
 (unless (package-installed-p 'rust-mode)
   (package-install 'rust-mode))
+(unless (package-installed-p 'vimrc-mode)
+  (package-install 'vimrc-mode))
+
+(add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
 
 ;;TODO: this is bad, change it pls
 (add-to-list 'load-path "~/.emacs.d/modes")
