@@ -13,23 +13,27 @@
 
 (unless (package-installed-p 'gruvbox-theme)
   (package-install 'gruvbox-theme))
-(unless (package-installed-p 'cuda-mode)
-  (package-install 'cuda-mode))
 (unless (package-installed-p 'rust-mode)
   (package-install 'rust-mode))
 
+;;TODO: this is bad, change it pls
+(add-to-list 'load-path "~/.emacs.d/modes")
+(load "i3wm-config-mode.el")
+(load "cuda-mode.el")
+(load "go-mode.el")
+(load "nim-mode.el")
 
 ;; Enable relative line numbers
 (global-display-line-numbers-mode 1)         ;; Enable line numbers globally
 (setq display-line-numbers-type 'relative)  ;; Set to relative line numbers
 
 ;; Set a built-in color theme 
-(load-theme 'gruvbox-dark-medium t)  
+(load-theme 'gruvbox-dark-medium t)
 
 ;; Turn off toolbar scrollbar and menubar
-(menu-bar-mode -1) 
-(toggle-scroll-bar -1) 
-(tool-bar-mode -1) 
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
 
 ;; Enable line wrapping
 (global-visual-line-mode 1)

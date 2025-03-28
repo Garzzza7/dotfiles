@@ -109,23 +109,27 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias bsh='$HOME/.local/share/nvim/mason/bin/beautysh *.sh'
 alias gf2='$HOME/gf/gf2'
 alias mc='EDITOR=nvim mc'
-alias emacs='emacs -nw'
+alias emacs='emacs --no-window-system'
 alias nv='nvim'
 alias :q='exit'
 alias lg='lazygit'
 alias du='du -h'
 alias gs='git status'
 alias ga='git add'
-alias gu='git pull'
 alias gp='git push'
+alias gu='git pull'
 alias gc='git commit'
 alias pp='powerprofilesctl set performance'
 alias pb='powerprofilesctl set balanced'
 alias pps='powerprofilesctl set power-saver'
 alias rm='trash-put'
+alias suspend='systemctl suspend'
 
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/usr/local/go/bin
