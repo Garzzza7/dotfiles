@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.keymap.set({ "n", "v", "i" }, "<Esc><Esc>", "<cmd>nohlsearch<cr>")
+vim.keymap.set({ "n" }, "<Esc><Esc>", "<cmd>nohlsearch<cr>")
 
 --vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 --vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
