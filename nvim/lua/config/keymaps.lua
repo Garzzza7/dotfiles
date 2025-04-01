@@ -54,9 +54,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {})
 vim.keymap.set("x", "<leader>p", '"_dP', {})
 
 -- replace the current word
-vim.keymap.set("n", "<C-s><C-s>", ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>", {})
-vim.keymap.set("n", "<C-s><C-s>", ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>", {})
--- vim.keymap.set("n", "<C-s><C-s>", ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left><Left>", {})
+vim.keymap.set("n", "<C-s><C-a>", ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>", {})
+vim.keymap.set("n", "<C-s><C-s>", ":%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>", {})
 
 -- inlay hints
 vim.keymap.set("n", "ih", "<cmd>:lua vim.lsp.inlay_hint.enable(true, { 0 })<CR>", { desc = "Enable inlay hints" })
