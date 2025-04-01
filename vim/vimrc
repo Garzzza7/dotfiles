@@ -16,8 +16,8 @@ set tabpagemax=1000
 set ruler
 set nojoinspaces
 set shiftround
-set showcmd 
-set paste 
+set showcmd
+set paste
 set is hls
 set incsearch
 set hlsearch
@@ -65,7 +65,7 @@ Plug 'zah/nim.vim'
 
 call plug#end()
 
-colorscheme gruvbox 
+colorscheme gruvbox
 
 if has("autocmd")
   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
@@ -120,7 +120,7 @@ let g:fzf_colors =
 :noremap <A-w> :bw<CR>
 :noremap <A-l> :ls<CR>
 
-" GLOBAL SAVING AND QUITING 
+" GLOBAL SAVING AND QUITING
 :noremap <A-C-q> :qa!<CR>
 :noremap <A-C-w> :wa<CR>
 
