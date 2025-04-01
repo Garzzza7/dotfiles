@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.keymap.set("n", "<Esc><Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<Esc><Esc>", "<cmd>nohlsearch<cr>")
 
 --vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 --vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
@@ -13,42 +13,42 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
-vim.keymap.set("n", "<F1>", "<cmd>echo 'Current time is ' . strftime('%c')<CR>", {})
+vim.keymap.set("n", "<F1>", "<cmd>echo 'Current time is ' . strftime('%c')<cr>", {})
 
-vim.keymap.set("n", "<A-C-q>", "<cmd>:qa!<CR> ", {})
-vim.keymap.set("n", "<A-C-q>", "<cmd>:qa!<CR> ", {})
-vim.keymap.set("i", "<A-C-w>", "<cmd>:wa!<CR> ", {})
-vim.keymap.set("i", "<A-C-w>", "<cmd>:wa!<CR> ", {})
+vim.keymap.set("n", "<A-C-q>", "<cmd>qa!<cr> ", {})
+vim.keymap.set("n", "<A-C-q>", "<cmd>qa!<cr> ", {})
+vim.keymap.set("i", "<A-C-w>", "<cmd>wa!<cr> ", {})
+vim.keymap.set("i", "<A-C-w>", "<cmd>wa!<cr> ", {})
 
-vim.keymap.set("n", "<A-n>", "<cmd>:bn<CR> ", {})
-vim.keymap.set("n", "<A-d>", "<cmd>:bd!<CR> ", {})
-vim.keymap.set("n", "<A-p>", "<cmd>:bp<CR> ", {})
-vim.keymap.set("n", "<A-w>", "<cmd>:bw<CR> ", {})
-vim.keymap.set("n", "<A-l>", "<cmd>:ls<CR> ", {})
+vim.keymap.set("n", "<A-n>", "<cmd>bn<cr> ", {})
+vim.keymap.set("n", "<A-d>", "<cmd>bd!<cr> ", {})
+vim.keymap.set("n", "<A-p>", "<cmd>bp<cr> ", {})
+vim.keymap.set("n", "<A-w>", "<cmd>bw<cr> ", {})
+vim.keymap.set("n", "<A-l>", "<cmd>ls<cr> ", {})
 
 -- window stuff, conflics with space a the leader
--- vim.keymap.set("n", "<space>n", "<cmd> :tabNext<CR> ", {})
--- vim.keymap.set("n", "<space>p", "<cmd> :tabprevious<CR> ", {}
--- vim.keymap.set("n", "<space>l", "<cmd> :tabs<CR> ", {})
--- vim.keymap.set("n", "<space>w", "<cmd> :tabclose<CR> ", {})
+-- vim.keymap.set("n", "<space>n", "<cmd> :tabNext<cr> ", {})
+-- vim.keymap.set("n", "<space>p", "<cmd> :tabprevious<cr> ", {}
+-- vim.keymap.set("n", "<space>l", "<cmd> :tabs<cr> ", {})
+-- vim.keymap.set("n", "<space>w", "<cmd> :tabclose<cr> ", {})
 
 -- keybind for sourcing
-vim.keymap.set("n", "<F5>", "<cmd>:source $HOME/.config/nvim/init.lua<CR>", {})
-vim.keymap.set("n", "<F5>", "<cmd>:.lua<CR>", {})
-vim.keymap.set("v", "<F5>", "<cmd>:lua<CR>", {})
+vim.keymap.set("n", "<F5>", "<cmd>source $HOME/.config/nvim/init.lua<cr>", {})
+vim.keymap.set("n", "<F5>", "<cmd>.lua<cr>", {})
+vim.keymap.set("v", "<F5>", "<cmd>lua<cr>", {})
 
 -- open netrw
-vim.keymap.set("n", "<A-t>", "<cmd>:Ex<CR>", {})
+vim.keymap.set("n", "<A-t>", "<cmd>Ex<cr>", {})
 
 -- lsp
-vim.keymap.set("n", "<F2>", "<cmd>:LspRestart<CR>", {})
-vim.keymap.set("n", "<F3>", "<cmd>:LspStart<CR>", {})
-vim.keymap.set("n", "<F4>", "<cmd>:LspStop<CR>", {})
-vim.keymap.set("n", "<F6>", "<cmd>:LspInfo<CR>", {})
+vim.keymap.set("n", "<F2>", "<cmd>LspRestart<cr>", {})
+vim.keymap.set("n", "<F3>", "<cmd>LspStart<cr>", {})
+vim.keymap.set("n", "<F4>", "<cmd>LspStop<cr>", {})
+vim.keymap.set("n", "<F6>", "<cmd>LspInfo<cr>", {})
 
 -- moving the highlighted text
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {})
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {})
+vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", {})
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", {})
 
 -- maintain copied text after deleting something
 vim.keymap.set("x", "<leader>p", '"_dP', {})
@@ -58,8 +58,8 @@ vim.keymap.set("n", "<C-s><C-a>", ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>", {})
 vim.keymap.set("n", "<C-s><C-s>", ":%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>", {})
 
 -- inlay hints
-vim.keymap.set("n", "ih", "<cmd>:lua vim.lsp.inlay_hint.enable(true, { 0 })<CR>", { desc = "Enable inlay hints" })
-vim.keymap.set("n", "hi", "<cmd>:lua vim.lsp.inlay_hint.enable(false, { 0 })<CR>", { desc = "Disenable inlay hints" })
+vim.keymap.set("n", "ih", "<cmd>lua vim.lsp.inlay_hint.enable(true, { 0 })<cr>", { desc = "Enable inlay hints" })
+vim.keymap.set("n", "hi", "<cmd>lua vim.lsp.inlay_hint.enable(false, { 0 })<cr>", { desc = "Disenable inlay hints" })
 
 vim.api.nvim_set_keymap(
 	"n",

@@ -4,41 +4,41 @@ return {
 		version = "*", -- Use the latest tagged version
 		opts = {}, -- This causes the plugin setup function to be called
 		keys = {
-			{ "<C-j>", "<cmd>MultipleCursorsAddDown<CR>", mode = { "n", "x" }, desc = "Add cursor and move down" },
-			{ "<C-k>", "<cmd>MultipleCursorsAddUp<CR>", mode = { "n", "x" }, desc = "Add cursor and move up" },
+			{ "<C-j>", "<cmd>MultipleCursorsAddDown<cr>", mode = { "n", "x" }, desc = "Add cursor and move down" },
+			{ "<C-k>", "<cmd>MultipleCursorsAddUp<cr>", mode = { "n", "x" }, desc = "Add cursor and move up" },
 
-			{ "<C-Up>", "<cmd>MultipleCursorsAddUp<CR>", mode = { "n", "i", "x" }, desc = "Add cursor and move up" },
+			{ "<C-Up>", "<cmd>MultipleCursorsAddUp<cr>", mode = { "n", "i", "x" }, desc = "Add cursor and move up" },
 			{
 				"<C-Down>",
-				"<cmd>MultipleCursorsAddDown<CR>",
+				"<cmd>MultipleCursorsAddDown<cr>",
 				mode = { "n", "i", "x" },
 				desc = "Add cursor and move down",
 			},
 
 			{
 				"<C-LeftMouse>",
-				"<cmd>MultipleCursorsMouseAddDelete<CR>",
+				"<cmd>MultipleCursorsMouseAddDelete<cr>",
 				mode = { "n", "i" },
 				desc = "Add or remove cursor",
 			},
 
-			{ "<Leader>a", "<cmd>MultipleCursorsAddMatches<CR>", mode = { "n", "x" }, desc = "Add cursors to cword" },
+			{ "<Leader>a", "<cmd>MultipleCursorsAddMatches<cr>", mode = { "n", "x" }, desc = "Add cursors to cword" },
 			{
 				"<Leader>A",
-				"<cmd>MultipleCursorsAddMatchesV<CR>",
+				"<cmd>MultipleCursorsAddMatchesV<cr>",
 				mode = { "n", "x" },
 				desc = "Add cursors to cword in previous area",
 			},
 
 			{
 				"<Leader>d",
-				"<cmd>MultipleCursorsAddJumpNextMatch<CR>",
+				"<cmd>MultipleCursorsAddJumpNextMatch<cr>",
 				mode = { "n", "x" },
 				desc = "Add cursor and jump to next cword",
 			},
-			{ "<Leader>D", "<cmd>MultipleCursorsJumpNextMatch<CR>", mode = { "n", "x" }, desc = "Jump to next cword" },
+			{ "<Leader>D", "<cmd>MultipleCursorsJumpNextMatch<cr>", mode = { "n", "x" }, desc = "Jump to next cword" },
 
-			{ "<Leader>l", "<cmd>MultipleCursorsLock<CR>", mode = { "n", "x" }, desc = "Lock virtual cursors" },
+			{ "<Leader>l", "<cmd>MultipleCursorsLock<cr>", mode = { "n", "x" }, desc = "Lock virtual cursors" },
 		},
 	},
 }
