@@ -30,7 +30,7 @@ vim.keymap.set({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", {})
 -- vim.keymap.set("n", "<space>l", "<cmd> :tabs<cr> ", {})
 -- vim.keymap.set("n", "<space>w", "<cmd> :tabclose<cr> ", {})
 
--- keybind for sourcing
+-- keybinds for sourcing
 vim.keymap.set("n", "<F5>", "<cmd>source $HOME/.config/nvim/init.lua<cr>", {})
 vim.keymap.set("n", "<F5>", "<cmd>.lua<cr>", {})
 vim.keymap.set("v", "<F5>", "<cmd>lua<cr>", {})
