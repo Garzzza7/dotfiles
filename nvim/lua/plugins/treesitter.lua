@@ -28,6 +28,8 @@ return {
 				"llvm",
 				"lua",
 				"luadoc",
+				"luap",
+				"luau",
 				"make",
 				"markdown",
 				"nasm",

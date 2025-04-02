@@ -112,6 +112,7 @@ return {
 			pcall(require("telescope").load_extension, "ui-select")
 
 			local builtin = require("telescope.builtin")
+
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 
 			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
@@ -156,7 +157,7 @@ return {
 
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
 
-			vim.keymap.set("n", "dc", vim.lsp.buf.hover, { desc = "Hover Documentation" })
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
 
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "[G]oto [D]eclaration" })
 
