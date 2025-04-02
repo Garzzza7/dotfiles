@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 if [ -f "/etc/arch-release" ]; then
     echo "Arch detected!!!!!!"
     sudo pacman -S base-devel cmake ninja curl
@@ -18,6 +16,6 @@ cd $HOME/neovim/
 
 git checkout stable
 
-make CMAKE_BUILD_TYPE=RelWithDebInfo -j$(nproc)
+make CMAKE_BUILD_TYPE=Release -j$(nproc)
 
 sudo make install

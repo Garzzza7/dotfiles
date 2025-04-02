@@ -54,7 +54,7 @@ fi
 if command -v emacs 2>&1 >/dev/null
 then
     printf "${green}Emacs found.\n${normal}"
-    cp emacs/* $HOME/.emacs.d/
+    cp -r emacs/* $HOME/.emacs.d/
 else
     printf "${red}Omitting Emacs.\n${normal}"
 fi
