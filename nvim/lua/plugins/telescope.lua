@@ -16,10 +16,89 @@ return {
 		},
 		config = function()
 			require("telescope").setup({
-				defaults = {},
+				defaults = {
+					layout_strategy = "vertical",
+					layout_config = { height = 0.95, width = 0.95 },
+				},
 				pickers = {
-					find_files = {
-						-- theme = "ivy",
+					help_tags = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					keymaps = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					fd = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					builtin = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					grep_string = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					live_grep = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					diagnostics = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					resume = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					oldfiles = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					buffers = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					man_pages = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					colorscheme = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					marks = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					git_status = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					git_files = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
+					},
+
+					current_buffer_fuzzy_find = {
+						layout_strategy = "vertical",
+						layout_config = { height = 0.95, width = 0.95 },
 					},
 				},
 				extensions = {
