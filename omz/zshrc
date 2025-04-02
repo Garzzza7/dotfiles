@@ -142,8 +142,5 @@ zstyle ':completion:*:processes' insert-ids menu yes select
 zstyle ':completion:*:processes-names' command 'NOCOLORS=1 ps xho command|sed "s/://g"'
 zstyle ':completion:*:processes' sort false
 
-
-
-
-
-
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
