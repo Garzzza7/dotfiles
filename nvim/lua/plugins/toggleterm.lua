@@ -8,10 +8,10 @@ return {
 			init = function()
 				require("toggleterm").setup({
 					size = 20,
-					open_mapping = "<C-t>",
+					-- open_mapping = "<C-t>",
 					shell = vim.o.shell,
 					hide_numbers = false,
-					start_in_insert = true,
+					start_in_insert = false,
 					direction = "float",
 					close_on_exit = false, -- close the terminal window when the process exits
 					clear_env = false, -- use only environmental variables from `env`, passed to jobstart()

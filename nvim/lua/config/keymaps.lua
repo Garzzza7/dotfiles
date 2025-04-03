@@ -7,6 +7,13 @@ vim.keymap.set(
 	{ noremap = true, silent = true, desc = "Turn off hlsearch" }
 )
 
+vim.keymap.set({ "n" }, "Q", "<nop>", { noremap = true, silent = true, desc = "Disable Q" })
+
+vim.keymap.set({ "n", "v" }, "<Up>", '<cmd>echo "xddd"<cr>', { noremap = true, silent = true, desc = "xddd" })
+vim.keymap.set({ "n", "v" }, "<Down>", '<cmd>echo "xddd"<cr>', { noremap = true, silent = true, desc = "xddd" })
+vim.keymap.set({ "n", "v" }, "<Left>", '<cmd>echo "xddd"<cr>', { noremap = true, silent = true, desc = "xddd" })
+vim.keymap.set({ "n", "v" }, "<Right>", '<cmd>echo "xddd"<cr>', { noremap = true, silent = true, desc = "xddd" })
+
 --vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true , silent = true , desc = "Go to previous [D]iagnostic message" })
 --vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true , silent = true , desc = "Go to next [D]iagnostic message" })
 vim.keymap.set(
@@ -193,3 +200,10 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 vim.api.nvim_set_keymap("n", "<leader>mf", "<cmd>Telescope media_files<cr>", { noremap = true, silent = true })
+
+vim.keymap.set(
+	"n",
+	"<C-t>",
+	"<cmd>ToggleTerm dir=%:p:h<cr>",
+	{ noremap = true, silent = true, desc = "Open ToggleTerm" }
+)
