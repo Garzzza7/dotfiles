@@ -109,13 +109,13 @@ vim.keymap.set(
 
 vim.keymap.set(
 	"n",
-	"ih",
+	"<C-i><C-h>",
 	"<cmd>lua vim.lsp.inlay_hint.enable(true, { 0 })<cr>",
 	{ noremap = true, silent = true, desc = "Enable inlay hints" }
 )
 vim.keymap.set(
 	"n",
-	"hi",
+	"<C-h><C-i>",
 	"<cmd>lua vim.lsp.inlay_hint.enable(false, { 0 })<cr>",
 	{ noremap = true, silent = true, desc = "Disable inlay hints" }
 )
