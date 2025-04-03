@@ -85,19 +85,19 @@ vim.keymap.set(
 	"n",
 	"<C-s><C-a>",
 	":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
-	{ noremap = true, silent = true, desc = "Replace word from under the cursor" }
+	{ noremap = true, silent = false, desc = "Replace word from under the cursor" }
 )
 vim.keymap.set(
 	"n",
 	"<C-s><C-s>",
 	":%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>",
-	{ noremap = true, silent = true, desc = "Replace word from under the cursor" }
+	{ noremap = true, silent = false, desc = "Replace word from under the cursor" }
 )
 vim.keymap.set(
 	"n",
 	"<C-s><C-l>",
 	":s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
-	{ noremap = true, silent = true, desc = "Replace word from under the cursor" }
+	{ noremap = true, silent = false, desc = "Replace word from under the cursor" }
 )
 
 vim.keymap.set(
