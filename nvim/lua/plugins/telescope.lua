@@ -4,7 +4,6 @@ return {
 		event = "VimEnter",
 		branch = "0.1.x",
 		dependencies = {
-			"nvim-lua/plenary.nvim",
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "make",
@@ -12,7 +11,10 @@ return {
 					return vim.fn.executable("make") == 1
 				end,
 			},
+			{ "nvim-lua/popup.nvim" },
+			{ "nvim-lua/plenary.nvim" },
 			{ "nvim-telescope/telescope-ui-select.nvim" },
+			{ "nvim-telescope/telescope-media-files.nvim" },
 		},
 		config = function()
 			require("telescope").setup({
@@ -102,14 +104,19 @@ return {
 					},
 				},
 				extensions = {
-					["ui-select"] = {
-						-- require("telescope.themes").get_ivy(),
+					media_files = {
+						-- filetypes whitelist
+						-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+						filetypes = { "png", "webp", "jpg", "jpeg" },
+						-- find command (defaults to `fd`)
+						find_cmd = "rg",
 					},
 				},
 			})
-
-			pcall(require("telescope").load_extension, "fzf")
-			pcall(require("telescope").load_extension, "ui-select")
+			-- MAYBE USE PCAL IDK
+			require("telescope").load_extension("fzf")
+			require("telescope").load_extension("ui-select")
+			require("telescope").load_extension("media_files")
 
 			local builtin = require("telescope.builtin")
 
