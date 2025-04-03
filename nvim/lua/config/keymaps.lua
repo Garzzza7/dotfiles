@@ -1,6 +1,11 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.keymap.set({ "n" }, "<Esc><Esc>", "<cmd>nohlsearch<cr>", { noremap = true, silent = true, desc = "TODO" })
+vim.keymap.set(
+	{ "n" },
+	"<Esc><Esc>",
+	"<cmd>nohlsearch<cr>",
+	{ noremap = true, silent = true, desc = "Turn off hlsearch" }
+)
 
 --vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true , silent = true , desc = "Go to previous [D]iagnostic message" })
 --vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true , silent = true , desc = "Go to next [D]iagnostic message" })
@@ -27,17 +32,17 @@ vim.keymap.set(
 	{ "n", "v", "i" },
 	"<F1>",
 	"<cmd>echo 'Current time is ' . strftime('%c')<cr>",
-	{ noremap = true, silent = true, desc = "TODO" }
+	{ noremap = true, silent = true, desc = "Display current time" }
 )
 
-vim.keymap.set({ "n", "i", "v" }, "<A-C-q>", "<cmd>qa!<cr> ", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set({ "n", "i", "v" }, "<A-C-w>", "<cmd>wa!<cr> ", { noremap = true, silent = true, desc = "TODO" })
+vim.keymap.set({ "n", "i", "v" }, "<A-C-q>", "<cmd>qa!<cr> ", { noremap = true, silent = true, desc = "Quit all" })
+vim.keymap.set({ "n", "i", "v" }, "<A-C-w>", "<cmd>wa!<cr> ", { noremap = true, silent = true, desc = "Write all" })
 
-vim.keymap.set({ "n", "i", "v" }, "<A-n>", "<cmd>bn<cr> ", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set({ "n", "i", "v" }, "<A-d>", "<cmd>bd!<cr> ", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set({ "n", "i", "v" }, "<A-p>", "<cmd>bp<cr> ", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set({ "n", "i", "v" }, "<A-w>", "<cmd>bw<cr> ", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", { noremap = true, silent = true, desc = "TODO" })
+vim.keymap.set({ "n", "i", "v" }, "<A-n>", "<cmd>bn<cr> ", { noremap = true, silent = true, desc = "Next buffer" })
+vim.keymap.set({ "n", "i", "v" }, "<A-d>", "<cmd>bd!<cr> ", { noremap = true, silent = true, desc = "Delete Buffer" })
+vim.keymap.set({ "n", "i", "v" }, "<A-p>", "<cmd>bp<cr> ", { noremap = true, silent = true, desc = "Previous buffer" })
+vim.keymap.set({ "n", "i", "v" }, "<A-w>", "<cmd>bw<cr> ", { noremap = true, silent = true, desc = "Write buffer" })
+vim.keymap.set({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", { noremap = true, silent = true, desc = "Display buffers" })
 
 -- window stuff, conflics with space a the leader
 -- vim.keymap.set("n", "<space>n", "<cmd> :tabNext<cr> ", {noremap = true , silent = true , desc = "TODO"})
@@ -45,53 +50,56 @@ vim.keymap.set({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", { noremap = true, sil
 -- vim.keymap.set("n", "<space>l", "<cmd> :tabs<cr> ", {noremap = true , silent = true , desc = "TODO"})
 -- vim.keymap.set("n", "<space>w", "<cmd> :tabclose<cr> ", {noremap = true , silent = true , desc = "TODO"})
 
--- keybinds for sourcing
 vim.keymap.set(
 	"n",
 	"<F5>",
 	"<cmd>source $HOME/.config/nvim/init.lua<cr>",
-	{ noremap = true, silent = true, desc = "TODO" }
+	{ noremap = true, silent = true, desc = "Reload config" }
 )
-vim.keymap.set("n", "<F5>", "<cmd>.lua<cr>", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set("v", "<F5>", "<cmd>lua<cr>", { noremap = true, silent = true, desc = "TODO" })
+vim.keymap.set("n", "<F5>", "<cmd>.lua<cr>", { noremap = true, silent = true, desc = "Reload config" })
+vim.keymap.set("v", "<F5>", "<cmd>lua<cr>", { noremap = true, silent = true, desc = "Reload config" })
 
--- open netrw
-vim.keymap.set("n", "<A-t>", "<cmd>Ex<cr>", { noremap = true, silent = true, desc = "TODO" })
+vim.keymap.set("n", "<A-t>", "<cmd>Ex<cr>", { noremap = true, silent = true, desc = "Open netrw" })
 
--- lsp
-vim.keymap.set({ "n", "v", "i" }, "<F2>", "<cmd>LspRestart<cr>", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set({ "n", "v", "i" }, "<F3>", "<cmd>LspStart<cr>", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set({ "n", "v", "i" }, "<F4>", "<cmd>LspStop<cr>", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set({ "n", "v", "i" }, "<F6>", "<cmd>LspInfo<cr>", { noremap = true, silent = true, desc = "TODO" })
+vim.keymap.set(
+	{ "n", "v", "i" },
+	"<F2>",
+	"<cmd>LspRestart<cr>",
+	{ noremap = true, silent = true, desc = "Restart lsp" }
+)
+vim.keymap.set({ "n", "v", "i" }, "<F3>", "<cmd>LspStart<cr>", { noremap = true, silent = true, desc = "Start lsp" })
+vim.keymap.set({ "n", "v", "i" }, "<F4>", "<cmd>LspStop<cr>", { noremap = true, silent = true, desc = "Stop lsp" })
+vim.keymap.set({ "n", "v", "i" }, "<F6>", "<cmd>LspInfo<cr>", { noremap = true, silent = true, desc = "Lsp info" })
 
--- moving the highlighted text
-vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", { noremap = true, silent = true, desc = "TODO" })
-vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", { noremap = true, silent = true, desc = "TODO" })
+vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", { noremap = true, silent = true, desc = "Move highlighted text" })
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", { noremap = true, silent = true, desc = "Move highlighted text" })
 
--- maintain copied text after deleting something
-vim.keymap.set("x", "<leader>p", '"_dP', { noremap = true, silent = true, desc = "TODO" })
+vim.keymap.set(
+	"x",
+	"<leader>p",
+	'"_dP',
+	{ noremap = true, silent = true, desc = "Remember copied file after deletion" }
+)
 
--- many ways to replace the current word
 vim.keymap.set(
 	"n",
 	"<C-s><C-a>",
 	":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
-	{ noremap = true, silent = true, desc = "TODO" }
+	{ noremap = true, silent = true, desc = "Replace word from under the cursor" }
 )
 vim.keymap.set(
 	"n",
 	"<C-s><C-s>",
 	":%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>",
-	{ noremap = true, silent = true, desc = "TODO" }
+	{ noremap = true, silent = true, desc = "Replace word from under the cursor" }
 )
 vim.keymap.set(
 	"n",
 	"<C-s><C-l>",
 	":s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
-	{ noremap = true, silent = true, desc = "TODO" }
+	{ noremap = true, silent = true, desc = "Replace word from under the cursor" }
 )
 
--- inlay hints
 vim.keymap.set(
 	"n",
 	"ih",
@@ -105,10 +113,8 @@ vim.keymap.set(
 	{ noremap = true, silent = true, desc = "Disable inlay hints" }
 )
 
--- Lazygit
 vim.keymap.set("n", "<space>lg", "<cmd>LazyGit<cr>", { noremap = true, silent = true, desc = "Open Lazygit" })
 
--- MultipleCursors keymaps
 vim.keymap.set(
 	"n",
 	"<C-j>",
@@ -169,9 +175,7 @@ vim.keymap.set(
 	"<cmd>MultipleCursorsLock<cr>",
 	{ noremap = true, silent = true, desc = "Lock virtual cursors" }
 )
--- Cursors end here
 
--- Buffer navigation
 vim.keymap.set("n", "<A-1>", "<cmd>b1<cr>", { noremap = true, silent = true, desc = "Go to buffer 1" })
 vim.keymap.set("n", "<A-2>", "<cmd>b2<cr>", { noremap = true, silent = true, desc = "Go to buffer 2" })
 vim.keymap.set("n", "<A-3>", "<cmd>b3<cr>", { noremap = true, silent = true, desc = "Go to buffer 3" })
@@ -182,7 +186,6 @@ vim.keymap.set("n", "<A-7>", "<cmd>b7<cr>", { noremap = true, silent = true, des
 vim.keymap.set("n", "<A-8>", "<cmd>b8<cr>", { noremap = true, silent = true, desc = "Go to buffer 8" })
 vim.keymap.set("n", "<A-9>", "<cmd>b9<cr>", { noremap = true, silent = true, desc = "Go to buffer 9" })
 
--- Telescope related keymaps
 vim.api.nvim_set_keymap(
 	"n",
 	"<leader>al",
