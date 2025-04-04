@@ -22,6 +22,7 @@ vim.keymap.set(
 	vim.diagnostic.open_float,
 	{ noremap = true, silent = true, desc = "Show diagnostic [E]rror messages" }
 )
+
 vim.keymap.set(
 	"n",
 	"<leader>q",
@@ -63,6 +64,7 @@ vim.keymap.set(
 	"<cmd>source $HOME/.config/nvim/init.lua<cr>",
 	{ noremap = true, silent = true, desc = "Reload config" }
 )
+
 vim.keymap.set("n", "<F5>", "<cmd>.lua<cr>", { noremap = true, silent = true, desc = "Reload config" })
 vim.keymap.set("v", "<F5>", "<cmd>lua<cr>", { noremap = true, silent = true, desc = "Reload config" })
 
@@ -74,6 +76,7 @@ vim.keymap.set(
 	"<cmd>LspRestart<cr>",
 	{ noremap = true, silent = true, desc = "Restart lsp" }
 )
+
 vim.keymap.set({ "n", "v", "i" }, "<F3>", "<cmd>LspStart<cr>", { noremap = true, silent = true, desc = "Start lsp" })
 vim.keymap.set({ "n", "v", "i" }, "<F4>", "<cmd>LspStop<cr>", { noremap = true, silent = true, desc = "Stop lsp" })
 vim.keymap.set({ "n", "v", "i" }, "<F6>", "<cmd>LspInfo<cr>", { noremap = true, silent = true, desc = "Lsp info" })
@@ -89,22 +92,24 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-	"n",
+	{ "n" },
 	"<C-s><C-a>",
-	":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
+	":%s/<C-r><C-w>//g<Left><Left>",
 	{ noremap = true, silent = false, desc = "Replace word from under the cursor" }
 )
+
 vim.keymap.set(
-	"n",
+	{ "n" },
 	"<C-s><C-s>",
-	":%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>",
+	":%s/<C-r><C-w>//gc<Left><Left><Left>",
 	{ noremap = true, silent = false, desc = "Replace word from under the cursor" }
 )
+
 vim.keymap.set(
-	"n",
-	"<C-s><C-l>",
-	":s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
-	{ noremap = true, silent = false, desc = "Replace word from under the cursor" }
+	{ "v" },
+	"<C-s><C-h>",
+	'"ay:%s/<C-r>a//gc<Left><Left><Left>',
+	{ noremap = true, silent = false, desc = "Replace word from the highlight" }
 )
 
 vim.keymap.set(
@@ -113,6 +118,7 @@ vim.keymap.set(
 	"<cmd>lua vim.lsp.inlay_hint.enable(true, { 0 })<cr>",
 	{ noremap = true, silent = true, desc = "Enable inlay hints" }
 )
+
 vim.keymap.set(
 	"n",
 	"<C-h><C-i>",
@@ -128,54 +134,63 @@ vim.keymap.set(
 	"<cmd>MultipleCursorsAddDown<cr>",
 	{ noremap = true, silent = true, desc = "Add cursor and move down" }
 )
+
 vim.keymap.set(
 	"n",
 	"<C-k>",
 	"<cmd>MultipleCursorsAddUp<cr>",
 	{ noremap = true, silent = true, desc = "Add cursor and move up" }
 )
+
 vim.keymap.set(
 	"n",
 	"<C-Up>",
 	"<cmd>MultipleCursorsAddUp<cr>",
 	{ noremap = true, silent = true, desc = "Add cursor and move up" }
 )
+
 vim.keymap.set(
 	"n",
 	"<C-Down>",
 	"<cmd>MultipleCursorsAddDown<cr>",
 	{ noremap = true, silent = true, desc = "Add cursor and move down" }
 )
+
 vim.keymap.set(
 	"n",
 	"<C-LeftMouse>",
 	"<cmd>MultipleCursorsMouseAddDelete<cr>",
 	{ noremap = true, silent = true, desc = "Add or remove cursor" }
 )
+
 vim.keymap.set(
 	"n",
 	"<space>a",
 	"<cmd>MultipleCursorsAddMatches<cr>",
 	{ noremap = true, silent = true, desc = "Add cursors to cword" }
 )
+
 vim.keymap.set(
 	"n",
 	"<space>A",
 	"<cmd>MultipleCursorsAddMatchesV<cr>",
 	{ noremap = true, silent = true, desc = "Add cursors to cword in previous area" }
 )
+
 vim.keymap.set(
 	"n",
 	"<space>d",
 	"<cmd>MultipleCursorsAddJumpNextMatch<cr>",
 	{ noremap = true, silent = true, desc = "Add cursor and jump to next cword" }
 )
+
 vim.keymap.set(
 	"n",
 	"<space>D",
 	"<cmd>MultipleCursorsJumpNextMatch<cr>",
 	{ noremap = true, silent = true, desc = "Jump to next cword" }
 )
+
 vim.keymap.set(
 	"n",
 	"<space>l",

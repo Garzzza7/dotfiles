@@ -65,7 +65,7 @@ Plug 'zah/nim.vim'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme sitruuna
 
 if has("autocmd")
   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
@@ -135,7 +135,7 @@ let g:fzf_colors =
 :noremap <C-f> :FZF<CR>
 :noremap <C-c><C-d> :FZF $HOME/.vim<CR>
 :noremap <C-c><C-f> :tabnew $HOME/.vimrc<CR>
-:noremap <F2> :echo 'Current time is ' . strftime('%c')<CR>
+:noremap <F1> :echo 'Current time is ' . strftime('%c')<CR>
 :noremap <C-r> :source $HOME/.vimrc<CR>
 
 set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
