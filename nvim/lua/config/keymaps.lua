@@ -212,8 +212,9 @@ vim.api.nvim_set_keymap(
 	"n",
 	"<leader>al",
 	"<cmd>Telescope find_files cwd=$HOME/zadania/Algos/<cr>",
-	{ noremap = true, silent = true }
+	{ noremap = true, silent = true, desc = "Open Algos" }
 )
+
 vim.api.nvim_set_keymap("n", "<leader>mf", "<cmd>Telescope media_files<cr>", { noremap = true, silent = true })
 
 vim.keymap.set(
