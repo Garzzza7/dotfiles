@@ -18,6 +18,14 @@
 (unless (package-installed-p 'vimrc-mode)
   (package-install 'vimrc-mode))
 
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
+
 (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
 
 ;;TODO: this is bad, change it pls

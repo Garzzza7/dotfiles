@@ -63,6 +63,7 @@ Plug 'vim-scripts/asmx86_64'
 Plug 'wlangstroth/vim-racket'
 Plug 'zah/nim.vim'
 Plug 'mbbill/undotree'
+Plug 'gleam-lang/gleam.vim'
 
 call plug#end()
 

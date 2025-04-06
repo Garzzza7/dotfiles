@@ -1,6 +1,7 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		-- version = "*",
 		version = "v0.9.1",
 		opts = {
 			ensure_installed = {
