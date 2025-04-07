@@ -65,6 +65,8 @@ Plug 'zah/nim.vim'
 Plug 'mbbill/undotree'
 Plug 'gleam-lang/gleam.vim'
 Plug 'jrozner/vim-antlr'
+Plug 'vim-scripts/slang_syntax'
+Plug 'beyondmarc/hlsl.vim'
 
 call plug#end()
 
