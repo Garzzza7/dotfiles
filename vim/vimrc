@@ -1,146 +1,160 @@
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-set number
 let g:netrw_liststyle=3
+set number 
 set relativenumber
-syntax enable
-filetype plugin indent on
-set nocompatible
-set termguicolors
+colorscheme retrobox
 set background=dark
-set tabpagemax=1000
-set ruler
-set nojoinspaces
-set shiftround
-set showcmd
-set paste
-set is hls
-set incsearch
-set hlsearch
-set wildmenu
-set hidden
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
-call plug#begin()
-
-Plug 'cespare/vim-toml'
-Plug 'cmaureir/snipmate-snippets-cuda'
-Plug 'eemed/sitruuna.vim'
-Plug 'elixir-lang/vim-elixir'
-Plug 'elmcast/elm-vim'
-Plug 'elzr/vim-json'
-Plug 'flazz/vim-colorschemes'
-Plug 'good5dog5/arm.vim'
-Plug 'harenome/vim-mipssyntax'
-Plug 'julialang/julia-vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'kchmck/vim-coffee-script'
-Plug 'lervag/vimtex'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'morhetz/gruvbox'
-Plug 'neovimhaskell/haskell-vim'
-" Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'bfrg/vim-cpp-modern'
-Plug 'plasticboy/vim-markdown'
-Plug 'potatoesmaster/i3-vim-syntax'
-Plug 'rhysd/vim-crystal'
-Plug 'rust-lang/rust.vim'
-Plug 'stephpy/vim-yaml'
-Plug 'superbil/llvm.vim'
-Plug 'tbastos/vim-lua'
-Plug 'tbastos/vim-lua'
-Plug 'tikhomirov/vim-glsl'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'vim-scripts/VimClojure'
-Plug 'vim-scripts/asmx86_64'
-Plug 'wlangstroth/vim-racket'
-Plug 'zah/nim.vim'
-Plug 'mbbill/undotree'
-Plug 'gleam-lang/gleam.vim'
-Plug 'jrozner/vim-antlr'
-Plug 'vim-scripts/slang_syntax'
-Plug 'beyondmarc/hlsl.vim'
-
-call plug#end()
-
-colorscheme sitruuna
-
-if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-        \ if v:insertmode == 'i' |
-        \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-        \ elseif v:insertmode == 'r' |
-        \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-        \ endif
-  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
-
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
-function! s:build_quickfix_list(lines)
-  call setqflist(map(copy(a:lines), '{ "filename": v:val, "lnum": 1 }'))
-  copen
-  cc
-endfunction
-let g:fzf_action = {
-      \ 'ctrl-q': function('s:build_quickfix_list'),
-      \ 'ctrl-t': 'tab split',
-      \ 'ctrl-x': 'split',
-      \ 'ctrl-v': 'vsplit' }
+:nnoremap <space>al <cmd>Ex $HOME/zadania/Algos<cr>
+:nnoremap <C-c><C-f> <cmd>tabnew $HOME/.vimrc<cr>
+:nnoremap <UP> <cmd>echo "xdd"<cr>
+:nnoremap <DOWN> <cmd>echo "xdd"<cr>
+:nnoremap <RIGHT> <cmd>echo "xdd"<cr>
+:nnoremap <LEFT> <cmd>echo "xdd"<cr>
 
 
-let g:fzf_colors =
-      \ { 'fg':      ['fg', 'Normal'],
-      \ 'bg':      ['bg', 'Normal'],
-      \ 'hl':      ['fg', 'Comment'],
-      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-      \ 'hl+':     ['fg', 'Statement'],
-      \ 'info':    ['fg', 'PreProc'],
-      \ 'border':  ['fg', 'Ignore'],
-      \ 'prompt':  ['fg', 'Conditional'],
-      \ 'pointer': ['fg', 'Exception'],
-      \ 'marker':  ['fg', 'Keyword'],
-      \ 'spinner': ['fg', 'Label'],
-      \ 'header':  ['fg', 'Comment'] }
 
-:tnoremap <Esc> <C-\><C-n>
-" WINDOWS
-:noremap <C-h> <C-w><C-h>
-:noremap <C-j> <C-w><C-j>
-:noremap <C-k> <C-w><C-k>
-:noremap <C-l> <C-w><C-l>
+" let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+" if empty(glob(data_dir . '/autoload/plug.vim'))
+"   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+"   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" endif
 
-" BUFFERS
-:noremap <A-n> :bn<CR>
-:noremap <A-d> :bd!<CR>
-:noremap <A-p> :bp<CR>
-:noremap <A-w> :bw<CR>
-:noremap <A-l> :ls<CR>
+" set number
+" let g:netrw_liststyle=3
+" set relativenumber
+" syntax enable
+" filetype plugin indent on
+" set nocompatible
+" set termguicolors
+" set background=dark
+" set tabpagemax=1000
+" set ruler
+" set nojoinspaces
+" set shiftround
+" set showcmd
+" set paste
+" set is hls
+" set incsearch
+" set hlsearch
+" set wildmenu
+" set hidden
+" if maparg('<C-L>', 'n') ==# ''
+"   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+" endif
+" call plug#begin()
 
-" GLOBAL SAVING AND QUITING
-:noremap <A-C-q> :qa!<CR>
-:noremap <A-C-w> :wa<CR>
+" Plug 'cespare/vim-toml'
+" Plug 'cmaureir/snipmate-snippets-cuda'
+" Plug 'eemed/sitruuna.vim'
+" Plug 'elixir-lang/vim-elixir'
+" Plug 'elmcast/elm-vim'
+" Plug 'elzr/vim-json'
+" Plug 'flazz/vim-colorschemes'
+" Plug 'good5dog5/arm.vim'
+" Plug 'harenome/vim-mipssyntax'
+" Plug 'julialang/julia-vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'kchmck/vim-coffee-script'
+" Plug 'lervag/vimtex'
+" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+" Plug 'morhetz/gruvbox'
+" Plug 'neovimhaskell/haskell-vim'
+" " Plug 'octol/vim-cpp-enhanced-highlight'
+" Plug 'bfrg/vim-cpp-modern'
+" Plug 'plasticboy/vim-markdown'
+" Plug 'potatoesmaster/i3-vim-syntax'
+" Plug 'rhysd/vim-crystal'
+" Plug 'rust-lang/rust.vim'
+" Plug 'stephpy/vim-yaml'
+" Plug 'superbil/llvm.vim'
+" Plug 'tbastos/vim-lua'
+" Plug 'tbastos/vim-lua'
+" Plug 'tikhomirov/vim-glsl'
+" Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-surround'
+" Plug 'vim-scripts/VimClojure'
+" Plug 'vim-scripts/asmx86_64'
+" Plug 'wlangstroth/vim-racket'
+" Plug 'zah/nim.vim'
+" Plug 'mbbill/undotree'
+" Plug 'gleam-lang/gleam.vim'
+" Plug 'jrozner/vim-antlr'
+" Plug 'vim-scripts/slang_syntax'
+" Plug 'beyondmarc/hlsl.vim'
 
-" TABS
-:noremap <space>n :tabNext<CR>
-:noremap <space>p :tabprevious<CR>
-:noremap <space>l :tabs<CR>
-:nnoremap <space>w :tabclose<CR>
-:nnoremap <C-t> :tab term<CR>
+" call plug#end()
 
-:noremap <Esc><Esc> :nohlsearch<CR>
-:noremap <C-f> :FZF<CR>
-:noremap <C-c><C-d> :FZF $HOME/.vim<CR>
-:noremap <C-c><C-f> :tabnew $HOME/.vimrc<CR>
-:noremap <F1> :echo 'Current time is ' . strftime('%c')<CR>
-:noremap <C-r> :source $HOME/.vimrc<CR>
+" colorscheme sitruuna
 
-set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
+" if has("autocmd")
+"   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+"   au InsertEnter,InsertChange *
+"         \ if v:insertmode == 'i' |
+"         \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+"         \ elseif v:insertmode == 'r' |
+"         \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+"         \ endif
+"   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+" endif
+
+" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+" function! s:build_quickfix_list(lines)
+"   call setqflist(map(copy(a:lines), '{ "filename": v:val, "lnum": 1 }'))
+"   copen
+"   cc
+" endfunction
+" let g:fzf_action = {
+"       \ 'ctrl-q': function('s:build_quickfix_list'),
+"       \ 'ctrl-t': 'tab split',
+"       \ 'ctrl-x': 'split',
+"       \ 'ctrl-v': 'vsplit' }
+
+
+" let g:fzf_colors =
+"       \ { 'fg':      ['fg', 'Normal'],
+"       \ 'bg':      ['bg', 'Normal'],
+"       \ 'hl':      ['fg', 'Comment'],
+"       \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+"       \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+"       \ 'hl+':     ['fg', 'Statement'],
+"       \ 'info':    ['fg', 'PreProc'],
+"       \ 'border':  ['fg', 'Ignore'],
+"       \ 'prompt':  ['fg', 'Conditional'],
+"       \ 'pointer': ['fg', 'Exception'],
+"       \ 'marker':  ['fg', 'Keyword'],
+"       \ 'spinner': ['fg', 'Label'],
+"       \ 'header':  ['fg', 'Comment'] }
+
+" :tnoremap <Esc> <C-\><C-n>
+" " WINDOWS
+" :noremap <C-h> <C-w><C-h>
+" :noremap <C-j> <C-w><C-j>
+" :noremap <C-k> <C-w><C-k>
+" :noremap <C-l> <C-w><C-l>
+
+" " BUFFERS
+" :noremap <A-n> :bn<CR>
+" :noremap <A-d> :bd!<CR>
+" :noremap <A-p> :bp<CR>
+" :noremap <A-w> :bw<CR>
+" :noremap <A-l> :ls<CR>
+
+" " GLOBAL SAVING AND QUITING
+" :noremap <A-C-q> :qa!<CR>
+" :noremap <A-C-w> :wa<CR>
+
+" " TABS
+" :noremap <space>n :tabNext<CR>
+" :noremap <space>p :tabprevious<CR>
+" :noremap <space>l :tabs<CR>
+" :nnoremap <space>w :tabclose<CR>
+" :nnoremap <C-t> :tab term<CR>
+
+" :noremap <Esc><Esc> :nohlsearch<CR>
+" :noremap <C-f> :FZF<CR>
+" :noremap <C-c><C-d> :FZF $HOME/.vim<CR>
+" :noremap <C-c><C-f> :tabnew $HOME/.vimrc<CR>
+" :noremap <F1> :echo 'Current time is ' . strftime('%c')<CR>
+" :noremap <C-r> :source $HOME/.vimrc<CR>
+
+" set rtp^="$HOME/.opam/default/share/ocp-indent/vim"

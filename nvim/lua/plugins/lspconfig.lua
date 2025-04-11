@@ -158,7 +158,18 @@ return {
 				-- asmfmt = {},
 				-- gopls = {},
 				glsl_analyzer = {},
-				perlnavigator = {},
+				perlnavigator = {
+					cmd = { "perlnavigator" },
+					settings = {
+						perlnavigator = {
+							perlPath = "/usr/bin/perl",
+							enableWarnings = true,
+							perltidyProfile = "",
+							perlcriticProfile = "",
+							perlcriticEnabled = true,
+						},
+					},
+				},
 				-- html = {},
 				-- hls = {},
 				-- ocamllsp = {},
@@ -204,7 +215,18 @@ return {
 			-- lspconfig.ocamllsp.setup({})
 			-- https://github.com/ocaml/ocaml-lsp
 
-			-- lspconfig.perlnavigator.setup({})
+			-- lspconfig.perlnavigator.setup({
+			-- 	cmd = { "perlnavigator" },
+			-- 	settings = {
+			-- 		perlnavigator = {
+			-- 			perlPath = "perl",
+			-- 			enableWarnings = true,
+			-- 			perltidyProfile = "",
+			-- 			perlcriticProfile = "",
+			-- 			perlcriticEnabled = true,
+			-- 		},
+			-- 	},
+			-- })
 			-- https://github.com/bscan/PerlNavigator
 
 			-- lspconfig.opencl_ls.setup({})
