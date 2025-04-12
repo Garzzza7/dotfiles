@@ -3,12 +3,15 @@ set number
 set relativenumber
 colorscheme retrobox
 set background=dark
-:nnoremap <space>al <cmd>Ex $HOME/zadania/Algos<cr>
-:nnoremap <C-c><C-f> <cmd>tabnew $HOME/.vimrc<cr>
-:nnoremap <UP> <cmd>echo "xdd"<cr>
-:nnoremap <DOWN> <cmd>echo "xdd"<cr>
-:nnoremap <RIGHT> <cmd>echo "xdd"<cr>
-:nnoremap <LEFT> <cmd>echo "xdd"<cr>
+:nnoremap <silent> <SPACE>al <cmd>Ex $HOME/zadania/Algos<cr>
+:nnoremap <silent> <C-c><C-f> <cmd>tabnew $HOME/.vimrc<cr>
+:nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
+:nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
+:nnoremap <silent> <RIGHT> <cmd>echo "xdd"<cr>
+:nnoremap <silent> <LEFT> <cmd>echo "xdd"<cr>
+:nnoremap <silent> <A-C-w> <cmd>wa<cr>
+:nnoremap <silent> <A-C-q> <cmd>qa!<cr>
+:nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
 
 
 
