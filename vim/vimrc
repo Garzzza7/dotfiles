@@ -1,6 +1,7 @@
 let g:netrw_liststyle=3
 set number 
 set relativenumber
+syntax on
 colorscheme retrobox
 set background=dark
 :nnoremap <silent> <SPACE>al <cmd>Ex $HOME/zadania/Algos<cr>
