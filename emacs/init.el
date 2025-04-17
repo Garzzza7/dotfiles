@@ -19,12 +19,12 @@
   (package-install 'vimrc-mode))
 
 ;; Download Evil
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
+;;(unless (package-installed-p 'evil)
+;;  (package-install 'evil))
 
 ;; Enable Evil
-(require 'evil)
-(evil-mode 1)
+;;(require 'evil)
+;;(evil-mode 1)
 
 (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
 
