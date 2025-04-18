@@ -13,6 +13,7 @@ set background=dark
 :nnoremap <silent> <A-C-w> <cmd>wa<cr>
 :nnoremap <silent> <A-C-q> <cmd>qa!<cr>
 :nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
+:tnoremap <silent> <Esc> <C-\><C-n>
 let &t_SI = "\e[6 q"  " Line cursor in insert mode
 let &t_EI = "\e[2 q"  " Block cursor in normal mode
 
