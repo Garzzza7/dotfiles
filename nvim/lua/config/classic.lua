@@ -25,3 +25,4 @@ vim.opt.scrolloff = 8
 vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 vim.opt.hlsearch = true
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"

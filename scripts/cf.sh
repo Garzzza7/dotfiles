@@ -4,5 +4,5 @@ modified_string=$(echo $input_string | sed 's/[[:space:]\x27]/_/g')
 touch $modified_string.cpp
 touch $modified_string.txt
 cp $HOME/zadania/TEMPLATE.cpp $modified_string.cpp
-nvim $modified_string.*
+vim $modified_string.*
 
