@@ -13,10 +13,15 @@ set background=dark
 :nnoremap <silent> <A-C-w> <cmd>wa<cr>
 :nnoremap <silent> <A-C-q> <cmd>qa!<cr>
 :nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
-:nnoremap <silent> <Esc><Esc> <C-\><C-n>
-:tnoremap <silent> <Esc><Esc> <C-\><C-n>
+:tnoremap <Esc> <C-\><C-n>
+:noremap <A-n> :bn<CR>
+:noremap <A-d> :bd!<CR>
+:noremap <A-p> :bp<CR>
+:noremap <A-w> :bw<CR>
+:noremap <A-l> :ls<CR>
 let &t_SI = "\e[6 q"  " Line cursor in insert mode
 let &t_EI = "\e[2 q"  " Block cursor in normal mode
+
 
 
 
