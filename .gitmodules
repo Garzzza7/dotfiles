@@ -7,3 +7,6 @@
 [submodule "gf"]
 	path = gf
 	url = https://github.com/nakst/gf
+[submodule "onefetch"]
+	path = onefetch
+	url = https://github.com/o2sh/onefetch
