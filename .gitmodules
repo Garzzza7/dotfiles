@@ -1,0 +1,9 @@
+[submodule "typst"]
+	path = typst
+	url = https://github.com/typst/typst
+[submodule "tree-sitter"]
+	path = tree-sitter
+	url = https://github.com/tree-sitter/tree-sitter.git
+[submodule "gf"]
+	path = gf
+	url = https://github.com/nakst/gf
