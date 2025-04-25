@@ -154,6 +154,7 @@ return {
 				},
 				bashls = {},
 				neocmake = {},
+				tinymist = {},
 				-- asm_lsp = {},
 				-- asmfmt = {},
 				-- gopls = {},

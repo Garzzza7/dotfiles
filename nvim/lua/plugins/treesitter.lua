@@ -3,6 +3,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		-- version = "*",
 		version = "v0.9.1",
+		-- version = "v0.9.3",
 		opts = {
 			ensure_installed = {
 				"asm",
@@ -56,15 +57,15 @@ return {
 			sync_install = false,
 
 			highlight = {
-				additional_vim_regex_highlighting = true,
+				additional_vim_regex_highlighting = false,
 				custom_captures = {},
-				disable = {},
+				-- disable = { "typst" },
 				enable = true,
 				loaded = false,
 			},
 			incremental_selection = {
 				enable = false,
-				disable = {},
+				-- disable = { "typst" },
 				keymaps = {
 					init_selection = "gnn",
 					node_decremental = "grm",
@@ -73,7 +74,7 @@ return {
 				},
 			},
 			indent = {
-				disable = {},
+				-- disable = { "typst" },
 				enable = false,
 			},
 		},
