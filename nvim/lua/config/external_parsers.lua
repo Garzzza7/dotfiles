@@ -1,13 +1,36 @@
 ---@diagnostic disable: inject-field
--- TYPYST GRAMMAR
+-- TYPST GRAMMAR
 require("nvim-treesitter.parsers").get_parser_configs().typst = {
 	install_info = {
-		url = "https://github.com/uben0/tree-sitter-typst", -- local path or git repo
-		files = { "src/parser.c", "src/scanner.c" }, -- note that some parsers also require src/scanner.c or src/scanner.cc
-		-- optional entries:
-		branch = "master", -- default branch in case of git repo if different from master
-		generate_requires_npm = false, -- if stand-alone parser without npm dependencies
-		requires_generate_from_grammar = true, -- if folder contains pre-generated src/parser.c
+		url = "https://github.com/uben0/tree-sitter-typst",
+		files = { "src/parser.c", "src/scanner.c" },
+		branch = "master",
+		generate_requires_npm = false,
+		requires_generate_from_grammar = true,
 	},
-	filetype = "typ", -- if filetype does not match the parser name
+	filetype = "typ",
+}
+
+-- ASM GRAMMAR
+require("nvim-treesitter.parsers").get_parser_configs().asm = {
+	install_info = {
+		url = "https://github.com/RubixDev/tree-sitter-asm",
+		files = { "src/parser.c" },
+		branch = "main",
+		generate_requires_npm = false,
+		requires_generate_from_grammar = true,
+	},
+	filetype = "asm",
+}
+
+-- DISASSEMBLY GRAMMAR
+require("nvim-treesitter.parsers").get_parser_configs().disassembly = {
+	install_info = {
+		url = "https://github.com/ColinKennedy/tree-sitter-disassembly",
+		files = { "src/parser.c", "src/scanner.c" },
+		branch = "master",
+		generate_requires_npm = false,
+		requires_generate_from_grammar = true,
+	},
+	filetype = "S",
 }
