@@ -9,13 +9,21 @@ pink=$(tput setaf 13)
 lightblue=$(tput setaf 12)
 vividred=$(tput setaf 9)
 purple=$(tput setaf 5)
-invisible=$(tput setaf 0)
+invincible=$(tput setaf 0)
 ygreen=$(tput setaf 2)
 yellow=$(tput setaf 3)
 red=$(tput setaf 1)
 blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
+
+if command -v ghostty 2>&1 >/dev/null
+then
+    printf "${green}Ghostty found.\n${normal}"
+    cp -r $HOME/.config/ghostty/config ghostty/config
+else
+    printf "${red}Omitting Ghostty.\n${normal}"
+fi
 
 if command -v qutebrowser 2>&1 >/dev/null
 then

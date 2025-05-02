@@ -17,6 +17,14 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
+if command -v ghostty 2>&1 >/dev/null
+then
+    printf "${green}Ghostty found.\n${normal}"
+    cp -r ghostty/config $HOME/.config/ghostty/config
+else
+    printf "${red}Omitting Ghostty\n${normal}"
+fi
+
 if command -v qutebrowser 2>&1 >/dev/null
 then
     printf "${green}Qutebrowser found.\n${normal}"
