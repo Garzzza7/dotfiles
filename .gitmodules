@@ -10,3 +10,6 @@
 [submodule "onefetch"]
 	path = onefetch
 	url = https://github.com/o2sh/onefetch
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git
