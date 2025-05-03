@@ -13,3 +13,6 @@
 [submodule "fzf"]
 	path = fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "mold"]
+	path = mold
+	url = https://github.com/rui314/mold.git
