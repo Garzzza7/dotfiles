@@ -6,7 +6,7 @@ if [ -f "/etc/arch-release" ]; then
     sudo pacman -S emacs
 elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
-    git clone https://git.savannah.gnu.org/git/emacs.git $HOME/emacs
+    # git clone https://git.savannah.gnu.org/git/emacs.git $HOME/emacs
 
     cd $HOME/emacs
 
@@ -19,12 +19,12 @@ elif [ -f "/etc/debian_version" ]; then
 
     ./autogen.sh
 
-    # --with-native-compilation
     ./configure -with-json --with-modules --with-harfbuzz --with-compress-install \
         --with-threads --with-included-regex --with-x-toolkit=lucid --with-zlib --with-jpeg --with-png --with-imagemagick --with-tiff --with-xpm --with-gnutls \
-        --with-xft --with-xml2 --with-mailutils
+        --with-xft --with-xml2 --with-mailutils --with-native-compilation
 
-    make -j$(nproc)
+
+    time sudo make -j$(nproc)
 
     sudo make install
 fi
