@@ -6,10 +6,7 @@ return {
 		dependencies = {
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
-				build = "make",
-				cond = function()
-					return vim.fn.executable("make") == 1
-				end,
+				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 			},
 			{ "nvim-lua/popup.nvim" },
 			{ "nvim-lua/plenary.nvim" },
@@ -26,11 +23,33 @@ return {
 
 				defaults = {
 					layout_strategy = "vertical",
-					layout_config = { height = 0.95, width = 0.95 },
+					-- layout_strategy = "flex",
+					sorting_strategy = "descending",
+					layout_config = {
+						prompt_position = "bottom",
+						horizontal = {
+							mirror = false,
+							preview_cutoff = 100,
+							preview_width = 0.5,
+						},
+						vertical = {
+							mirror = false,
+							preview_cutoff = 0.4,
+						},
+						flex = {
+							flip_columns = 200,
+						},
+						height = 0.95,
+						width = 0.95,
+						preview_cutoff = 100,
+					},
 					mappings = {
 						i = {
 							["<ESC>"] = require("telescope.actions").close,
 						},
+					},
+					preview = {
+						filesize_limit = 1.0, -- MB
 					},
 				},
 				pickers = {
@@ -184,22 +203,7 @@ return {
 						},
 					},
 					["ui-select"] = {
-						require("telescope.themes").get_dropdown({
-							-- even more opts
-						}),
-						-- pseudo code / specification for writing custom displays, like the one
-						-- for "codeactions"
-						-- specific_opts = {
-						--   [kind] = {
-						--     make_indexed = function(items) -> indexed_items, width,
-						--     make_displayer = function(widths) -> displayer
-						--     make_display = function(displayer) -> function(e)
-						--     make_ordinal = function(e) -> string
-						--   },
-						--   -- for example to disable the custom builtin "codeactions" display
-						--      do the following
-						--   codeactions = false,
-						-- }
+						require("telescope.themes").get_dropdown({}),
 					},
 					live_grep_args = {
 						auto_quoting = true, -- enable/disable auto-quoting
@@ -223,7 +227,7 @@ return {
 			})
 			-- MAYBE USE PCAL IDK
 			require("telescope").load_extension("fzf")
-			-- require("telescope").load_extension("ui-select")
+			require("telescope").load_extension("ui-select")
 			require("telescope").load_extension("media_files")
 			require("telescope").load_extension("file_browser")
 			-- require("telescope").load_extension("live_grep_args")
