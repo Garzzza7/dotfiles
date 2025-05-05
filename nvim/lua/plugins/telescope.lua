@@ -23,9 +23,15 @@ return {
 		},
 		config = function()
 			require("telescope").setup({
+
 				defaults = {
 					layout_strategy = "vertical",
 					layout_config = { height = 0.95, width = 0.95 },
+					mappings = {
+						i = {
+							["<ESC>"] = require("telescope.actions").close,
+						},
+					},
 				},
 				pickers = {
 					help_tags = {
@@ -100,7 +106,7 @@ return {
 
 					git_files = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = -1.95, width = 0.95 },
 					},
 
 					current_buffer_fuzzy_find = {
