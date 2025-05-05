@@ -34,3 +34,15 @@ require("nvim-treesitter.parsers").get_parser_configs().disassembly = {
 	},
 	filetype = "S",
 }
+
+-- NIM GRAMMAR
+require("nvim-treesitter.parsers").get_parser_configs().disassembly = {
+	install_info = {
+		url = "https://github.com/alaviss/tree-sitter-nim/tree/main",
+		files = { "src/parser.c", "src/scanner.c" },
+		branch = "main",
+		generate_requires_npm = false,
+		requires_generate_from_grammar = true,
+	},
+	filetype = "nim",
+}

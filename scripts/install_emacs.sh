@@ -6,7 +6,7 @@ if [ -f "/etc/arch-release" ]; then
     sudo pacman -S emacs
 elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
-    # git clone https://git.savannah.gnu.org/git/emacs.git $HOME/emacs
+    git clone https://git.savannah.gnu.org/git/emacs.git $HOME/emacs
 
     cd $HOME/emacs
 

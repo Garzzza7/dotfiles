@@ -14,7 +14,8 @@ git clone https://github.com/neovim/neovim $HOME/neovim
 
 cd $HOME/neovim/
 
-# git checkout v0.10.4
+git checkout v0.10.4
+# git checkout stable
 
 sudo make CMAKE_BUILD_TYPE=Release -j$(nproc)
 
