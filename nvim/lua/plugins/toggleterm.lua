@@ -7,7 +7,7 @@ return {
 			opts = {},
 			init = function()
 				require("toggleterm").setup({
-					size = 20,
+					size = 100,
 					-- open_mapping = "<C-t>",
 					shell = vim.o.shell,
 					hide_numbers = false,
