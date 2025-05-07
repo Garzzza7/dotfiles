@@ -1,7 +1,7 @@
 return {
 	{
 		"brenton-leighton/multiple-cursors.nvim",
-		version = "*",
+		version = "v0.15",
 		opts = {},
 	},
 }

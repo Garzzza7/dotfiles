@@ -1,13 +1,22 @@
 return {
 	{
 		"neovim/nvim-lspconfig",
+		version = "v2.1.0",
 		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			{
+				"williamboman/mason.nvim",
+				version = "v1.11.0",
+			},
+			{
+				"williamboman/mason-lspconfig.nvim",
+				version = "v1.32.0",
+			},
+			{
+				"WhoIsSethDaniel/mason-tool-installer.nvim",
+			},
 			{
 				"j-hui/fidget.nvim",
-				tag = "v1.6.1",
+				version = "v1.6.1",
 				opts = {},
 				init = function()
 					require("fidget").setup({

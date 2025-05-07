@@ -2,6 +2,7 @@
 return {
 	{
 		"numToStr/Comment.nvim",
+		version = "v0.8.0",
 		config = function()
 			require("Comment").setup({
 				---Add a space b/w comment and the line

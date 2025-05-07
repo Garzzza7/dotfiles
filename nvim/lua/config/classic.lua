@@ -21,8 +21,11 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 8
 
---syncronizing clipboard between neovim and the system, in order for this to work xclip has to be installed
-vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
+-- syncronizing clipboard between neovim and the system, in order for this to work xclip has to be installed
+-- vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 vim.opt.hlsearch = true
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+
+-- default terminal
+vim.g.terminal_emulator = "ghostty"

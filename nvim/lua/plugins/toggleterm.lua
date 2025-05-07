@@ -2,7 +2,7 @@ return {
 	{
 		{
 			"akinsho/toggleterm.nvim",
-			version = "*",
+			version = "v2.13.1",
 			lazy = true,
 			opts = {},
 			init = function()
