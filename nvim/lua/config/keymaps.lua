@@ -50,7 +50,17 @@ vim.keymap.set({ "n", "i", "v" }, "<A-n>", "<cmd>bn<cr> ", { noremap = true, sil
 vim.keymap.set({ "n", "i", "v" }, "<A-d>", "<cmd>bd!<cr> ", { noremap = true, silent = true, desc = "Delete Buffer" })
 vim.keymap.set({ "n", "i", "v" }, "<A-p>", "<cmd>bp<cr> ", { noremap = true, silent = true, desc = "Previous buffer" })
 vim.keymap.set({ "n", "i", "v" }, "<A-w>", "<cmd>bw<cr> ", { noremap = true, silent = true, desc = "Write buffer" })
-vim.keymap.set({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", { noremap = true, silent = true, desc = "Display buffers" })
+vim.keymap.set({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", { noremap = true, silent = false, desc = "Display buffers" })
+
+-- TODO: make tab stuff not collide with anything
+-- vim.keymap.set({ "n", "i", "v" }, "<C-n>", "<cmd>tabNext<cr> ", { noremap = true, silent = true, desc = "Next tab" })
+-- vim.keymap.set({ "n", "i", "v" }, "<C-d>", "<cmd>tabclose<cr> ", { noremap = true, silent = true, desc = "Delete tab" })
+-- vim.keymap.set(
+-- 	{ "n", "i", "v" },
+-- 	"<C-p>",
+-- 	"<cmd>tabprevious<cr> ",
+-- 	{ noremap = true, silent = true, desc = "Previous tab" }
+-- )
 
 -- window stuff, conflics with space a the leader
 -- vim.keymap.set("n", "<space>n", "<cmd> :tabNext<cr> ", {noremap = true , silent = true , desc = "TODO"})
