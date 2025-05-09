@@ -48,3 +48,4 @@ window-subtitle = false
 gtk-tabs-location = hidden
 window-theme = ghostty
 gtk-wide-tabs = false
+background-opacity = 0.75
