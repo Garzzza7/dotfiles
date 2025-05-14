@@ -233,3 +233,12 @@ vim.keymap.set(
 	"<cmd>ToggleTerm dir=%:p:h<cr>",
 	{ noremap = true, silent = true, desc = "Open ToggleTerm" }
 )
+
+vim.keymap.set(
+	"n",
+	"<F8>",
+	"<esc> :w <cr> :!comp.sh $(echo %)<cr>",
+	{ noremap = true, silent = true, desc = "Compile C++." }
+)
+
+vim.keymap.set("n", "<F9>", "<esc> :w <cr> :!python3<cr>", { noremap = true, silent = true, desc = "Run Python." })

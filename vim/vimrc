@@ -34,8 +34,10 @@ set incsearch
 :noremap <A-l> :ls<cr>
 :nnoremap <CR> :nohlsearch<cr><cr>
 :nnoremap <C-x> :set hlsearch! hlsearch?<cr>
-:noremap <space>sf :FZF<CR>
-:noremap <space>al :FZF $HOME/zadania/Algos<CR>
+:noremap <space>sf :FZF<cr>
+:noremap <space>al :FZF $HOME/zadania/Algos<cr>
+:noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
+:noremap <F9> <esc> :w <cr> :!python3<cr>
 let &t_SI = "\e[6 q"  " Line cursor in insert mode
 let &t_EI = "\e[2 q"  " Block cursor in normal mode
 
