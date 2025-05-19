@@ -46,3 +46,15 @@ require("nvim-treesitter.parsers").get_parser_configs().nim = {
 	},
 	filetype = "nim",
 }
+
+-- LINKERSCRIPT GRAMMAR
+require("nvim-treesitter.parsers").get_parser_configs().linkerscript = {
+	install_info = {
+		url = "https://github.com/tree-sitter-grammars/tree-sitter-linkerscript",
+		files = { "src/parser.c" },
+		branch = "master",
+		generate_requires_npm = false,
+		requires_generate_from_grammar = true,
+	},
+	filetype = "ls",
+}
