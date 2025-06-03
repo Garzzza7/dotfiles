@@ -248,7 +248,8 @@ vim:fileencoding=utf-8:foldmethod=marker
 #: }}}
 
 #: Cursor customization {{{
-# cursor #ffffff
+
+ cursor #ffffff
 
 #: Default cursor color. If set to the special value none the cursor
 #: will be rendered with a "reverse video" effect. It's color will be
@@ -1118,8 +1119,9 @@ vim:fileencoding=utf-8:foldmethod=marker
 #: }}}
 
 #: Color scheme {{{
-# foreground #ffdddd
-# background #000000
+
+	foreground #ffdddd
+		background #000000
 
 #: The foreground and background colors.
 
@@ -2473,8 +2475,3 @@ bold_font        auto
 italic_font      auto
 bold_italic_font auto
 # END_KITTY_FONTS
-
-# BEGIN_KITTY_THEME
-# Jet Brains Darcula
-include current-theme.conf
-# END_KITTY_THEME
