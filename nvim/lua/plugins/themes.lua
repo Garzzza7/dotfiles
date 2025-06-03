@@ -282,12 +282,38 @@ return {
 	},
 	{
 		"eemed/sitruuna.vim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 	},
 	{
 		"jackplus-xyz/binary.nvim",
 		lazy = true,
 		priority = 1000,
+	},
+	{
+		"abreujp/scholar.nvim",
+		lazy = true,
+		priority = 1000,
+	},
+	{
+		"blazkowolf/gruber-darker.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			bold = true,
+			invert = {
+				signs = false,
+				tabline = false,
+				visual = false,
+			},
+			italic = {
+				strings = true,
+				comments = true,
+				operators = false,
+				folds = true,
+			},
+			undercurl = true,
+			underline = true,
+		},
 	},
 }
