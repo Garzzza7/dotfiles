@@ -3,7 +3,8 @@ set $mod Mod4
 
 set $alt Mod1
 
-set $TERMINAL ghostty
+# set $TERMINAL ghostty
+set $TERMINAL kitty
 
 #font pango:monospace 8
 # font pango:DejaVu Sans Mono 10
