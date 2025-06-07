@@ -1,14 +1,16 @@
 " NEW CONFIG
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+        silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'eemed/sitruuna.vim'
 Plug 'nanotech/jellybeans.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'drsooch/gruber-darker-vim'
 call plug#end()
 
 syntax on
@@ -18,9 +20,10 @@ set nocursorline
 syntax sync minlines=256
 
 let g:netrw_liststyle=3
-set number 
+set number
 set relativenumber
-colorscheme sitruuna
+colorscheme GruberDarker
+"colorscheme sitruuna
 set background=dark
 set hlsearch
 set is hls
