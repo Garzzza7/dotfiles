@@ -38,23 +38,23 @@ nnoremap <silent> <A-C-w> <cmd>wa<cr>
 nnoremap <silent> <A-C-q> <cmd>qa!<cr>
 nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
 tnoremap <Esc> <C-\><C-n>
-noremap <A-n> :bn<cr>
-noremap <A-d> :bd!<cr>
-noremap <A-p> :bp<cr>
-noremap <A-w> :bw<cr>
-noremap <A-l> :ls<cr>
+noremap <silent> <A-n> :bn<cr>
+noremap <silent> <A-d> :bd!<cr>
+noremap <silent> <A-p> :bp<cr>
+noremap <silent> <A-w> :bw<cr>
+noremap <silent> <A-l> :ls<cr>
 nnoremap <CR> :nohlsearch<cr><cr>
 nnoremap <C-x> :set hlsearch! hlsearch?<cr>
 
 noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
 noremap <F9> <esc> :w <cr> :!python3<cr>
 
-noremap <space>sf :FZF<cr>
-noremap <space>sgg :Rg<cr>
-noremap <space><space> :Buffers<cr>
-noremap <space>/ :BLines<cr>
-noremap <space>mn :Marks<cr>
-noremap <space>al :FZF $HOME/zadania/Algos<cr>
+noremap <silent> <space>sf :FZF<cr>
+noremap <silent> <space>sgg :Rg<cr>
+noremap <silent> <space><space> :Buffers<cr>
+noremap <silent> <space>/ :BLines<cr>
+noremap <silent> <space>mn :Marks<cr>
+noremap <silent> <space>al :FZF $HOME/zadania/Algos<cr>
 
 noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k

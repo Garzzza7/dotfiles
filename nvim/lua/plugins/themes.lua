@@ -316,4 +316,9 @@ return {
 			underline = true,
 		},
 	},
+	{
+		"cmoscofian/nibble-vim",
+		lazy = true,
+		priority = 1000,
+	},
 }
