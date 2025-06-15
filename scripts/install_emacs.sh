@@ -17,11 +17,11 @@ elif [ -f "/etc/debian_version" ]; then
 
     export CC="gcc-10"
 
-    ./autogen.sh
+    sudo ./autogen.sh
 
-    ./configure -with-json --with-modules --with-harfbuzz --with-compress-install \
+    sudo ./configure -with-json --with-modules --with-harfbuzz --with-compress-install \
         --with-threads --with-included-regex --with-x-toolkit=lucid --with-zlib --with-jpeg --with-png --with-imagemagick --with-tiff --with-xpm --with-gnutls \
-        --with-xft --with-xml2 --with-mailutils --with-native-compilation
+        --with-xft --with-xml2 --with-mailutils --with-native-compilation CFLAGS='-Ofast'
 
 
     time sudo make -j$(nproc)
