@@ -51,7 +51,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 #wallpaper
 # --bg-fill
-exec_always feh --bg-max $HOME/.config/i3/wallpaper.jpg
+# exec_always feh --bg-max $HOME/.config/i3/wallpaper.jpg
+exec_always feh --bg-max $HOME/.config/i3/mitsuri.png
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
