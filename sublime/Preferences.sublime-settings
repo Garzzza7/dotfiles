@@ -579,7 +579,7 @@
 	// bars, etc)
 	// The value "auto" will switch between the "light_theme" and "dark_theme"
 	// based on the operating system appearance.
-	"theme": "Adaptive.sublime-theme",
+	"theme": "Default Dark.sublime-theme",
 
 	// Controls the "theme" when to "auto"
 	"light_theme": "Default.sublime-theme",

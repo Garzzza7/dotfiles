@@ -230,14 +230,14 @@ return {
 			require("telescope").load_extension("ui-select")
 			require("telescope").load_extension("media_files")
 			require("telescope").load_extension("file_browser")
-			-- require("telescope").load_extension("live_grep_args")
+			require("telescope").load_extension("live_grep_args")
 
-			-- vim.keymap.set(
-			-- 	"n",
-			-- 	"<leader>fg",
-			-- 	"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
-			-- 	{ noremap = true, silent = true, desc = "Pass args to grep" }
-			-- )
+			vim.keymap.set(
+				"n",
+				"<leader>sga",
+				"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+				{ noremap = true, silent = true, desc = "Pass args to grep" }
+			)
 
 			vim.keymap.set(
 				"n",
