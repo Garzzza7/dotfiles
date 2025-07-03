@@ -16,3 +16,6 @@
 [submodule "mold"]
 	path = mold
 	url = https://github.com/rui314/mold.git
+[submodule "typstyle"]
+	path = typstyle
+	url = https://github.com/typstyle-rs/typstyle.git
