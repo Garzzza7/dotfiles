@@ -7,8 +7,11 @@ return {
 		opts = {
 			ensure_installed = {
 				"c",
+				"cmake",
 				"cpp",
+				"cuda",
 				"lua",
+				"make",
 				"markdown",
 				"markdown_inline",
 				"python",
