@@ -24,10 +24,12 @@ return {
 			-- 	}
 			-- end,
 			formatters_by_ft = {
+				bash = { "beautysh" },
+				cpp = { "clang-format" },
 				lua = { "stylua" },
 				python = { "black" },
-				cpp = { "clang-format" },
-				bash = { "beautysh" },
+				rust = { "rust-analyzer" },
+				typst = { "typstyle" },
 			},
 		},
 	},
