@@ -134,6 +134,7 @@ alias rm='trash-put'
 alias suspend='systemctl suspend'
 
 export PATH=$PATH:~/scripts
+export PATH=$PATH:/home/pc/.local/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/symlinks
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
