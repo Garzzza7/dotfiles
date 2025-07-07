@@ -6,16 +6,17 @@ return {
 		-- version = "v0.9.3",
 		opts = {
 			ensure_installed = {
+				"bash",
 				"c",
 				"cmake",
 				"cpp",
 				"cuda",
 				"lua",
-				"make",
 				"markdown",
 				"markdown_inline",
 				"python",
 				"query",
+				"rust",
 				"vim",
 				"vimdoc",
 			},
