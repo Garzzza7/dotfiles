@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if [ -f "/etc/arch-release" ]; then
     echo "Arch detected!!!!!!"
     sudo pacman -S base-devel cmake ninja curl feh neofetch discord unzip luarocks ripgrep npm lazygit github-cli alsa-utils xorg-xrandr toilet man-db mpv mupdf emacs htop gdb fd mupdf-tools python-pip python-setuptools tree termdown obs-studio onefetch kolourpaint cuda opencl-nvidia binwalk pulseaudio-jack nix qutebrowser imagemagick chafa ueberzug lua51 cmatrix glm glfw python-beautifulsoup4 python-requests netcat perl-image-exiftool sleuthkit wireshark-qt ghidra python-pwntools bless php sublime-text ghostty go glad clojure speedtest-cli

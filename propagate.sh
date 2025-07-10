@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 grey=$(tput setaf 7)
 vividblue=$(tput setaf 20)
 darkblue=$(tput setaf 17)
