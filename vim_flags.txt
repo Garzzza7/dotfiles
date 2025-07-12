@@ -1,0 +1,8 @@
+CONF_OPT_GUI = --disable-gui
+CONF_OPT_ACL = --disable-acl
+CONF_OPT_GPM = --disable-gpm
+CONF_OPT_CANBERRA = --disable-canberra
+CONF_OPT_SODIUM = --disable-libsodium
+CONF_OPT_COMPBY = "--with-compiledby=Gab gab gab gab"
+CONF_OPT_X = --without-x
+CFLAGS = -Ofast

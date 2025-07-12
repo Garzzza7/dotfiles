@@ -11,6 +11,7 @@ Plug 'eemed/sitruuna.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'drsooch/gruber-darker-vim'
+Plug 'mbbill/undotree'
 call plug#end()
 
 syntax on
