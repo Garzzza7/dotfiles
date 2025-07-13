@@ -20,7 +20,6 @@ return {
 		},
 		config = function()
 			require("telescope").setup({
-
 				defaults = {
 					layout_strategy = "vertical",
 					-- layout_strategy = "flex",
@@ -39,8 +38,9 @@ return {
 						flex = {
 							flip_columns = 200,
 						},
-						height = 0.95,
-						width = 0.95,
+
+						height = 0.99,
+						width = 0.99,
 						preview_cutoff = 100,
 					},
 					mappings = {
@@ -55,82 +55,82 @@ return {
 				pickers = {
 					help_tags = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					keymaps = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					fd = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					builtin = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					grep_string = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					live_grep = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					diagnostics = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					resume = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					oldfiles = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					buffers = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					man_pages = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					colorscheme = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					marks = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					git_status = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 
 					git_files = {
 						layout_strategy = "vertical",
-						layout_config = { height = -1.95, width = 0.95 },
+						layout_config = { height = -1.95, width = 0.99 },
 					},
 
 					current_buffer_fuzzy_find = {
 						layout_strategy = "vertical",
-						layout_config = { height = 0.95, width = 0.95 },
+						layout_config = { height = 0.99, width = 0.99 },
 					},
 				},
 				extensions = {
