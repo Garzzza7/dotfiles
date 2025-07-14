@@ -11,6 +11,7 @@ return {
 				"cmake",
 				"cpp",
 				"cuda",
+				"json",
 				"lua",
 				"markdown",
 				"markdown_inline",
@@ -19,6 +20,7 @@ return {
 				"rust",
 				"vim",
 				"vimdoc",
+				"yaml",
 			},
 
 			auto_install = false,

@@ -14,7 +14,7 @@ return {
 			},
 		},
 		opts = {
-			notify_on_error = false,
+			notify_on_error = true,
 			notify_no_formatters = true,
 			-- format_on_save = function(bufnr)
 			-- 	local disable_filetypes = {}
