@@ -1,6 +1,7 @@
 return {
 	{
 		"folke/todo-comments.nvim",
+		version = "v1.4.0",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {
 			signs = true, -- show icons in the signs column

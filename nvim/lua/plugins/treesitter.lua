@@ -9,6 +9,7 @@ return {
 				"bash",
 				"c",
 				"cmake",
+				"comment",
 				"cpp",
 				"cuda",
 				"json",
@@ -27,13 +28,13 @@ return {
 			sync_install = false,
 
 			highlight = {
+				enable = true,
 				additional_vim_regex_highlighting = false,
 				custom_captures = {},
-				enable = true,
 				loaded = false,
 			},
 			incremental_selection = {
-				enable = false,
+				enable = true,
 				keymaps = {
 					init_selection = "gnn",
 					node_decremental = "grm",
