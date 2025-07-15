@@ -24,7 +24,7 @@ return {
 			-- 	}
 			-- end,
 			formatters_by_ft = {
-				bash = { "beautysh" },
+				bash = { "shfmt" },
 				cpp = { "clang-format" },
 				lua = { "stylua" },
 				python = { "black" },

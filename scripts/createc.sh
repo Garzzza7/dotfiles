@@ -5,4 +5,3 @@ touch $modified_string.cpp
 touch $modified_string.txt
 cp TEMPLATE.cpp $modified_string.cpp
 nvim $modified_string.*
-

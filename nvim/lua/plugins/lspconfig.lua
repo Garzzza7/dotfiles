@@ -202,7 +202,8 @@ return {
 				"stylua",
 				"black",
 				"clang-format",
-				"beautysh",
+				"shfmt",
+				-- "beautysh",
 				-- "ocamlformat",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
