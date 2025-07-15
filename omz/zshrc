@@ -134,6 +134,7 @@ alias pps='powerprofilesctl set power-saver'
 alias rm='trash-put'
 alias suspend='systemctl suspend'
 
+export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 export PATH=$PATH:~/scripts
 export PATH=$PATH:/home/pc/.local/bin
 export PATH=$PATH:/usr/local/go/bin
