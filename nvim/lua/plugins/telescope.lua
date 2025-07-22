@@ -17,6 +17,9 @@ return {
 				"nvim-telescope/telescope-live-grep-args.nvim",
 				version = "^1.0.0",
 			},
+			{
+				"mrloop/telescope-git-branch.nvim",
+			},
 		},
 		config = function()
 			require("telescope").setup({
@@ -231,6 +234,14 @@ return {
 			require("telescope").load_extension("media_files")
 			require("telescope").load_extension("file_browser")
 			require("telescope").load_extension("live_grep_args")
+			require("telescope").load_extension("git_branch")
+
+			vim.keymap.set(
+				"n",
+				"<leader>gb",
+				"<cmd>Telescope git_branch<cr>",
+				{ noremap = true, silent = true, desc = "Use Telescope to open git_branch" }
+			)
 
 			vim.keymap.set(
 				"n",
