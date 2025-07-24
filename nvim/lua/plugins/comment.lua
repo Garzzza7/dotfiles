@@ -1,4 +1,3 @@
----@diagnostic disable: assign-type-mismatch
 return {
 	{
 		"numToStr/Comment.nvim",

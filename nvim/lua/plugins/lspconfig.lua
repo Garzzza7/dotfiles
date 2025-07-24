@@ -208,7 +208,6 @@ return {
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			---@diagnostic disable-next-line: missing-fields
 			require("mason-lspconfig").setup({
 				handlers = {
 					function(server_name)
@@ -279,11 +278,9 @@ return {
 			-- 			cmd = { "neocmakelsp", "--stdio" },
 			-- 			filetypes = { "cmake" },
 			-- 			root_dir = function(fname)
-			-- 				---@diagnostic disable-next-line: deprecated
 			-- 				return lspconfig.util.find_git_ancestor(fname)
 			-- 			end,
 			-- 			single_file_support = true, -- suggested
-			-- 			---@diagnostic disable-next-line: undefined-global
 			-- 			on_attach = on_attach, -- on_attach is the on_attach function you defined
 			-- 			init_options = {
 			-- 				format = {
