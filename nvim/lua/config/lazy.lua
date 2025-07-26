@@ -15,6 +15,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{
+		"willothy/flatten.nvim",
+		config = true,
+		opts = {},
+		lazy = false,
+		priority = 1001,
+	},
 	spec = {
 		{ import = "plugins" },
 	},
