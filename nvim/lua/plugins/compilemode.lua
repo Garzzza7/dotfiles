@@ -4,7 +4,7 @@ return {
 		tag = "v2.0.0",
 		dependencies = {
 			{ "nvim-lua/plenary.nvim" },
-			{ "m00qek/baleia.nvim", tag = "v1.3.0" },
+			{ "m00qek/baleia.nvim", version = "v1.3.0" },
 		},
 		config = function()
 			vim.g.compile_mode = {
