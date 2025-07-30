@@ -20,6 +20,10 @@ return {
 			{
 				"mrloop/telescope-git-branch.nvim",
 			},
+			{
+				"debugloop/telescope-undo.nvim",
+			},
+			{ "desdic/telescope-rooter.nvim" },
 		},
 		config = function()
 			require("telescope").setup({
@@ -137,6 +141,28 @@ return {
 					},
 				},
 				extensions = {
+					rooter = {
+						enable = true,
+						patterns = { ".git", ".clangd", ".clang-format", ".gitignore" },
+					},
+					undo = {
+						side_by_side = true,
+						layout_strategy = "vertical",
+						layout_config = {
+							preview_height = 0.8,
+						},
+					},
+					-- undo = {
+					-- 	use_delta = true,
+					-- 	use_custom_command = nil, -- setting this implies `use_delta = false`. Accepted format is: { "bash", "-c", "echo '$DIFF' | delta" }
+					-- 	side_by_side = false,
+					-- 	vim_diff_opts = {
+					-- 		ctxlen = vim.o.scrolloff,
+					-- 	},
+					-- 	entry_format = "state #$ID, $STAT, $TIME",
+					-- 	time_format = "",
+					-- 	saved_only = false,
+					-- },
 					media_files = {
 						-- filetypes whitelist
 						-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
@@ -235,6 +261,15 @@ return {
 			require("telescope").load_extension("file_browser")
 			require("telescope").load_extension("live_grep_args")
 			require("telescope").load_extension("git_branch")
+			require("telescope").load_extension("undo")
+			require("telescope").load_extension("rooter")
+
+			vim.keymap.set(
+				"n",
+				"<leader>u",
+				"<cmd>Telescope undo<cr>",
+				{ noremap = true, silent = true, desc = "Use Telescope Undo" }
+			)
 
 			vim.keymap.set(
 				"n",
