@@ -2,9 +2,9 @@ return {
 	{
 		"Civitasv/cmake-tools.nvim",
 		opts = {},
-		config = function()
-			local osys = require("cmake-tools.osys")
-			require("cmake-tools").setup({
+		config = function ()
+			local osys = require ("cmake-tools.osys")
+			require ("cmake-tools").setup ({
 				cmake_command = "cmake", -- this is used to specify cmake command path
 				ctest_command = "ctest", -- this is used to specify ctest command path
 				cmake_use_preset = true,
@@ -15,7 +15,7 @@ return {
 				--       ${kit}
 				--       ${kitGenerator}
 				--       ${variant:xx}
-				cmake_build_directory = function()
+				cmake_build_directory = function ()
 					if osys.iswin32 then
 						return "build\\${variant:buildType}"
 					end
@@ -62,8 +62,8 @@ return {
 									quit_on_exit = "success",
 								},
 							}, -- options to pass into the `overseer.new_task` command
-							on_new_task = function(task)
-								require("overseer").open({ enter = false, direction = "right" })
+							on_new_task = function (task)
+								require ("overseer").open ({ enter = false, direction = "right" })
 							end, -- a function that gets overseer.Task when it is created, before calling `task:start`
 						},
 						terminal = {
@@ -111,7 +111,7 @@ return {
 									quit_on_exit = "success",
 								},
 							}, -- options to pass into the `overseer.new_task` command
-							on_new_task = function(task) end, -- a function that gets overseer.Task when it is created, before calling `task:start`
+							on_new_task = function (task) end, -- a function that gets overseer.Task when it is created, before calling `task:start`
 						},
 						terminal = {
 							name = "Main Terminal",

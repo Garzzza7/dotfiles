@@ -1,8 +1,8 @@
 return {
 	{
 		"ya2s/nvim-cursorline",
-		config = function()
-			require("nvim-cursorline").setup({
+		config = function ()
+			require ("nvim-cursorline").setup ({
 				cursorline = {
 					enable = false,
 					timeout = 1000,

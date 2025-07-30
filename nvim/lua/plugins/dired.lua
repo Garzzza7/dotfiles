@@ -6,8 +6,8 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 	},
-	config = function()
-		require("dired").setup({
+	config = function ()
+		require ("dired").setup ({
 			path_separator = "/", -- Use '/' as the path separator
 			show_hidden = true, -- Show hidden files
 			show_icons = false, -- Show icons (patched font required)

@@ -4,7 +4,7 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 		lazy = true,
-		init = function()
+		init = function ()
 			local function_names = ""
 			local line_following_the_cursor = ""
 			local line_numbers = ""
@@ -18,13 +18,13 @@ return {
 			local macro_parameters = ""
 			local namespaces = ""
 			local idk = ""
-			local latte = require("catppuccin.palettes").get_palette("latte")
-			local frappe = require("catppuccin.palettes").get_palette("frappe")
-			local macchiato = require("catppuccin.palettes").get_palette("macchiato")
-			local mocha = require("catppuccin.palettes").get_palette("mocha")
+			local latte = require ("catppuccin.palettes").get_palette ("latte")
+			local frappe = require ("catppuccin.palettes").get_palette ("frappe")
+			local macchiato = require ("catppuccin.palettes").get_palette ("macchiato")
+			local mocha = require ("catppuccin.palettes").get_palette ("mocha")
 			local light = "#000000"
 			local black = "#ffffff"
-			require("catppuccin").setup({
+			require ("catppuccin").setup ({
 				flavour = "latte", -- latte, frappe, macchiato, mocha
 				background = { -- :h background
 					-- light = "latte",
@@ -122,7 +122,7 @@ return {
 	{
 		"EdenEast/nightfox.nvim",
 		lazy = true,
-		init = function()
+		init = function ()
 			local palettes = {
 				all = {
 					bg0 = "#000000",
@@ -165,7 +165,7 @@ return {
 			}
 
 			--require("nightfox").setup({ palettes = palettes, specs = specs, groups = groups })
-			require("nightfox").setup({})
+			require ("nightfox").setup ({})
 
 			-- require("nightfox").setup({ palettes = palettes, specs = specs, groups = groups })({
 			-- 	options = {
@@ -214,8 +214,8 @@ return {
 		priority = 1000,
 		config = true,
 		lazy = true,
-		init = function()
-			require("gruvbox").setup({
+		init = function ()
+			require ("gruvbox").setup ({
 				terminal_colors = true, -- add neovim terminal colors
 				undercurl = true,
 				underline = true,
@@ -246,16 +246,16 @@ return {
 		version = false,
 		lazy = true,
 		priority = 1000,
-		config = function()
-			require("everforest").setup({
-				on_highlights = function(hl, palette)
+		config = function ()
+			require ("everforest").setup ({
+				on_highlights = function (hl, palette)
 					hl.DiagnosticError = { fg = palette.none, bg = palette.none, sp = palette.red }
 					hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
 					hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
 					hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
 					hl.TSBoolean = { fg = palette.purple, bg = palette.none, bold = true }
 				end,
-				colours_override = function(palette) end,
+				colours_override = function (palette) end,
 			})
 		end,
 	},

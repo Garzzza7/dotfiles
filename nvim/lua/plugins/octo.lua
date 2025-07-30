@@ -6,8 +6,8 @@ return {
 		-- OR 'ibhagwan/fzf-lua',
 		-- OR 'folke/snacks.nvim',
 	},
-	config = function()
-		require("octo").setup({
+	config = function ()
+		require ("octo").setup ({
 			use_local_fs = false, -- use local files on right side of reviews
 			enable_builtin = false, -- shows a list of builtin actions when no action is provided
 			default_remote = { "upstream", "origin" }, -- order to try remotes

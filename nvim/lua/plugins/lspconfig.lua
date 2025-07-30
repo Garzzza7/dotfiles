@@ -18,8 +18,8 @@ return {
 				"j-hui/fidget.nvim",
 				version = "v1.6.1",
 				opts = {},
-				init = function()
-					require("fidget").setup({
+				init = function ()
+					require ("fidget").setup ({
 						-- Options related to LSP progress subsystem
 						progress = {
 							poll_rate = 0, -- How and when to poll for progress messages
@@ -27,13 +27,13 @@ return {
 							ignore_done_already = false, -- Ignore new tasks that are already complete
 							ignore_empty_message = false, -- Ignore new tasks that don't contain a message
 							-- Clear notification group when LSP server detaches
-							clear_on_detach = function(client_id)
-								local client = vim.lsp.get_client_by_id(client_id)
+							clear_on_detach = function (client_id)
+								local client = vim.lsp.get_client_by_id (client_id)
 								return client and client.name or nil
 							end,
 							-- How to get a progress message's notification group key
-							notification_group = function(msg)
-								return string.format("%s %s", "Processing", msg.lsp_client.name)
+							notification_group = function (msg)
+								return string.format ("%s %s", "Processing", msg.lsp_client.name)
 							end,
 							ignore = {}, -- List of LSP servers to ignore
 
@@ -53,14 +53,14 @@ return {
 								priority = 30, -- Ordering priority for LSP notification group
 								skip_history = true, -- Whether progress notifications should be omitted from history
 								-- How to format a progress message
-								format_message = require("fidget.progress.display").default_format_message,
+								format_message = require ("fidget.progress.display").default_format_message,
 								-- How to format a progress annotation
-								format_annote = function(msg)
-									return string.format("%s %s", msg.title, "lol")
+								format_annote = function (msg)
+									return string.format ("%s %s", msg.title, "lol")
 								end,
 								-- How to format a progress notification group's name
-								format_group_name = function(lsp_name)
-									return string.format("%s", lsp_name)
+								format_group_name = function (lsp_name)
+									return string.format ("%s", lsp_name)
 								end,
 								overrides = { -- Override options from the default notification config
 								},
@@ -80,11 +80,11 @@ return {
 							history_size = 128, -- Number of removed messages to retain in history
 							override_vim_notify = true, -- Automatically override vim.notify() with Fidget
 							-- How to configure notification groups when instantiated
-							configs = { default = require("fidget.notification").default_config },
+							configs = { default = require ("fidget.notification").default_config },
 							-- Conditionally redirect notifications to another backend
-							redirect = function(msg, level, opts)
+							redirect = function (msg, level, opts)
 								if opts and opts.on_open then
-									return require("fidget.integration.nvim-notify").delegate(msg, level, opts)
+									return require ("fidget.integration.nvim-notify").delegate (msg, level, opts)
 								end
 							end,
 
@@ -96,8 +96,8 @@ return {
 								-- Highlight group used for group separator
 								group_separator_hl = "Comment",
 								-- How to render notification messages
-								render_message = function(msg, cnt)
-									return cnt == 1 and msg or string.format("(%dx) %s", cnt, "DONE")
+								render_message = function (msg, cnt)
+									return cnt == 1 and msg or string.format ("(%dx) %s", cnt, "DONE")
 								end,
 							},
 
@@ -125,33 +125,33 @@ return {
 							max_size = 100, -- Maximum log file size, in KB
 							float_precision = 0.01, -- Limit the number of decimals displayed for floats
 							-- Where Fidget writes its logs to
-							path = string.format("%s/fidget.nvim.log", vim.fn.stdpath("cache")),
+							path = string.format ("%s/fidget.nvim.log", vim.fn.stdpath ("cache")),
 						},
 					})
 				end,
 			},
 			{ "folke/neodev.nvim", opts = {} },
 		},
-		config = function()
-			vim.api.nvim_create_autocmd("LspAttach", {
-				group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
-				callback = function(event)
-					local client = vim.lsp.get_client_by_id(event.data.client_id)
+		config = function ()
+			vim.api.nvim_create_autocmd ("LspAttach", {
+				group = vim.api.nvim_create_augroup ("lsp-attach", { clear = true }),
+				callback = function (event)
+					local client = vim.lsp.get_client_by_id (event.data.client_id)
 					if client and client.server_capabilities.documentHighlightProvider then
-						vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+						vim.api.nvim_create_autocmd ({ "CursorHold", "CursorHoldI" }, {
 							buffer = event.buf,
 							callback = vim.lsp.buf.document_highlight,
 						})
 
-						vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+						vim.api.nvim_create_autocmd ({ "CursorMoved", "CursorMovedI" }, {
 							buffer = event.buf,
 							callback = vim.lsp.buf.clear_references,
 						})
 					end
 				end,
 			})
-			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+			local capabilities = vim.lsp.protocol.make_client_capabilities ()
+			capabilities = vim.tbl_deep_extend ("force", capabilities, require ("cmp_nvim_lsp").default_capabilities ())
 
 			local servers = {
 				clangd = {},
@@ -195,10 +195,10 @@ return {
 				},
 			}
 
-			require("mason").setup()
+			require ("mason").setup ()
 
-			local ensure_installed = vim.tbl_keys(servers or {})
-			vim.list_extend(ensure_installed, {
+			local ensure_installed = vim.tbl_keys (servers or {})
+			vim.list_extend (ensure_installed, {
 				"stylua",
 				"black",
 				"clang-format",
@@ -206,14 +206,14 @@ return {
 				-- "beautysh",
 				-- "ocamlformat",
 			})
-			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+			require ("mason-tool-installer").setup ({ ensure_installed = ensure_installed })
 
-			require("mason-lspconfig").setup({
+			require ("mason-lspconfig").setup ({
 				handlers = {
-					function(server_name)
+					function (server_name)
 						local server = servers[server_name] or {}
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
+						server.capabilities = vim.tbl_deep_extend ("force", {}, capabilities, server.capabilities or {})
+						require ("lspconfig")[server_name].setup (server)
 					end,
 				},
 			})

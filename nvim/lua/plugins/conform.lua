@@ -6,8 +6,8 @@ return {
 		keys = {
 			{
 				"==",
-				function()
-					require("conform").format({ async = true, lsp_fallback = true })
+				function ()
+					require ("conform").format ({ async = true, lsp_fallback = true })
 				end,
 				mode = "",
 				desc = "Format buffer",

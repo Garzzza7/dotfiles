@@ -5,8 +5,8 @@ return {
 			version = "v2.13.1",
 			lazy = true,
 			opts = {},
-			init = function()
-				require("toggleterm").setup({
+			init = function ()
+				require ("toggleterm").setup ({
 					size = 100,
 					-- open_mapping = "<C-t>",
 					shell = vim.o.shell,

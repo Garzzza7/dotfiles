@@ -8,8 +8,8 @@ return {
 		keys = {
 			{
 				"<leader>cc",
-				function()
-					require("comment-highlights").toggle()
+				function ()
+					require ("comment-highlights").toggle ()
 				end,
 				desc = "Toggle comment highlighting",
 			},

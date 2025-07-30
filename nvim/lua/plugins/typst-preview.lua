@@ -4,8 +4,8 @@ return {
 		lazy = false, -- or ft = 'typst'
 		version = "v1.3.1",
 		opts = {
-			config = function()
-				require("typst-preview").setup({
+			config = function ()
+				require ("typst-preview").setup ({
 					-- Setting this true will enable logging debug information to
 					-- `vim.fn.stdpath 'data' .. '/typst-preview/log.txt'`
 					debug = false,
@@ -43,17 +43,17 @@ return {
 					extra_args = nil,
 
 					-- This function will be called to determine the root of the typst project
-					get_root = function(path_of_main_file)
-						local root = os.getenv("TYPST_ROOT")
+					get_root = function (path_of_main_file)
+						local root = os.getenv ("TYPST_ROOT")
 						if root then
 							return root
 						end
-						return vim.fn.fnamemodify(path_of_main_file, ":p:h")
+						return vim.fn.fnamemodify (path_of_main_file, ":p:h")
 					end,
 
 					-- This function will be called to determine the main file of the typst
 					-- project.
-					get_main_file = function(path_of_buffer)
+					get_main_file = function (path_of_buffer)
 						return path_of_buffer
 					end,
 				})
