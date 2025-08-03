@@ -6,6 +6,7 @@ return {
 		-- version = "v0.9.3",
 		opts = {
 			ensure_installed = {
+				"awk",
 				"bash",
 				"c",
 				"cmake",
@@ -13,7 +14,10 @@ return {
 				"cpp",
 				"cuda",
 				"json",
+				"latex",
+				"llvm",
 				"lua",
+				"make",
 				"markdown",
 				"markdown_inline",
 				"python",

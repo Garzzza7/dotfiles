@@ -16,6 +16,10 @@ local langs = {
 	"vim",
 	"vimdoc",
 	"yaml",
+	"awk",
+	"make",
+	"llvm",
+	"latex",
 }
 
 local unique = {}
