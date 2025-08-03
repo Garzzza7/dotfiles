@@ -4,7 +4,7 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 		lazy = true,
-		init = function ()
+		config = function ()
 			local function_names = ""
 			local line_following_the_cursor = ""
 			local line_numbers = ""
@@ -122,7 +122,7 @@ return {
 	{
 		"EdenEast/nightfox.nvim",
 		lazy = true,
-		init = function ()
+		config = function ()
 			local palettes = {
 				all = {
 					bg0 = "#000000",
@@ -214,7 +214,7 @@ return {
 		priority = 1000,
 		config = true,
 		lazy = true,
-		init = function ()
+		config = function ()
 			require ("gruvbox").setup ({
 				terminal_colors = true, -- add neovim terminal colors
 				undercurl = true,

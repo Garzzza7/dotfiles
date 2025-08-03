@@ -5,7 +5,7 @@ return {
 			version = "v2.13.1",
 			lazy = true,
 			opts = {},
-			init = function ()
+			config = function ()
 				require ("toggleterm").setup ({
 					size = 100,
 					-- open_mapping = "<C-t>",
