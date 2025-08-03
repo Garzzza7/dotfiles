@@ -12,7 +12,7 @@ return {
 					shell = vim.o.shell,
 					hide_numbers = false,
 					start_in_insert = false,
-					direction = "float",
+					direction = "tab",
 					close_on_exit = false, -- close the terminal window when the process exits
 					clear_env = false, -- use only environmental variables from `env`, passed to jobstart()
 					auto_scroll = true, -- automatically scroll to the bottom on terminal output
