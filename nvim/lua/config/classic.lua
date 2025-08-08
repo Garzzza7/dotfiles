@@ -1,8 +1,8 @@
 vim.g.netrw_liststyle = 3
 
 vim.g.have_nerd_font = false
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.number = false
+vim.opt.relativenumber = false
 vim.opt.mouse = "a"
 vim.opt.showmode = false
 vim.opt.breakindent = true

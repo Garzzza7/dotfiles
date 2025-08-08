@@ -20,6 +20,8 @@ local langs = {
 	"make",
 	"llvm",
 	"latex",
+	"haskell",
+	"ruby",
 }
 
 local unique = {}
