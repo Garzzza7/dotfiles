@@ -18,6 +18,13 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
+if command -v gh 2>&1 >/dev/null; then
+	printf "${green}GH found.\n${normal}"
+	cp -r gh/config.yml $HOME/.config/gh/config.yml
+else
+	printf "${red}Omitting GH\n${normal}"
+fi
+
 if command -v ghostty 2>&1 >/dev/null; then
 	printf "${green}Ghostty found.\n${normal}"
 	cp -r ghostty/config $HOME/.config/ghostty/config

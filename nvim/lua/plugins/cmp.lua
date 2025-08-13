@@ -1,7 +1,8 @@
 return {
 	{
 		"hrsh7th/nvim-cmp",
-		version = "v0.0.2",
+		-- version = "v0.0.2",
+		commit = "059e89495b3ec09395262f16b1ad441a38081d04",
 		event = "InsertEnter",
 		dependencies = {
 			{
@@ -15,7 +16,7 @@ return {
 				dependencies = {},
 			},
 			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-nvim-lsp", commit = "a8912b88ce488f411177fc8aed358b04dc246d7b" },
 			{ "hrsh7th/cmp-path" },
 		},
 		config = function ()
