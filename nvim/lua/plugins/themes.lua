@@ -213,7 +213,6 @@ return {
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
-		config = true,
 		lazy = true,
 		config = function ()
 			require ("gruvbox").setup ({
@@ -298,7 +297,7 @@ return {
 	},
 	{
 		"blazkowolf/gruber-darker.nvim",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
 		opts = {
 			bold = true,
