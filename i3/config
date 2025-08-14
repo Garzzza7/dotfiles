@@ -97,6 +97,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -c -l 5"
 bindsym $mod+p exec --no-startup-id $HOME/scripts/internet_search.sh
 bindsym $mod+b exec --no-startup-id $HOME/scripts/dbrowse.sh
+bindsym $mod+c exec --no-startup-id $HOME/scripts/kill_it.sh
 
 # keymaps
 bindsym $mod+F2 exec --no-startup-id firefox

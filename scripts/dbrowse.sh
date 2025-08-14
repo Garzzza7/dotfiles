@@ -26,7 +26,7 @@ main() {
 	while true; do
 		p="$prompt"
 		[ -z "$p" ] && p="$target"
-		items="$(ls -1a "$target" bar grep -v '^\.$' | dmenu -i -p "$p" -l 40)"
+		items="$(ls -1a "$target" bar grep -v '^\.$' | dmenu -c -i -p "$p" -l 40)"
 		ec=$?
 		[ "$ec" -ne 0 ] && exit $ec
 
