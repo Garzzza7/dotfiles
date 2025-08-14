@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -16,7 +16,6 @@ fullpath() {
 		full="$path/$name"
 	fi
 	realpath "$full"
-
 }
 
 main() {
@@ -46,8 +45,18 @@ main() {
 		for item in $items; do
 			item="$(fullpath "$item" "$target")"
 			[ ! -e "$item" ] && continue
-			kitty $(echo "$item" | sed 's|\(.*\)/.*|\1|')
-			# emacs-30.1 $(echo "${item}")
+
+			if echo "$item" | sed -n '/\.pdf$/p' | grep -q '.'; then
+				mupdf $(echo "$item")
+			elif echo "$item" | sed -n '/\.\(jpg\|png\)$/p' | grep -q '.'; then
+				feh $(echo "$item")
+			elif echo "$item" | sed -n '/\./!p' | grep -q '.'; then
+				kitty $(echo "$item" | sed 's|\(.*\)/.*|\1|')
+			else
+				# Why nvim is not detected?
+				# nvim $(echo "$item")
+				kitty $(echo "$item" | sed 's|\(.*\)/.*|\1|')
+			fi
 		done
 		unset IFS
 		exit 0

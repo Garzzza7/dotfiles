@@ -120,4 +120,4 @@ vim.keymap.set ({ "n" }, "<F8>", "<esc> :w <cr> :!comp.sh $(echo %)<cr>", { nore
 
 vim.keymap.set ({ "n" }, "<F9>", "<esc> :w <cr> :!python3<cr>", { noremap = true, silent = true, desc = "Open Python" })
 
-vim.keymap.set ({ "n", "i", "v" }, "<leader>td", "<cmd>TodoTelescope<cr>", { noremap = true, silent = true, desc = "Open TODOs" })
+vim.keymap.set ({ "n" }, "<leader>td", "<cmd>TodoTelescope<cr>", { noremap = true, silent = true, desc = "Open TODOs" })
