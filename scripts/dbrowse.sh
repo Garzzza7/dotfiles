@@ -48,7 +48,7 @@ main() {
 
 			if echo "$item" | sed -n '/\.pdf$/p' | grep -q '.'; then
 				mupdf $(echo "$item")
-			elif echo "$item" | sed -n '/\.\(jpg\|png\)$/p' | grep -q '.'; then
+			elif echo "$item" | sed -n '/\.\(jpg\|png\|jpeg\|bmp\|svg\)$/p' | grep -q '.'; then
 				feh $(echo "$item")
 			elif echo "$item" | sed -n '/\./!p' | grep -q '.'; then
 				kitty $(echo "$item" | sed 's|\(.*\)/.*|\1|')
