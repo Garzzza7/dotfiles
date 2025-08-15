@@ -94,7 +94,7 @@ bindsym $mod+Shift+q kill
 # start dmenu stuff
 # bindsym $mod+d exec --no-startup-id dmenu_run -l 20
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -c -l 5"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -c -l 10"
 bindsym $mod+p exec --no-startup-id $HOME/scripts/internet_search.sh
 bindsym $mod+b exec --no-startup-id $HOME/scripts/dbrowse.sh
 bindsym $mod+c exec --no-startup-id $HOME/scripts/kill_it.sh

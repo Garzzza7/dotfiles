@@ -53,9 +53,7 @@ main() {
 			elif echo "$item" | sed -n '/\./!p' | grep -q '.'; then
 				kitty $(echo "$item" | sed 's|\(.*\)/.*|\1|')
 			else
-				# Why nvim is not detected?
-				# nvim $(echo "$item")
-				kitty $(echo "$item" | sed 's|\(.*\)/.*|\1|')
+				kitty -e nvim $(echo "$item")
 			fi
 		done
 		unset IFS
