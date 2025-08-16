@@ -146,7 +146,18 @@ return {
 				extensions = {
 					rooter = {
 						enable = true,
-						patterns = { ".git", ".clangd", ".clang-format", ".gitignore", "stylua.toml" },
+						patterns = {
+							".git",
+							".clangd",
+							".clang-format",
+							".gitignore",
+							"stylua.toml",
+							"Cargo.lock",
+							"Cargo.toml",
+							"head.here", -- mine
+							"Makefile",
+							"README.md",
+						},
 					},
 					undo = {
 						side_by_side = true,

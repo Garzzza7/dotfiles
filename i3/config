@@ -98,6 +98,8 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -c -l 10"
 bindsym $mod+p exec --no-startup-id $HOME/scripts/internet_search.sh
 bindsym $mod+b exec --no-startup-id $HOME/scripts/dbrowse.sh
 bindsym $mod+c exec --no-startup-id $HOME/scripts/kill_it.sh
+bindsym $mod+v exec --no-startup-id $HOME/scripts/end_it.sh
+bindsym $mod+o exec --no-startup-id $HOME/scripts/change_wall.sh
 
 # keymaps
 bindsym $mod+F2 exec --no-startup-id firefox

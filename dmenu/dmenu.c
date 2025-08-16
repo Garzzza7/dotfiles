@@ -52,7 +52,8 @@ static size_t cursor;
 static struct item *items = NULL;
 static struct item *matches, *matchend;
 static struct item *prev, *curr, *next, *sel;
-static int mon = -1, screen;
+static int mon = -1;
+static int screen;
 
 static Atom clip, utf8;
 static Display *dpy;
