@@ -23,7 +23,7 @@
   "kanagawa.nvim": { "branch": "master", "commit": "debe91547d7fb1eef34ce26a5106f277fbfdd109" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazygit.nvim": { "branch": "main", "commit": "4839ab642962cc76bb1bf278427dc4c59be15072" },
-  "lean.nvim": { "branch": "main", "commit": "ccf0f5c2bdd084626ea9319db5e78b9f6ed82533" },
+  "lean.nvim": { "branch": "main", "commit": "6ebeeed1a2ffe5ab6fc4db8fa5ee2e1862b8cdf1" },
   "makeit.nvim": { "branch": "main", "commit": "5859c9d8936528ff5f88f0fc2de7daee0dbcd9b8" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "1a31f824b9cd5bc6f342fc29e9a53b60d74af245" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "517ef5994ef9d6b738322664d5fdd948f0fdeb46" },
