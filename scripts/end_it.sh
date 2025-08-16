@@ -3,19 +3,15 @@
 opts="suspend reboot shutdown"
 read -r -a arr <<<"$opts"
 p=""
-printf "%s\n" "${arr[@]}" | dmenu -c -i -p "$p" -l ${#arr[@]}
-
-case "${p}" in
-"suspend")
-	suspend
-	;;
-"reboot")
-	reboot
-	;;
-"shutdown")
-	shutdown
-	;;
-*)
-	echo "unreachable"
-	;;
-esac
+res=$(printf "%s\n" "${arr[@]}" | dmenu -c -i -p "$p" -l ${#arr[@]})
+if [ "${res}" eval "suspend" ]; then
+	systemctl halt
+elif
+	[ "${res}" = "reboot" ]
+then
+	systemctl reboot
+elif
+	[ "${res}" = "shutdown" ]
+then
+	systemctl poweroff
+fi
