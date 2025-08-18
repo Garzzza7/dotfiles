@@ -52,6 +52,8 @@ main() {
 				feh $(echo "$item")
 			elif echo "$item" | sed -n '/\./!p' | grep -q '.'; then
 				kitty $(echo "$item" | sed 's|\(.*\)/.*|\1|')
+			elif echo "$item" | sed -n '/\.mp4$/p' | grep -q '.'; then
+				mpv $(echo "$item")
 			else
 				kitty -e nvim $(echo "$item")
 			fi
