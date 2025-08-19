@@ -12,6 +12,8 @@ return {
 					["{"] = "}",
 					["["] = "]",
 					["function"] = "end",
+					-- ["start"] = "end",
+					["starting"] = "ending",
 				},
 				remove_default_keybinds = true,
 				remove_default_inverses = true,
