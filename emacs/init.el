@@ -18,6 +18,9 @@
 (unless (package-installed-p 'vimrc-mode)
   (package-install 'vimrc-mode))
 
+
+
+
 ;; Download Evil
 ;;(unless (package-installed-p 'evil)
 ;;  (package-install 'evil))
@@ -83,7 +86,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(gnuplot gruvbox-theme magit rust-mode vimrc-mode)))
+ '(package-selected-packages
+   '(gnuplot gruvbox-theme company lsp-mode magit rust-mode vimrc-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

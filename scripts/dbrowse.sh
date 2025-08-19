@@ -51,11 +51,11 @@ main() {
 			elif echo "$item" | sed -n '/\.\(jpg\|png\|jpeg\|bmp\|svg\)$/p' | grep -q '.'; then
 				feh $(echo "$item")
 			elif echo "$item" | sed -n '/\./!p' | grep -q '.'; then
-				kitty $(echo "$item" | sed 's|\(.*\)/.*|\1|')
+				st $(echo "$item" | sed 's|\(.*\)/.*|\1|')
 			elif echo "$item" | sed -n '/\.mp4$/p' | grep -q '.'; then
 				mpv $(echo "$item")
 			else
-				kitty -e nvim $(echo "$item")
+				st -e nvim $(echo "$item")
 			fi
 		done
 		unset IFS

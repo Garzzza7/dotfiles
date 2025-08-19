@@ -34,7 +34,8 @@ vim.keymap.set ({ "n", "i", "v" }, "<A-w>", "<cmd>bw<cr> ", { noremap = true, si
 vim.keymap.set ({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", { noremap = true, silent = false, desc = "Display buffers" })
 
 -- TODO: make tab stuff not collide with anything
--- vim.keymap.set({ "n", "i", "v" }, "<C-n>", "<cmd>tabNext<cr> ", { noremap = true, silent = true, desc = "Next tab" })
+-- vim.keymap.set ({ "n", "i", "v" }, "<C-l>", "<cmd>tabNext<cr> ", { noremap = true, silent = true, desc = "Next tab" })
+-- vim.keymap.set ({ "n", "i", "v" }, "<C-h>", "<cmd>tabprevious<cr> ", { noremap = true, silent = true, desc = "Next tab" })
 -- vim.keymap.set({ "n", "i", "v" }, "<C-d>", "<cmd>tabclose<cr> ", { noremap = true, silent = true, desc = "Delete tab" })
 -- vim.keymap.set(
 -- 	{ "n", "i", "v" },
