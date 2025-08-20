@@ -47,7 +47,8 @@ main() {
 			[ ! -e "$item" ] && continue
 
 			if echo "$item" | sed -n '/\.pdf$/p' | grep -q '.'; then
-				mupdf $(echo "$item")
+				# mupdf $(echo "$item")
+				zathura $(echo "$item")
 			elif echo "$item" | sed -n '/\.\(jpg\|png\|jpeg\|bmp\|svg\)$/p' | grep -q '.'; then
 				feh $(echo "$item")
 			elif echo "$item" | sed -n '/\./!p' | grep -q '.'; then

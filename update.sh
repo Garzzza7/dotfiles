@@ -65,7 +65,6 @@ fi
 if command -v emacs 2>&1 >/dev/null; then
 	printf "${green}Emacs found.\n${normal}"
 	cp -r $HOME/.emacs.d/init.el emacs/init.el
-	cp -r $HOME/.emacs.d/modes/* emacs/modes/
 else
 	printf "${red}Omitting Emacs.\n${normal}"
 fi

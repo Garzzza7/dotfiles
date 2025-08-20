@@ -32,11 +32,11 @@
 (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
 
 ;;TODO: this is bad, change it pls
-(add-to-list 'load-path "~/.emacs.d/modes")
-(load "i3wm-config-mode.el")
-(load "cuda-mode.el")
-(load "go-mode.el")
-(load "nim-mode.el")
+;;(add-to-list 'load-path "~/.emacs.d/modes")
+;;(load "i3wm-config-mode.el")
+;;(load "cuda-mode.el")
+;;(load "go-mode.el")
+;;(load "nim-mode.el")
 
 ;; Enable relative line numbers
 (global-display-line-numbers-mode 1)         ;; Enable line numbers globally
