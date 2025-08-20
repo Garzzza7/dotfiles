@@ -19,6 +19,3 @@
 [submodule "typstyle"]
 	path = typstyle
 	url = https://github.com/typstyle-rs/typstyle.git
-[submodule "st"]
-	path = st
-	url = https://git.suckless.org/st
