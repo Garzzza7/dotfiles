@@ -1,11 +1,14 @@
 " MINIMALISTIC CONFIG
-if 1
+if 0
 	syntax on
 	set hlsearch
 	set is hls
 	set incsearch
 	tnoremap <Esc> <C-\><C-n>
 	noremap <Esc><Esc> :nohlsearch<CR>
+	let &t_SI .= "\e[6 q"
+	let &t_EI .= "\e[2 q"
+	let &t_SR .= "\e[4 q"
 else
 " MAXIMALISTIC CONFIG
 	let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -17,7 +20,6 @@ call plug#begin()
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'eemed/sitruuna.vim'
-	Plug 'nanotech/jellybeans.vim'
 	Plug 'tpope/vim-fugitive'
 	Plug 'drsooch/gruber-darker-vim'
 	Plug 'mbbill/undotree'
@@ -28,8 +30,6 @@ call plug#end()
 	set nocursorline
 	syntax sync minlines=256
 	let g:netrw_liststyle=3
-	"set number
-	"set relativenumber
 	colorscheme GruberDarker
 	"colorscheme sitruuna
 	set background=dark
@@ -50,7 +50,7 @@ call plug#end()
 	noremap <silent> <A-p> :bp<cr>
 	noremap <silent> <A-w> :bw<cr>
 	noremap <silent> <A-l> :ls<cr>
-	nnoremap <CR> :nohlsearch<cr><cr>
+        noremap <Esc><Esc> :nohlsearch<CR>
 	nnoremap <C-x> :set hlsearch! hlsearch?<cr>
 	noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
 	noremap <F9> <esc> :w <cr> :!python3<cr>
