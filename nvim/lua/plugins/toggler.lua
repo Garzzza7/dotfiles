@@ -1,6 +1,7 @@
 return {
 	{
 		"nguyenvukhang/nvim-toggler",
+		enable = false,
 		version = "v0.3.1",
 		dependencies = {},
 		config = function ()
@@ -19,7 +20,7 @@ return {
 				remove_default_inverses = true,
 				autoselect_longest_match = false,
 			})
-			vim.keymap.set ({ "n", "v", "i" }, "<C-a>", require ("nvim-toggler").toggle, { noremap = true, silent = true, desc = "Toggler" })
+			vim.keymap.set ({ "n", "v", "i" }, "<C-a><C-s>", require ("nvim-toggler").toggle, { noremap = true, silent = true, desc = "Toggler" })
 		end,
 	},
 }

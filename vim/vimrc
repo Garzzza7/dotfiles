@@ -1,14 +1,21 @@
 " MINIMALISTIC CONFIG
 if 0
-	syntax on
-	set hlsearch
-	set is hls
-	set incsearch
-	tnoremap <Esc> <C-\><C-n>
-	noremap <Esc><Esc> :nohlsearch<CR>
-	let &t_SI .= "\e[6 q"
-	let &t_EI .= "\e[2 q"
-	let &t_SR .= "\e[4 q"
+        syntax on
+        set hlsearch
+        set is hls
+        set incsearch
+        tnoremap <Esc> <C-\><C-n>
+        noremap <Esc><Esc> :nohlsearch<CR>
+        let &t_SI .= "\e[6 q"
+        let &t_EI .= "\e[2 q"
+        let &t_SR .= "\e[4 q"
+        set autochdir
+
+        vnoremap J :m '>+1<cr>gv=gv
+        vnoremap K :m '<-2<cr>gv=gv
+
+	nnoremap <silent> <C-n> <cmd>bnext<cr>
+	nnoremap <silent> <C-p> <cmd>bprevious<cr>
 else
 " MAXIMALISTIC CONFIG
 	let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -36,6 +43,14 @@ call plug#end()
 	set hlsearch
 	set is hls
 	set incsearch
+        set autochdir
+
+        vnoremap J :m '>+1<cr>gv=gv
+        vnoremap K :m '<-2<cr>gv=gv
+
+	nnoremap <silent> <C-n> <cmd>bnext<cr>
+	nnoremap <silent> <C-p> <cmd>bprevious<cr>
+
 	nnoremap <silent> <C-c><C-f> <cmd>tabnew $HOME/.vimrc<cr>
 	nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
 	nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
