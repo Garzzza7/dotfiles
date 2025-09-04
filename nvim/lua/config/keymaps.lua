@@ -74,9 +74,9 @@ vim.keymap.set ({ "n" }, "<C-s><C-s>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", {
 
 vim.keymap.set ({ "v" }, "<C-s><C-h>", '"ay:%s/<C-r>a//gc<Left><Left><Left>', { noremap = true, silent = false, desc = "Replace word from the highlight" })
 
-vim.keymap.set ({ "n" }, "<C-i><C-h>", "<cmd>lua vim.lsp.inlay_hint.enable(true, { 0 })<cr>", { noremap = true, silent = true, desc = "Enable inlay hints" })
+vim.keymap.set ({ "n", "i", "v" }, "<C-i><C-h>", "<cmd>lua vim.lsp.inlay_hint.enable(true)<cr>", { noremap = true, silent = true, desc = "Enable inlay hints" })
 
-vim.keymap.set ({ "n" }, "<C-h><C-i>", "<cmd>lua vim.lsp.inlay_hint.enable(false, { 0 })<cr>", { noremap = true, silent = true, desc = "Disable inlay hints" })
+vim.keymap.set ({ "n", "i", "v" }, "<C-h><C-h>", "<cmd>lua vim.lsp.inlay_hint.enable(false)<cr>", { noremap = true, silent = true, desc = "Disable inlay hints" })
 
 vim.keymap.set ({ "n" }, "<space>lg", "<cmd>LazyGit<cr>", { noremap = true, silent = true, desc = "Open Lazygit" })
 
