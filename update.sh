@@ -18,6 +18,13 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
+if command -v zed 2>&1 >/dev/null || command -v zeditor 2>&1 >/dev/null; then
+	printf "${green}Zed found.\n${normal}"
+	cp -r $HOME/.config/zed/settings.json zed/settings.json
+else
+	printf "${red}Omitting Zed.\n${normal}"
+fi
+
 if command -v gh 2>&1 >/dev/null; then
 	printf "${green}GH found.\n${normal}"
 	cp -r $HOME/.config/gh/config.yml gh/config.yml
