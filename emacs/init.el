@@ -7,10 +7,10 @@
 (setq inhibit-startup-screen t)
 
 (defun revert-buffer-no-confirm ()
-    "Revert buffer without requiring confirmation."
-    (interactive)
-    (revert-buffer :ignore-auto :noconfirm)
-    )
+  "Revert buffer without requiring confirmation."
+  (interactive)
+  (revert-buffer :ignore-auto :noconfirm)
+  )
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
