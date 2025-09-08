@@ -1,4 +1,5 @@
 (require 'package)
+(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
@@ -17,7 +18,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(company gnuplot magit rust-mode)))
+ '(package-selected-packages
+   '(company cuda-mode gnuplot lsp-mode lua-mode magit rust-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -37,3 +39,32 @@
 
 (invert-face 'default)
 
+(setq scroll-step            1
+      scroll-conservatively  10000)
+
+;; (use-package lsp-mode
+;;   :hook ((c-mode          ; clangd
+;;           c++-mode        ; clangd
+;;           c-or-c++-mode   ; clangd
+;;           ) . lsp)
+;;   :commands lsp
+;;   :config
+;;   (setq lsp-auto-guess-root t)
+;;   (setq lsp-diagnostic-package :none)
+;;   (setq lsp-enable-symbol-highlighting t)
+;;   (setq lsp-enable-on-type-formatting nil)
+;;   (setq lsp-signature-auto-activate nil)
+;;   (setq lsp-enable-folding nil)
+;;   (setq lsp-enable-snippet nil)
+;;   (setq lsp-enable-completion-at-point t)
+;;   (setq read-process-output-max (* 1024 1024)) ;; 1mb
+;;   (setq lsp-idle-delay 0.5)
+;;   (setq lsp-prefer-capf t)) ; prefer lsp's company-capf over company-lsp
+
+;; (use-package company
+;;   :hook (prog-mode . company-mode)
+;;   :config
+;;   (setq company-minimum-prefix-length 1)
+;;   (setq company-idle-delay 0.3)
+;;   (setq company-selection-wrap-around t)
+;;   (setq company-tooltip-align-annotations t))

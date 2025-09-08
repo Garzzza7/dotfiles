@@ -16,7 +16,7 @@
   "cyberdream.nvim": { "branch": "main", "commit": "caf4f5e57f8d5e0bb75fe98f4f67965b1fb3326c" },
   "dired.nvim": { "branch": "main", "commit": "45a32388ce46a8eb93c09d2afa4229e998c4734b" },
   "eagle.nvim": { "branch": "main", "commit": "dd1a28c4d8626fbe85580b0a9ed8f88d77a26da1" },
-  "everforest-nvim": { "branch": "main", "commit": "8db2bd8af38ed7b1bd12baa9a28858ff92e839bf" },
+  "everforest-nvim": { "branch": "main", "commit": "b480d70152d434db322e4647a4b399397ffa6dfc" },
   "fidget.nvim": { "branch": "main", "commit": "b61e8af9b8b68ee0ec7da5fb7a8c203aae854f2e" },
   "github-theme": { "branch": "main", "commit": "c106c9472154d6b2c74b74565616b877ae8ed31d" },
   "gitsigns.nvim": { "branch": "main", "commit": "6e3c66548035e50db7bd8e360a29aec6620c3641" },
