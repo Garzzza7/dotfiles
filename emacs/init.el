@@ -19,7 +19,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(company cuda-mode gnuplot lsp-mode lua-mode magit rust-mode)))
+   '(company cuda-mode exec-path-from-shell gnuplot lsp-mode lua-mode
+	     magit rust-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,13 +28,15 @@
  ;; If there is more than one, they won't work right.
  )
 
+(exec-path-from-shell-initialize)
+
 (global-company-mode 1)
 (setq company-backends '((company-dabbrev)))
 (setq company-dabbrev-minimum-length 1)
 (setq company-dabbrev-ignore-case 1)
 (setq company-idle-delay nil)
 
-(define-key company-mode-map (kbd "TAB") 'company-complete)
+(define-key company-mode-map (kbd "C-<tab>") 'company-complete)
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 
@@ -42,29 +45,30 @@
 (setq scroll-step            1
       scroll-conservatively  10000)
 
-;; (use-package lsp-mode
-;;   :hook ((c-mode          ; clangd
-;;           c++-mode        ; clangd
-;;           c-or-c++-mode   ; clangd
-;;           ) . lsp)
-;;   :commands lsp
-;;   :config
-;;   (setq lsp-auto-guess-root t)
-;;   (setq lsp-diagnostic-package :none)
-;;   (setq lsp-enable-symbol-highlighting t)
-;;   (setq lsp-enable-on-type-formatting nil)
-;;   (setq lsp-signature-auto-activate nil)
-;;   (setq lsp-enable-folding nil)
-;;   (setq lsp-enable-snippet nil)
-;;   (setq lsp-enable-completion-at-point t)
-;;   (setq read-process-output-max (* 1024 1024)) ;; 1mb
-;;   (setq lsp-idle-delay 0.5)
-;;   (setq lsp-prefer-capf t)) ; prefer lsp's company-capf over company-lsp
+ (use-package lsp-mode
+   :hook ((c-mode          ; clangd
+           c++-mode        ; clangd
+           c-or-c++-mode   ; clangd
+	   rust-mode
+           ) . lsp)
+   :commands lsp
+   :config
+   (setq lsp-auto-guess-root t)
+   (setq lsp-diagnostic-package :none)
+   (setq lsp-enable-symbol-highlighting t)
+   (setq lsp-enable-on-type-formatting nil)
+   (setq lsp-signature-auto-activate nil)
+   (setq lsp-enable-folding nil)
+   (setq lsp-enable-snippet nil)
+   (setq lsp-enable-completion-at-point t)
+   (setq read-process-output-max (* 1024 1024)) ;; 1mb
+   (setq lsp-idle-delay 0.5)
+   (setq lsp-prefer-capf t)) ; prefer lsp's company-capf over company-lsp
 
-;; (use-package company
-;;   :hook (prog-mode . company-mode)
-;;   :config
-;;   (setq company-minimum-prefix-length 1)
-;;   (setq company-idle-delay 0.3)
-;;   (setq company-selection-wrap-around t)
-;;   (setq company-tooltip-align-annotations t))
+ (use-package company
+   :hook (prog-mode . company-mode)
+   :config
+   (setq company-minimum-prefix-length 1)
+   (setq company-idle-delay 0.3)
+   (setq company-selection-wrap-around t)
+   (setq company-tooltip-align-annotations t))
