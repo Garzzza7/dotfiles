@@ -28,6 +28,8 @@
  ;; If there is more than one, they won't work right.
  )
 
+(ido-mode)
+
 (exec-path-from-shell-initialize)
 
 (global-company-mode 1)
