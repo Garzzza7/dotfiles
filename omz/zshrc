@@ -133,6 +133,7 @@ alias pb='powerprofilesctl set balanced'
 alias pps='powerprofilesctl set power-saver'
 alias rm='trash-put'
 alias suspend='systemctl suspend'
+alias discord='discord --no-sandbox'
 
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 export PATH=$PATH:~/scripts

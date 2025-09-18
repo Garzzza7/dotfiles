@@ -23,6 +23,27 @@ if [ "$res" != "Already up to date." ]; then
 	./download.sh
 	printf "${grey}Changes detected.\n${normal}"
 
+	if command -v discord 2>&1 >/dev/null; then
+		printf "${green}Discord found.\n${normal}"
+		cp -r discord/settings.json $HOME/.config/discord/settings.json
+	else
+		printf "${red}Omitting Discord\n${normal}"
+	fi
+
+	if command -v zed 2>&1 >/dev/null || command -v zeditor 2>&1 >/dev/null; then
+		printf "${green}Zed found.\n${normal}"
+		cp -r zed/settings.json $HOME/.config/zed/settings.json
+	else
+		printf "${red}Omitting Zed.\n${normal}"
+	fi
+
+	if command -v gh 2>&1 >/dev/null; then
+		printf "${green}GH found.\n${normal}"
+		cp -r gh/config.yml $HOME/.config/gh/config.yml
+	else
+		printf "${red}Omitting GH\n${normal}"
+	fi
+
 	if command -v ghostty 2>&1 >/dev/null; then
 		printf "${green}Ghostty found.\n${normal}"
 		cp -r ghostty/config $HOME/.config/ghostty/config

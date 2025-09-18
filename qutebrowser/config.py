@@ -4,4 +4,4 @@ config.load_autoconfig(False)
 # c.new_instance_open_target = "window"
 # c.downloads.position = "bottom"
 # config.set("colors.webpage.darkmode.enabled", False)
-# c.content.javascript.enabled = True
+c.content.javascript.enabled = True

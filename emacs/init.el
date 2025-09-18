@@ -47,30 +47,31 @@
 (setq scroll-step            1
       scroll-conservatively  10000)
 
- (use-package lsp-mode
-   :hook ((c-mode          ; clangd
-           c++-mode        ; clangd
-           c-or-c++-mode   ; clangd
-	   rust-mode
-           ) . lsp)
-   :commands lsp
-   :config
-   (setq lsp-auto-guess-root t)
-   (setq lsp-diagnostic-package :none)
-   (setq lsp-enable-symbol-highlighting t)
-   (setq lsp-enable-on-type-formatting nil)
-   (setq lsp-signature-auto-activate nil)
-   (setq lsp-enable-folding nil)
-   (setq lsp-enable-snippet nil)
-   (setq lsp-enable-completion-at-point t)
-   (setq read-process-output-max (* 1024 1024)) ;; 1mb
-   (setq lsp-idle-delay 0.5)
-   (setq lsp-prefer-capf t)) ; prefer lsp's company-capf over company-lsp
+ ;; (use-package lsp-mode
+ ;;   :hook ((c-mode          ; clangd
+ ;;           c++-mode        ; clangd
+ ;;           c-or-c++-mode   ; clangd
+ ;; 	   rust-mode       ; rust-analyzer
+ ;;           python-mode     ; pyright
+ ;;           ) . lsp)
+ ;;   :commands lsp
+ ;;   :config
+ ;;   (setq lsp-auto-guess-root t)
+ ;;   (setq lsp-diagnostic-package :none)
+ ;;   (setq lsp-enable-symbol-highlighting t)
+ ;;   (setq lsp-enable-on-type-formatting nil)
+ ;;   (setq lsp-signature-auto-activate nil)
+ ;;   (setq lsp-enable-folding nil)
+ ;;   (setq lsp-enable-snippet nil)
+ ;;   (setq lsp-enable-completion-at-point t)
+ ;;   (setq read-process-output-max (* 1024 1024)) ;; 1mb
+ ;;   (setq lsp-idle-delay 0.5)
+ ;;   (setq lsp-prefer-capf t)) ; prefer lsp's company-capf over company-lsp
 
- (use-package company
-   :hook (prog-mode . company-mode)
-   :config
-   (setq company-minimum-prefix-length 1)
-   (setq company-idle-delay 0.3)
-   (setq company-selection-wrap-around t)
-   (setq company-tooltip-align-annotations t))
+ ;; (use-package company
+ ;;   :hook (prog-mode . company-mode)
+ ;;   :config
+ ;;   (setq company-minimum-prefix-length 1)
+ ;;   (setq company-idle-delay 0.3)
+ ;;   (setq company-selection-wrap-around t)
+ ;;   (setq company-tooltip-align-annotations t))

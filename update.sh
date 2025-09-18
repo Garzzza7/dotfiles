@@ -18,6 +18,13 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
+if command -v discord 2>&1 >/dev/null; then
+	printf "${green}Discord found.\n${normal}"
+	cp -r $HOME/.config/discord/settings.json discord/settings.json
+else
+	printf "${red}Omitting Discord.\n${normal}"
+fi
+
 if command -v zed 2>&1 >/dev/null || command -v zeditor 2>&1 >/dev/null; then
 	printf "${green}Zed found.\n${normal}"
 	cp -r $HOME/.config/zed/settings.json zed/settings.json
