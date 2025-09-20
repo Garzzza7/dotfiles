@@ -1,12 +1,12 @@
 {
   "chromiumSwitches": {},
-  "IS_MAXIMIZED": false,
+  "IS_MAXIMIZED": true,
   "IS_MINIMIZED": false,
   "WINDOW_BOUNDS": {
-    "x": 0,
-    "y": 33,
-    "width": 1920,
-    "height": 1047
+    "x": 962,
+    "y": 30,
+    "width": 958,
+    "height": 1050
   },
   "BACKGROUND_COLOR": "#121214",
   "offloadAdmControls": true,
