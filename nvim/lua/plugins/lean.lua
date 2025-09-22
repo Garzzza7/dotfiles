@@ -5,7 +5,7 @@ return {
 
 		dependencies = {
 			{ "neovim/nvim-lspconfig" },
-			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-lua/plenary.nvim", commit = "857c5ac632080dba10aae49dba902ce3abf91b35" },
 			{ "hrsh7th/nvim-cmp" },
 			{ "nvim-telescope/telescope.nvim" }, -- for 2 Lean-specific pickers
 			{ "andymass/vim-matchup" }, -- for enhanced % motion behavior

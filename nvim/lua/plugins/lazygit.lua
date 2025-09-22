@@ -11,7 +11,7 @@ return {
 		},
 		-- optional for floating window border decoration
 		dependencies = {
-			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-lua/plenary.nvim", commit = "857c5ac632080dba10aae49dba902ce3abf91b35" },
 		},
 	},
 }

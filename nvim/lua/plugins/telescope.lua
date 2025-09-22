@@ -3,13 +3,14 @@ return {
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
 		branch = "0.1.x",
+		-- tag = "0.1.7",
 		dependencies = {
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5 && cmake --build build --config Release && cmake --install build --prefix build",
 			},
 			{ "nvim-lua/popup.nvim" },
-			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-lua/plenary.nvim", commit = "857c5ac632080dba10aae49dba902ce3abf91b35" },
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 			{ "nvim-telescope/telescope-media-files.nvim" },
 			{ "nvim-telescope/telescope-file-browser.nvim" },

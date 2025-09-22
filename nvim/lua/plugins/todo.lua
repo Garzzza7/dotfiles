@@ -2,7 +2,7 @@ return {
 	{
 		"folke/todo-comments.nvim",
 		version = "v1.4.0",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = { "nvim-lua/plenary.nvim", commit = "857c5ac632080dba10aae49dba902ce3abf91b35" },
 		opts = {
 			signs = true, -- show icons in the signs column
 			sign_priority = 8, -- sign priority

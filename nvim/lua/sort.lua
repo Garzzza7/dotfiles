@@ -22,6 +22,8 @@ local langs = {
 	"latex",
 	"haskell",
 	"ruby",
+	"ocaml",
+	"commonlisp",
 }
 
 local unique = {}
