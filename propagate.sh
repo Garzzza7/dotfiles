@@ -18,6 +18,13 @@ blue=$(tput setaf 4)
 green=$(tput setaf 6)
 normal=$(tput sgr0)
 
+if command -v tmux 2>&1 >/dev/null; then
+	printf "${green}Tmux found.\n${normal}"
+	cp -r tmux/tmux.conf $HOME/.tmux.conf
+else
+	printf "${red}Omitting Tmux\n${normal}"
+fi
+
 if command -v discord 2>&1 >/dev/null; then
 	printf "${green}Discord found.\n${normal}"
 	cp -r discord/settings.json $HOME/.config/discord/settings.json

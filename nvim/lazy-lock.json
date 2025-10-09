@@ -32,7 +32,7 @@
   "mason-tool-installer.nvim": { "branch": "main", "commit": "517ef5994ef9d6b738322664d5fdd948f0fdeb46" },
   "mason.nvim": { "branch": "main", "commit": "fc98833b6da5de5a9c5b1446ac541577059555be" },
   "mini.misc": { "branch": "main", "commit": "d92235cfb7b1bce2dfc21d06ee1a1a3d7e04b969" },
-  "mini.nvim": { "branch": "main", "commit": "fbb6ad02871d296fc7d3ebd453e1be89b1210f68" },
+  "mini.nvim": { "branch": "main", "commit": "ef89bb115244297ed440441faa61759ddcf4a970" },
   "multiple-cursors.nvim": { "branch": "main", "commit": "1ac15d047a4b265cc2389957bcc56ee561b29e02" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "nibble-vim": { "branch": "main", "commit": "f2a0fce6fee1b6668ed7e29fe3ed8cb702f710d7" },
