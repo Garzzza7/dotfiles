@@ -20,7 +20,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(company cuda-mode exec-path-from-shell gnuplot haskell-mode lsp-mode
-	     lua-mode magit rust-mode)))
+	     lua-mode magit rust-mode typst-ts-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -42,7 +42,7 @@
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 
-(invert-face 'default)
+;;(invert-face 'default)
 
 (setq scroll-step            1
       scroll-conservatively  10000)
