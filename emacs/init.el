@@ -42,11 +42,11 @@
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 
-;;(invert-face 'default)
+(invert-face 'default)
 
 (setq scroll-step            1
       scroll-conservatively  10000)
-
+(scroll-bar-mode -1)
  ;; (use-package lsp-mode
  ;;   :hook ((c-mode          ; clangd
  ;;           c++-mode        ; clangd

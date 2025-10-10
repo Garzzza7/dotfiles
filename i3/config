@@ -9,39 +9,36 @@ set $TERMINAL st
 
 #font pango:monospace 8
 # font pango:DejaVu Sans Mono 10
-font pango:Ubuntu Regular 3
+font pango:Ubuntu Regular 9
 
 # NOTE: The secondary rgb color in the lines below is the fallback if
 # i3 fails to get colors from Xresources.
-set $transp       #00000000
-set_from_resource $colorf  i3wm.foreground #f8f8f2
-set_from_resource $colorb  i3wm.background #181a26
-set_from_resource $color0  i3wm.color0  #282936
-set_from_resource $color8  i3wm.color8  #4d4f68
-set_from_resource $color1  i3wm.color1  #f087bd
-set_from_resource $color9  i3wm.color9  #bd6a95
-set_from_resource $color2  i3wm.color2  #a5fb8f
-set_from_resource $color10 i3wm.color10 #83c771
-set_from_resource $color3  i3wm.color3  #fae3b0
-set_from_resource $color11 i3wm.color11 #c7b58c
-set_from_resource $color4  i3wm.color4  #96cdfb
-set_from_resource $color12 i3wm.color12 #77a2c7
-set_from_resource $color5  i3wm.color5  #9183f7
-set_from_resource $color13 i3wm.color13 #7368c4
-set_from_resource $color6  i3wm.color6  #89dceb
-set_from_resource $color14 i3wm.color14 #6bacb8
-set_from_resource $color7  i3wm.color7  #e9e9f4
-set_from_resource $color15 i3wm.color15 #f7f7fb
+# set $transp       #00000000
+# set_from_resource $colorf  i3wm.foreground #f8f8f2
+# set_from_resource $colorb  i3wm.background #181a26
+# set_from_resource $color0  i3wm.color0  #282936
+# set_from_resource $color8  i3wm.color8  #4d4f68
+# set_from_resource $color1  i3wm.color1  #f087bd
+# set_from_resource $color9  i3wm.color9  #bd6a95
+# set_from_resource $color2  i3wm.color2  #a5fb8f
+# set_from_resource $color10 i3wm.color10 #83c771
+# set_from_resource $color3  i3wm.color3  #fae3b0
+# set_from_resource $color11 i3wm.color11 #c7b58c
+# set_from_resource $color4  i3wm.color4  #96cdfb
+# set_from_resource $color12 i3wm.color12 #77a2c7
+# set_from_resource $color5  i3wm.color5  #9183f7
+# set_from_resource $color13 i3wm.color13 #7368c4
+# set_from_resource $color6  i3wm.color6  #89dceb
+# set_from_resource $color14 i3wm.color14 #6bacb8
+# set_from_resource $color7  i3wm.color7  #e9e9f4
+# set_from_resource $color15 i3wm.color15 #f7f7fb
 
 # class                 border    backgr.  text     indicator  child_border
-client.focused          $transp   #000000  #00ff00  #00ff00    $transp
-client.focused_inactive $transp   $color8  $color1  $color1    $transp
-client.unfocused        $transp   #3F3F3F  #ACB6AE  $color1    $transp
-client.urgent           $transp   $color1  $color0  $color1    $transp
-client.background       $transp
-
-# does not work, dont care
-set $ARTIST $(exec_always playerctl metadata artist)
+# client.focused          $transp   #000000  #00ff00  #00ff00    $transp
+# client.focused_inactive $transp   $color8  $color1  $color1    $transp
+# client.unfocused        $transp   #3F3F3F  #ACB6AE  $color1    $transp
+# client.urgent           $transp   $color1  $color0  $color1    $transp
+# client.background       $transp
 
 # KEYBOARD LAYOUT
 bindsym $mod+Shift+Ctrl+e exec setxkbmap -layout us
@@ -57,11 +54,12 @@ exec_always feh --bg-max $HOME/.config/i3/mitsuri.png
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
+
+set $refresh_i3status killall -SIGUSR1 i3status.sh
 
 # Use pactl to adjust volume in PulseAudio
-set $refresh_i3status killall -SIGUSR1 i3status.sh
-# @DEFAULT_SINK@ 
+# @DEFAULT_SINK@
 # pc ALL=(ALL)
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && $refresh_i3status
 
@@ -86,7 +84,7 @@ floating_modifier $mod
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec $TERMINAL
 
-# BACKUP OPENINGS OF A TERMINAL
+# Backup terminal
 bindsym Ctrl+$alt+t exec $TERMINAL
 
 # kill focused window
@@ -216,7 +214,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 #resize
 mode "resize" {
-
         bindsym $LEFT resize shrink width 5 px or 5 ppt
         bindsym $UP resize grow height 5 px or 5 ppt
         bindsym $DOWN resize shrink height 5 px or 5 ppt
@@ -243,7 +240,8 @@ bindsym $mod+x move workspace to output right
 bar {
         # status_command i3status -c $HOME/.config/i3status/i3status.conf
         status_command $HOME/scripts/i3status.sh
-        position top
+        # position top
+        position bottom
         tray_output primary
         workspace_buttons yes
         font pango:DejaVu Sans Mono 10
@@ -257,14 +255,14 @@ bar {
         strip_workspace_name no
 
   colors {
-        background #000000
-        statusline #0FF344
-        separator #0FF344
-
-        focused_workspace  #00ff00 #000000 #00ff00
-        active_workspace   #FF0000 #ff0000 #ff0000
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #ff0000 #000000 #ff0000
+        # background #000000
+        # statusline #0FF344
+        # separator #0FF344
+        #
+        # focused_workspace  #00ff00 #000000 #00ff00
+        # active_workspace   #FF0000 #ff0000 #ff0000
+        # inactive_workspace #333333 #222222 #888888
+        # urgent_workspace   #ff0000 #000000 #ff0000
     }
 }
 
