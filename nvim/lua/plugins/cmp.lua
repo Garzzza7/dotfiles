@@ -7,6 +7,7 @@ return {
 		dependencies = {
 			{
 				"L3MON4D3/LuaSnip",
+				commit = "faf3c94a44508cec1b961406d36cc65113ff3b98",
 				build = (function ()
 					if vim.fn.has ("win32") == 1 or vim.fn.executable ("make") == 0 then
 						return

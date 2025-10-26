@@ -169,7 +169,7 @@ return {
 							"stylua.toml",
 							"Cargo.lock",
 							"Cargo.toml",
-							"head.here", -- mine
+							"root.here", -- mine
 							"Makefile",
 							"README.md",
 						},
