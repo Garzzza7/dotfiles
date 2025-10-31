@@ -1,7 +1,7 @@
 {
   "chromiumSwitches": {},
   "IS_MAXIMIZED": false,
-  "IS_MINIMIZED": false,
+  "IS_MINIMIZED": true,
   "WINDOW_BOUNDS": {
     "x": 962,
     "y": 18,

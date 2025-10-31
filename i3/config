@@ -250,7 +250,7 @@ bar {
         # alt+win key
         modifier $alt+$mod
         tray_padding 0
-        workspace_min_width 30
+        workspace_min_width 10
         strip_workspace_numbers no
         strip_workspace_name no
 

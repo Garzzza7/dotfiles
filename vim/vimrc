@@ -1,6 +1,7 @@
 " MINIMALISTIC CONFIG
 if 0
         syntax on
+        colorscheme default
         set hlsearch
         set is hls
         set incsearch
@@ -37,8 +38,9 @@ call plug#end()
 	set nocursorline
 	syntax sync minlines=256
 	let g:netrw_liststyle=3
-	colorscheme GruberDarker
+	"colorscheme GruberDarker
 	"colorscheme sitruuna
+        colorscheme default
 	set background=dark
 	set hlsearch
 	set is hls

@@ -30,6 +30,7 @@ return {
 				python = { "black" },
 				rust = { "rust-analyzer" },
 				typst = { "typstyle" },
+				nix = { "nixfmt" },
 			},
 		},
 	},
