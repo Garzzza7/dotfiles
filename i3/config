@@ -242,7 +242,7 @@ bar {
         status_command $HOME/scripts/i3status.sh
         # position top
         position bottom
-        tray_output primary
+        tray_output none
         workspace_buttons yes
         font pango:DejaVu Sans Mono 10
         #mode hide
