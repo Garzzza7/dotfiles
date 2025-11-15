@@ -160,7 +160,7 @@ return {
 				},
 				extensions = {
 					rooter = {
-						enable = true,
+						enable = false,
 						patterns = {
 							".git",
 							".clangd",

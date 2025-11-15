@@ -28,4 +28,4 @@ vim.opt.hlsearch = true
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 -- default terminal
-vim.g.terminal_emulator = "kitty"
+vim.g.terminal_emulator = "st"
