@@ -32,6 +32,7 @@ call plug#begin()
 	Plug 'drsooch/gruber-darker-vim'
 	Plug 'mbbill/undotree'
 	Plug 'tpope/vim-surround'
+        Plug 'mhinz/vim-grepper'
 call plug#end()
 	syntax on
 	set nocursorcolumn
