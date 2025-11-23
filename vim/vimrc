@@ -15,83 +15,86 @@ if 0
         vnoremap J :m '>+1<cr>gv=gv
         vnoremap K :m '<-2<cr>gv=gv
 
-	nnoremap <silent> <C-n> <cmd>bnext<cr>
-	nnoremap <silent> <C-p> <cmd>bprevious<cr>
+        nnoremap <silent> <C-n> <cmd>bnext<cr>
+        nnoremap <silent> <C-p> <cmd>bprevious<cr>
 else
 " MAXIMALISTIC CONFIG
-	let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-	if empty(glob(data_dir . '/autoload/plug.vim'))
-		silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-		autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-	endif
+    let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+    if empty(glob(data_dir . '/autoload/plug.vim'))
+        silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
 call plug#begin()
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
-	Plug 'eemed/sitruuna.vim'
-	Plug 'tpope/vim-fugitive'
-	Plug 'drsooch/gruber-darker-vim'
-	Plug 'mbbill/undotree'
-	Plug 'tpope/vim-surround'
-        Plug 'mhinz/vim-grepper'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'eemed/sitruuna.vim'
+    Plug 'tpope/vim-fugitive'
+    Plug 'drsooch/gruber-darker-vim'
+    Plug 'mbbill/undotree'
+    Plug 'tpope/vim-surround'
+    Plug 'mhinz/vim-grepper'
 call plug#end()
-	syntax on
-	set nocursorcolumn
-	set nocursorline
-	syntax sync minlines=256
-	let g:netrw_liststyle=3
-	"colorscheme GruberDarker
-	"colorscheme sitruuna
-        colorscheme default
-	set background=dark
-	set hlsearch
-	set is hls
-	set incsearch
-        set autochdir
+    syntax on
+    set nocursorcolumn
+    set nocursorline
+    syntax sync minlines=256
+    let g:netrw_liststyle=3
+    "colorscheme GruberDarker
+    "colorscheme sitruuna
+    colorscheme default
+    set background=dark
+    set hlsearch
+    set is hls
+    set incsearch
 
-        vnoremap J :m '>+1<cr>gv=gv
-        vnoremap K :m '<-2<cr>gv=gv
+    vnoremap J :m '>+1<cr>gv=gv
+    vnoremap K :m '<-2<cr>gv=gv
 
-	nnoremap <silent> <C-n> <cmd>bnext<cr>
-	nnoremap <silent> <C-p> <cmd>bprevious<cr>
+    nnoremap <silent> <C-n> <cmd>bnext<cr>
+    nnoremap <silent> <C-p> <cmd>bprevious<cr>
 
-        nnoremap <C-s><C-a> :%s/<C-r><C-w>//g<Left><Left>
-        nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
-        vnoremap <C-s><C-h> "ay:%s/<C-r>a//gc<Left><Left><Left>
+    nnoremap <C-s><C-a> :%s/<C-r><C-w>//g<Left><Left>
+    nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
+    vnoremap <C-s><C-s> "ay:%s/<C-r>a//gc<Left><Left><Left>
 
-	nnoremap <silent> <C-c><C-f> <cmd>tabnew $HOME/.vimrc<cr>
-	nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
-	nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
-	nnoremap <silent> <RIGHT> <cmd>echo "xdd"<cr>
-	nnoremap <silent> <LEFT> <cmd>echo "xdd"<cr>
-	nnoremap <silent> <A-C-w> <cmd>wa<cr>
-	nnoremap <silent> <A-C-q> <cmd>qa!<cr>
-	nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
-	tnoremap <Esc> <C-\><C-n>
-	noremap <silent> <A-n> :bn<cr>
-	noremap <silent> <A-d> :bd!<cr>
-	noremap <silent> <A-p> :bp<cr>
-	noremap <silent> <A-w> :bw<cr>
-	noremap <silent> <A-l> :ls<cr>
-        noremap <Esc><Esc> :nohlsearch<CR>
-	nnoremap <C-x> :set hlsearch! hlsearch?<cr>
-	noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
-	noremap <F9> <esc> :w <cr> :!python3<cr>
-	noremap <silent> <space>sf :FZF<cr>
-	noremap <silent> <space>sgg :Rg<cr>
-	noremap <silent> <space><space> :Buffers<cr>
-	noremap <silent> <space>/ :BLines<cr>
-	noremap <silent> <space>mn :Marks<cr>
-	noremap <silent> <space>al :FZF $HOME/zadania/Algos<cr>
-	noremap <C-j> <C-W>j
-	noremap <C-k> <C-W>k
-	noremap <C-h> <C-W>h
-	noremap <C-l> <C-W>l
-	let &t_SI .= "\e[6 q"  " Line cursor in insert mode
-	let &t_EI .= "\e[2 q"  " Block cursor in normal mode
-	let &t_SR .= "\e[4 q"  " replace mode
-	filetype on
-	set encoding=utf-8
-	set expandtab
+    nnoremap <silent> <C-c><C-f> <cmd>tabnew $HOME/.vimrc<cr>
+    nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
+    nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
+    nnoremap <silent> <RIGHT> <cmd>echo "xdd"<cr>
+    nnoremap <silent> <LEFT> <cmd>echo "xdd"<cr>
+    nnoremap <silent> <A-C-w> <cmd>wa<cr>
+    nnoremap <silent> <A-C-q> <cmd>qa!<cr>
+    nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
+    tnoremap <Esc> <C-\><C-n>
+    noremap <silent> <A-n> :bn<cr>
+    noremap <silent> <A-d> :bd!<cr>
+    noremap <silent> <A-p> :bp<cr>
+    noremap <silent> <A-w> :bw<cr>
+    noremap <silent> <A-l> :ls<cr>
+    noremap <Esc><Esc> :nohlsearch<CR>
+    nnoremap <C-x> :set hlsearch! hlsearch?<cr>
+    noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
+    noremap <F9> <esc> :w <cr> :!python3<cr>
+    noremap <silent> <space>sf :FZF<cr>
+    noremap <silent> <space>sgg :Rg<cr>
+    noremap <silent> <space><space> :Buffers<cr>
+    noremap <silent> <space>/ :BLines<cr>
+    noremap <silent> <space>mn :Marks<cr>
+    noremap <silent> <space>al :FZF $HOME/zadania/Algos<cr>
+    noremap <C-j> <C-W>j
+    noremap <C-k> <C-W>k
+    noremap <C-h> <C-W>h
+    noremap <C-l> <C-W>l
+    let &t_SI .= "\e[6 q"  " Line cursor in insert mode
+    let &t_EI .= "\e[2 q"  " Block cursor in normal mode
+    let &t_SR .= "\e[4 q"  " replace mode
+    filetype on
+
+    set encoding=utf-8
+
+    set shiftwidth=4
+    set tabstop=4
+    set expandtab
 endif
 " -------------------------------------------------------------------------------------------
 " OLD CONFIG
