@@ -23,7 +23,7 @@ return {
 				"latex",
 				"llvm",
 				"lua",
-				"make",
+				-- "make",
 				"markdown",
 				"markdown_inline",
 				"nix",
