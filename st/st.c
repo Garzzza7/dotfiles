@@ -35,6 +35,7 @@
 #define ESC_ARG_SIZ 16
 #define STR_BUF_SIZ ESC_BUF_SIZ
 #define STR_ARG_SIZ ESC_ARG_SIZ
+#define CUSTOM_SCROLL_SIZE 2
 
 /* macros */
 #define IS_SET(flag) ((term.mode & (flag)) != 0)
@@ -1032,7 +1033,8 @@ void tswapscreen(void) {
 }
 
 void kscrollup(const Arg *a) {
-  int n = a->i;
+  // int n = a->i;
+  int n = CUSTOM_SCROLL_SIZE;
 
   if (IS_SET(MODE_ALTSCREEN))
     return;
@@ -1049,8 +1051,8 @@ void kscrollup(const Arg *a) {
 }
 
 void kscrolldown(const Arg *a) {
-
-  int n = a->i;
+  // int n = a->i;
+  int n = CUSTOM_SCROLL_SIZE;
 
   if (IS_SET(MODE_ALTSCREEN))
     return;
@@ -1141,7 +1143,8 @@ void tscrollup(int orig, int n) {
   /* Redraw portion of the screen that has scrolled */
   tsetdirt(orig, term.bot - n + 1);
 
-  selscroll(orig, -n);
+  // selscroll(orig, -n);
+  selscroll(orig, -10);
 }
 
 void selscroll(int orig, int n) {
