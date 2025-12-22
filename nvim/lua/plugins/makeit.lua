@@ -1,12 +1,14 @@
 return {
     { -- This plugin
         "Zeioth/makeit.nvim",
+        enabled = false,
         cmd = { "MakeitOpen", "MakeitToggleResults", "MakeitRedo" },
         dependencies = { "stevearc/overseer.nvim" },
         opts = {},
     },
     { -- The task runner we use
         "stevearc/overseer.nvim",
+        enabled = false,
         commit = "400e762648b70397d0d315e5acaf0ff3597f2d8b",
         cmd = { "MakeitOpen", "MakeitToggleResults", "MakeitRedo" },
         opts = {
