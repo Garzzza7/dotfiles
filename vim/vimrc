@@ -31,10 +31,11 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
-    Plug 'terryma/vim-multiple-cursors'   
+    Plug 'terryma/vim-multiple-cursors'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
+    Plug 'wezm/vim-mercury'
 call plug#end()
     syntax on
     set nocursorcolumn
@@ -131,6 +132,9 @@ endif
 "   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 " endif
 " call plug#begin()
+" " Plug 'octol/vim-cpp-enhanced-highlight'
+" Plug 'beyondmarc/hlsl.vim'
+" Plug 'bfrg/vim-cpp-modern'
 " Plug 'cespare/vim-toml'
 " Plug 'cmaureir/snipmate-snippets-cuda'
 " Plug 'eemed/sitruuna.vim'
@@ -138,17 +142,18 @@ endif
 " Plug 'elmcast/elm-vim'
 " Plug 'elzr/vim-json'
 " Plug 'flazz/vim-colorschemes'
+" Plug 'gleam-lang/gleam.vim'
 " Plug 'good5dog5/arm.vim'
 " Plug 'harenome/vim-mipssyntax'
+" Plug 'jrozner/vim-antlr'
 " Plug 'julialang/julia-vim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'kchmck/vim-coffee-script'
 " Plug 'lervag/vimtex'
+" Plug 'mbbill/undotree'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'morhetz/gruvbox'
 " Plug 'neovimhaskell/haskell-vim'
-" " Plug 'octol/vim-cpp-enhanced-highlight'
-" Plug 'bfrg/vim-cpp-modern'
 " Plug 'plasticboy/vim-markdown'
 " Plug 'potatoesmaster/i3-vim-syntax'
 " Plug 'rhysd/vim-crystal'
@@ -163,13 +168,9 @@ endif
 " Plug 'tpope/vim-surround'
 " Plug 'vim-scripts/VimClojure'
 " Plug 'vim-scripts/asmx86_64'
+" Plug 'vim-scripts/slang_syntax'
 " Plug 'wlangstroth/vim-racket'
 " Plug 'zah/nim.vim'
-" Plug 'mbbill/undotree'
-" Plug 'gleam-lang/gleam.vim'
-" Plug 'jrozner/vim-antlr'
-" Plug 'vim-scripts/slang_syntax'
-" Plug 'beyondmarc/hlsl.vim'
 " call plug#end()
 " colorscheme sitruuna
 " if has("autocmd")

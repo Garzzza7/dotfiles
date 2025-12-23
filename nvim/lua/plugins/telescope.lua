@@ -305,7 +305,7 @@ return {
 
             vim.keymap.set (
                 { "n" },
-                "<leader>sga",
+                "<leader>gr",
                 "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
                 { noremap = true, silent = true, desc = "Pass args to grep" }
             )
