@@ -407,12 +407,16 @@ return {
                 { noremap = true, silent = true, desc = "Search git files" }
             )
 
-            vim.keymap.set (
-                { "n" },
-                "gd",
-                require ("telescope.builtin").lsp_definitions,
-                { noremap = true, silent = true, desc = "[G]oto [D]efinition" }
-            )
+            vim.keymap.set ("n", "gd", function ()
+                local clients = vim.lsp.get_clients ()
+                if next (clients) == nil then
+                    vim.cmd ("normal! gd")
+                else
+                    -- TODO: why it does not work?
+                    -- require("telescope.builtin").lsp_definitions,
+                    vim.lsp.buf.definition ()
+                end
+            end, { noremap = true, silent = true, desc = "[G]oto [D]efinition" })
 
             vim.keymap.set (
                 { "n" },
