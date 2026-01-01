@@ -55,8 +55,8 @@ call plug#end()
     vnoremap J :m '>+1<cr>gv=gv
     vnoremap K :m '<-2<cr>gv=gv
 
-    nnoremap <silent> <C-n> <cmd>bnext<cr>
-    nnoremap <silent> <C-p> <cmd>bprevious<cr>
+    " nnoremap <silent> <C-n> <cmd>bnext<cr>
+    " nnoremap <silent> <C-p> <cmd>bprevious<cr>
 
     nnoremap <C-s><C-a> :%s/<C-r><C-w>//g<Left><Left>
     nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
@@ -71,13 +71,13 @@ call plug#end()
     nnoremap <silent> <A-C-q> <cmd>qa!<cr>
     nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
     tnoremap <Esc> <C-\><C-n>
-    noremap <silent> <A-n> :bn<cr>
-    noremap <silent> <A-d> :bd!<cr>
-    noremap <silent> <A-p> :bp<cr>
-    noremap <silent> <A-w> :bw<cr>
-    noremap <silent> <A-l> :ls<cr>
+    noremap <A-n> :bn<cr>
+    " noremap <A-d> :bd!<cr>
+    nnoremap <A-d> :bd<CR>
+    noremap <A-p> :bp<cr>
+    noremap <A-w> :bw<cr>
+    noremap <A-l> :ls<cr>
     noremap <Esc><Esc> :nohlsearch<CR>
-    nnoremap <C-x> :set hlsearch! hlsearch?<cr>
     noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
     noremap <F9> <esc> :w <cr> :!python3<cr>
     noremap <silent> <space>sf :FZF<cr>

@@ -48,7 +48,7 @@ bindsym $mod+Shift+Ctrl+p exec setxkbmap -layout pl
 exec --no-startup-id dex --autostart --environment i3
 
 #wallpaper
-# --bg-fill
+
 # exec_always feh --bg-max $HOME/.config/i3/wallpaper.jpg
 # exec_always feh --bg-max $HOME/.config/i3/mitsuri.png
 exec_always feh --bg-max $HOME/.config/i3/type_shit.jpg
@@ -92,7 +92,7 @@ bindsym Ctrl+$alt+t exec $TERMINAL
 bindsym $mod+Shift+q kill
 
 # start dmenu stuff
-# bindsym $mod+d exec --no-startup-id dmenu_run -l 20
+bindsym $mod+Ctrl+d exec --no-startup-id dmenu_run -l 20
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -c -l 10"
 bindsym $mod+p exec --no-startup-id $HOME/scripts/internet_search.sh

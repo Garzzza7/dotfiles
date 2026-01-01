@@ -1,4 +1,3 @@
----@diagnostic disable: inject-field
 -- TYPST GRAMMAR
 require ("nvim-treesitter.parsers").get_parser_configs ().typst = {
     install_info = {
@@ -33,18 +32,6 @@ require ("nvim-treesitter.parsers").get_parser_configs ().disassembly = {
         requires_generate_from_grammar = true,
     },
     filetype = "S",
-}
-
--- NIM GRAMMAR
-require ("nvim-treesitter.parsers").get_parser_configs ().nim = {
-    install_info = {
-        url = "https://github.com/alaviss/tree-sitter-nim",
-        files = { "src/parser.c", "src/scanner.c" },
-        branch = "main",
-        generate_requires_npm = false,
-        requires_generate_from_grammar = true,
-    },
-    filetype = "nim",
 }
 
 -- LINKERSCRIPT GRAMMAR

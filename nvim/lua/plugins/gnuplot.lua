@@ -1,0 +1,5 @@
+return {
+    {
+        "dpezto/gnuplot.vim",
+    },
+}

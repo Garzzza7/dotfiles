@@ -408,13 +408,14 @@ return {
             )
 
             vim.keymap.set ("n", "gd", function ()
+                local cword = vim.fn.expand ("<cword>")
+                if cword == "" then return end
                 local clients = vim.lsp.get_clients ()
                 if next (clients) == nil then
-                    vim.cmd ("normal! gd")
+                    local response = vim.cmd ("normal! gd")
                 else
-                    -- TODO: why it does not work?
-                    -- require("telescope.builtin").lsp_definitions,
-                    vim.lsp.buf.definition ()
+                    -- pcall (vim.lsp.buf.definition)
+                    require ("telescope.builtin").lsp_definitions ({ reuse_win = true })
                 end
             end, { noremap = true, silent = true, desc = "[G]oto [D]efinition" })
 

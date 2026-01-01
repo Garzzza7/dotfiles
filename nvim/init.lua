@@ -3,6 +3,7 @@ pcall (require ("config.lazy"))
 pcall (require ("config.classic"))
 pcall (require ("config.apperance"))
 pcall (require ("config.external_parsers"))
+pcall (require ("config.neovide-config"))
 
 vim.api.nvim_create_autocmd ("BufEnter", {
     pattern = "*.m",
