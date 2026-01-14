@@ -2,7 +2,7 @@
 return {
     {
         "lewis6991/gitsigns.nvim",
-        enable = false,
+        enabled = false,
         config = function ()
             require ("gitsigns").setup ({
                 signs = {

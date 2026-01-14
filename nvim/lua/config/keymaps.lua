@@ -38,23 +38,6 @@ vim.keymap.set ({ "n", "i", "v" }, "<A-p>", "<cmd>bp<cr> ", { noremap = true, si
 vim.keymap.set ({ "n", "i", "v" }, "<A-w>", "<cmd>bw<cr> ", { noremap = true, silent = true, desc = "Write buffer" })
 vim.keymap.set ({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", { noremap = true, silent = false, desc = "Display buffers" })
 
--- TODO: make tab stuff not collide with anything
--- vim.keymap.set ({ "n", "i", "v" }, "<C-l>", "<cmd>tabNext<cr> ", { noremap = true, silent = true, desc = "Next tab" })
--- vim.keymap.set ({ "n", "i", "v" }, "<C-h>", "<cmd>tabprevious<cr> ", { noremap = true, silent = true, desc = "Next tab" })
--- vim.keymap.set({ "n", "i", "v" }, "<C-d>", "<cmd>tabclose<cr> ", { noremap = true, silent = true, desc = "Delete tab" })
--- vim.keymap.set(
--- 	{ "n", "i", "v" },
--- 	"<C-p>",
--- 	"<cmd>tabprevious<cr> ",
--- 	{ noremap = true, silent = true, desc = "Previous tab" }
--- )
-
--- window stuff, conflics with space a the leader
--- vim.keymap.set ({ "n" }, "<leader>n", "<cmd> :tabNext<cr> ", { noremap = true, silent = true, desc = "TODO" })
--- vim.keymap.set ({ "n" }, "<leader>p", "<cmd> :tabprevious<cr> ", { noremap = true, silent = true, desc = "TODO" })
--- vim.keymap.set ({ "n" }, "<leader>l", "<cmd> :tabs<cr> ", { noremap = true, silent = true, desc = "TODO" })
--- vim.keymap.set ({ "n" }, "<leader>w", "<cmd> :tabclose<cr> ", { noremap = true, silent = true, desc = "TODO" })
-
 vim.keymap.set ({ "n" }, "<F5>", "<cmd>source $HOME/.config/nvim/init.lua<cr>", { noremap = true, silent = true, desc = "Reload config" })
 
 vim.keymap.set ({ "n" }, "<F5>", "<cmd>.lua<cr>", { noremap = true, silent = true, desc = "Reload config" })
@@ -95,14 +78,15 @@ vim.keymap.set (
 )
 
 vim.keymap.set (
-    { "n", "i", "v" },
+    -- for some reason adding more modes makes TAB not work instantly in the insert mode, probably some type of collision. Stick to just the normal mode.
+    { "n" },
     "<C-i><C-h>",
     "<cmd>lua vim.lsp.inlay_hint.enable(true)<cr>",
     { noremap = true, silent = true, desc = "Enable inlay hints" }
 )
 
 vim.keymap.set (
-    { "n", "i", "v" },
+    { "n" },
     "<C-h><C-h>",
     "<cmd>lua vim.lsp.inlay_hint.enable(false)<cr>",
     { noremap = true, silent = true, desc = "Disable inlay hints" }

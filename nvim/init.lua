@@ -24,3 +24,8 @@ vim.api.nvim_create_autocmd ("FileType", {
     pattern = "mercury",
     command = "setlocal commentstring=%\\ %s",
 })
+
+vim.api.nvim_create_autocmd ("FileType", {
+    pattern = "asm",
+    command = "setlocal commentstring=#\\ %s",
+})

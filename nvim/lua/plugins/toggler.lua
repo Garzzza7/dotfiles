@@ -1,7 +1,7 @@
 return {
     {
         "nguyenvukhang/nvim-toggler",
-        enable = false,
+        enabled = false,
         version = "v0.3.1",
         dependencies = {},
         config = function ()

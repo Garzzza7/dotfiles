@@ -7,9 +7,9 @@ set $alt Mod1
 # set $TERMINAL kitty
 set $TERMINAL st
 
-#font pango:monospace 8
+# font pango:monospace 8
 # font pango:DejaVu Sans Mono 10
-font pango:Ubuntu Regular 9
+font pango:Ubuntu Regular 10
 
 # NOTE: The secondary rgb color in the lines below is the fallback if
 # i3 fails to get colors from Xresources.
@@ -161,13 +161,12 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-#border stuff
+# border stuff
 
 # bindsym $mod+t border normal
 # bindsym $mod+y border 1pixel
 # bindsym $mod+u border none
 # for_window [all] border none
-
 
 set $ws1 "1"
 set $ws2 "2"
@@ -230,6 +229,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+# multi-monitor
 bindsym $mod+z move workspace to output left
 bindsym $mod+x move workspace to output right
 

@@ -40,6 +40,7 @@ return {
                         cmp.config.compare.length,
                         cmp.config.compare.order,
                     },
+                    priority_weight = 0,
                 },
                 completion = { completeopt = "menu,menuone,noinsert" },
                 mapping = cmp.mapping.preset.insert ({
