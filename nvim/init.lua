@@ -29,3 +29,10 @@ vim.api.nvim_create_autocmd ("FileType", {
     pattern = "asm",
     command = "setlocal commentstring=#\\ %s",
 })
+
+vim.api.nvim_create_autocmd ("FileType", {
+    pattern = "cpp",
+    command = "setlocal commentstring=//\\ %s",
+})
+
+vim.deprecate = function () end

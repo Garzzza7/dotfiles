@@ -37,14 +37,18 @@ call plug#begin()
     Plug 'tpope/vim-surround'
     Plug 'wezm/vim-mercury'
 call plug#end()
+    set rtp^="/home/pc/.opam/default/share/ocp-indent/vim"
     syntax on
+    set ttimeout
+    set ttimeoutlen=10
+
     set nocursorcolumn
     set nocursorline
     syntax sync minlines=256
     let g:netrw_liststyle=3
     "colorscheme GruberDarker
-    colorscheme sitruuna
-    "colorscheme default
+    " colorscheme sitruuna
+    colorscheme default
     set background=dark
     set hlsearch
     set is hls
@@ -62,7 +66,6 @@ call plug#end()
     nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
     vnoremap <C-s><C-s> "ay:%s/<C-r>a//gc<Left><Left><Left>
 
-    nnoremap <silent> <C-c><C-f> <cmd>tabnew $HOME/.vimrc<cr>
     nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
     nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
     nnoremap <silent> <RIGHT> <cmd>echo "xdd"<cr>
@@ -71,7 +74,7 @@ call plug#end()
     nnoremap <silent> <A-C-q> <cmd>qa!<cr>
     nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
     tnoremap <Esc> <C-\><C-n>
-    noremap <A-n> :bn<cr>
+    nnoremap <A-n> :bn<cr>
     " noremap <A-d> :bd!<cr>
     nnoremap <A-d> :bd<CR>
     noremap <A-p> :bp<cr>
