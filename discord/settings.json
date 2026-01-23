@@ -3,10 +3,10 @@
   "IS_MAXIMIZED": true,
   "IS_MINIMIZED": false,
   "WINDOW_BOUNDS": {
-    "x": 960,
+    "x": 1146,
     "y": 0,
-    "width": 960,
-    "height": 1060
+    "width": 1147,
+    "height": 1419
   },
   "BACKGROUND_COLOR": "#121214",
   "offloadAdmControls": true,

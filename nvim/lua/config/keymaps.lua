@@ -56,18 +56,20 @@ vim.keymap.set ({ "v" }, "K", ":m '<-2<cr>gv=gv", { noremap = true, silent = tru
 
 vim.keymap.set ({ "x" }, "<leader>p", '"_dP', { noremap = true, silent = true, desc = "Remember copied stuff after deletion" })
 
+vim.keymap.set ({ "n" }, "<C-s><C-d>", ":GrepperGrep <C-r><C-w>", { noremap = true, silent = false, desc = "Run grepper" })
+
 vim.keymap.set (
     { "n" },
     "<C-s><C-a>",
     ":%s/<C-r><C-w>//g<Left><Left>",
-    { noremap = true, silent = false, desc = "Replace word from under the cursor" }
+    { noremap = true, silent = false, desc = "Replace word from under the cursor without confirmation" }
 )
 
 vim.keymap.set (
     { "n" },
     "<C-s><C-s>",
     ":%s/<C-r><C-w>//gc<Left><Left><Left>",
-    { noremap = true, silent = false, desc = "Replace word from under the cursor" }
+    { noremap = true, silent = false, desc = "Replace word from under the cursor with confirmation" }
 )
 
 vim.keymap.set (

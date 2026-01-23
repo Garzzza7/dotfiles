@@ -41,6 +41,7 @@ call plug#end()
     syntax on
     set ttimeout
     set ttimeoutlen=10
+    set scrolloff=8
 
     set nocursorcolumn
     set nocursorline
@@ -62,6 +63,7 @@ call plug#end()
     " nnoremap <silent> <C-n> <cmd>bnext<cr>
     " nnoremap <silent> <C-p> <cmd>bprevious<cr>
 
+    nnoremap <C-s><C-d> :GrepperGrep <C-r><C-w>
     nnoremap <C-s><C-a> :%s/<C-r><C-w>//g<Left><Left>
     nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
     vnoremap <C-s><C-s> "ay:%s/<C-r>a//gc<Left><Left><Left>

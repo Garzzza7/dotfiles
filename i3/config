@@ -9,7 +9,7 @@ set $TERMINAL st
 
 # font pango:monospace 8
 # font pango:DejaVu Sans Mono 10
-font pango:Ubuntu Regular 10
+font pango:Ubuntu Regular 15
 
 # NOTE: The secondary rgb color in the lines below is the fallback if
 # i3 fails to get colors from Xresources.
@@ -245,7 +245,8 @@ bar {
         position bottom
         tray_output none
         workspace_buttons yes
-        font pango:DejaVu Sans Mono 10
+        # font pango:DejaVu Sans Mono 12
+        font pango:Ubuntu Regular 12
         #mode hide
         hidden_state hide
         # alt+win key
