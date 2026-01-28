@@ -384,4 +384,9 @@ return {
             vim.g.adwaita_transparent = true -- makes the background transparent
         end,
     },
+    {
+        "christophermca/meta5",
+        lazy = true,
+        priority = 1000,
+    },
 }
