@@ -25,18 +25,19 @@ else
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     endif
 call plug#begin()
+    Plug 'christophermca/meta5'
     Plug 'drsooch/gruber-darker-vim'
     Plug 'eemed/sitruuna.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
-    " Plug 'terryma/vim-multiple-cursors'
     Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-vinegar'
     Plug 'wezm/vim-mercury'
-    Plug 'christophermca/meta5'
 call plug#end()
     set rtp^="/home/pc/.opam/default/share/ocp-indent/vim"
     syntax on
