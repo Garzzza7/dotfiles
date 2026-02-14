@@ -2,8 +2,8 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         -- version = "*",
-        version = "v0.9.1",
-        -- version = "v0.9.3",
+        -- version = "v0.9.1",
+        version = "v0.9.3",
         config = function ()
             require ("nvim-treesitter.configs").setup ({
                 ensure_installed = {
@@ -21,7 +21,6 @@ return {
                     "gitignore",
                     "haskell",
                     "json",
-                    "latex",
                     "llvm",
                     "lua",
                     "markdown",

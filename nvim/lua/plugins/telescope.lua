@@ -296,116 +296,41 @@ return {
 
             vim.keymap.set ({ "n" }, "<leader>u", "<cmd>Telescope undo<cr>", { noremap = true, silent = true, desc = "Use Telescope Undo" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>gb",
-                "<cmd>Telescope git_branch<cr>",
-                { noremap = true, silent = true, desc = "Use Telescope to open git_branch" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>gb", "<cmd>Telescope git_branch<cr>", { noremap = true, silent = true, desc = "Use Telescope to open git_branch" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>gr",
-                "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
-                { noremap = true, silent = true, desc = "Pass args to grep" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>gr", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", { noremap = true, silent = true, desc = "Pass args to grep" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>fb",
-                "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
-                { noremap = true, silent = true, desc = "File Browser relative to the buffer" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>fb", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", { noremap = true, silent = true, desc = "File Browser relative to the buffer" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>sh",
-                require ("telescope.builtin").help_tags,
-                { noremap = true, silent = true, desc = "[S]earch [H]elp" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>sh", require ("telescope.builtin").help_tags, { noremap = true, silent = true, desc = "[S]earch [H]elp" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>sk",
-                require ("telescope.builtin").keymaps,
-                { noremap = true, silent = true, desc = "[S]earch [K]eymaps" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>sk", require ("telescope.builtin").keymaps, { noremap = true, silent = true, desc = "[S]earch [K]eymaps" })
 
             vim.keymap.set ({ "n" }, "<leader>sf", require ("telescope.builtin").fd, { noremap = true, silent = true, desc = "[S]earch [F]iles" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>ss",
-                require ("telescope.builtin").builtin,
-                { noremap = true, silent = true, desc = "[S]earch [S]elect Telescope" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>ss", require ("telescope.builtin").builtin, { noremap = true, silent = true, desc = "[S]earch [S]elect Telescope" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>sw",
-                require ("telescope.builtin").grep_string,
-                { noremap = true, silent = true, desc = "[S]earch current [W]ord" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>sw", require ("telescope.builtin").grep_string, { noremap = true, silent = true, desc = "[S]earch current [W]ord" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>sgg",
-                require ("telescope.builtin").live_grep,
-                { noremap = true, silent = true, desc = "[S]earch by [G]rep" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>sgg", require ("telescope.builtin").live_grep, { noremap = true, silent = true, desc = "[S]earch by [G]rep" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>sd",
-                require ("telescope.builtin").diagnostics,
-                { noremap = true, silent = true, desc = "[S]earch [D]iagnostics" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>sd", require ("telescope.builtin").diagnostics, { noremap = true, silent = true, desc = "[S]earch [D]iagnostics" })
 
             vim.keymap.set ({ "n" }, "<leader>sr", require ("telescope.builtin").resume, { noremap = true, silent = true, desc = "[S]earch [R]esume" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>s.",
-                require ("telescope.builtin").oldfiles,
-                { noremap = true, silent = true, desc = '[S]earch Recent Files ("." for repeat)' }
-            )
+            vim.keymap.set ({ "n" }, "<leader>s.", require ("telescope.builtin").oldfiles, { noremap = true, silent = true, desc = '[S]earch Recent Files ("." for repeat)' })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader><leader>",
-                require ("telescope.builtin").buffers,
-                { noremap = true, silent = true, desc = "Display existing buffers" }
-            )
+            vim.keymap.set ({ "n" }, "<leader><leader>", require ("telescope.builtin").buffers, { noremap = true, silent = true, desc = "Display existing buffers" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>ma",
-                require ("telescope.builtin").man_pages,
-                { noremap = true, silent = true, desc = "Display manpages" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>ma", require ("telescope.builtin").man_pages, { noremap = true, silent = true, desc = "Display manpages" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>col",
-                require ("telescope.builtin").colorscheme,
-                { noremap = true, silent = true, desc = "Display colorschemes" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>col", require ("telescope.builtin").colorscheme, { noremap = true, silent = true, desc = "Display colorschemes" })
 
             vim.keymap.set ({ "n" }, "<leader>mn", require ("telescope.builtin").marks, { noremap = true, silent = true, desc = "Display marks" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>gs",
-                require ("telescope.builtin").git_status,
-                { noremap = true, silent = true, desc = "Display git status" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>gs", require ("telescope.builtin").git_status, { noremap = true, silent = true, desc = "Display git status" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>sgf",
-                require ("telescope.builtin").git_files,
-                { noremap = true, silent = true, desc = "Search git files" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>sgf", require ("telescope.builtin").git_files, { noremap = true, silent = true, desc = "Search git files" })
 
             vim.keymap.set ("n", "gd", function ()
                 local cword = vim.fn.expand ("<cword>")
@@ -419,33 +344,13 @@ return {
                 end
             end, { noremap = true, silent = true, desc = "[G]oto [D]efinition" })
 
-            vim.keymap.set (
-                { "n" },
-                "gr",
-                require ("telescope.builtin").lsp_references,
-                { noremap = true, silent = true, desc = "[G]oto [R]eferences" }
-            )
+            vim.keymap.set ({ "n" }, "gr", require ("telescope.builtin").lsp_references, { noremap = true, silent = true, desc = "[G]oto [R]eferences" })
 
-            vim.keymap.set (
-                { "n" },
-                "gi",
-                require ("telescope.builtin").lsp_implementations,
-                { noremap = true, silent = true, desc = "[G]oto [I]mplementation" }
-            )
+            vim.keymap.set ({ "n" }, "gi", require ("telescope.builtin").lsp_implementations, { noremap = true, silent = true, desc = "[G]oto [I]mplementation" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>ds",
-                require ("telescope.builtin").lsp_document_symbols,
-                { noremap = true, silent = true, desc = "[D]ocument [S]ymbols" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>ds", require ("telescope.builtin").lsp_document_symbols, { noremap = true, silent = true, desc = "[D]ocument [S]ymbols" })
 
-            vim.keymap.set (
-                { "n" },
-                "<leader>ws",
-                require ("telescope.builtin").lsp_dynamic_workspace_symbols,
-                { noremap = true, silent = true, desc = "[W]orkspace [S]ymbols" }
-            )
+            vim.keymap.set ({ "n" }, "<leader>ws", require ("telescope.builtin").lsp_dynamic_workspace_symbols, { noremap = true, silent = true, desc = "[W]orkspace [S]ymbols" })
 
             vim.keymap.set ({ "n" }, "rn", vim.lsp.buf.rename, { noremap = true, silent = true, desc = "[R]e[n]ame" })
 

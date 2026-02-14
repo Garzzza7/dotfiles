@@ -33,6 +33,7 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
+    Plug 'overvale/vacme'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-eunuch'
@@ -56,6 +57,7 @@ call plug#end()
     " colorscheme sitruuna
     " colorscheme default
     colorscheme meta5
+    " colorscheme miku
     set background=dark
     set hlsearch
     set is hls

@@ -22,12 +22,7 @@ vim.keymap.set ({ "n" }, "<C-l>", "<C-w><C-l>", { noremap = true, silent = true,
 vim.keymap.set ({ "n" }, "<C-j>", "<C-w><C-j>", { noremap = true, silent = true, desc = "Move focus to the lower window" })
 vim.keymap.set ({ "n" }, "<C-k>", "<C-w><C-k>", { noremap = true, silent = true, desc = "Move focus to the upper window" })
 
-vim.keymap.set (
-    { "n", "v", "i" },
-    "<F1>",
-    "<cmd>echo 'Current time is ' . strftime('%c')<cr>",
-    { noremap = true, silent = true, desc = "Display current time" }
-)
+vim.keymap.set ({ "n", "v", "i" }, "<F1>", "<cmd>echo 'Current time is ' . strftime('%c')<cr>", { noremap = true, silent = true, desc = "Display current time" })
 
 vim.keymap.set ({ "n", "i", "v" }, "<A-C-q>", "<cmd>qa!<cr> ", { noremap = true, silent = true, desc = "Quit all" })
 vim.keymap.set ({ "n", "i", "v" }, "<A-C-w>", "<cmd>wa!<cr> ", { noremap = true, silent = true, desc = "Write all" })
@@ -58,26 +53,11 @@ vim.keymap.set ({ "x" }, "<leader>p", '"_dP', { noremap = true, silent = true, d
 
 vim.keymap.set ({ "n" }, "<C-s><C-d>", ":GrepperGrep <C-r><C-w>", { noremap = true, silent = false, desc = "Run grepper" })
 
-vim.keymap.set (
-    { "n" },
-    "<C-s><C-a>",
-    ":%s/<C-r><C-w>//g<Left><Left>",
-    { noremap = true, silent = false, desc = "Replace word from under the cursor without confirmation" }
-)
+vim.keymap.set ({ "n" }, "<C-s><C-a>", ":%s/<C-r><C-w>//g<Left><Left>", { noremap = true, silent = false, desc = "Replace word from under the cursor without confirmation" })
 
-vim.keymap.set (
-    { "n" },
-    "<C-s><C-s>",
-    ":%s/<C-r><C-w>//gc<Left><Left><Left>",
-    { noremap = true, silent = false, desc = "Replace word from under the cursor with confirmation" }
-)
+vim.keymap.set ({ "n" }, "<C-s><C-s>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", { noremap = true, silent = false, desc = "Replace word from under the cursor with confirmation" })
 
-vim.keymap.set (
-    { "v" },
-    "<C-s><C-h>",
-    '"ay:%s/<C-r>a//gc<Left><Left><Left>',
-    { noremap = true, silent = false, desc = "Replace word from the highlight" }
-)
+vim.keymap.set ({ "v" }, "<C-s><C-h>", '"ay:%s/<C-r>a//gc<Left><Left><Left>', { noremap = true, silent = false, desc = "Replace word from the highlight" })
 
 vim.keymap.set (
     -- for some reason adding more modes makes TAB not work instantly in the insert mode, probably some type of collision. Stick to just the normal mode.
@@ -87,12 +67,7 @@ vim.keymap.set (
     { noremap = true, silent = true, desc = "Enable inlay hints" }
 )
 
-vim.keymap.set (
-    { "n" },
-    "<C-h><C-h>",
-    "<cmd>lua vim.lsp.inlay_hint.enable(false)<cr>",
-    { noremap = true, silent = true, desc = "Disable inlay hints" }
-)
+vim.keymap.set ({ "n" }, "<C-h><C-h>", "<cmd>lua vim.lsp.inlay_hint.enable(false)<cr>", { noremap = true, silent = true, desc = "Disable inlay hints" })
 
 vim.keymap.set ({ "n" }, "<space>lg", "<cmd>LazyGit<cr>", { noremap = true, silent = true, desc = "Open Lazygit" })
 
@@ -108,19 +83,9 @@ vim.keymap.set ({ "n" }, "<C-LeftMouse>", "<cmd>MultipleCursorsMouseAddDelete<cr
 
 vim.keymap.set ({ "n" }, "<space>a", "<cmd>MultipleCursorsAddMatches<cr>", { noremap = true, silent = true, desc = "Add cursors to cword" })
 
-vim.keymap.set (
-    { "n" },
-    "<space>A",
-    "<cmd>MultipleCursorsAddMatchesV<cr>",
-    { noremap = true, silent = true, desc = "Add cursors to cword in previous area" }
-)
+vim.keymap.set ({ "n" }, "<space>A", "<cmd>MultipleCursorsAddMatchesV<cr>", { noremap = true, silent = true, desc = "Add cursors to cword in previous area" })
 
-vim.keymap.set (
-    { "n" },
-    "<space>d",
-    "<cmd>MultipleCursorsAddJumpNextMatch<cr>",
-    { noremap = true, silent = true, desc = "Add cursor and jump to next cword" }
-)
+vim.keymap.set ({ "n" }, "<space>d", "<cmd>MultipleCursorsAddJumpNextMatch<cr>", { noremap = true, silent = true, desc = "Add cursor and jump to next cword" })
 
 vim.keymap.set ({ "n" }, "<space>D", "<cmd>MultipleCursorsJumpNextMatch<cr>", { noremap = true, silent = true, desc = "Jump to next cword" })
 
@@ -137,12 +102,7 @@ vim.keymap.set ({ "n" }, "<A-7>", "<cmd>b7<cr>", { noremap = true, silent = true
 vim.keymap.set ({ "n" }, "<A-8>", "<cmd>b8<cr>", { noremap = true, silent = true, desc = "Go to buffer 8" })
 vim.keymap.set ({ "n" }, "<A-9>", "<cmd>b9<cr>", { noremap = true, silent = true, desc = "Go to buffer 9" })
 
-vim.api.nvim_set_keymap (
-    "n",
-    "<leader>al",
-    "<cmd>Telescope find_files cwd=$HOME/zadania/Algos/<cr>",
-    { noremap = true, silent = true, desc = "Open Algos" }
-)
+vim.api.nvim_set_keymap ("n", "<leader>al", "<cmd>Telescope find_files cwd=$HOME/zadania/Algos/<cr>", { noremap = true, silent = true, desc = "Open Algos" })
 
 vim.api.nvim_set_keymap ("n", "<leader>mf", "<cmd>Telescope media_files<cr>", { noremap = true, silent = true, desc = "Media Files" })
 

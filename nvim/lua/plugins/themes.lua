@@ -389,4 +389,19 @@ return {
         lazy = true,
         priority = 1000,
     },
+    {
+        "pebeto/dookie.nvim",
+        lazy = true,
+        priority = 1000,
+    },
+    {
+        "lifepillar/vim-solarized8",
+        lazy = true,
+        priority = 1000,
+    },
+    {
+        "overvale/vacme",
+        lazy = true,
+        priority = 1000,
+    },
 }

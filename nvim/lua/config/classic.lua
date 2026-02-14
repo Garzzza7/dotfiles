@@ -7,7 +7,7 @@ vim.opt.ignorecase = true
 vim.opt.inccommand = "split"
 vim.opt.list = true
 vim.opt.listchars = { tab = "> ", trail = "_", nbsp = "␣" }
-vim.opt.mouse = "a"
+vim.opt.mouse = ""
 vim.opt.number = false
 vim.opt.relativenumber = false
 vim.opt.scrolloff = 8
