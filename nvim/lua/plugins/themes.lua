@@ -297,7 +297,7 @@ return {
     },
     {
         "blazkowolf/gruber-darker.nvim",
-        lazy = false,
+        lazy = true,
         priority = 1000,
         opts = {
             bold = true,

@@ -5,4 +5,4 @@ touch $modified_string.cpp
 touch $modified_string.txt
 cp $HOME/zadania/MINTEMPLATE.cpp $modified_string.cpp
 # nvim $modified_string.txt $modified_string.cpp
-vim $modified_string.txt $modified_string.cpp
+nvim $modified_string.txt $modified_string.cpp

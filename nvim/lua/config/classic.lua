@@ -10,7 +10,7 @@ vim.opt.listchars = { tab = "> ", trail = "_", nbsp = "␣" }
 vim.opt.mouse = ""
 vim.opt.number = false
 vim.opt.relativenumber = false
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 16
 vim.opt.showmode = false
 vim.opt.signcolumn = "no"
 vim.opt.smartcase = true
