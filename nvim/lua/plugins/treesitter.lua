@@ -21,6 +21,8 @@ return {
                     "gitignore",
                     "haskell",
                     "json",
+                    "json5",
+                    "jsonc",
                     "llvm",
                     "lua",
                     "markdown",
