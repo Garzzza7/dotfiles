@@ -2,6 +2,7 @@
 
 (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("elpa" . "https://elpa.gnu.org/packages/"))
 
 (package-initialize)
 
@@ -25,11 +26,11 @@
      "d5fd482fcb0fe42e849caba275a01d4925e422963d1cd165565b31d3f4189c87"
      default))
  '(package-selected-packages
-   '(clipboard-collector commenter company cuda-mode evil evil-commentary
-			 exec-path-from-shell gnuplot
-			 gruber-darker-theme haskell-mode lsp-mode
-			 lua-mode magit nix-mode pdf-tools rust-mode
-			 typst-ts-mode xclip)))
+   '(clipboard-collector company cuda-mode evil evil-commentary
+             exec-path-from-shell gnuplot
+             gruber-darker-theme haskell-mode lsp-mode
+             lua-mode magit nix-mode pdf-tools rust-mode
+             typst-ts-mode xclip)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -37,7 +38,11 @@
  ;; If there is more than one, they won't work right.
  )
 
-(ido-mode)
+(ido-mode 1)
+
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
 
 (exec-path-from-shell-initialize)
 
