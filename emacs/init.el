@@ -6,14 +6,6 @@
 
 (package-initialize)
 
-(evil-mode 1)
-(global-auto-revert-mode 1)
-(global-company-mode 1)
-(ido-mode 1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-
 (setq inhibit-startup-screen t)
 
 (defun revert-buffer-no-confirm ()
@@ -35,6 +27,14 @@
 			 typst-ts-mode xclip)))
 (custom-set-faces
  )
+
+(evil-mode 1)
+(global-auto-revert-mode 1)
+(global-company-mode 1)
+(ido-mode 1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
 
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
