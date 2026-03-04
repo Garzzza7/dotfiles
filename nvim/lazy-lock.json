@@ -3,7 +3,7 @@
   "NeoSolarized.nvim": { "branch": "master", "commit": "3c55ad358c062aa4879950c4f83b4deeac6b72df" },
   "adwaita.nvim": { "branch": "main", "commit": "93f3bed009f7fc4c57f8d710880b6cab9e0b0d15" },
   "binary.nvim": { "branch": "main", "commit": "0a0422551dfc9e8b02c00b133f63d72a75938d81" },
-  "catppuccin": { "branch": "main", "commit": "0a5de4da015a175f416d6ef1eda84661623e0500" },
+  "catppuccin": { "branch": "main", "commit": "c4d475e4b5684747cde9b3f849186af7837d4397" },
   "clangd_extensions.nvim": { "branch": "main", "commit": "db28f29be928d18cbfb86fbfb9f83f584f658feb" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },
   "cmp-path": { "branch": "main", "commit": "c642487086dbd9a93160e1679a1327be111cbc25" },

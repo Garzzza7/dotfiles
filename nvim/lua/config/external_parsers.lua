@@ -7,7 +7,7 @@ require ("nvim-treesitter.parsers").get_parser_configs ().typst = {
         generate_requires_npm = false,
         requires_generate_from_grammar = true,
     },
-    filetype = "typ",
+    filetype = "typst",
 }
 
 -- ASM GRAMMAR
@@ -31,7 +31,7 @@ require ("nvim-treesitter.parsers").get_parser_configs ().disassembly = {
         generate_requires_npm = false,
         requires_generate_from_grammar = true,
     },
-    filetype = "S",
+    filetype = "asm",
 }
 
 -- LINKERSCRIPT GRAMMAR
@@ -44,4 +44,16 @@ require ("nvim-treesitter.parsers").get_parser_configs ().linkerscript = {
         requires_generate_from_grammar = true,
     },
     filetype = "ls",
+}
+
+-- LISP GRAMMAR
+require ("nvim-treesitter.parsers").get_parser_configs ().lisp = {
+    install_info = {
+        url = "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
+        files = { "src/parser.c" },
+        branch = "master",
+        -- generate_requires_npm = false,
+        -- requires_generate_from_grammar = true,
+    },
+    filetype = "lisp",
 }

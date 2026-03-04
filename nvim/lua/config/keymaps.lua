@@ -110,6 +110,6 @@ vim.keymap.set ({ "n", "i", "x" }, "<C-t>", "<cmd>ToggleTerm dir=%:p:h<cr>", { n
 
 vim.keymap.set ({ "n" }, "<F8>", "<esc> :w <cr> :!comp.sh $(echo %)<cr>", { noremap = true, silent = true, desc = "Compile and run C++" })
 
-vim.keymap.set ({ "n" }, "<F9>", "<esc> :w <cr> :Dispatch<cr>", { noremap = true, silent = true, desc = "Run Dispatch" })
+vim.keymap.set ({ "n" }, "<F9>", "<esc> :w <cr> :Dispatch<cr>", { noremap = true, silent = false, desc = "Run Dispatch" })
 
 vim.keymap.set ({ "n" }, "<leader>td", "<cmd>TodoTelescope<cr>", { noremap = true, silent = true, desc = "Open TODOs" })

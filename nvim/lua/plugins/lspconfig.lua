@@ -70,7 +70,7 @@ return {
                 -- },
                 -- html = {},
                 -- hls = {},
-                -- ocamllsp = {},
+                ocamllsp = {},
                 vimls = {},
                 lua_ls = {
                     settings = {
@@ -87,12 +87,14 @@ return {
 
             local ensure_installed = vim.tbl_keys (servers or {})
             vim.list_extend (ensure_installed, {
-                "stylua",
                 "black",
                 "clang-format",
-                "shfmt",
                 "mbake",
+                "ocamlformat",
+                "shfmt",
+                "stylua",
             })
+
             require ("mason-tool-installer").setup ({ ensure_installed = ensure_installed })
 
             require ("mason-lspconfig").setup ({
