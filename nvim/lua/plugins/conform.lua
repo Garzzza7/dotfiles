@@ -29,6 +29,7 @@ return {
                 rust = { "rust-analyzer" },
                 typst = { "typstyle" },
                 nix = { "nixfmt" },
+                make = { "mbake" },
             },
         },
     },

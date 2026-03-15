@@ -6,6 +6,8 @@
 
 (package-initialize)
 
+(setq elisp-enable-lexical-binding 1)
+
 (setq inhibit-startup-screen t)
 
 (defun revert-buffer-no-confirm ()
@@ -22,11 +24,12 @@
  '(package-selected-packages
    '(clipboard-collector cmake-mode company cuda-mode evil
 			 evil-commentary exec-path-from-shell gnuplot
-			 gruber-darker-theme haskell-mode lsp-mode
-			 lua-mode magit nix-mode pdf-tools rust-mode
-			 typst-ts-mode xclip)))
-(custom-set-faces
- )
+			 go-mode gruber-darker-theme haskell-mode
+			 lsp-mode lsp-ui lua-mode magit nix-mode
+			 ocaml-ts-mode pdf-tools rust-mode tuareg
+			 typst-ts-mode xclip))
+ '(warning-suppress-types '((treesit))))
+(custom-set-faces)
 
 (evil-mode 1)
 (global-auto-revert-mode 1)
@@ -75,3 +78,41 @@
 
   (define-key evil-normal-state-map (kbd "gc") #'my/evil-comment)
   (define-key evil-visual-state-map (kbd "gc") #'my/evil-comment))
+
+(require 'lsp-mode)
+
+(add-hook 'c++-mode-hook #'lsp-deferred)
+(add-hook 'c++-ts-mode-hook #'lsp-deferred)
+(add-hook 'c-mode-hook #'lsp-deferred)
+(add-hook 'python-mode-hook #'lsp-deferred)
+(add-hook 'rust-mode-hook #'lsp-deferred)
+(add-hook 'rust-ts-mode-hook #'lsp-deferred)
+;; ocaml
+(add-hook 'tuareg-mode-hook #'lsp-deferred)
+
+(setq lsp-keymap-prefix "C-c l")
+
+(setq lsp-idle-delay 0.2)
+(setq lsp-headerline-breadcrumb-enable nil)
+(setq lsp-modeline-code-actions-enable t)
+(setq lsp-enable-symbol-highlighting t)
+
+(with-eval-after-load 'company
+  (setq company-backends '((company-capf company-dabbrev))))
+
+(setq lsp-clients-clangd-args
+      '("--header-insertion=never"
+        "--completion-style=detailed"
+        "--clang-tidy"))
+
+(setq lsp-clients-clangd-executable "clangd")
+
+(with-eval-after-load 'evil
+  (define-key evil-normal-state-map (kbd "K")
+    #'lsp-ui-doc-glance))
+
+(require 'lsp-ui)
+
+(setq lsp-ui-doc-enable t)
+(setq lsp-ui-sideline-enable t)
+(setq lsp-ui-doc-position 'at-point)

@@ -12,7 +12,8 @@ git pull
 
 # autoconf make gcc libgtk-3-dev libxpm-dev libjpeg-dev libgif-dev libtiff5-dev libgnutls28-dev libncurses5-dev libjansson-dev libharfbuzz-dev libharfbuzz-bin imagemagick libmagickwand-dev libgccjit-10-dev libgccjit0 gcc-10 libjansson4 libjansson-dev xaw3dg-dev texinfo libx11-dev
 
-export CC="gcc"
+# export CC="gcc"
+export CC="clang"
 
 sudo ./autogen.sh
 
@@ -38,6 +39,7 @@ sudo ./configure \
     --with-x-toolkit=yes \
     --with-xwidgets
 
-time sudo make -j$(nproc)
+# time sudo make -j$(nproc)
+time sudo make -j1
 
-sudo make install
+# sudo make install
