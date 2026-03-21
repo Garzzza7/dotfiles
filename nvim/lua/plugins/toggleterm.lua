@@ -2,7 +2,7 @@ return {
     {
         "akinsho/toggleterm.nvim",
         version = "v2.13.1",
-        lazy = true,
+        lazy = false,
         opts = {},
         config = function ()
             require ("toggleterm").setup ({
@@ -11,7 +11,7 @@ return {
                 shell = vim.o.shell,
                 hide_numbers = false,
                 start_in_insert = false,
-                direction = "tab",
+                direction = "float",
                 close_on_exit = false, -- close the terminal window when the process exits
                 clear_env = false, -- use only environmental variables from `env`, passed to jobstart()
                 auto_scroll = true, -- automatically scroll to the bottom on terminal output

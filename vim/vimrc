@@ -45,7 +45,7 @@ call plug#begin()
     Plug 'wezm/vim-mercury'
 
 call plug#end()
-    set rtp^="/home/pc/.opam/default/share/ocp-indent/vim"
+    set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
     syntax on
     set ttimeout
     set ttimeoutlen=10
@@ -60,10 +60,11 @@ call plug#end()
     let g:netrw_liststyle=3
     "colorscheme GruberDarker
     " colorscheme sitruuna
-    " colorscheme default
-    colorscheme meta5
+    colorscheme default
+    " colorscheme meta5
     " colorscheme miku
-    set background=dark
+    " set background=dark
+    set background=light
     set hlsearch
     set is hls
     set incsearch

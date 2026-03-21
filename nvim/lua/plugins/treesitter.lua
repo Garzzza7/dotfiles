@@ -27,6 +27,7 @@ return {
                     "lua",
                     "markdown",
                     "markdown_inline",
+                    "ninja",
                     "nix",
                     "ocaml",
                     "python",
