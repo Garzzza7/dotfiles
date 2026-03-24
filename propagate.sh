@@ -29,20 +29,6 @@ else
     printf "${red}Omitting Tmux\n${normal}"
 fi
 
-if is_installed discord; then
-    printf "${green}Discord found.\n${normal}"
-    cp -r discord/settings.json $HOME/.config/discord/settings.json
-else
-    printf "${red}Omitting Discord\n${normal}"
-fi
-
-if is_installed zed || is_installed zeditor; then
-    printf "${green}Zed found.\n${normal}"
-    cp -r zed/settings.json $HOME/.config/zed/settings.json
-else
-    printf "${red}Omitting Zed.\n${normal}"
-fi
-
 if is_installed gh; then
     printf "${green}GH found.\n${normal}"
     cp -r gh/config.yml $HOME/.config/gh/config.yml
@@ -72,13 +58,6 @@ else
     printf "${red}Omitting Neofetch.\n${normal}"
 fi
 
-if is_installed subl; then
-    printf "${green}Sublime Text found.\n${normal}"
-    cp -r sublime/Preferences.sublime-settings $HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings
-else
-    printf "${red}Omitting Sublime Text.\n${normal}"
-fi
-
 if is_installed i3; then
     printf "${green}i3 found.\n${normal}"
     cp i3/* $HOME/.config/i3/
@@ -106,14 +85,6 @@ if is_installed vim; then
     cp vim/vimrc $HOME/.vimrc
 else
     printf "${red}Omitting Vim.\n${normal}"
-fi
-
-if is_installed code; then
-    printf "${green}VSCode found.\n${normal}"
-    # cp vscode/settings.json $HOME/.config/Code/User/settings.json
-    #     cat vscode/ext.txt | xargs -L 1 code --install-extension
-else
-    printf "${red}Omitting VSCode.\n${normal}"
 fi
 
 if [ -f $HOME/.zshrc ]; then
@@ -149,13 +120,6 @@ if [ -d "$HOME/scripts" ]; then
     cp scripts/* $HOME/scripts/
 else
     printf "${red}Scripts does not exist.\n${normal}"
-fi
-
-if is_installed mc; then
-    printf "${green}Midnight Commander found.\n${normal}"
-    cp mc/ini $HOME/.config/mc/ini
-else
-    printf "${red}Omitting Midnight Commander.\n${normal}"
 fi
 
 printf "${grey}Done.\n${normal}"
