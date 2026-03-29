@@ -281,7 +281,8 @@ return {
         priority = 1000,
     },
     {
-        "eemed/sitruuna.vim",
+        -- "eemed/sitruuna.vim",
+        "Garzzza7/sitruuna_backup",
         lazy = true,
         priority = 1000,
     },

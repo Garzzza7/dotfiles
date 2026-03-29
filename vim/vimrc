@@ -29,7 +29,8 @@ call plug#begin()
 
     Plug 'christophermca/meta5'
     Plug 'drsooch/gruber-darker-vim'
-    Plug 'eemed/sitruuna.vim'
+    " Plug 'eemed/sitruuna.vim'
+    Plug 'Garzzza7/sitruuna_backup'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'lifepillar/vim-solarized8'
