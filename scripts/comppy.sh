@@ -1,5 +1,14 @@
 #!/bin/bash
 
-set -ex
+set -e
 
-time python3 $1.py <$1.txt
+input=$1
+suffix=".py"
+
+if [[ $input == *"$suffix" ]]; then
+    input=${input%$suffix}
+elif [[ $input == *"." ]]; then
+    input=${input%.}
+fi
+
+time python3 $input.py <$input.txt

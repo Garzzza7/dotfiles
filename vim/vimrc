@@ -26,7 +26,7 @@ else
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     endif
 call plug#begin()
-
+    Plug 'vim-scripts/Tango-colour-scheme'
     Plug 'christophermca/meta5'
     Plug 'drsooch/gruber-darker-vim'
     " Plug 'eemed/sitruuna.vim'
@@ -69,8 +69,8 @@ call plug#end()
     colorscheme default
     " colorscheme meta5
     " colorscheme miku
-    " set background=dark
-    set background=light
+    set background=dark
+    " set background=light
     set hlsearch
     set is hls
     set incsearch
