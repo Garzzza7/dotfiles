@@ -26,11 +26,12 @@ else
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     endif
 call plug#begin()
-    Plug 'vim-scripts/Tango-colour-scheme'
-    Plug 'christophermca/meta5'
-    Plug 'drsooch/gruber-darker-vim'
+
     " Plug 'eemed/sitruuna.vim'
     Plug 'Garzzza7/sitruuna_backup'
+    Plug 'christophermca/meta5'
+    Plug 'drsooch/gruber-darker-vim'
+    Plug 'jfsicilia/Bclose'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'lifepillar/vim-solarized8'
@@ -43,6 +44,7 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
+    Plug 'vim-scripts/Tango-colour-scheme'
     Plug 'wezm/vim-mercury'
 
 call plug#end()
@@ -98,7 +100,7 @@ call plug#end()
     tnoremap <Esc> <C-\><C-n>
     nnoremap <A-n> :bn<cr>
     " noremap <A-d> :bd!<cr>
-    nnoremap <A-d> :bd<CR>
+    nnoremap <silent> <A-d> :Bclose<CR>
     noremap <A-p> :bp<cr>
     noremap <A-w> :bw<cr>
     noremap <A-l> :ls<cr>
