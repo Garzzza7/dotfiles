@@ -100,7 +100,9 @@ call plug#end()
     tnoremap <Esc> <C-\><C-n>
     nnoremap <A-n> :bn<cr>
     " noremap <A-d> :bd!<cr>
-    nnoremap <silent> <A-d> :Bclose<CR>
+    nnoremap <silent> <M-d> :Bclose<CR>
+    " it is set for the sake of st
+    nnoremap <silent> <Esc>d :Bclose<CR>
     noremap <A-p> :bp<cr>
     noremap <A-w> :bw<cr>
     noremap <A-l> :ls<cr>
