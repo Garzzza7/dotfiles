@@ -1,32 +1,10 @@
-" MINIMALISTIC CONFIG
-if 0
-        syntax on
-        colorscheme default
-        set hlsearch
-        set is hls
-        set incsearch
-        tnoremap <Esc> <C-\><C-n>
-        noremap <Esc><Esc> :nohlsearch<CR>
-        let &t_SI .= "\e[6 q"
-        let &t_EI .= "\e[2 q"
-        let &t_SR .= "\e[4 q"
-        set autochdir
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-        vnoremap J :m '>+1<cr>gv=gv
-        vnoremap K :m '<-2<cr>gv=gv
-
-
-        nnoremap <silent> <C-n> <cmd>bnext<cr>
-        nnoremap <silent> <C-p> <cmd>bprevious<cr>
-else
-" MAXIMALISTIC CONFIG
-    let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-    if empty(glob(data_dir . '/autoload/plug.vim'))
-        silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-    endif
 call plug#begin()
-
     " Plug 'eemed/sitruuna.vim'
     Plug 'Garzzza7/sitruuna_backup'
     Plug 'christophermca/meta5'
@@ -46,87 +24,83 @@ call plug#begin()
     Plug 'tpope/vim-vinegar'
     Plug 'vim-scripts/Tango-colour-scheme'
     Plug 'wezm/vim-mercury'
-
 call plug#end()
-    set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
-    syntax on
-    set ttimeout
-    set ttimeoutlen=10
-    set scrolloff=8
-    set mouse=a
 
-    set wildmenu
-    set wildmode=full
-    set wildoptions=pum
+syntax on
+set ttimeout
+set ttimeoutlen=10
+set scrolloff=8
+set mouse=a
 
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set noswapfile
 
-    set nocursorcolumn
-    set nocursorline
-    syntax sync minlines=256
-    let g:netrw_liststyle=3
-    "colorscheme GruberDarker
-    " colorscheme sitruuna
-    colorscheme default
-    " colorscheme meta5
-    " colorscheme miku
-    set background=dark
-    " set background=light
-    set hlsearch
-    set is hls
-    set incsearch
+set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
 
-    filetype plugin indent on
+set wildmenu
+set wildmode=full
+set wildoptions=pum
 
-    vnoremap J :m '>+1<cr>gv=gv
-    vnoremap K :m '<-2<cr>gv=gv
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-    " nnoremap <silent> <C-n> <cmd>bnext<cr>
-    " nnoremap <silent> <C-p> <cmd>bprevious<cr>
+set nocursorcolumn
+set nocursorline
+syntax sync minlines=256
+let g:netrw_liststyle=3
+colorscheme default
+set background=dark
+set hlsearch
+set is hls
+set incsearch
 
-    nnoremap <C-s><C-d> :GrepperGrep <C-r><C-w>
-    nnoremap <C-s><C-a> :%s/<C-r><C-w>//g<Left><Left>
-    nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
-    vnoremap <C-s><C-s> "ay:%s/<C-r>a//gc<Left><Left><Left>
+filetype plugin indent on
 
-    nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
-    nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
-    nnoremap <silent> <RIGHT> <cmd>echo "xdd"<cr>
-    nnoremap <silent> <LEFT> <cmd>echo "xdd"<cr>
-    nnoremap <silent> <A-C-w> <cmd>wa<cr>
-    nnoremap <silent> <A-C-q> <cmd>qa!<cr>
-    nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
-    tnoremap <Esc> <C-\><C-n>
-    nnoremap <A-n> :bn<cr>
-    " noremap <A-d> :bd!<cr>
-    nnoremap <silent> <M-d> :Bclose<CR>
-    " it is set for the sake of st
-    nnoremap <silent> <Esc>d :Bclose<CR>
-    noremap <A-p> :bp<cr>
-    noremap <A-w> :bw<cr>
-    noremap <A-l> :ls<cr>
-    noremap <Esc><Esc> :nohlsearch<CR>
-    noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
-    noremap <F9> <esc> :w <cr> :!python3<cr>
-    noremap <silent> <space>sf :FZF<cr>
-    noremap <silent> <space>sgg :Rg<cr>
-    noremap <silent> <space><space> :Buffers<cr>
-    noremap <silent> <space>/ :BLines<cr>
-    noremap <silent> <space>mn :Marks<cr>
-    noremap <silent> <space>al :FZF $HOME/zadania/Algos<cr>
-    noremap <C-j> <C-W>j
-    noremap <C-k> <C-W>k
-    noremap <C-h> <C-W>h
-    noremap <C-l> <C-W>l
-    let &t_SI .= "\e[6 q"  " Line cursor in insert mode
-    let &t_EI .= "\e[2 q"  " Block cursor in normal mode
-    let &t_SR .= "\e[4 q"  " replace mode
-    filetype on
+vnoremap J :m '>+1<cr>gv=gv
+vnoremap K :m '<-2<cr>gv=gv
 
-    set encoding=utf-8
+nnoremap <C-s><C-d> :GrepperGrep <C-r><C-w>
+nnoremap <C-s><C-a> :%s/<C-r><C-w>//g<Left><Left>
+nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
+vnoremap <C-s><C-s> "ay:%s/<C-r>a//gc<Left><Left><Left>
 
-    set shiftwidth=4
-    set tabstop=4
-    set expandtab
-endif
+nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
+nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
+nnoremap <silent> <RIGHT> <cmd>echo "xdd"<cr>
+nnoremap <silent> <LEFT> <cmd>echo "xdd"<cr>
+nnoremap <silent> <A-C-w> <cmd>wa<cr>
+nnoremap <silent> <A-C-q> <cmd>qa!<cr>
+nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
+tnoremap <Esc> <C-\><C-n>
+nnoremap <A-n> :bn<cr>
+nnoremap <ESC>n :bn<cr>
+nnoremap <silent> <A-d> :Bclose<CR>
+" it is set for the sake of st
+nnoremap <silent> <Esc>d :Bclose<CR>
+noremap <A-p> :bp<cr>
+noremap <A-w> :bw<cr>
+noremap <A-l> :ls<cr>
+noremap <ESC>p :bp<cr>
+noremap <ESC>w :bw<cr>
+noremap <ESC>l :ls<cr>
+noremap <Esc><Esc> :nohlsearch<CR>
+noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
+noremap <F9> <esc> :w <cr> :!python3<cr>
+noremap <silent> <space>sf :FZF<cr>
+noremap <silent> <space>sgg :Rg<cr>
+noremap <silent> <space><space> :Buffers<cr>
+noremap <silent> <space>/ :BLines<cr>
+noremap <silent> <space>mn :Marks<cr>
+noremap <silent> <space>al :FZF $HOME/zadania/Algos<cr>
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+let &t_SI .= "\e[6 q"  " Line cursor in insert mode
+let &t_EI .= "\e[2 q"  " Block cursor in normal mode
+let &t_SR .= "\e[4 q"  " replace mode
+
+set encoding=utf-8
+
+set shiftwidth=4
+set tabstop=4
+set expandtab
