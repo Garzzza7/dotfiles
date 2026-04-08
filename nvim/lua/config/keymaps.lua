@@ -28,7 +28,7 @@ vim.keymap.set ({ "n", "i", "v" }, "<A-C-q>", "<cmd>qa!<cr> ", { noremap = true,
 vim.keymap.set ({ "n", "i", "v" }, "<A-C-w>", "<cmd>wa!<cr> ", { noremap = true, silent = true, desc = "Write all" })
 
 vim.keymap.set ({ "n", "i", "v" }, "<A-n>", "<cmd>bn<cr> ", { noremap = true, silent = true, desc = "Next buffer" })
-vim.keymap.set ({ "n", "i", "v" }, "<A-d>", "<cmd>bd!<cr> ", { noremap = true, silent = true, desc = "Delete Buffer" })
+vim.keymap.set ({ "n", "i", "v" }, "<A-d>", "<cmd>Bclose<cr>", { noremap = true, silent = true, desc = "Delete buffer without closing the window" })
 vim.keymap.set ({ "n", "i", "v" }, "<A-p>", "<cmd>bp<cr> ", { noremap = true, silent = true, desc = "Previous buffer" })
 vim.keymap.set ({ "n", "i", "v" }, "<A-w>", "<cmd>bw<cr> ", { noremap = true, silent = true, desc = "Write buffer" })
 vim.keymap.set ({ "n", "i", "v" }, "<A-l>", "<cmd>ls<cr> ", { noremap = true, silent = false, desc = "Display buffers" })
