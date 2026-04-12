@@ -102,7 +102,7 @@ bindsym $mod+v exec --no-startup-id $HOME/scripts/end_it.sh
 bindsym $mod+o exec --no-startup-id $HOME/scripts/change_wall.sh
 
 # keymaps
-bindsym $mod+F1 exec --no-startup-id i3lock -c 181818
+bindsym $mod+F1 exec --no-startup-id i3lock -c 000000
 bindsym $mod+F2 exec --no-startup-id firefox
 bindsym $mod+F3 exec --no-startup-id discord
 

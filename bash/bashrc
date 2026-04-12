@@ -113,6 +113,7 @@ alias rm='trash-put'
 alias suspend='systemctl suspend'
 alias ..='cd ..'
 alias vi='vim'
+alias pls='sudo $(history -p !!)'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
