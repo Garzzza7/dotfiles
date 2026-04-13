@@ -12,7 +12,7 @@
   "comment-highlights.nvim": { "branch": "main", "commit": "b601b741d771932d01a7e7af2162f4b0404bb77a" },
   "compile-mode.nvim": { "branch": "main", "commit": "db43c6c07b2df10421e5b6efcee7bf11270b5f93" },
   "conform.nvim": { "branch": "master", "commit": "a6f5bdb78caa305496357d17e962bbc4c0b392e2" },
-  "cyberdream.nvim": { "branch": "main", "commit": "3def90c9eded09e5aae818983f14b5fe52b2034a" },
+  "cyberdream.nvim": { "branch": "main", "commit": "39f69ebcd8de69c741bb7a65353aa37dd0680ad1" },
   "diffs.nvim": { "branch": "main", "commit": "e7d56e3bbe3427d26f3e4772afa2816874d39675" },
   "dired.nvim": { "branch": "main", "commit": "45a32388ce46a8eb93c09d2afa4229e998c4734b" },
   "dookie.nvim": { "branch": "main", "commit": "17c3a456fdd404770311b6c38689a984c3e24c74" },

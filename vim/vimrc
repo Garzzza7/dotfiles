@@ -78,19 +78,20 @@ nnoremap <silent> <A-d> :Bclose<CR>
 nnoremap <silent> <Esc>d :Bclose<CR>
 noremap <A-p> :bp<cr>
 noremap <A-w> :bw<cr>
-noremap <A-l> :ls<cr>
 noremap <ESC>p :bp<cr>
 noremap <ESC>w :bw<cr>
 noremap <ESC>l :ls<cr>
 noremap <Esc><Esc> :nohlsearch<CR>
+noremap <A><A> :nohlsearch<CR>
 noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
 noremap <F9> <esc> :w <cr> :!python3<cr>
 noremap <silent> <space>sf :FZF<cr>
 noremap <silent> <space>sgg :Rg<cr>
 noremap <silent> <space><space> :Buffers<cr>
 noremap <silent> <space>/ :BLines<cr>
+noremap <silent> <space>ss :Lines<cr>
 noremap <silent> <space>mn :Marks<cr>
-noremap <silent> <space>al :FZF $HOME/zadania/Algos<cr>
+noremap <silent> <space>al :FZF! $HOME/zadania/Algos<cr>
 noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
 noremap <C-h> <C-W>h
