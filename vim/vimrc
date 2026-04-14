@@ -4,8 +4,12 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+set nocompatible
+
 call plug#begin()
     " Plug 'eemed/sitruuna.vim'
+    Plug 'sheerun/vim-polyglot'
+
     Plug 'Garzzza7/sitruuna_backup'
     Plug 'christophermca/meta5'
     Plug 'drsooch/gruber-darker-vim'
@@ -25,6 +29,9 @@ call plug#begin()
     Plug 'vim-scripts/Tango-colour-scheme'
     Plug 'wezm/vim-mercury'
 call plug#end()
+
+let g:polyglot_disabled = ['autoindent']
+let g:polyglot_disabled = ['sensible']
 
 syntax on
 set ttimeout
