@@ -298,7 +298,7 @@ return {
 
             vim.keymap.set ({ "n" }, "<leader>gb", "<cmd>Telescope git_branch<cr>", { noremap = true, silent = true, desc = "Use Telescope to open git_branch" })
 
-            vim.keymap.set ({ "n" }, "<leader>gr", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", { noremap = true, silent = true, desc = "Pass args to grep" })
+            vim.keymap.set ({ "n" }, "<leader>sa", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", { noremap = true, silent = true, desc = "Pass args to grep" })
 
             vim.keymap.set ({ "n" }, "<leader>fb", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", { noremap = true, silent = true, desc = "File Browser relative to the buffer" })
 
@@ -308,7 +308,7 @@ return {
 
             vim.keymap.set ({ "n" }, "<leader>sf", require ("telescope.builtin").fd, { noremap = true, silent = true, desc = "[S]earch [F]iles" })
 
-            vim.keymap.set ({ "n" }, "<leader>ss", require ("telescope.builtin").builtin, { noremap = true, silent = true, desc = "[S]earch [S]elect Telescope" })
+            vim.keymap.set ({ "n" }, "<leader>st", require ("telescope.builtin").builtin, { noremap = true, silent = true, desc = "[S]earch [S]elect Telescope" })
 
             vim.keymap.set ({ "n" }, "<leader>sw", require ("telescope.builtin").grep_string, { noremap = true, silent = true, desc = "[S]earch current [W]ord" })
 
@@ -374,7 +374,7 @@ return {
 
             vim.keymap.set (
                 { "n" },
-                "<leader>s/",
+                "<leader>ss",
                 function ()
                     require ("telescope.builtin").live_grep ({
                         grep_open_files = true,
