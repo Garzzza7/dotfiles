@@ -4,6 +4,10 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+function! RunCtags()
+    ! ctags --recurse .
+endfunction
+
 " let g:polyglot_disabled = ['autoindent']
 " let g:polyglot_disabled = ['sensible']
 

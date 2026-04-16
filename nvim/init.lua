@@ -36,3 +36,5 @@ vim.api.nvim_create_autocmd ("FileType", {
 })
 
 vim.deprecate = function () end
+
+function RunCtags () vim.cmd ("! ctags --recurse .") end
