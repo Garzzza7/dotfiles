@@ -117,5 +117,5 @@ set encoding=utf-8
 set shiftwidth=4
 set tabstop=4
 set expandtab
-let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 1.0, 'relative': v:true} }
+let g:fzf_layout = { 'window': { 'width': 0.95 , 'height': 0.95 , 'relative':v:false} }
 let g:fzf_preview_window = ['up:70%', 'ctrl-/']
