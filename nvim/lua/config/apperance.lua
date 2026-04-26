@@ -4,5 +4,7 @@ vim.o.termguicolors = true
 vim.o.background = "dark"
 -- vim.cmd ("colorscheme gruber-darker")
 -- vim.cmd ("colorscheme solarized8")
-vim.cmd ("colorscheme cyberdream")
-vim.cmd ("set background=light")
+-- vim.cmd ("colorscheme cyberdream")
+vim.cmd ("colorscheme sitruuna")
+-- vim.cmd ("set background=light")
+vim.cmd ("set background=dark")

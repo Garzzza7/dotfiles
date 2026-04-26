@@ -39,7 +39,6 @@ sudo ./configure \
     --with-x-toolkit=yes \
     --with-xwidgets
 
-# time sudo make -j$(nproc)
-time sudo make -j1
+time sudo make -j$(nproc)
 
-# sudo make install
+sudo make install
