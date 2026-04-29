@@ -91,7 +91,6 @@ noremap <A-p> :bp<cr>
 noremap <A-w> :bw<cr>
 noremap <ESC>p :bp<cr>
 noremap <ESC>w :bw<cr>
-noremap <ESC>l :ls<cr>
 noremap <Esc><Esc> :nohlsearch<CR>
 noremap <A><A> :nohlsearch<CR>
 noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
