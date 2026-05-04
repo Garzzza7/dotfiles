@@ -57,7 +57,7 @@ vim.keymap.set ({ "n" }, "<C-s><C-a>", ":%s/<C-r><C-w>//g<Left><Left>", { norema
 
 vim.keymap.set ({ "n" }, "<C-s><C-s>", ":%s/<C-r><C-w>//gc<Left><Left><Left>", { noremap = true, silent = false, desc = "Replace word from under the cursor with confirmation" })
 
-vim.keymap.set ({ "v" }, "<C-s><C-h>", '"ay:%s/<C-r>a//gc<Left><Left><Left>', { noremap = true, silent = false, desc = "Replace word from the highlight" })
+vim.keymap.set ({ "v" }, "<C-s><C-a>", '"ay:%s/<C-r>a//gc<Left><Left><Left>', { noremap = true, silent = false, desc = "Replace word from the highlight" })
 
 vim.keymap.set (
     -- for some reason adding more modes makes TAB not work instantly in the insert mode, probably some type of collision. Stick to just the normal mode.

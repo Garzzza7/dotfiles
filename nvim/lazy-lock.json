@@ -36,7 +36,7 @@
   "mypy.nvim": { "branch": "main", "commit": "7c21900112782559d82ed17f11e43d75e871d079" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "nibble-vim": { "branch": "main", "commit": "7bc65491c4672aa389ab5c15209751f51af4f0b9" },
-  "nightfox.nvim": { "branch": "main", "commit": "ba47d4b4c5ec308718641ba7402c143836f35aa9" },
+  "nightfox.nvim": { "branch": "main", "commit": "26b61b1f856ec37cae3cb64f5690adb955f246a1" },
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-cmp": { "branch": "main", "commit": "059e89495b3ec09395262f16b1ad441a38081d04" },
   "nvim-gdb": { "branch": "master", "commit": "b644f07c54608cc913c1d9e14954f15dcb7331a9" },
