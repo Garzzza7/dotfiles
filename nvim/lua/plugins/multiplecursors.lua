@@ -1,6 +1,7 @@
 return {
     {
         "brenton-leighton/multiple-cursors.nvim",
+        enabled = false,
         version = "v0.15",
         opts = {
             pre_hook = function ()

@@ -71,25 +71,25 @@ vim.keymap.set ({ "n" }, "<C-h><C-h>", "<cmd>lua vim.lsp.inlay_hint.enable(false
 
 vim.keymap.set ({ "n" }, "<space>lg", "<cmd>LazyGit<cr>", { noremap = true, silent = true, desc = "Open Lazygit" })
 
-vim.keymap.set ({ "n" }, "<C-j>", "<cmd>MultipleCursorsAddDown<cr>", { noremap = true, silent = true, desc = "Add cursor and move down" })
-
-vim.keymap.set ({ "n" }, "<C-k>", "<cmd>MultipleCursorsAddUp<cr>", { noremap = true, silent = true, desc = "Add cursor and move up" })
-
-vim.keymap.set ({ "n" }, "<C-Up>", "<cmd>MultipleCursorsAddUp<cr>", { noremap = true, silent = true, desc = "Add cursor and move up" })
-
-vim.keymap.set ({ "n" }, "<C-Down>", "<cmd>MultipleCursorsAddDown<cr>", { noremap = true, silent = true, desc = "Add cursor and move down" })
-
-vim.keymap.set ({ "n" }, "<C-LeftMouse>", "<cmd>MultipleCursorsMouseAddDelete<cr>", { noremap = true, silent = true, desc = "Add or remove cursor" })
-
-vim.keymap.set ({ "n" }, "<space>a", "<cmd>MultipleCursorsAddMatches<cr>", { noremap = true, silent = true, desc = "Add cursors to cword" })
-
-vim.keymap.set ({ "n" }, "<space>A", "<cmd>MultipleCursorsAddMatchesV<cr>", { noremap = true, silent = true, desc = "Add cursors to cword in previous area" })
-
-vim.keymap.set ({ "n" }, "<space>d", "<cmd>MultipleCursorsAddJumpNextMatch<cr>", { noremap = true, silent = true, desc = "Add cursor and jump to next cword" })
-
-vim.keymap.set ({ "n" }, "<space>D", "<cmd>MultipleCursorsJumpNextMatch<cr>", { noremap = true, silent = true, desc = "Jump to next cword" })
-
-vim.keymap.set ({ "n" }, "<space>l", "<cmd>MultipleCursorsLock<cr>", { noremap = true, silent = true, desc = "Lock virtual cursors" })
+-- vim.keymap.set ({ "n" }, "<C-j>", "<cmd>MultipleCursorsAddDown<cr>", { noremap = true, silent = true, desc = "Add cursor and move down" })
+--
+-- vim.keymap.set ({ "n" }, "<C-k>", "<cmd>MultipleCursorsAddUp<cr>", { noremap = true, silent = true, desc = "Add cursor and move up" })
+--
+-- vim.keymap.set ({ "n" }, "<C-Up>", "<cmd>MultipleCursorsAddUp<cr>", { noremap = true, silent = true, desc = "Add cursor and move up" })
+--
+-- vim.keymap.set ({ "n" }, "<C-Down>", "<cmd>MultipleCursorsAddDown<cr>", { noremap = true, silent = true, desc = "Add cursor and move down" })
+--
+-- vim.keymap.set ({ "n" }, "<C-LeftMouse>", "<cmd>MultipleCursorsMouseAddDelete<cr>", { noremap = true, silent = true, desc = "Add or remove cursor" })
+--
+-- vim.keymap.set ({ "n" }, "<space>a", "<cmd>MultipleCursorsAddMatches<cr>", { noremap = true, silent = true, desc = "Add cursors to cword" })
+--
+-- vim.keymap.set ({ "n" }, "<space>A", "<cmd>MultipleCursorsAddMatchesV<cr>", { noremap = true, silent = true, desc = "Add cursors to cword in previous area" })
+--
+-- vim.keymap.set ({ "n" }, "<space>d", "<cmd>MultipleCursorsAddJumpNextMatch<cr>", { noremap = true, silent = true, desc = "Add cursor and jump to next cword" })
+--
+-- vim.keymap.set ({ "n" }, "<space>D", "<cmd>MultipleCursorsJumpNextMatch<cr>", { noremap = true, silent = true, desc = "Jump to next cword" })
+--
+-- vim.keymap.set ({ "n" }, "<space>l", "<cmd>MultipleCursorsLock<cr>", { noremap = true, silent = true, desc = "Lock virtual cursors" })
 
 -- FIX: fix this bs improper indexing
 vim.keymap.set ({ "n" }, "<A-1>", "<cmd>b1<cr>", { noremap = true, silent = true, desc = "Go to buffer 1" })
