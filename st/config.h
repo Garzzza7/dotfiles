@@ -123,6 +123,7 @@ static const char *colorname[] = {
     "#555555",
     "gray90", /* default foreground colour */
     "black",  /* default background colour */
+    "#300924",
 };
 
 /*
@@ -130,7 +131,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
+unsigned int defaultbg = 260;
 unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
@@ -190,6 +191,8 @@ static Shortcut shortcuts[] = {
     {ControlMask, XK_Print, toggleprinter, {.i = 0}},
     {ShiftMask, XK_Print, printscreen, {.i = 0}},
     {XK_ANY_MOD, XK_Print, printsel, {.i = 0}},
+    {TERMMOD, XK_plus, zoom, {.f = +1}},
+    {TERMMOD, XK_underscore, zoom, {.f = -1}},
     {TERMMOD, XK_Prior, zoom, {.f = +1}},
     {TERMMOD, XK_Next, zoom, {.f = -1}},
     {TERMMOD, XK_Up, zoom, {.f = +1}},

@@ -634,7 +634,7 @@ execsh(char *cmd, char **args) {
         prog = sh;
         arg = NULL;
     }
-    DEFAULT(args, ((char *[]) {prog, arg, NULL}));
+    DEFAULT(args, ((char *[]){prog, arg, NULL}));
 
     unsetenv("COLUMNS");
     unsetenv("LINES");
@@ -941,7 +941,7 @@ treset(void) {
     // }, .x = 0, .y = 0, .state = CURSOR_DEFAULT};
 
     int i, j;
-    Glyph g = (Glyph) {.fg = defaultfg, .bg = defaultbg};
+    Glyph g = (Glyph){.fg = defaultfg, .bg = defaultbg};
 
     memset(term.tabs, 0, term.col * sizeof(*term.tabs));
     for (i = tabspaces; i < term.col; i += tabspaces)
@@ -957,7 +957,7 @@ treset(void) {
         // tcursor(CURSOR_SAVE);
         // tclearregion(0, 0, term.col-1, term.row-1);
         // tswapscreen();
-        term.screen[i].sc = (TCursor) {{.fg = defaultfg, .bg = defaultbg}};
+        term.screen[i].sc = (TCursor){{.fg = defaultfg, .bg = defaultbg}};
         term.screen[i].cur = 0;
         term.screen[i].off = 0;
         for (j = 0; j < term.row; ++j) {
@@ -978,7 +978,7 @@ void
 tnew(int col, int row) {
     // term = (Term){ .c = { .attr = { .fg = defaultfg, .bg = defaultbg } } };
     int i;
-    term = (Term) {};
+    term = (Term){};
     term.screen[0].buffer = xmalloc(HISTSIZE * sizeof(Line));
     term.screen[0].size = HISTSIZE;
     term.screen[1].buffer = NULL;
@@ -1997,7 +1997,7 @@ strdump(void) {
 
 void
 strreset(void) {
-    strescseq = (STREscape) {
+    strescseq = (STREscape){
         .buf = xrealloc(strescseq.buf, STR_BUF_SIZ),
         .siz = STR_BUF_SIZ,
     };
