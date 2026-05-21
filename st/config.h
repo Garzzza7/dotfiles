@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char *font = "Liberation Mono:pixelsize=25:antialias=true:autohint=true";
-static char *font = "Adwaita Mono:pixelsize=25:antialias=true:autohint=true";
+static char *font   = "Adwaita Mono:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -18,9 +18,9 @@ static int borderpx = 2;
  * 5: value of shell in config.h
  */
 static char *shell = "/bin/sh";
-char *utmp = NULL;
+char *utmp         = NULL;
 /* scroll program: to enable use a string like "scroll" */
-char *scroll = NULL;
+char *scroll    = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
@@ -130,9 +130,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 260;
-unsigned int defaultcs = 256;
+unsigned int defaultfg         = 258;
+unsigned int defaultbg         = 260;
+unsigned int defaultcs         = 256;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -155,8 +155,8 @@ static unsigned int rows = 24;
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
-static unsigned int mousebg = 0;
+static unsigned int mousefg    = 7;
+static unsigned int mousebg    = 0;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
@@ -177,12 +177,13 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
     /* mask                 button   function        argument       release */
-    {XK_ANY_MOD, Button2, selpaste, {.i = 0}, 1},      {ShiftMask, Button4, ttysend, {.s = "\033[5;2~"}}, {XK_ANY_MOD, Button4, ttysend, {.s = "\031"}},
-    {ShiftMask, Button5, ttysend, {.s = "\033[6;2~"}}, {XK_ANY_MOD, Button5, ttysend, {.s = "\005"}},
+    {XK_ANY_MOD, Button2, selpaste, {.i = 0}, 1},  {ShiftMask, Button4, ttysend, {.s = "\033[5;2~"}},
+    {XK_ANY_MOD, Button4, ttysend, {.s = "\031"}}, {ShiftMask, Button5, ttysend, {.s = "\033[6;2~"}},
+    {XK_ANY_MOD, Button5, ttysend, {.s = "\005"}},
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
+#define MODKEY  Mod1Mask
 #define TERMMOD (ControlMask | ShiftMask)
 
 static Shortcut shortcuts[] = {
