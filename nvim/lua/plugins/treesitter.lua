@@ -19,6 +19,7 @@ return {
                     "gitattributes",
                     "gitcommit",
                     "gitignore",
+                    "go",
                     "haskell",
                     "json",
                     "json5",
