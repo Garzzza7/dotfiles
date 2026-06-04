@@ -2,7 +2,10 @@ return {
     {
         "folke/todo-comments.nvim",
         version = "v1.4.0",
-        dependencies = { "nvim-lua/plenary.nvim", commit = "857c5ac632080dba10aae49dba902ce3abf91b35" },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            commit = "857c5ac632080dba10aae49dba902ce3abf91b35",
+        },
         opts = {
             signs = true, -- show icons in the signs column
             sign_priority = 8, -- sign priority
@@ -67,9 +70,19 @@ return {
                 -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
             },
         },
-        vim.keymap.set ("n", "]t", function () require ("todo-comments").jump_next () end, { desc = "Next todo comment" }),
+        vim.keymap.set (
+            "n",
+            "]t",
+            function () require ("todo-comments").jump_next () end,
+            { desc = "Next todo comment" }
+        ),
 
-        vim.keymap.set ("n", "[t", function () require ("todo-comments").jump_prev () end, { desc = "Previous todo comment" }),
+        vim.keymap.set (
+            "n",
+            "[t",
+            function () require ("todo-comments").jump_prev () end,
+            { desc = "Previous todo comment" }
+        ),
 
         -- Specific type of comment
         -- vim.keymap.set ("n", "]t", function ()

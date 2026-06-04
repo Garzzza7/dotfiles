@@ -17,7 +17,9 @@ return {
                         return client and client.name or nil
                     end,
                     -- How to get a progress message's notification group key
-                    notification_group = function (msg) return string.format ("%s %s", "Processing", msg.lsp_client.name) end,
+                    notification_group = function (msg)
+                        return string.format ("%s %s", "Processing", msg.lsp_client.name)
+                    end,
                     ignore = {}, -- List of LSP servers to ignore
 
                     -- Options related to how LSP progress messages are displayed as notifications
@@ -38,9 +40,13 @@ return {
                         -- How to format a progress message
                         format_message = require ("fidget.progress.display").default_format_message,
                         -- How to format a progress annotation
-                        format_annote = function (msg) return string.format ("%s %s", msg.title, "lol") end,
+                        format_annote = function (msg)
+                            return string.format ("%s %s", msg.title, "lol")
+                        end,
                         -- How to format a progress notification group's name
-                        format_group_name = function (lsp_name) return string.format ("%s", lsp_name) end,
+                        format_group_name = function (lsp_name)
+                            return string.format ("%s", lsp_name)
+                        end,
                         overrides = { -- Override options from the default notification config
                         },
                     },
@@ -62,7 +68,13 @@ return {
                     configs = { default = require ("fidget.notification").default_config },
                     -- Conditionally redirect notifications to another backend
                     redirect = function (msg, level, opts)
-                        if opts and opts.on_open then return require ("fidget.integration.nvim-notify").delegate (msg, level, opts) end
+                        if opts and opts.on_open then
+                            return require ("fidget.integration.nvim-notify").delegate (
+                                msg,
+                                level,
+                                opts
+                            )
+                        end
                     end,
 
                     -- Options related to how notifications are rendered as text
@@ -73,7 +85,9 @@ return {
                         -- Highlight group used for group separator
                         group_separator_hl = "Comment",
                         -- How to render notification messages
-                        render_message = function (msg, cnt) return cnt == 1 and msg or string.format ("(%dx) %s", cnt, "DONE") end,
+                        render_message = function (msg, cnt)
+                            return cnt == 1 and msg or string.format ("(%dx) %s", cnt, "DONE")
+                        end,
                     },
 
                     -- Options related to the notification window and buffer

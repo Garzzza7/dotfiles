@@ -9,7 +9,9 @@ return {
             })
             vim.api.nvim_create_autocmd ("BufEnter", {
                 pattern = "*.typ",
-                callback = function () vim.bo.makeprg = "typst compile " .. vim.api.nvim_buf_get_name (0) end,
+                callback = function ()
+                    vim.bo.makeprg = "typst compile " .. vim.api.nvim_buf_get_name (0)
+                end,
             })
         end,
     },
