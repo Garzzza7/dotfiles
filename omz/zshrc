@@ -135,6 +135,7 @@ alias rm='trash-put'
 alias suspend='systemctl suspend'
 alias discord='discord --no-sandbox'
 alias pls='sudo $(history -p !!)'
+alias ctags='ctags-universal'
 
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 export PATH=$PATH:~/scripts

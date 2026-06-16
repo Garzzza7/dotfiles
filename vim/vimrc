@@ -15,6 +15,8 @@ set nocompatible
 
 call plug#begin()
     " Plug 'eemed/sitruuna.vim'
+    Plug 'bfrg/vim-cpp-modern'
+    Plug 'ludovicchabant/vim-gutentags'
 
     Plug 'Garzzza7/sitruuna_backup'
     Plug 'christophermca/meta5'
@@ -26,7 +28,7 @@ call plug#begin()
     Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
     Plug 'overvale/vacme'
-    Plug 'sheerun/vim-polyglot'
+    " Plug 'sheerun/vim-polyglot'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-eunuch'
