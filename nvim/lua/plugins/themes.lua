@@ -4,7 +4,7 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         priority = 1000,
-        lazy = true,
+        lazy = false,
         config = function ()
             local function_names = ""
             local line_following_the_cursor = ""
@@ -122,7 +122,7 @@ return {
     },
     {
         "EdenEast/nightfox.nvim",
-        lazy = true,
+        lazy = false,
         config = function ()
             local palettes = {
                 all = {
@@ -213,7 +213,7 @@ return {
     {
         "ellisonleao/gruvbox.nvim",
         priority = 1000,
-        lazy = true,
+        lazy = false,
         config = function ()
             require ("gruvbox").setup ({
                 terminal_colors = true, -- add neovim terminal colors
@@ -244,7 +244,7 @@ return {
     {
         "neanias/everforest-nvim",
         version = false,
-        lazy = true,
+        lazy = false,
         priority = 1000,
         config = function ()
             require ("everforest").setup ({
@@ -262,44 +262,44 @@ return {
     },
     {
         "folke/tokyonight.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
         opts = {},
     },
     {
         "Tsuzat/NeoSolarized.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "scottmckendry/cyberdream.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "rebelot/kanagawa.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         -- "eemed/sitruuna.vim",
         "Garzzza7/sitruuna_backup",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "jackplus-xyz/binary.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "abreujp/scholar.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "blazkowolf/gruber-darker.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
         opts = {
             bold = true,
@@ -320,12 +320,12 @@ return {
     },
     {
         "cmoscofian/nibble-vim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "Mofiqul/vscode.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
         config = function ()
             require ("vscode").setup ({
@@ -371,13 +371,13 @@ return {
     {
         "projekt0n/github-nvim-theme",
         name = "github-theme",
-        lazy = true, -- make sure we load this during startup if it is your main colorscheme
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function () require ("github-theme").setup ({}) end,
     },
     {
         "Mofiqul/adwaita.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
         -- configure and set on startup
         config = function ()
@@ -388,22 +388,22 @@ return {
     },
     {
         "christophermca/meta5",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "pebeto/dookie.nvim",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "lifepillar/vim-solarized8",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
     {
         "overvale/vacme",
-        lazy = true,
+        lazy = false,
         priority = 1000,
     },
 }
