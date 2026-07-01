@@ -250,8 +250,7 @@ return {
             require ("everforest").setup ({
                 on_highlights = function (hl, palette)
                     hl.DiagnosticError = { fg = palette.none, bg = palette.none, sp = palette.red }
-                    hl.DiagnosticWarn =
-                        { fg = palette.none, bg = palette.none, sp = palette.yellow }
+                    hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
                     hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
                     hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
                     hl.TSBoolean = { fg = palette.purple, bg = palette.none, bold = true }
@@ -403,6 +402,11 @@ return {
     },
     {
         "overvale/vacme",
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        "yonatanperel/lake-dweller.nvim",
         lazy = false,
         priority = 1000,
     },
