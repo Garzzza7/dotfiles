@@ -15,20 +15,20 @@ set nocompatible
 
 call plug#begin()
     " Plug 'eemed/sitruuna.vim'
-    Plug 'bfrg/vim-cpp-modern'
-    Plug 'ludovicchabant/vim-gutentags'
+    Plug 'vim-scripts/ansi_blows.vim'
 
     Plug 'Garzzza7/sitruuna_backup'
+    Plug 'bfrg/vim-cpp-modern'
     Plug 'christophermca/meta5'
     Plug 'drsooch/gruber-darker-vim'
     Plug 'jfsicilia/Bclose'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'lifepillar/vim-solarized8'
+    Plug 'ludovicchabant/vim-gutentags'
     Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
     Plug 'overvale/vacme'
-    " Plug 'sheerun/vim-polyglot'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-eunuch'
