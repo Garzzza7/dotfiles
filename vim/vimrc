@@ -15,7 +15,12 @@ set nocompatible
 
 call plug#begin()
     " Plug 'eemed/sitruuna.vim'
+    Plug 'Badacadabra/vim-archery'
+    Plug 'jpo/vim-railscasts-theme'
     Plug 'vim-scripts/ansi_blows.vim'
+    Plug 'w0ng/vim-hybrid'
+    Plug 'nelstrom/vim-mac-classic-theme'
+    Plug 'caglartoklu/borlandp.vim'
 
     Plug 'Garzzza7/sitruuna_backup'
     Plug 'bfrg/vim-cpp-modern'
