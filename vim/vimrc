@@ -11,6 +11,7 @@ endfunction
 " let g:polyglot_disabled = ['autoindent']
 " let g:polyglot_disabled = ['sensible']
 " autocmd BufEnter * set indentexpr=
+syntax on
 set nocompatible
 
 call plug#begin()
@@ -49,7 +50,12 @@ call plug#end()
 let g:fzf_vim = {}
 let g:fzf_vim.buffers_options = '--no-header --info default'
 
-syntax on
+set laststatus=2
+set statusline=
+set statusline +=%f
+set statusline +=%1*%=%5l%*
+set statusline +=%2*/%L%*
+
 set ttimeout
 set ttimeoutlen=10
 set scrolloff=8
