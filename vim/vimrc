@@ -73,7 +73,8 @@ set nocursorcolumn
 set nocursorline
 syntax sync minlines=256
 let g:netrw_liststyle=3
-colo default
+" colo default
+colo railscasts
 set background=dark
 set hlsearch
 set is hls
