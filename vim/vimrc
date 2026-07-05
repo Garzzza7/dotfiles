@@ -103,20 +103,20 @@ nnoremap <silent> <LEFT> <cmd>echo "xdd"<cr>
 nnoremap <silent> <A-C-w> <cmd>wa<cr>
 nnoremap <silent> <A-C-q> <cmd>qa!<cr>
 nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
-tnoremap <Esc> <C-\><C-n>
-nnoremap <A-n> :bn<cr>
-nnoremap <ESC>n :bn<cr>
+tnoremap <silent> <Esc> <C-\><C-n>
+nnoremap <silent> <A-n> :bn<cr>
+nnoremap <silent> <ESC>n :bn<cr>
 nnoremap <silent> <A-d> :Bclose<CR>
 " it is set for the sake of st
 nnoremap <silent> <Esc>d :Bclose<CR>
-noremap <A-p> :bp<cr>
-noremap <A-w> :bw<cr>
-noremap <ESC>p :bp<cr>
-noremap <ESC>w :bw<cr>
-noremap <Esc><Esc> :nohlsearch<CR>
-noremap <A><A> :nohlsearch<CR>
-noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
-noremap <F9> <esc> :w <cr> :!python3<cr>
+noremap <silent> <A-p> :bp<cr>
+noremap <silent> <A-w> :bw<cr>
+noremap <silent> <ESC>p :bp<cr>
+noremap <silent> <ESC>w :bw<cr>
+noremap <silent> <Esc><Esc> :nohlsearch<CR>
+noremap <silent> <A><A> :nohlsearch<CR>
+noremap <silent> <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
+noremap <silent> <F9> <esc> :w <cr> :!python3<cr>
 noremap <silent> <space>sf :FZF<cr>
 noremap <silent> <space>sa  :RG<cr>
 noremap <silent> <space><space> :Buffers<cr>
