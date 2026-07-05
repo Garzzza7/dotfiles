@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ./vim.nix
     ./broadcom.nix
+    ./steam.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -196,13 +197,6 @@
   };
 
   environment.variables.EDITOR = "vim";
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = false; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = false; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = false; # Open ports in the firewall for Steam Local Network Game Transfers
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

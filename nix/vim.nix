@@ -30,12 +30,18 @@
             ! ctags --recurse .
         endfunction
 
+        syntax on
         set nocompatible
 
         let g:fzf_vim = {}
         let g:fzf_vim.buffers_options = '--no-header --info default'
 
-        syntax on
+        set laststatus=2
+        set statusline=
+        set statusline +=%f
+        set statusline +=%1*%=%5l%*
+        set statusline +=%2*/%L%*
+
         set ttimeout
         set ttimeoutlen=10
         set scrolloff=8
