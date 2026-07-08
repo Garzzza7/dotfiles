@@ -44,5 +44,5 @@ build/*
 *.i
 *.pdf
 *~
-lazygit
+# lazygit
 tags
