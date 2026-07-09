@@ -20,8 +20,10 @@
           vim-grepper
           vim-gutentags
           vim-polyglot
+          vim-solarized8
           vim-surround
           vim-vinegar
+          zig
         ];
         opt = [ ];
       };
