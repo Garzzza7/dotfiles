@@ -116,7 +116,7 @@ vim.api.nvim_set_keymap ("n", "<leader>mf", "<cmd>Telescope media_files<cr>", { 
 
 -- vim.keymap.set ({ "n", "i", "x" }, "<C-t>", "<cmd>ToggleTerm dir=%:p:h<cr>", { noremap = true, silent = true, desc = "Open ToggleTerm" })
 
-vim.keymap.set ({ "n" }, "<F8>", "<esc> :w <cr> :!comp.sh $(echo %)<cr>", { noremap = true, silent = true, desc = "Compile and run C++" })
+vim.keymap.set ({ "n" }, "<F8>", "<esc> :w <cr> :Dispatch comp.sh $(echo %)<cr>", { noremap = true, silent = true, desc = "Compile and run" })
 
 vim.keymap.set ({ "n" }, "<F9>", "<esc> :w <cr> :Dispatch<cr>", { noremap = true, silent = false, desc = "Run Dispatch" })
 

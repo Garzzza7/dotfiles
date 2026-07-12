@@ -80,7 +80,9 @@ set nocursorline
 syntax sync minlines=256
 let g:netrw_liststyle=3
 " colo default
-colo railscasts
+" colo railscasts
+colo solarized8_high
+" set background=dark
 set background=dark
 set hlsearch
 set is hls
