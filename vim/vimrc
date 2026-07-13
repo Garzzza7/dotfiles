@@ -46,6 +46,7 @@ call plug#begin()
     Plug 'wezm/vim-mercury'
 
 call plug#end()
+packadd cfilter
 
 let g:fzf_vim = {}
 let g:fzf_vim.buffers_options = '--no-header --info default'
@@ -93,43 +94,43 @@ filetype plugin indent on
 vnoremap J :m '>+1<cr>gv=gv
 vnoremap K :m '<-2<cr>gv=gv
 
-nnoremap <C-s><C-d> :GrepperGrep <C-r><C-w>
-nnoremap <C-s><C-a> :%s/<C-r><C-w>//g<Left><Left>
-nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
-vnoremap <C-s><C-s> "ay:%s/<C-r>a//gc<Left><Left><Left>
-
-nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
-nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
-nnoremap <silent> <RIGHT> <cmd>echo "xdd"<cr>
-nnoremap <silent> <LEFT> <cmd>echo "xdd"<cr>
-nnoremap <silent> <A-C-w> <cmd>wa<cr>
-nnoremap <silent> <A-C-q> <cmd>qa!<cr>
-nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
-tnoremap <silent> <Esc> <C-\><C-n>
-nnoremap <silent> <A-n> :bn<cr>
-nnoremap <silent> <ESC>n :bn<cr>
-nnoremap <silent> <A-d> :Bclose<CR>
+nnoremap <silent>   <C-s><C-d>      :GrepperGrep <C-r><C-w>
+nnoremap <silent>   <C-s><C-a>      :%s/<C-r><C-w>//g<Left><Left>
+nnoremap <silent>   <C-s><C-s>      :%s/<C-r><C-w>//gc<Left><Left><Left>
+vnoremap <silent>   <C-s><C-s>      "ay:%s/<C-r>a//gc<Left><Left><Left>
+nnoremap <silent>   <UP>            <cmd>echo "xdd"<cr>
+nnoremap <silent>   <DOWN>          <cmd>echo "xdd"<cr>
+nnoremap <silent>   <RIGHT>         <cmd>echo "xdd"<cr>
+nnoremap <silent>   <LEFT>          <cmd>echo "xdd"<cr>
+nnoremap <silent>   <A-C-w>         <cmd>wa<cr>
+nnoremap <silent>   <A-C-q>         <cmd>qa!<cr>
+nnoremap <silent>   <C-r>           <cmd>source $HOME/.vimrc<cr>
+tnoremap <silent>   <Esc>           <C-\><C-n>
+nnoremap <silent>   <A-n>           :bn<cr>
+nnoremap <silent>   <ESC>n          :bn<cr>
+nnoremap <silent>   <A-d>           :Bclose<CR>
 " it is set for the sake of st
-nnoremap <silent> <Esc>d :Bclose<CR>
-noremap <silent> <A-p> :bp<cr>
-noremap <silent> <A-w> :bw<cr>
-noremap <silent> <ESC>p :bp<cr>
-noremap <silent> <ESC>w :bw<cr>
-noremap <silent> <Esc><Esc> :nohlsearch<CR>
-noremap <silent> <A><A> :nohlsearch<CR>
-noremap <silent> <F8> <esc> :w <cr> :Dispatch comp.sh $(echo %)<cr>
-noremap <silent> <F9> <esc> :w <cr> :!python3<cr>
-noremap <silent> <space>sf :FZF<cr>
-noremap <silent> <space>sa  :RG<cr>
-noremap <silent> <space><space> :Buffers<cr>
-noremap <silent> <space>/ :BLines<cr>
-noremap <silent> <space>ss :Lines<cr>
-noremap <silent> <space>mn :Marks<cr>
-noremap <silent> <space>al :FZF! $HOME/zadania/Algos<cr>
-noremap <C-j> <C-W>j
-noremap <C-k> <C-W>k
-noremap <C-h> <C-W>h
-noremap <C-l> <C-W>l
+nnoremap <silent>   <Esc>d          :Bclose<CR>
+noremap  <silent>   <A-p>           :bp<cr>
+noremap  <silent>   <A-w>           :bw<cr>
+noremap  <silent>   <ESC>p          :bp<cr>
+noremap  <silent>   <ESC>w          :bw<cr>
+noremap  <silent>   <Esc><Esc>      :nohlsearch<CR>
+noremap  <silent>   <A><A>          :nohlsearch<CR>
+noremap  <silent>   <F8>            <esc>:w<cr> :Dispatch comp.sh $(echo %)<cr>
+noremap  <silent>   <F9>            <esc>:w<cr> :!python3<cr>
+noremap  <silent>   <F10>           <esc>:w<cr> :Dispatch! comp.sh $(echo %)<cr>
+noremap  <silent>   <space>sf      :FZF<cr>
+noremap  <silent>   <space>sa      :RG<cr>
+noremap  <silent>   <space><space> :Buffers<cr>
+noremap  <silent>   <space>/       :BLines<cr>
+noremap  <silent>   <space>ss      :Lines<cr>
+noremap  <silent>   <space>mn      :Marks<cr>
+noremap  <silent>   <space>al      :FZF! $HOME/zadania/Algos<cr>
+noremap  <silent>   <C-j>          <C-W>j
+noremap  <silent>   <C-k>          <C-W>k
+noremap  <silent>   <C-h>          <C-W>h
+noremap  <silent>   <C-l>          <C-W>l
 let &t_SI .= "\e[6 q"  " Line cursor in insert mode
 let &t_EI .= "\e[2 q"  " Block cursor in normal mode
 let &t_SR .= "\e[4 q"  " replace mode
