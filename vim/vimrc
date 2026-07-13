@@ -117,7 +117,7 @@ noremap <silent> <ESC>p :bp<cr>
 noremap <silent> <ESC>w :bw<cr>
 noremap <silent> <Esc><Esc> :nohlsearch<CR>
 noremap <silent> <A><A> :nohlsearch<CR>
-noremap <silent> <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
+noremap <silent> <F8> <esc> :w <cr> :Dispatch comp.sh $(echo %)<cr>
 noremap <silent> <F9> <esc> :w <cr> :!python3<cr>
 noremap <silent> <space>sf :FZF<cr>
 noremap <silent> <space>sa  :RG<cr>
