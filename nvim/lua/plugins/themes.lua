@@ -410,4 +410,14 @@ return {
         lazy = false,
         priority = 1000,
     },
+    {
+        "lycuid/far.vim",
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        "dgrco/deepwater.nvim",
+        lazy = false,
+        priority = 1000,
+    },
 }

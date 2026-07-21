@@ -110,6 +110,7 @@ return {
                         },
                     },
                 },
+                mypy = {},
             }
 
             require ("mason").setup ()

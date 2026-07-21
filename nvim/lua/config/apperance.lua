@@ -3,7 +3,8 @@ vim.g.netrw_banner = 0
 vim.o.termguicolors = true
 vim.o.background = "dark"
 -- vim.cmd ("colorscheme gruber-darker")
-vim.cmd ("colorscheme solarized8_high")
+-- vim.cmd ("colorscheme solarized8_high")
+vim.cmd ("colorscheme deepwater")
 -- vim.cmd ("colorscheme cyberdream")
 -- vim.cmd ("colorscheme sitruuna")
 -- vim.cmd ("set background=light")

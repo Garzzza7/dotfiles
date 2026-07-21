@@ -22,6 +22,7 @@ call plug#begin()
     Plug 'w0ng/vim-hybrid'
     Plug 'nelstrom/vim-mac-classic-theme'
     Plug 'caglartoklu/borlandp.vim'
+    Plug 'lycuid/far.vim'
 
     Plug 'Garzzza7/sitruuna_backup'
     Plug 'bfrg/vim-cpp-modern'
