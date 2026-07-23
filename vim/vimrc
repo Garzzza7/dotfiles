@@ -23,6 +23,7 @@ call plug#begin()
     Plug 'nelstrom/vim-mac-classic-theme'
     Plug 'caglartoklu/borlandp.vim'
     Plug 'lycuid/far.vim'
+    Plug 'piyush-ppradhan/naysayer.vim'
 
     Plug 'Garzzza7/sitruuna_backup'
     Plug 'bfrg/vim-cpp-modern'
@@ -83,7 +84,8 @@ syntax sync minlines=256
 let g:netrw_liststyle=3
 " colo default
 " colo railscasts
-colo solarized8_high
+" colo solarized8_high
+colo naysayer
 " set background=dark
 set background=dark
 set hlsearch
