@@ -30,6 +30,7 @@ return {
             { "Snikimonkd/telescope-git-conflicts.nvim" },
         },
         config = function ()
+            local default_picker_layout = { height = 0.99, width = 0.99 }
             require ("telescope").setup ({
                 defaults = {
                     layout_strategy = "vertical",
@@ -78,82 +79,82 @@ return {
                 pickers = {
                     help_tags = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     keymaps = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     fd = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     builtin = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     grep_string = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     live_grep = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     diagnostics = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     resume = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     oldfiles = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     buffers = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     man_pages = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     colorscheme = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     marks = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     git_status = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     git_files = {
                         layout_strategy = "vertical",
-                        layout_config = { height = -1.95, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
 
                     current_buffer_fuzzy_find = {
                         layout_strategy = "vertical",
-                        layout_config = { height = 0.99, width = 0.99 },
+                        layout_config = default_picker_layout,
                     },
                 },
                 extensions = {
@@ -168,7 +169,7 @@ return {
                             "Cargo.lock",
                             "Cargo.toml",
                             "root.here", -- mine
-                            "Makefile",
+                            -- "Makefile",
                             "README.md",
                         },
                     },
