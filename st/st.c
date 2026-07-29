@@ -980,7 +980,7 @@ void
 tnew(int col, int row) {
     // term = (Term){ .c = { .attr = { .fg = defaultfg, .bg = defaultbg } } };
     int i;
-    term                  = (Term){};
+    term = (Term){};
     term.screen[0].buffer = xmalloc(HISTSIZE * sizeof(Line));
     term.screen[0].size   = HISTSIZE;
     term.screen[1].buffer = NULL;
