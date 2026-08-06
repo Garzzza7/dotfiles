@@ -40,9 +40,9 @@ if [ -f "/etc/arch-release" ]; then
 elif [ -f "/etc/debian_version" ]; then
     echo "Debian detected!!!!!!"
     sudo apt-get update
-    sudo apt-get upgrade      #<<< yes
-    sudo apt-get full-upgrade #<<< yes
-    sudo apt-get autoremove   #<<< yes
+    sudo apt-get upgrade
+    sudo apt-get full-upgrade
+    sudo apt-get autoremove
     sudo apt-get autoclean
     sudo apt-get clean
     sudo snap refresh
@@ -80,4 +80,3 @@ echo "⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄�
 ⡟⠝⠈⠄⠄⠄⠄⠄⠂⠠⡑⡱⢐⠄⢸⡲⡠⠄⠉⠙⠻⠿⣿⠿⠿⢛⠫⡩⡳⣸⠾⠁⢀⢢⠣⠃⠄⠠⠐⡀⠂⠄⠡⠈⠄⡁⠂⠄⠡⠐⢈⠠⠁⠌⠠
 ⠄⠄⣀⣤⣤⣀⡀⠄⠂⠄⠐⢌⠆⢕⠈⣗⢥⢣⢡⢑⢌⡢⡢⢅⢇⢇⢯⢾⡽⠃⢀⠔⡅⠁⠄⠄⠨⢀⠡⠐⠈⠄⠡⢈⠐⡀⠅⠌⠠⠁⡂⠄⠡⢈⠐
 ⣾⣿⢿⡿⡿⠇⠄⠄⠄⡀⢀⠢⠭⢆⠦⡿⡷⡷⡵⡷⡷⣵⢽⡮⣷⢽⡽⡓⠤⠤⠕⡁⠠⠄⠅⠄⠅⠄⠂⠌⠠⠡⠈⠄⢂⠐⠠⠨⠠⠁⠄⢂⠡⠐⡈"
-#sudo e4defrag /dev/nvme0n1p5
