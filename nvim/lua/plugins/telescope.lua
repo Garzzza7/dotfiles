@@ -56,6 +56,9 @@ return {
                         preview_cutoff = 100,
                     },
                     mappings = {
+                        n = {
+                            ["<M-d>"] = require ("telescope.actions").delete_buffer,
+                        },
                         i = {
                             ["<ESC>"] = require ("telescope.actions").close,
                             ["<CR>"] = function (prompt_bufnr)
@@ -70,6 +73,8 @@ return {
                                     require ("telescope.actions").select_default (prompt_bufnr)
                                 end
                             end,
+                            ["<C-h>"] = "which_key",
+                            ["<M-d>"] = require ("telescope.actions").delete_buffer,
                         },
                     },
                     preview = {
