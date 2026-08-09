@@ -129,9 +129,34 @@ return {
             require ("mason-lspconfig").setup ({
                 handlers = {
                     function (server_name)
-                        local server = servers[server_name] or {}
-                        server.capabilities = vim.tbl_deep_extend ("force", {}, capabilities, server.capabilities or {})
-                        require ("lspconfig")[server_name].setup (server)
+                        if server_name == "neocmake" then
+                            local server = servers[server_name] or {}
+                            require ("lspconfig.configs").neocmake = {
+                                default_config = {
+                                    cmd = { "neocmakelsp", "stdio" },
+                                    filetypes = { "cmake" },
+                                    -- root_dir = function (fname) return require ("lspconfig").util.find_git_ancestor (fname) end,
+                                    root_dir = vim.fs.dirname (vim.fs.find (".git", { path = startpath, upward = true })[1]),
+                                    single_file_support = true,
+                                    on_attach = on_attach,
+                                    init_options = {
+                                        format = {
+                                            enable = true,
+                                        },
+                                        lint = {
+                                            enable = true,
+                                        },
+                                        scan_cmake_in_package = true,
+                                    },
+                                },
+                            }
+                            server.capabilities = vim.tbl_deep_extend ("force", {}, capabilities, server.capabilities or {})
+                            require ("lspconfig")[server_name].setup (server)
+                        else
+                            local server = servers[server_name] or {}
+                            server.capabilities = vim.tbl_deep_extend ("force", {}, capabilities, server.capabilities or {})
+                            require ("lspconfig")[server_name].setup (server)
+                        end
                     end,
                 },
             })
