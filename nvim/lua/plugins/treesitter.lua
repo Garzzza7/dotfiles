@@ -34,6 +34,7 @@ return {
                     "python",
                     "query",
                     "rust",
+                    "tmux",
                     "toml",
                     "vim",
                     "vimdoc",
