@@ -4,39 +4,34 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-function! RunCtags()
-    ! ctags --recurse .
-endfunction
-
-" let g:polyglot_disabled = ['autoindent']
-" let g:polyglot_disabled = ['sensible']
-" autocmd BufEnter * set indentexpr=
 syntax on
 set nocompatible
 
 call plug#begin()
     " Plug 'eemed/sitruuna.vim'
+    " themes
     Plug 'Badacadabra/vim-archery'
-    Plug 'jpo/vim-railscasts-theme'
-    Plug 'vim-scripts/ansi_blows.vim'
-    Plug 'w0ng/vim-hybrid'
-    Plug 'nelstrom/vim-mac-classic-theme'
-    Plug 'caglartoklu/borlandp.vim'
-    Plug 'lycuid/far.vim'
-    Plug 'piyush-ppradhan/naysayer.vim'
-
     Plug 'Garzzza7/sitruuna_backup'
-    Plug 'bfrg/vim-cpp-modern'
+    Plug 'caglartoklu/borlandp.vim'
     Plug 'christophermca/meta5'
     Plug 'drsooch/gruber-darker-vim'
+    Plug 'jpo/vim-railscasts-theme'
+    Plug 'lifepillar/vim-solarized8'
+    Plug 'lycuid/far.vim'
+    Plug 'nelstrom/vim-mac-classic-theme'
+    Plug 'overvale/vacme'
+    Plug 'piyush-ppradhan/naysayer.vim'
+    Plug 'vim-scripts/Tango-colour-scheme'
+    Plug 'vim-scripts/ansi_blows.vim'
+    Plug 'w0ng/vim-hybrid'
+
+    Plug 'bfrg/vim-cpp-modern'
     Plug 'jfsicilia/Bclose'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'lifepillar/vim-solarized8'
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
-    Plug 'overvale/vacme'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-eunuch'
@@ -44,20 +39,16 @@ call plug#begin()
     Plug 'tpope/vim-rhubarb'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
-    Plug 'vim-scripts/Tango-colour-scheme'
     Plug 'wezm/vim-mercury'
-
 call plug#end()
+
 packadd cfilter
 
 let g:fzf_vim = {}
 let g:fzf_vim.buffers_options = '--no-header --info default'
 
 set laststatus=2
-set statusline=
-set statusline +=%f
-set statusline +=%1*%=%5l%*
-set statusline +=%2*/%L%*
+set statusline=%f\ %m\ %l/%L\ %c\ %=%y
 
 set ttimeout
 set ttimeoutlen=10
@@ -82,11 +73,7 @@ set nocursorcolumn
 set nocursorline
 syntax sync minlines=256
 let g:netrw_liststyle=3
-" colo default
-" colo railscasts
-" colo solarized8_high
 colo naysayer
-" set background=dark
 set background=dark
 set hlsearch
 set is hls
@@ -138,9 +125,7 @@ let &t_SI .= "\e[6 q"  " Line cursor in insert mode
 let &t_EI .= "\e[2 q"  " Block cursor in normal mode
 let &t_SR .= "\e[4 q"  " replace mode
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-
 set encoding=utf-8
-
 set shiftwidth=4
 set tabstop=4
 set expandtab
