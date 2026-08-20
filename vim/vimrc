@@ -4,26 +4,23 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-syntax on
-set nocompatible
-
 call plug#begin()
     " Plug 'eemed/sitruuna.vim'
     " themes
-    Plug 'Badacadabra/vim-archery'
-    Plug 'Garzzza7/sitruuna_backup'
-    Plug 'caglartoklu/borlandp.vim'
-    Plug 'christophermca/meta5'
-    Plug 'drsooch/gruber-darker-vim'
-    Plug 'jpo/vim-railscasts-theme'
-    Plug 'lifepillar/vim-solarized8'
-    Plug 'lycuid/far.vim'
-    Plug 'nelstrom/vim-mac-classic-theme'
-    Plug 'overvale/vacme'
+    " Plug 'Badacadabra/vim-archery'
+    " Plug 'Garzzza7/sitruuna_backup'
+    " Plug 'caglartoklu/borlandp.vim'
+    " Plug 'christophermca/meta5'
+    " Plug 'drsooch/gruber-darker-vim'
+    " Plug 'jpo/vim-railscasts-theme'
+    " Plug 'lifepillar/vim-solarized8'
+    " Plug 'lycuid/far.vim'
+    " Plug 'nelstrom/vim-mac-classic-theme'
+    " Plug 'overvale/vacme'
     Plug 'piyush-ppradhan/naysayer.vim'
-    Plug 'vim-scripts/Tango-colour-scheme'
-    Plug 'vim-scripts/ansi_blows.vim'
-    Plug 'w0ng/vim-hybrid'
+    " Plug 'vim-scripts/Tango-colour-scheme'
+    " Plug 'vim-scripts/ansi_blows.vim'
+    " Plug 'w0ng/vim-hybrid'
 
     Plug 'bfrg/vim-cpp-modern'
     Plug 'jfsicilia/Bclose'
@@ -42,48 +39,60 @@ call plug#begin()
     Plug 'wezm/vim-mercury'
 call plug#end()
 
-packadd cfilter
+syntax on
+syntax sync minlines=256
 
-let g:fzf_vim = {}
-let g:fzf_vim.buffers_options = '--no-header --info default'
+set autoread
+set encoding=utf-8
+set expandtab
+set hidden
+set hlsearch
+set ignorecase
+set incsearch
+set is hls
+set mouse=a
+set nocompatible
+set nocursorcolumn
+set nocursorline
+set noswapfile
+set scrolloff=8
+set shiftwidth=4
+set tabstop=4
+set ttimeout
+set ttimeoutlen=10
 
 set laststatus=2
 set statusline=%f\ %m\ %l/%L\ %c\ %=%y
-
-set ttimeout
-set ttimeoutlen=10
-set scrolloff=8
-set mouse=a
-set autoread
-
-set noswapfile
-
-set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
 
 set wildmenu
 set wildmode=full
 set wildoptions=pum
 
-set ignorecase
+packadd cfilter
 
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let g:fzf_vim = {}
+let g:fzf_vim.buffers_options = '--no-header --info default'
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_layout = { 'window': { 'width': 0.95 , 'height': 0.95 , 'relative':v:false} }
+let g:fzf_preview_window = ['up:70%', 'ctrl-/']
+
+set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
+
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_EI .= "\e[2 q"  " Block cursor in normal mode
+let &t_SI .= "\e[6 q"  " Line cursor in insert mode
+let &t_SR .= "\e[4 q"  " replace mode
 
-set nocursorcolumn
-set nocursorline
-syntax sync minlines=256
 let g:netrw_liststyle=3
+
 colo naysayer
 set background=dark
-set hlsearch
-set is hls
-set incsearch
 
 filetype plugin indent on
 
-vnoremap J :m '>+1<cr>gv=gv
-vnoremap K :m '<-2<cr>gv=gv
-
+vnoremap            J               :m '>+1<cr>gv=gv
+vnoremap            K               :m '<-2<cr>gv=gv
 nnoremap            <C-s><C-d>      :GrepperGrep <C-r><C-w>
 nnoremap            <C-s><C-a>      :%s/<C-r><C-w>//g<Left><Left>
 nnoremap            <C-s><C-s>      :%s/<C-r><C-w>//gc<Left><Left><Left>
@@ -116,18 +125,8 @@ noremap             <space><space> :Buffers<cr>
 noremap             <space>/       :BLines<cr>
 noremap             <space>ss      :Lines<cr>
 noremap             <space>mn      :Marks<cr>
-noremap             <space>al      :FZF! $HOME/zadania/Algos<cr>
+noremap             <space>al      :FZF $HOME/zadania/Algos<cr>
 noremap             <C-j>          <C-W>j
 noremap             <C-k>          <C-W>k
 noremap             <C-h>          <C-W>h
 noremap             <C-l>          <C-W>l
-let &t_SI .= "\e[6 q"  " Line cursor in insert mode
-let &t_EI .= "\e[2 q"  " Block cursor in normal mode
-let &t_SR .= "\e[4 q"  " replace mode
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-set encoding=utf-8
-set shiftwidth=4
-set tabstop=4
-set expandtab
-let g:fzf_layout = { 'window': { 'width': 0.95 , 'height': 0.95 , 'relative':v:false} }
-let g:fzf_preview_window = ['up:70%', 'ctrl-/']
