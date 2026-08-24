@@ -70,6 +70,11 @@ set wildoptions=pum
 
 packadd cfilter
 
+au ColorScheme * hi Error NONE
+au ColorScheme * hi ErrorMsg NONE
+au GuiEnter * hi Error NONE
+au GuiEnter * hi ErrorMsg NONE
+
 let g:fzf_vim = {}
 let g:fzf_vim.buffers_options = '--no-header --info default'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
