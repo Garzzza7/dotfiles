@@ -5,13 +5,14 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
+    " og
     " Plug 'eemed/sitruuna.vim'
     " themes
     " Plug 'Badacadabra/vim-archery'
-    " Plug 'Garzzza7/sitruuna_backup'
+    Plug 'Garzzza7/sitruuna_backup'
     " Plug 'caglartoklu/borlandp.vim'
     " Plug 'christophermca/meta5'
-    " Plug 'drsooch/gruber-darker-vim'
+    Plug 'drsooch/gruber-darker-vim'
     " Plug 'jpo/vim-railscasts-theme'
     " Plug 'lifepillar/vim-solarized8'
     " Plug 'lycuid/far.vim'
