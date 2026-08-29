@@ -13,7 +13,7 @@ call plug#begin()
     " Plug 'caglartoklu/borlandp.vim'
     " Plug 'christophermca/meta5'
     Plug 'drsooch/gruber-darker-vim'
-    " Plug 'jpo/vim-railscasts-theme'
+    Plug 'jpo/vim-railscasts-theme'
     " Plug 'lifepillar/vim-solarized8'
     " Plug 'lycuid/far.vim'
     " Plug 'nelstrom/vim-mac-classic-theme'
@@ -56,7 +56,7 @@ set nocompatible
 set nocursorcolumn
 set nocursorline
 set noswapfile
-set scrolloff=8
+set scrolloff=16
 set shiftwidth=4
 set tabstop=4
 set ttimeout
