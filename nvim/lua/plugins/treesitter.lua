@@ -31,6 +31,7 @@ return {
                     "ninja",
                     "nix",
                     "ocaml",
+                    "prolog",
                     "python",
                     "query",
                     "rust",
