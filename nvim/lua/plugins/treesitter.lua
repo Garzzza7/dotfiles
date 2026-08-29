@@ -66,6 +66,7 @@ return {
                 indent = {
                     enable = false,
                 },
+                vim.treesitter.language.register ("prolog", { "mercury" }),
             })
         end,
     },
