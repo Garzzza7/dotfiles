@@ -77,6 +77,7 @@
   "vim-grepper": { "branch": "master", "commit": "74284df0abf7c3f9d57e3416129dbeeba36dc86b" },
   "vim-gutentags": { "branch": "master", "commit": "aa47c5e29c37c52176c44e61c780032dfacef3dd" },
   "vim-mercury": { "branch": "master", "commit": "3b16706ba5455bfb61fba57860eeeb298f366c7e" },
+  "vim-railscasts-theme": { "branch": "main", "commit": "826e17cc7a7fdc1aef16b9ddfaf271b51fc2e0a8" },
   "vim-rhubarb": { "branch": "master", "commit": "5496d7c94581c4c9ad7430357449bb57fc59f501" },
   "vim-solarized8": { "branch": "master", "commit": "4433b4411de92b2446a4d32f0d8bf1b25c476bf9" },
   "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" },

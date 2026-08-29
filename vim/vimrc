@@ -79,7 +79,7 @@ au GuiEnter * hi ErrorMsg NONE
 let g:fzf_vim = {}
 let g:fzf_vim.buffers_options = '--no-header --info default'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-let g:fzf_layout = { 'window': { 'width': 0.95 , 'height': 0.95 , 'relative':v:false} }
+let g:fzf_layout = { 'window': { 'width': 1.00 , 'height': 1.00 , 'relative':v:false} }
 let g:fzf_preview_window = ['up:70%', 'ctrl-/']
 
 set rtp^="$HOME/.opam/default/share/ocp-indent/vim"

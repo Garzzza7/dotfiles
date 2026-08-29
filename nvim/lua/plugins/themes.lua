@@ -420,4 +420,9 @@ return {
         lazy = false,
         priority = 1000,
     },
+    {
+        "jpo/vim-railscasts-theme",
+        lazy = false,
+        priority = 1000,
+    },
 }
