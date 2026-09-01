@@ -167,6 +167,8 @@
     gedit
     tor-browser
     kdePackages.kate
+    kdePackages.konsole
+    universal-ctags
 
     # random editors
     notepadqq

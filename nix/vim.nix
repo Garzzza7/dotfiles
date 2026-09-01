@@ -23,108 +23,106 @@
           vim-solarized8
           vim-surround
           vim-vinegar
-          zig
         ];
         opt = [ ];
       };
       vimrcConfig.customRC = ''
-        function! RunCtags()
-            ! ctags --recurse .
-        endfunction
-
         syntax on
+        syntax sync minlines=256
+
+        set autoread
+        set encoding=utf-8
+        set expandtab
+        set hidden
+        set hlsearch
+        set ignorecase
+        set incsearch
+        set is hls
+        set mouse=a
         set nocompatible
-
-        let g:fzf_vim = {}
-        let g:fzf_vim.buffers_options = '--no-header --info default'
-
-        set laststatus=2
-        set statusline=
-        set statusline +=%f
-        set statusline +=%1*%=%5l%*
-        set statusline +=%2*/%L%*
-
+        set nocursorcolumn
+        set nocursorline
+        set noswapfile
+        set scrolloff=16
+        set shiftwidth=4
+        set tabstop=4
         set ttimeout
         set ttimeoutlen=10
-        set scrolloff=8
-        set mouse=a
-        set autoread
 
-        set noswapfile
+        set laststatus=2
+        set statusline=%f\ %m\ %l/%L\ %c\ %=%y
 
         set wildmenu
         set wildmode=full
         set wildoptions=pum
 
-        set ignorecase
+        packadd cfilter
 
-        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        au ColorScheme * hi Error NONE
+        au ColorScheme * hi ErrorMsg NONE
+        au GuiEnter * hi Error NONE
+        au GuiEnter * hi ErrorMsg NONE
+
+        let g:fzf_vim = {}
+        let g:fzf_vim.buffers_options = '--no-header --info default'
+        let g:fzf_history_dir = '~/.local/share/fzf-history'
+        let g:fzf_layout = { 'window': { 'width': 1.00 , 'height': 1.00 , 'relative':v:false} }
+        let g:fzf_preview_window = ['up:70%', 'ctrl-/']
+
+        set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
+
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_EI .= "\e[2 q"  " Block cursor in normal mode
+        let &t_SI .= "\e[6 q"  " Line cursor in insert mode
+        let &t_SR .= "\e[4 q"  " replace mode
 
-        set nocursorcolumn
-        set nocursorline
-        syntax sync minlines=256
         let g:netrw_liststyle=3
+
         colo default
         set background=dark
-        set hlsearch
-        set is hls
-        set incsearch
 
         filetype plugin indent on
 
-        vnoremap J :m '>+1<cr>gv=gv
-        vnoremap K :m '<-2<cr>gv=gv
-
-        nnoremap <C-s><C-d> :GrepperGrep <C-r><C-w>
-        nnoremap <C-s><C-a> :%s/<C-r><C-w>//g<Left><Left>
-        nnoremap <C-s><C-s> :%s/<C-r><C-w>//gc<Left><Left><Left>
-        vnoremap <C-s><C-s> "ay:%s/<C-r>a//gc<Left><Left><Left>
-
-        nnoremap <silent> <UP> <cmd>echo "xdd"<cr>
-        nnoremap <silent> <DOWN> <cmd>echo "xdd"<cr>
-        nnoremap <silent> <RIGHT> <cmd>echo "xdd"<cr>
-        nnoremap <silent> <LEFT> <cmd>echo "xdd"<cr>
-        nnoremap <silent> <A-C-w> <cmd>wa<cr>
-        nnoremap <silent> <A-C-q> <cmd>qa!<cr>
-        nnoremap <silent> <C-r> <cmd>source $HOME/.vimrc<cr>
-        tnoremap <Esc> <C-\><C-n>
-        nnoremap <A-n> :bn<cr>
-        nnoremap <ESC>n :bn<cr>
-        nnoremap <silent> <A-d> :Bclose<CR>
+        vnoremap            J               :m '>+1<cr>gv=gv
+        vnoremap            K               :m '<-2<cr>gv=gv
+        nnoremap            <C-s><C-d>      :GrepperGrep <C-r><C-w>
+        nnoremap            <C-s><C-a>      :%s/<C-r><C-w>//g<Left><Left>
+        nnoremap            <C-s><C-s>      :%s/<C-r><C-w>//gc<Left><Left><Left>
+        vnoremap            <C-s><C-s>      "ay:%s/<C-r>a//gc<Left><Left><Left>
+        nnoremap            <UP>            <cmd>echo "xdd"<cr>
+        nnoremap            <DOWN>          <cmd>echo "xdd"<cr>
+        nnoremap            <RIGHT>         <cmd>echo "xdd"<cr>
+        nnoremap            <LEFT>          <cmd>echo "xdd"<cr>
+        nnoremap            <A-C-w>         <cmd>wa<cr>
+        nnoremap            <A-C-q>         <cmd>qa!<cr>
+        nnoremap            <C-r>           <cmd>source $HOME/.vimrc<cr>
+        tnoremap            <Esc>           <C-\><C-n>
+        nnoremap            <A-n>           :bn<cr>
+        nnoremap            <ESC>n          :bn<cr>
+        nnoremap            <A-d>           :Bclose<CR>
         " it is set for the sake of st
-        nnoremap <silent> <Esc>d :Bclose<CR>
-        noremap <A-p> :bp<cr>
-        noremap <A-w> :bw<cr>
-        noremap <ESC>p :bp<cr>
-        noremap <ESC>w :bw<cr>
-        noremap <Esc><Esc> :nohlsearch<CR>
-        noremap <A><A> :nohlsearch<CR>
-        noremap <F8> <esc> :w <cr> :!comp.sh $(echo %)<cr>
-        noremap <F9> <esc> :w <cr> :!python3<cr>
-        noremap <silent> <space>sf :FZF<cr>
-        noremap <silent> <space>sa  :RG<cr>
-        noremap <silent> <space><space> :Buffers<cr>
-        noremap <silent> <space>/ :BLines<cr>
-        noremap <silent> <space>ss :Lines<cr>
-        noremap <silent> <space>mn :Marks<cr>
-        noremap <silent> <space>al :FZF! $HOME/zadania/Algos<cr>
-        noremap <C-j> <C-W>j
-        noremap <C-k> <C-W>k
-        noremap <C-h> <C-W>h
-        noremap <C-l> <C-W>l
-        let &t_SI .= "\e[6 q"  " Line cursor in insert mode
-        let &t_EI .= "\e[2 q"  " Block cursor in normal mode
-        let &t_SR .= "\e[4 q"  " replace mode
-        let g:fzf_history_dir = '~/.local/share/fzf-history'
-
-        set encoding=utf-8
-
-        set shiftwidth=4
-        set tabstop=4
-        set expandtab
-        let g:fzf_layout = { 'window': { 'width': 0.95 , 'height': 0.95 , 'relative':v:false} }
-        let g:fzf_preview_window = ['up:70%', 'ctrl-/']
+        nnoremap            <Esc>d          :Bclose<CR>
+        noremap             <A-p>           :bp<cr>
+        noremap             <A-w>           :bw<cr>
+        noremap             <ESC>p          :bp<cr>
+        noremap             <ESC>w          :bw<cr>
+        noremap             <Esc><Esc>      :nohlsearch<CR>
+        noremap             <A><A>          :nohlsearch<CR>
+        noremap             <F8>            <esc>:w<cr> :Dispatch comp.sh $(echo %)<cr>
+        noremap             <F9>            <esc>:w<cr> :!python3<cr>
+        noremap             <F10>           <esc>:w<cr> :Dispatch! comp.sh $(echo %)<cr>
+        noremap             <space>sf      :FZF<cr>
+        noremap             <space>sa      :RG<cr>
+        noremap             <space><space> :Buffers<cr>
+        noremap             <space>/       :BLines<cr>
+        noremap             <space>ss      :Lines<cr>
+        noremap             <space>mn      :Marks<cr>
+        noremap             <space>al      :FZF $HOME/zadania/Algos<cr>
+        noremap             <C-j>          <C-W>j
+        noremap             <C-k>          <C-W>k
+        noremap             <C-h>          <C-W>h
+        noremap             <C-l>          <C-W>l
       '';
     })
   ];
