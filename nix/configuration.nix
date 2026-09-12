@@ -7,10 +7,10 @@
   ];
 
   imports = [
-    ./hardware-configuration.nix
-    ./vim.nix
     ./broadcom.nix
+    ./hardware-configuration.nix
     ./steam.nix
+    ./vim.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -99,84 +99,90 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    emacs
-    neofetch
-    htop
-    wget
-    git
-    tree
-    gh
-    lazygit
-    ripgrep
-    killall
-    onefetch
-    mupdf
-    zathura
-    neovim
-    toilet
-    xclip
-    cmatrix
+    # browsers
     firefox
-    pciutils
-    file
-    tmux
     qutebrowser
-    bash-completion
-    maim
-    feh
-    pkgs.nixfmt-rfc-style
-    termdown
-    alsa-utils
-    nix-search
-    mpv
-    imhex
-    ghostty
-    st
-    mypaint
-    zip
-    unzip
-    kdePackages.kolourpaint
-    discord
-    fd
-    redshift
-    fastfetch
-    kakoune
-    obs-studio
-    tree-sitter
-    fzf
-    cloc
     tor
+    tor-browser
 
+    # utilities
+    alsa-utils
+    bash-completion
+    btop
+    cloc
+    cmatrix
+    discord
+    dysk
+    fastfetch
+    fd
+    feh
+    file
+    fzf
+    gh
+    git
     gparted
+    htop
+    kdePackages.kolourpaint
+    killall
+    lazygit
+    maim
+    mpv
+    mupdf
+    mypaint
+    neofetch
+    nix-search
+    obs-studio
+    onefetch
+    pciutils
+    pdfgrep
+    pkgs.nixfmt-rfc-style
+    redshift
+    ripgrep
+    termdown
+    tmux
+    toilet
+    trash-cli
+    tree
+    tree-sitter
+    universal-ctags
+    unzip
+    wget
+    xclip
+    zathura
+    zip
 
+    # terminals
+    ghostty
+    kdePackages.konsole
+    st
+
+    # language stuff
     gcc
     ghc
+    gnuplot
+    lua-language-server
     lua5_1
     mercury
     ocaml
     opam
     pypy3
     racket
-
-    neovide
-    dysk
-    lua-language-server
     stylua
-    btop
-    pdfgrep
+
+    # editors
+    emacs
     gedit
-    tor-browser
+    imhex
+    kakoune
     kdePackages.kate
-    kdePackages.konsole
-    universal-ctags
+    neovide
+    neovim
 
     # random editors
-    notepadqq
     ad
     amp
     cano
     cudatext
-    evil-helix
     evil-helix
     fte
     gnome-text-editor
@@ -186,6 +192,7 @@
     kibi
     lite
     mle
+    notepadqq
     scite
     textadept
     xed-editor
