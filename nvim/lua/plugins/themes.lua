@@ -292,11 +292,6 @@ return {
         priority = 1000,
     },
     {
-        "abreujp/scholar.nvim",
-        lazy = false,
-        priority = 1000,
-    },
-    {
         "blazkowolf/gruber-darker.nvim",
         lazy = false,
         priority = 1000,
