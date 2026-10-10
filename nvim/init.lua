@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd ("FileType", {
 })
 
 vim.api.nvim_create_autocmd ("FileType", {
-    pattern = { "cpp", "cuda" },
+    pattern = { "cpp", "cuda", "typst" },
     command = "setlocal commentstring=//\\ %s",
 })
 
