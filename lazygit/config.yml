@@ -59,8 +59,6 @@ gui:
   showListFooter: true
   showFileTree: true
   showRootItemInFileTree: true
-  fileTreeSortOrder: mixed
-  fileTreeSortCaseSensitive: true
   showNumstatInFilesView: false
   showRandomTip: true
   showCommandLog: true
@@ -80,14 +78,12 @@ gui:
   border: rounded
   animateExplosion: true
   portraitMode: auto
-  portraitModeAutoMaxWidth: 84
-  portraitModeAutoMinHeight: 46
   filterMode: substring
   spinner:
     frames:
-      - '|'
+      - "|"
       - /
-      - '-'
+      - "-"
       - \
     rate: 50
   statusPanelView: dashboard
@@ -95,7 +91,7 @@ gui:
   switchToFilesAfterStashApply: true
   switchTabsWithPanelJumpKeys: false
 git:
-  diffRenderers: []
+  pagers: []
   commit:
     signOff: false
     autoWrapCommitMessage: true
@@ -148,8 +144,8 @@ promptToReturnFromSubprocess: true
 keybinding:
   universal:
     quit: q
-    quit-alt1: <ctrl+c>
-    suspendApp: <ctrl+z>
+    quit-alt1: <c-c>
+    suspendApp: <c-z>
     return: <esc>
     quitWithoutChangingDirectory: Q
     togglePanel: <tab>
@@ -157,17 +153,17 @@ keybinding:
     nextItem: <down>
     prevItem-alt: k
     nextItem-alt: j
-    prevPage: ','
+    prevPage: ","
     nextPage: .
     scrollLeft: H
     scrollRight: L
     gotoTop: <
-    gotoBottom: '>'
+    gotoBottom: ">"
     gotoTop-alt: <home>
     gotoBottom-alt: <end>
     toggleRangeSelect: v
-    rangeSelectDown: <shift+down>
-    rangeSelectUp: <shift+up>
+    rangeSelectDown: <s-down>
+    rangeSelectUp: <s-up>
     prevBlock: <left>
     nextBlock: <right>
     prevBlock-alt: h
@@ -184,18 +180,15 @@ keybinding:
     nextMatch: "n"
     prevMatch: "N"
     startSearch: /
-    moveWordLeft: <ctrl+left>
-    moveWordRight: <ctrl+right>
-    backspaceWord: <ctrl+backspace>
-    forwardDeleteWord: <ctrl+delete>
-    optionMenu: '?'
+    optionMenu: <disabled>
+    optionMenu-alt1: "?"
     select: <space>
     goInto: <enter>
     confirm: <enter>
     confirmMenu: <enter>
     confirmSuggestion: <enter>
-    confirmInEditor: <ctrl+enter>
-    confirmInEditor-alt: <ctrl+s>
+    confirmInEditor: <a-enter>
+    confirmInEditor-alt: <c-s>
     remove: d
     new: "n"
     edit: e
@@ -204,46 +197,44 @@ keybinding:
     scrollDownMain: <pgdown>
     scrollUpMain-alt1: K
     scrollDownMain-alt1: J
-    scrollUpMain-alt2: <ctrl+u>
-    scrollDownMain-alt2: <ctrl+d>
-    executeShellCommand: ':'
+    scrollUpMain-alt2: <c-u>
+    scrollDownMain-alt2: <c-d>
+    executeShellCommand: ":"
     createRebaseOptionsMenu: m
     pushFiles: P
     pullFiles: p
     refresh: R
-    createPatchOptionsMenu: <ctrl+p>
-    nextTab: ']'
-    prevTab: '['
+    createPatchOptionsMenu: <c-p>
+    nextTab: "]"
+    prevTab: "["
     nextScreenMode: +
     prevScreenMode: _
-    cycleDiffRenderers: '|'
+    cyclePagers: "|"
     undo: z
     redo: Z
-    filteringMenu: <ctrl+s>
+    filteringMenu: <c-s>
     diffingMenu: W
-    diffingMenu-alt: <ctrl+e>
-    copyToClipboard: <ctrl+o>
-    openRecentRepos: <ctrl+r>
+    diffingMenu-alt: <c-e>
+    copyToClipboard: <c-o>
+    openRecentRepos: <c-r>
     submitEditorText: <enter>
-    extrasMenu: '@'
-    toggleWhitespaceInDiffView: <ctrl+w>
-    increaseContextInDiffView: '}'
-    decreaseContextInDiffView: '{'
+    extrasMenu: "@"
+    toggleWhitespaceInDiffView: <c-w>
+    increaseContextInDiffView: "}"
+    decreaseContextInDiffView: "{"
     increaseRenameSimilarityThreshold: )
     decreaseRenameSimilarityThreshold: (
-    openDiffTool: <ctrl+t>
-    newWorktree: w
+    openDiffTool: <c-t>
   status:
     checkForUpdate: u
     recentRepos: <enter>
     allBranchesLogGraph: a
-    allBranchesLogGraphReverse: A
   files:
     commitChanges: c
     commitChangesWithoutHook: w
     amendLastCommit: A
     commitChangesWithEditor: C
-    findBaseCommitForFixup: <ctrl+f>
+    findBaseCommitForFixup: <c-f>
     confirmDiscard: x
     ignoreFile: i
     refreshFiles: r
@@ -252,20 +243,19 @@ keybinding:
     toggleStagedAll: a
     viewResetOptions: D
     fetch: f
-    toggleTreeView: '`'
+    toggleTreeView: "`"
     openMergeOptions: M
-    openStatusFilter: <ctrl+b>
+    openStatusFilter: <c-b>
     copyFileInfoToClipboard: "y"
-    collapseAll: '-'
+    collapseAll: "-"
     expandAll: =
   branches:
     createPullRequest: o
     viewPullRequestOptions: O
-    openPullRequestInBrowser: G
-    copyPullRequestURL: <ctrl+y>
+    copyPullRequestURL: <c-y>
     checkoutBranchByName: c
     forceCheckoutBranch: F
-    checkoutPreviousBranch: '-'
+    checkoutPreviousBranch: "-"
     rebaseBranch: r
     renameBranch: R
     mergeIntoCurrentBranch: M
@@ -278,17 +268,18 @@ keybinding:
     fetchRemote: f
     addForkRemote: F
     sortOrder: s
+  worktrees:
+    viewWorktreeOptions: w
   commits:
     squashDown: s
     renameCommit: r
     renameCommitWithEditor: R
     viewResetOptions: g
     markCommitAsFixup: f
-    setFixupMessage: c
     createFixupCommit: F
     squashAboveCommits: S
-    moveDownCommit: [<ctrl+j>, <alt-down>]
-    moveUpCommit: [<ctrl+k>, <alt-up>]
+    moveDownCommit: <c-j>
+    moveUpCommit: <c-k>
     amendToCommit: A
     resetCommitAuthor: a
     pickCommit: p
@@ -298,14 +289,13 @@ keybinding:
     markCommitAsBaseForRebase: B
     tagCommit: T
     checkoutCommit: <space>
-    resetCherryPick: <ctrl+r>
+    resetCherryPick: <c-R>
     copyCommitAttributeToClipboard: "y"
-    openLogMenu: <ctrl+l>
+    openLogMenu: <c-l>
     openInBrowser: o
-    openPullRequestInBrowser: G
     viewBisectOptions: b
     startInteractiveRebase: i
-    selectCommitsOfCurrentBranch: '*'
+    selectCommitsOfCurrentBranch: "*"
   amendAttribute:
     resetAuthor: a
     setAuthor: A
@@ -316,8 +306,6 @@ keybinding:
   commitFiles:
     checkoutCommitFile: c
   main:
-    prevHunk: [<left>, h]
-    nextHunk: [<right>, l]
     toggleSelectHunk: a
     pickBothHunks: b
     editSelectHunk: E
@@ -326,4 +314,4 @@ keybinding:
     update: u
     bulkMenu: b
   commitMessage:
-    commitMenu: <ctrl+o>
+    commitMenu: <c-o>

@@ -406,7 +406,7 @@ return {
         priority = 1000,
     },
     {
-        "lycuid/far.vim",
+        "Garzzza7/far.vim",
         lazy = false,
         priority = 1000,
     },

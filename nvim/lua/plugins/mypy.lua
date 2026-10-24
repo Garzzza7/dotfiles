@@ -1,6 +1,7 @@
 return {
     {
         "feakuru/mypy.nvim",
+        -- enabled = false,
         config = function ()
             require ("mypy").setup ({
                 -- additional arguments to pass to invocations of `mypy`

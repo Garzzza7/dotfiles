@@ -23,5 +23,6 @@ vim.api.nvim_create_autocmd ("GuiEnter", {
     command = "hi ErrorMsg NONE",
 })
 
-vim.cmd ("colorscheme solarized8_high")
+vim.cmd ("colorscheme gruber-darker")
+-- vim.cmd ("colorscheme solarized8_high")
 vim.cmd ("set background=dark")

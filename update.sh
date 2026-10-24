@@ -109,12 +109,12 @@ else
     printf "${red}Omitting Lazygit.\n${normal}"
 fi
 
-if is_installed bash; then
-    printf "${green}Bash found.\n${normal}"
-    cp $HOME/.bashrc bash/bashrc
-else
-    printf "${red}Omitting Bash.\n${normal}"
-fi
+# if is_installed bash; then
+#     printf "${green}Bash found.\n${normal}"
+#     cp $HOME/.bashrc bash/bashrc
+# else
+#     printf "${red}Omitting Bash.\n${normal}"
+# fi
 
 if [ -d "$HOME/scripts" ]; then
     printf "${green}Scripts found.\n${normal}"
