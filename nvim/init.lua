@@ -20,6 +20,21 @@ vim.api.nvim_create_autocmd ("BufNewFile", {
     callback = function () vim.cmd ("set ft=mercury") end,
 })
 
+vim.api.nvim_create_autocmd ("BufEnter", {
+    pattern = ".aliases",
+    callback = function () vim.cmd ("set ft=bash") end,
+})
+
+vim.api.nvim_create_autocmd ("BufRead", {
+    pattern = ".aliases",
+    callback = function () vim.cmd ("set ft=bash") end,
+})
+
+vim.api.nvim_create_autocmd ("BufNewFile", {
+    pattern = ".aliases",
+    callback = function () vim.cmd ("set ft=bash") end,
+})
+
 vim.api.nvim_create_autocmd ("FileType", {
     pattern = "mercury",
     command = "setlocal commentstring=%\\ %s",
