@@ -7,5 +7,7 @@ if [[ $input == *"$suffix" ]]; then
 elif [[ $input == *"." ]]; then
     input=${input%.}
 fi
-time g++ -Wall -g3 --std=c++20 -Wextra -pedantic -O0 -Wconversion -Wfloat-equal -DTIME -DFAST $input.cpp -o $input.sol
+# time g++ -Wall -g3 --std=c++20 -Wextra -pedantic -O0 -Wconversion -Wfloat-equal -DTIME -DFAST $input.cpp -o $input.sol
+time clang++ -Wall -g3 --std=c++20 -Wextra -pedantic -O0 -Wconversion -Wfloat-equal -DTIME -DFAST $input.cpp -o $input.sol
+
 time ./$input.sol < $input.txt
