@@ -40,20 +40,18 @@ return {
                         prompt_position = "bottom",
                         horizontal = {
                             mirror = false,
-                            preview_cutoff = 100,
-                            preview_width = 0.5,
+                            preview_width = 0.65,
                         },
                         vertical = {
                             mirror = false,
-                            preview_cutoff = 0.4,
+                            preview_height = 0.70,
+                            preview_cutoff = 0.5,
                         },
                         flex = {
                             flip_columns = 200,
                         },
-
                         height = 0.99,
                         width = 0.99,
-                        preview_cutoff = 100,
                     },
                     mappings = {
                         n = {
