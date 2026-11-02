@@ -13,6 +13,7 @@ return {
                     "comment",
                     "commonlisp",
                     "cpp",
+                    "csv",
                     "cuda",
                     "git_config",
                     "git_rebase",
