@@ -24,7 +24,7 @@
   "fidget.nvim": { "branch": "main", "commit": "b61e8af9b8b68ee0ec7da5fb7a8c203aae854f2e" },
   "github-theme": { "branch": "main", "commit": "c106c9472154d6b2c74b74565616b877ae8ed31d" },
   "gitsigns.nvim": { "branch": "main", "commit": "42d6aed4e94e0f0bbced16bbdcc42f57673bd75e" },
-  "gnuplot.vim": { "branch": "main", "commit": "11e85da9231dddf3ba8dc6c15850b67f9c623281" },
+  "gnuplot.vim": { "branch": "main", "commit": "4b8e5962e720477f49a24b24bc310adc5c70eb6e" },
   "gruber-darker.nvim": { "branch": "main", "commit": "35cb97959ef01f7193c94c404c13ddb3d4346654" },
   "gruvbox.nvim": { "branch": "main", "commit": "154eb5ff5b96d0641307113fa385eaf0d36d9796" },
   "gutentags_plus": { "branch": "master", "commit": "a0157ca0092a21f0947917945506fde3859c9cd2" },

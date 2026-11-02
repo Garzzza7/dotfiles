@@ -34,6 +34,7 @@ return {
                     "prolog",
                     "python",
                     "query",
+                    "requirements",
                     "rust",
                     "tmux",
                     "toml",
