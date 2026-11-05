@@ -23,6 +23,7 @@ call plug#begin()
     " Plug 'vim-scripts/ansi_blows.vim'
     " Plug 'w0ng/vim-hybrid'
     Plug 'vim-polyglot/vim-polyglot'
+    Plug 'kaarmu/typst.vim'
 
     Plug 'bfrg/vim-cpp-modern'
     Plug 'jfsicilia/Bclose'

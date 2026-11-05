@@ -1,5 +1,0 @@
-return {
-    {
-        "wezm/vim-mercury",
-    },
-}
