@@ -144,9 +144,9 @@ noremap             <C-k>          <C-W>k
 noremap             <C-h>          <C-W>h
 noremap             <C-l>          <C-W>l
 
-let g:any_jump_disable_default_keybindings = 0
+let g:any_jump_disable_default_keybindings = 1
 
-nnoremap            <space>j       :AnyJump<CR>
-xnoremap            <space>j       :AnyJumpVisual<CR>
+nnoremap            <space>jj       :AnyJump<CR>
+xnoremap            <space>jj       :AnyJumpVisual<CR>
 nnoremap            <space>ab      :AnyJumpBack<CR>
-nnoremap            <space>al      :AnyJumpLastResults<CR>
+nnoremap            <space>ja      :AnyJumpLastResults<CR>
