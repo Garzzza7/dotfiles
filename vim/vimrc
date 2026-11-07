@@ -24,6 +24,7 @@ call plug#begin()
     " Plug 'w0ng/vim-hybrid'
     Plug 'vim-polyglot/vim-polyglot'
     Plug 'kaarmu/typst.vim'
+    Plug 'pechorin/any-jump.vim'
 
     Plug 'bfrg/vim-cpp-modern'
     Plug 'jfsicilia/Bclose'
@@ -44,6 +45,10 @@ call plug#end()
 
 syntax on
 syntax sync minlines=256
+
+set ai
+set number
+set ruler
 
 set autoread
 set encoding=utf-8
@@ -138,3 +143,10 @@ noremap             <C-j>          <C-W>j
 noremap             <C-k>          <C-W>k
 noremap             <C-h>          <C-W>h
 noremap             <C-l>          <C-W>l
+
+let g:any_jump_disable_default_keybindings = 0
+
+nnoremap            <space>j       :AnyJump<CR>
+xnoremap            <space>j       :AnyJumpVisual<CR>
+nnoremap            <space>ab      :AnyJumpBack<CR>
+nnoremap            <space>al      :AnyJumpLastResults<CR>
