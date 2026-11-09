@@ -8,31 +8,36 @@ call plug#begin()
     " og
     " Plug 'eemed/sitruuna.vim'
     " themes
-    " Plug 'Badacadabra/vim-archery'
+    Plug 'Badacadabra/vim-archery'
+    Plug 'Garzzza7/far.vim'
     Plug 'Garzzza7/sitruuna_backup'
-    " Plug 'caglartoklu/borlandp.vim'
-    " Plug 'christophermca/meta5'
+    Plug 'caglartoklu/borlandp.vim'
+    Plug 'christophermca/meta5'
     Plug 'drsooch/gruber-darker-vim'
     Plug 'jpo/vim-railscasts-theme'
-    " Plug 'lifepillar/vim-solarized8'
-    " Plug 'lycuid/far.vim'
-    " Plug 'nelstrom/vim-mac-classic-theme'
-    " Plug 'overvale/vacme'
+    Plug 'lifepillar/vim-solarized8'
+    Plug 'nelstrom/vim-mac-classic-theme'
+    Plug 'overvale/vacme'
     Plug 'piyush-ppradhan/naysayer.vim'
-    " Plug 'vim-scripts/Tango-colour-scheme'
-    " Plug 'vim-scripts/ansi_blows.vim'
-    " Plug 'w0ng/vim-hybrid'
-    Plug 'vim-polyglot/vim-polyglot'
-    Plug 'kaarmu/typst.vim'
-    Plug 'pechorin/any-jump.vim'
+    Plug 'vim-scripts/Tango-colour-scheme'
+    Plug 'vim-scripts/ansi_blows.vim'
+    Plug 'w0ng/vim-hybrid'
 
+    " syntax
     Plug 'bfrg/vim-cpp-modern'
+    Plug 'kaarmu/typst.vim'
+    Plug 'mboughaba/i3config.vim'
+    Plug 'vim-polyglot/vim-polyglot'
+    Plug 'wezm/vim-mercury'
+
+    " good stuff
     Plug 'jfsicilia/Bclose'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
+    Plug 'pechorin/any-jump.vim'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-eunuch'
@@ -40,7 +45,6 @@ call plug#begin()
     Plug 'tpope/vim-rhubarb'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
-    Plug 'wezm/vim-mercury'
 call plug#end()
 
 syntax on
@@ -99,7 +103,8 @@ let &t_SR .= "\e[4 q"  " replace mode
 
 let g:netrw_liststyle=3
 
-colorscheme retrobox
+colorscheme naysayer
+colorscheme ansi_blows
 set background=dark
 
 filetype plugin indent on
