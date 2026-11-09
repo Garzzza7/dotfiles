@@ -21,6 +21,7 @@ vim.opt.undofile = true
 vim.opt.updatetime = 4000
 vim.opt.laststatus = 2
 vim.opt.statusline = "%f %m %l/%L %c %=%y"
+vim.opt.ai = true
 
 -- syncronizing clipboard between neovim and the system, in order for this to work xclip has to be installed
 -- vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
