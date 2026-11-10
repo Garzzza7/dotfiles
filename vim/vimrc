@@ -125,15 +125,16 @@ nnoremap            <C-r>           <cmd>source $HOME/.vimrc<cr>
 " tnoremap            <Esc>           <C-\><C-n>
 nnoremap            <A-n>           :bn<cr>
 nnoremap            <ESC>n          :bn<cr>
-nnoremap            <A-d>           :Bclose!<CR>
+nnoremap            <A-d>           :Bclose!<cr>
 " it is set for the sake of st
-nnoremap            <Esc>d          :Bclose!<CR>
+nnoremap            <Esc>d          :Bclose!<cr>
 noremap             <A-p>           :bp<cr>
 noremap             <A-w>           :bw<cr>
 noremap             <ESC>p          :bp<cr>
 noremap             <ESC>w          :bw<cr>
-noremap             <Esc><Esc>      :nohlsearch<CR>
-noremap             <A><A>          :nohlsearch<CR>
+noremap             <Esc><Esc>      :nohlsearch<cr>
+noremap             <A><A>          :nohlsearch<cr>
+noremap  <silent>   <F1>            :echo 'Current time is ' . strftime('%c')<cr>
 noremap             <F8>            <esc>:w<cr> :Dispatch comp.sh $(echo %)<cr>
 noremap             <F9>            <esc>:w<cr> :!python3<cr>
 noremap             <F10>           <esc>:w<cr> :Dispatch! comp.sh $(echo %)<cr>
