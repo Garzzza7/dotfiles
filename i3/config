@@ -238,6 +238,7 @@ bindsym $mod+x move workspace to output right
 # screenshot stuff
 # bindsym Print exec gnome-screenshot -i
 # bindsym $mod+Print exec gnome-screenshot -a
+bindsym Print exec flameshot gui
 
 #status bar
 bar {
