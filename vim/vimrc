@@ -4,6 +4,13 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:polyglot_disabled = ['octave', 'matlab']
+let g:polyglot_disabled = ['ftdetect']
+
+" autocmd BufRead,BufNewFile *.m set ft=mercury
+autocmd BufEnter,BufRead,BufNewFile *.m  set filetype=mercury
+autocmd BufEnter,BufRead,BufNewFile *.g4 set filetype=antlr4
+
 call plug#begin()
     " og
     " Plug 'eemed/sitruuna.vim'
