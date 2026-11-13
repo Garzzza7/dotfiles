@@ -129,7 +129,7 @@ nnoremap            <LEFT>          <cmd>echo "xdd"<cr>
 nnoremap            <A-C-w>         <cmd>wa<cr>
 nnoremap            <A-C-q>         <cmd>qa!<cr>
 nnoremap            <C-r>           <cmd>source $HOME/.vimrc<cr>
-" tnoremap            <Esc>           <C-\><C-n>
+tnoremap            tt              <C-\><C-n>
 nnoremap            <A-n>           :bn<cr>
 nnoremap            <ESC>n          :bn<cr>
 nnoremap            <A-d>           :Bclose!<cr>
