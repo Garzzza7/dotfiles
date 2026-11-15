@@ -437,38 +437,38 @@
 
 ;;; DISABLE ARROW KEYS
 
-(defun my/disabled-arrow-key ()
-  "Disable arrow keys."
-  (interactive)
-  (message "Use navigation keys instead."))
+; (defun my/disabled-arrow-key ()
+;   "Disable arrow keys."
+;   (interactive)
+;   (message "Use navigation keys instead."))
 
-(global-set-key (kbd "<up>") #'my/disabled-arrow-key)
-(global-set-key (kbd "<down>") #'my/disabled-arrow-key)
-(global-set-key (kbd "<left>") #'my/disabled-arrow-key)
-(global-set-key (kbd "<right>") #'my/disabled-arrow-key)
+; (global-set-key (kbd "<up>") #'my/disabled-arrow-key)
+; (global-set-key (kbd "<down>") #'my/disabled-arrow-key)
+; (global-set-key (kbd "<left>") #'my/disabled-arrow-key)
+; (global-set-key (kbd "<right>") #'my/disabled-arrow-key)
 
 
 ;;; FINAL
 
 (provide 'init)
 
-(invert-face 'default)
+;;(invert-face 'default)
 
 ;;; init.el ends here
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  '(package-selected-packages
-     '(consult embark evil general magit marginalia orderless projectile rg
-               rust-mode typst-ts-mode uwu-theme vertico vterm)))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(consult embark evil general magit marginalia orderless projectile rg
+             rust-mode typst-ts-mode uwu-theme vertico vterm xclip)))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  )
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 ;;; Vim-like tags navigation
 
