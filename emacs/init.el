@@ -461,8 +461,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(consult embark evil general magit marginalia orderless projectile rg
-             rust-mode typst-ts-mode uwu-theme vertico vterm xclip)))
+   '(cmake-mode consult embark evil general hl-todo magit marginalia
+                orderless projectile rg typst-ts-mode vertico vterm
+                xclip)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
